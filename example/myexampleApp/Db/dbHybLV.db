@@ -1,0 +1,1276 @@
+
+
+
+
+####### DVDD I_RD BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:dvdd:i_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(FLNK,"SVT:lv:hyb:bot:1:dvdd:i_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:0:dvdd:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:dvdd:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:0:dvdd:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:1:dvdd:i_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:2:dvdd:i_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:1:dvdd:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:dvdd:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:1:dvdd:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:2:dvdd:i_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:3:dvdd:i_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:2:dvdd:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:dvdd:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:2:dvdd:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:dvdd:i_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:0:avdd:i_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:3:dvdd:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:dvdd:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:3:dvdd:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+####### AVDD I_RD BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:avdd:i_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:1:avdd:i_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:0:avdd:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:avdd:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:0:avdd:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:1:avdd:i_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:2:avdd:i_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:1:avdd:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:avdd:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:1:avdd:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:2:avdd:i_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:3:avdd:i_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:2:avdd:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:avdd:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:2:avdd:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:avdd:i_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:0:v125:i_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:3:avdd:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:avdd:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:3:avdd:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+####### V125 I_RD BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:v125:i_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:1:v125:i_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:0:v125:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:v125:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:0:v125:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:1:v125:i_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:2:v125:i_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:1:v125:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:v125:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:1:v125:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:2:v125:i_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:3:v125:i_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:2:v125:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:v125:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:2:v125:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:v125:i_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:0:dvdd:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:3:v125:i_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:v125:i_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:3:v125:i_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+
+
+####### DVDD VN BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:dvdd:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:1:dvdd:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:0:dvdd:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:dvdd:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:0:dvdd:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:1:dvdd:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:2:dvdd:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:1:dvdd:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:dvdd:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:1:dvdd:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:2:dvdd:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:3:dvdd:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:2:dvdd:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:dvdd:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:2:dvdd:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:dvdd:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:0:dvdd:vf_sub")
+}
+
+record(ai, SVT:lv:hyb:bot:3:dvdd:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:dvdd:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:3:dvdd:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+
+####### DVDD VF BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:dvdd:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:1:dvdd:vf")
+}
+
+record(ai, SVT:lv:hyb:bot:0:dvdd:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:dvdd:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:0:dvdd:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:1:dvdd:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:2:dvdd:vf")
+}
+
+record(ai, SVT:lv:hyb:bot:1:dvdd:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:dvdd:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:1:dvdd:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:2:dvdd:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:3:dvdd:vf")
+}
+
+record(ai, SVT:lv:hyb:bot:2:dvdd:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:dvdd:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:2:dvdd:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:dvdd:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:0:avdd:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:3:dvdd:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:dvdd:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:3:dvdd:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+
+
+
+
+####### AVDD VN BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:avdd:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:1:avdd:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:0:avdd:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:avdd:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:0:avdd:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:1:avdd:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:2:avdd:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:1:avdd:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:avdd:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:1:avdd:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:2:avdd:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:3:avdd:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:2:avdd:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:avdd:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:2:avdd:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:avdd:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:0:avdd:vf")
+}
+
+record(ai, SVT:lv:hyb:bot:3:avdd:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:avdd:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:3:avdd:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+
+
+####### AVDD VF BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:avdd:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:1:avdd:vf")
+}
+
+record(ai, SVT:lv:hyb:bot:0:avdd:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:avdd:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:0:avdd:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:1:avdd:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:2:avdd:vf")
+}
+
+record(ai, SVT:lv:hyb:bot:1:avdd:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:avdd:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:1:avdd:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:2:avdd:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:3:avdd:vf")
+}
+
+record(ai, SVT:lv:hyb:bot:2:avdd:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:avdd:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:2:avdd:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:avdd:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:0:v125:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:3:avdd:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:avdd:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:3:avdd:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+
+
+####### V125 VN BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:v125:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:1:v125:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:0:v125:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:v125:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:0:v125:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:1:v125:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:2:v125:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:1:v125:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:v125:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:1:v125:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:2:v125:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:3:v125:vn")
+}
+
+record(ai, SVT:lv:hyb:bot:2:v125:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:v125:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:2:v125:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:v125:vn_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:0:v125:vf")
+}
+
+record(ai, SVT:lv:hyb:bot:3:v125:vn) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:v125:vn_sub")
+  field(INP, "SVT:lv:hyb:bot:3:v125:vn_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+
+
+####### V125 VF BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:v125:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:1:v125:vf")
+}
+
+record(ai, SVT:lv:hyb:bot:0:v125:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:v125:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:0:v125:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:1:v125:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:2:v125:vf")
+}
+
+record(ai, SVT:lv:hyb:bot:1:v125:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:v125:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:1:v125:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:2:v125:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:hyb:bot:3:v125:vf")
+}
+
+record(ai, SVT:lv:hyb:bot:2:v125:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:v125:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:2:v125:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:v125:vf_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:0:dvdd:v_set_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:3:v125:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:v125:vf_sub")
+  field(INP, "SVT:lv:hyb:bot:3:v125:vf_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+####### DVDD V_SET_RD BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:dvdd:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:1:dvdd:v_set_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:0:dvdd:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:dvdd:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:0:dvdd:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+record(sub,SVT:lv:hyb:bot:1:dvdd:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:2:dvdd:v_set_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:1:dvdd:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:dvdd:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:1:dvdd:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+record(sub,SVT:lv:hyb:bot:2:dvdd:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:3:dvdd:v_set_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:2:dvdd:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:dvdd:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:2:dvdd:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+record(sub,SVT:lv:hyb:bot:3:dvdd:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:0:avdd:v_set_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:3:dvdd:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:dvdd:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:3:dvdd:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+
+
+####### AVDD V_SET_RD BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:avdd:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:1:avdd:v_set_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:0:avdd:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:avdd:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:0:avdd:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+record(sub,SVT:lv:hyb:bot:1:avdd:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:2:avdd:v_set_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:1:avdd:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:avdd:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:1:avdd:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+record(sub,SVT:lv:hyb:bot:2:avdd:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:3:avdd:v_set_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:2:avdd:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:avdd:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:2:avdd:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+record(sub,SVT:lv:hyb:bot:3:avdd:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:0:v125:v_set_rd")
+
+}
+
+record(ai, SVT:lv:hyb:bot:3:avdd:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:avdd:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:3:avdd:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+
+####### V125 V_SET_RD BOT
+
+
+record(sub,SVT:lv:hyb:bot:0:v125:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:1:v125:v_set_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:0:v125:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:0:v125:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:0:v125:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+record(sub,SVT:lv:hyb:bot:1:v125:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:2:v125:v_set_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:1:v125:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:1:v125:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:1:v125:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+record(sub,SVT:lv:hyb:bot:2:v125:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:lv:hyb:bot:3:v125:v_set_rd")
+}
+
+record(ai, SVT:lv:hyb:bot:2:v125:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:2:v125:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:2:v125:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+record(sub,SVT:lv:hyb:bot:3:v125:v_set_rd_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK, "SVT:temp:hyb:bot:0:temp0:t_rd")
+
+}
+
+record(ai, SVT:lv:hyb:bot:3:v125:v_set_rd) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(FLNK,"SVT:lv:hyb:bot:3:v125:v_set_rd_sub")
+  field(INP, "SVT:lv:hyb:bot:3:v125:v_set_rd_sub CPP")
+  field(DTYP,"Soft Channel")
+
+}
+
+
+
+####### DVDD V_SET BOT
+
+
+
+record(sub,SVT:lv:hyb:bot:0:dvdd:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(ao, SVT:lv:hyb:bot:0:dvdd:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:0:dvdd:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:1:dvdd:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(ao, SVT:lv:hyb:bot:1:dvdd:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:1:dvdd:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:2:dvdd:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(ao, SVT:lv:hyb:bot:2:dvdd:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:2:dvdd:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:dvdd:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(ao, SVT:lv:hyb:bot:3:dvdd:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:3:dvdd:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+####### AVDD V_SET BOT
+
+
+
+record(sub,SVT:lv:hyb:bot:0:avdd:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+
+record(ao, SVT:lv:hyb:bot:0:avdd:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:0:avdd:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+
+record(bo, SVT:lv:hyb:bot:all:v_sync) {
+    field(FLNK, "SVT:lv:hyb:bot:1:all:v_sync_fanout")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "supervisory")
+}
+
+
+
+record(fanout, SVT:lv:hyb:bot:1:all:v_sync_fanout) {
+  field(SELM, "All")
+  field(LNK1, "SVT:lv:hyb:bot:1:avdd:v_sync")
+}
+
+record(ai, SVT:lv:hyb:bot:1:avdd:v_sync) {
+  field(SCAN, "Passive") 
+  field(PREC, "3")
+  field(INP, "SVT:lv:hyb:bot:1:avdd:v_set_rd")
+  field(FLNK,"SVT:lv:hyb:bot:1:avdd:v_set_sync")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(ao, SVT:lv:hyb:bot:1:avdd:v_set_sync) {
+  field(OMSL, "closed_loop")
+  field(DOL, "SVT:lv:hyb:bot:1:avdd:v_sync")
+  field(OUT, "SVT:lv:hyb:bot:1:avdd:v_set CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+
+
+record(sub,SVT:lv:hyb:bot:1:avdd:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(ao, SVT:lv:hyb:bot:1:avdd:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:1:avdd:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:lv:hyb:bot:2:avdd:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(ao, SVT:lv:hyb:bot:2:avdd:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:2:avdd:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:avdd:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(ao, SVT:lv:hyb:bot:3:avdd:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:3:avdd:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+####### V125 V_SET BOT
+
+
+
+record(sub,SVT:lv:hyb:bot:0:v125:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(ao, SVT:lv:hyb:bot:0:v125:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:0:v125:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:1:v125:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(ao, SVT:lv:hyb:bot:1:v125:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:1:v125:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:2:v125:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(ao, SVT:lv:hyb:bot:2:v125:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:2:v125:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:hyb:bot:3:v125:v_set_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(ao, SVT:lv:hyb:bot:3:v125:v_set) {
+  field(OUT, "SVT:lv:hyb:bot:3:v125:v_set_sub CPP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+
+####### ALL SWITCH BOT
+
+record(sub,SVT:lv:hyb:bot:0:all:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:0:all:switch) {
+    field(OUT, "SVT:lv:hyb:bot:0:all:switch_sub CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "supervisory")
+}
+
+record(sub,SVT:lv:hyb:bot:1:all:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:1:all:switch) {
+    field(OUT, "SVT:lv:hyb:bot:1:all:switch_sub CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "supervisory")
+}
+
+record(sub,SVT:lv:hyb:bot:2:all:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:2:all:switch) {
+    field(OUT, "SVT:lv:hyb:bot:2:all:switch_sub CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "supervisory")
+}
+
+record(sub,SVT:lv:hyb:bot:3:all:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:3:all:switch) {
+    field(OUT, "SVT:lv:hyb:bot:3:all:switch_sub CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "supervisory")
+}
+
+
+
+####### DVDD SWITCH BOT
+
+record(sub,SVT:lv:hyb:bot:0:dvdd:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:0:dvdd:switch) {
+    field(DOL,"SVT:lv:hyb:bot:0:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+
+record(sub,SVT:lv:hyb:bot:1:dvdd:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:1:dvdd:switch) {
+    field(DOL,"SVT:lv:hyb:bot:1:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+
+record(sub,SVT:lv:hyb:bot:2:dvdd:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:2:dvdd:switch) {
+    field(DOL,"SVT:lv:hyb:bot:2:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+
+record(sub,SVT:lv:hyb:bot:3:dvdd:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:3:dvdd:switch) {
+    field(DOL,"SVT:lv:hyb:bot:3:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+####### AVDD SWITCH BOT
+
+record(sub,SVT:lv:hyb:bot:0:avdd:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:0:avdd:switch) {
+    field(DOL,"SVT:lv:hyb:bot:0:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(sub,SVT:lv:hyb:bot:1:avdd:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:1:avdd:switch) {
+    field(DOL,"SVT:lv:hyb:bot:1:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(sub,SVT:lv:hyb:bot:2:avdd:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:2:avdd:switch) {
+    field(DOL,"SVT:lv:hyb:bot:2:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(sub,SVT:lv:hyb:bot:3:avdd:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:3:avdd:switch) {
+    field(DOL,"SVT:lv:hyb:bot:3:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+####### V125 SWITCH BOT
+
+record(sub,SVT:lv:hyb:bot:0:v125:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:0:v125:switch) {
+    field(DOL,"SVT:lv:hyb:bot:0:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(sub,SVT:lv:hyb:bot:1:v125:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:1:v125:switch) {
+    field(DOL,"SVT:lv:hyb:bot:1:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(sub,SVT:lv:hyb:bot:2:v125:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:2:v125:switch) {
+    field(DOL,"SVT:lv:hyb:bot:2:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(sub,SVT:lv:hyb:bot:3:v125:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+}
+
+record(bo, SVT:lv:hyb:bot:3:v125:switch) {
+    field(DOL,"SVT:lv:hyb:bot:3:all:switch CPP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+

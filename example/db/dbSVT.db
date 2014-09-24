@@ -1,0 +1,33 @@
+
+record(sub, SVT:poll_stat) {
+    field(SCAN,"Passive")
+    field(INAM,"subPollStatInit")
+    field(SNAM,"subPollStatProcess")
+    field(FLNK,"SVT:hb_check")
+}
+
+record(sub,SVT:poll_xml)
+{
+    field(SCAN,"5 second")
+    field(INAM,"subPollInit")
+    field(SNAM,"subPollProcess")
+    field(FLNK,"SVT:poll_stat")
+    field(INPA, "SVT:poll_xml_ip CPP")
+    field(INPB, "SVT:poll_xml_port CPP")
+}
+
+record(stringin, SVT:poll_xml_ip) {
+    field(VAL,"134.79.229.141")
+}
+
+record(longin, SVT:poll_xml_port) {
+    field(VAL,"8090")
+}
+
+record(bi, SVT:hb_check) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:poll_stat CPP")
+  field(DTYP,"Soft Channel")
+  field(FLNK,"SVT:temp:fe:0:axixadc:t_rd")
+}
+

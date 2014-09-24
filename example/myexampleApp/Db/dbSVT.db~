@@ -1,0 +1,18 @@
+
+record(sub,SVT:poll_xml)
+{
+    field(SCAN,"5 second")
+    field(INAM,"subPollInit")
+    field(SNAM,"subPollProcess")
+    field(FLNK,"SVT:temp:fe:0:axixadc:t_rd")
+    field(INPA, "SVT:poll_xml_ip CPP")
+    field(INPB, "SVT:poll_xml_port CPP")
+}
+
+record(stringin, SVT:poll_xml_ip) {
+    field(VAL,"134.79.229.141")
+}
+
+record(longin, SVT:poll_xml_port) {
+    field(VAL,"8090")
+}
