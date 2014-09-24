@@ -1,7 +1,0 @@
-variable(mySubDebug)
-function(subLVInit)
-function(subLVProcess)
-function(subTempInit)
-function(subTempProcess)
-function(subPollInit)
-function(subPollProcess)
