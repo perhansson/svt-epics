@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/10006/trunk/controls/epics/drivers/HVCAENx527App/op/css
+END
+HV_configurator.opi
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/!svn/ver/10006/trunk/controls/epics/drivers/HVCAENx527App/op/css/HV_configurator.opi
+END
+run_opi.csh
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/!svn/ver/10006/trunk/controls/epics/drivers/HVCAENx527App/op/css/run_opi.csh
+END
