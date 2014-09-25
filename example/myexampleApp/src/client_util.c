@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include "sys/ioctl.h"
 
-int client_util_debug = 0;
+int client_util_debug = 2;
 char *xml_string = NULL;
 xmlDoc* doc = NULL;
 xmlNode* xml_root = NULL;
@@ -244,7 +244,8 @@ void getXmlDoc(int sockfd, int read_status, int read_config) {
 	  if(client_util_debug>1) printf("getXmlDoc: found xml_root name %s\n",(xml_root)->name);
 	}
       } else {
-	if(client_util_debug>1) printf("getXmlDoc: problem building xml doc %p\n",doc);	
+	printf("getXmlDoc: problem building xml doc at %p from \n%s\n",doc,xml_string);
+	exit(1);
       }
     } else {
       printf("ERROR: getXmlDoc xml_string is there but has zero string length!\n");	
@@ -385,7 +386,7 @@ void readHybridI(int feb_id, int hyb_id,char ch_name[], char value[],const unsig
 
 void readHybridT(int feb_id, int hyb_id, int tId, char value[],const unsigned int MAX) {
   char tag[256];
-  sprintf(tag,"system:status:FrontEndTestFpga:FebCore:PowerMonitor:Hybrid%d_HTemp%d",hyb_id,tId);
+  sprintf(tag,"system:status:FrontEndTestFpga:FebCore:PowerMonitor:Hybrid%d_ZTemp%d",hyb_id,tId);
   getXMLValue(tag,value,MAX);
 }
 
@@ -421,21 +422,21 @@ xmlNode* retrieveElement(xmlDoc* doc, xmlNode* node, char* tag) {
   //int debug = 1;
   for(cur_node = node; cur_node; cur_node = cur_node->next) {
     if(found_it!=NULL) {
-      if(client_util_debug>1) printf("stop at cur_node %s prev %s  \n",cur_node->name,cur_node->prev->name);
+      if(client_util_debug>3) printf("stop at cur_node %s prev %s  \n",cur_node->name,cur_node->prev->name);
       break;
     }
-    if(client_util_debug>1) printf("Looking for %s and comparing to %s\n",tag,cur_node->name);
+    if(client_util_debug>3) printf("Looking for %s and comparing to %s\n",tag,cur_node->name);
     if( (!xmlStrcmp(cur_node->name,(const xmlChar*)tag)) ) {
-      if(client_util_debug>1) printf("found an element of type %d\n",cur_node->type);
+      if(client_util_debug>3) printf("found an element of type %d\n",cur_node->type);
       if (cur_node->type == XML_ELEMENT_NODE) {
-        if(client_util_debug>1) printf("found it\n");
+        if(client_util_debug>3) printf("found it\n");
         found_it = cur_node;
         break;
       }
     }
 
     if(found_it!=NULL) {
-      if(client_util_debug>1) printf("found it at name %s \n",cur_node->name);
+      if(client_util_debug>3) printf("found it at name %s \n",cur_node->name);
       return found_it;
     }
 
@@ -456,17 +457,62 @@ xmlNode* retrieveElement(xmlDoc* doc, xmlNode* node, char* tag) {
 
 int findSystemStr(char* buf, const int MAX, char** start) {
   if(client_util_debug>1) printf("finding system string from %p and %d chars len with start at %p\n",buf,MAX,*start);
-  char* s = strstr(buf,"<system>");  
-  if(s!=NULL) {
-    char* e = strstr(s,"</system>");
-    if(e!=NULL) {	
-      e = e + strlen("</system>");
-      *start = s;
-      long int l = e-s;
-      if(client_util_debug>1) printf("found s at %p and e at %p and *start at %p with len %ld \n",s,e,*start,l);
-      return (int)l;
+  char* b;
+  char* e;
+  char* s;
+  char* p_ending;
+  char* status_tag_s;
+  char* status_tag_e;
+
+  b = buf;
+  while(1!=0) {    
+    s = strstr(b,"<system>");  
+    p_ending = strchr(b,'\f');  
+
+    if(s!=NULL) {
+      if(p_ending!=NULL) {      
+	//check that status exists
+	if(client_util_debug>1) printf("found system at len %ld and ending and len %ld\n",s-b,p_ending-b);
+	status_tag_s = strstr(b,"<status>");
+	status_tag_e = strstr(b,"</status>");
+	// look at this system string  if status tags are found inside the ending
+	if(status_tag_s!=NULL && status_tag_e!=NULL) {
+	  if(client_util_debug>1) printf("found status tags at len %ld and %ld\n",status_tag_s-b, status_tag_e-b);
+	  if((status_tag_s-b)<(p_ending-b) && (status_tag_e-b)<(p_ending-b)) {
+	    if(client_util_debug>1) printf("found status tags inside ending\n");
+	    // return this
+	    *start = s;
+	    e = p_ending-1;
+	    if(client_util_debug>1) {
+	      printf("found s at %p and e at %p and *start at %p with len %ld \n",s,e,*start,e-s);
+	      printf("last characters are:\n");
+	      int ii;
+	      for(ii=-50;ii<=0;++ii) {
+		char ee = *(e+ii);
+		printf("%d: '%c'\n",ii,ee);
+	      }
+	    }
+	    return (int)(e-s);
+	  }
+	} 
+	else {
+	  // go to next, if there is one
+	  b = p_ending+1;
+	  if((b-buf)>MAX) return -1;
+	}
+      } else {
+	if(client_util_debug>1) printf("p_ending couldn't be found\n"); 
+	// nothing in this string to work with
+	break;
+      }
+    } else {
+      if(client_util_debug>1) printf("<system> couldn't be found\n"); 
+      // nothing in this string to work with
+      break;      
     }
   }
+  
+ 
   return -1;
 }
 
@@ -644,34 +690,43 @@ void pollXmlString(int socketfd) {
     if(client_util_debug>0) printf("pollXmlString: \nPick out config and status string between <system> and %d endings in string with strlen %ld and buf_len %d\n",n_endings,strlen(buf),buf_len);
     if(client_util_debug>1) printf("pollXmlString: \nbuf: \n%s\n",buf);
     
-    //assume it's the first system tag string I can find
+    //search for the <status> tag in each <system>->'\f' substring
     
     char* start = NULL;
     int len = findSystemStr(buf, buf_len,&start);    
     if(len>0) {      
       char* stop = start+len;
       if(client_util_debug>1) printf("pollXmlString: len %d start at %p stop at %p\n",len,start, stop);
-      char* config = strstr(start,"<config>");
-      if(config!=NULL && ((config-start)<len)) {
-	char* status = strstr(start,"<status>");
-	if(status!=NULL && ((status-start)<len)) {
-	  // seems we found all of them. 
-	  if(client_util_debug>1) printf("pollXmlString: \ncalloc xml string len %d\n",len);
-	  xml_string = (char*) calloc(len,sizeof(char));
-	  //xml_string = (char*) malloc(sizeof(char)*len);
-	  if(client_util_debug>1) printf("pollXmlString: copy to xml string at %p\n",xml_string);	
-	  memcpy(xml_string,start,len);
-	  if(client_util_debug>1) printf("pollXmlString: \ncopied %d chars to %p with strlen %ld\n%s\n",len,xml_string,strlen(xml_string),xml_string);
-	  
-	} else {
-	   if(client_util_debug>0) printf("pollXmlString: \n no status found\n");
-	}
-      } else {
-	if(client_util_debug>0) printf("pollXmlString: \n no config found\n");
-      }
+      if(client_util_debug>1) printf("pollXmlString: calloc xml string len %d\n",len);
+      xml_string = (char*) calloc(len+1,sizeof(char));
+      //xml_string = (char*) malloc(sizeof(char)*len);
+      if(client_util_debug>1) printf("pollXmlString: copy to xml string at %p\n",xml_string);	
+      memcpy(xml_string,start,len);
+      // terminate
+      xml_string[len] = '\0'; 
+      if(client_util_debug>1) printf("pollXmlString: \ncopied %d chars to %p with strlen %ld\n%s\n",len+1,xml_string,strlen(xml_string),xml_string);
+      
+/*       char* config = strstr(start,"<config>"); */
+/*       if(config!=NULL && ((config-start)<len)) { */
+/* 	char* status = strstr(start,"<status>"); */
+/* 	if(status!=NULL && ((status-start)<len)) { */
+/* 	  // seems we found all of them.  */
+/* 	  if(client_util_debug>1) printf("pollXmlString: calloc xml string len %d\n",len); */
+/* 	  xml_string = (char*) calloc(len,sizeof(char)); */
+/* 	  //xml_string = (char*) malloc(sizeof(char)*len); */
+/* 	  if(client_util_debug>1) printf("pollXmlString: copy to xml string at %p\n",xml_string);	 */
+/* 	  memcpy(xml_string,start,len); */
+/* 	  if(client_util_debug>1) printf("pollXmlString: \ncopied %d chars to %p with strlen %ld\n%s\n",len,xml_string,strlen(xml_string),xml_string); */
+      
+/* 	} else { */
+/* 	   if(client_util_debug>0) printf("pollXmlString: \n no status found\n"); */
+/* 	} */
+/*       } else { */
+/* 	if(client_util_debug>0) printf("pollXmlString: \n no config found\n"); */
+/*       } */
     }
     else {
-      if(client_util_debug>0) printf("pollXmlString: Couldn't find system string in xml buffer\n");
+      if(client_util_debug>0) printf("pollXmlString: Couldn't find system and/or status string in xml buffer\n");
     }
   } 
   
@@ -747,5 +802,12 @@ void retrieveValue(xmlDoc* doc, xmlNode* node, char* tags, char value[], const u
   if(value_str!=NULL) {
     if(client_util_debug>1) printf("retrieveValue: free value_str\n");
     xmlFree(value_str);
+  }
+}
+
+
+void getXmlDocStrFormat(char** xml_str, int * xml_str_len) {
+  if(doc!=NULL) {
+    xmlDocDumpFormatMemoryEnc	(doc,xml_str,xml_str_len, "UTF-8",1);    
   }
 }

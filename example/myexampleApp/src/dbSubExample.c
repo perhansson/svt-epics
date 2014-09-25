@@ -194,7 +194,7 @@ static long subPollStatInit(subRecord *precord) {
       
       if (mySubDebug) printf("writeHybrid: Poll xml string after write\n");
       
-      getXmlDoc(sockfd,0,0);
+      getXmlDoc(sockfd,1,0);
       
       if (mySubDebug) printf("writeHybrid:  Poll XML done after write.\n");
       
@@ -215,7 +215,7 @@ static long subPollStatInit(subRecord *precord) {
 	
 	if (mySubDebug) printf("writeHybrid: Poll xml string after write\n");
 
-	getXmlDoc(sockfd,0,0);
+	getXmlDoc(sockfd,1,0);
 
 	if (mySubDebug) printf("writeHybrid:  Poll XML done after write.\n");
 	
@@ -256,7 +256,7 @@ static long subPollStatInit(subRecord *precord) {
   }
 
   //set to default
-  precord->val = def_hyb_t;
+  //precord->val = def_hyb_t;
   
   char value[BUF_SIZE];
   memset(value,0,BUF_SIZE);
@@ -314,7 +314,7 @@ static long subPollStatInit(subRecord *precord) {
   memset(value,0,BUF_SIZE);
   if(strcmp(action,"t_rd_sub")==0) {
     //set to default
-    precord->val=def_AxiXadcTemp;
+    //precord->val=def_AxiXadcTemp;
     readFebT(feb_id, value, ch_name, BUF_SIZE);
     
   } 
@@ -602,6 +602,19 @@ static long subPollProcess(subRecord *precord) {
   if(sockfd>0) {
     sockfd = close_socket(sockfd);
   } 
+
+  if(mySubDebug>1) {
+    char * s = NULL;
+    int len;
+    getXmlDocStrFormat(&s, &len);
+    printf("subPollProcess: got XML with len %d\n", len);
+    if(len>0) printf("\n%s\n",s);
+    if(s!=NULL) {
+      printf("subPollProcess: free string at %p\n",s);      
+      free(s);
+      printf("subPollProcess: done free string at %p\n",s);      
+    }
+  }
 
   if (mySubDebug) printf("subPollProcess: before update status_poll_flag = %d\n", status_poll_flag);
   
