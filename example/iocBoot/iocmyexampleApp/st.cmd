@@ -22,7 +22,7 @@ dbLoadRecords "db/dbFebTemp.db"
 dbLoadRecords "db/dbSVT.db"
 
 ## Set this to see messages from mySub
-var mySubDebug 2
+var mySubDebug 3
 
 ## Run this to trace the stages of iocInit
 traceIocInit
