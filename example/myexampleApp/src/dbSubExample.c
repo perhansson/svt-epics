@@ -194,7 +194,7 @@ static long subPollStatInit(subRecord *precord) {
       
       if (mySubDebug) printf("writeHybrid: Poll xml string after write\n");
       
-      getXmlDoc(sockfd,1,0);
+      getXmlDoc(sockfd,0,0);
       
       if (mySubDebug) printf("writeHybrid:  Poll XML done after write.\n");
       
@@ -215,7 +215,7 @@ static long subPollStatInit(subRecord *precord) {
 	
 	if (mySubDebug) printf("writeHybrid: Poll xml string after write\n");
 
-	getXmlDoc(sockfd,1,0);
+	getXmlDoc(sockfd,0,0);
 
 	if (mySubDebug) printf("writeHybrid:  Poll XML done after write.\n");
 	
@@ -596,7 +596,7 @@ static long subPollProcess(subRecord *precord) {
   
   if (mySubDebug) printf("subPollProcess: Poll xml string\n");
   
-  getXmlDoc(sockfd,1,0);
+  getXmlDoc(sockfd,0,0);
   
   if (mySubDebug) printf("subPollProcess: Poll XML done. Close socket if needed\n");
   if(sockfd>0) {

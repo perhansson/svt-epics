@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include "sys/ioctl.h"
 
-int client_util_debug = 2;
+int client_util_debug = 3;
 char *xml_string = NULL;
 xmlDoc* doc = NULL;
 xmlNode* xml_root = NULL;
@@ -130,11 +130,11 @@ int open_socket(char* hostname, int portno) {
   int socketfd;
   if(client_util_debug>0) printf("open_socket : open for %s:%d \n",hostname,portno);
   socketfd = socket(AF_INET, SOCK_STREAM, 0);
-  if(client_util_debug>1) printf("open_socket : opened socket %d \n",socketfd);
   if (socketfd < 0) {
     socket_error("ERROR opening socket");
     return socketfd;
   }
+  if(client_util_debug>1) printf("open_socket : opened socket %d \n",socketfd);
   if(client_util_debug>1) printf("open_socket : set server\n");
   server = gethostbyname(hostname);
   if (server == NULL) {
