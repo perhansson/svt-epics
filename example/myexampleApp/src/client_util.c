@@ -146,9 +146,12 @@ int open_socket(char* hostname, int portno) {
     if(client_util_debug>1) printf("[ open_socket ]: Getting the host information\n");
     server = gethostbyname(hostname);
     if (server == NULL) {
-        socket_error("[ open_socket ]: [ ERROR ]: Host was not found.");
-        close_socket(socketfd);
-        return -1;
+      char msgstr[256];
+      sprintf(msgstr,"[ open_socket ]: [ ERROR ]: Host \"%s\" was not found.",hostname);
+      //socket_error("[ open_socket ]: [ ERROR ]: Host was not found.");
+      socket_error(msgstr);
+      close_socket(socketfd);
+      return -1;
     }
     if(client_util_debug > 1) printf("[ open_socket ]: Host with name %s found at address %s \n", 
                                         server->h_name, server->h_addr);
@@ -179,11 +182,11 @@ int close_socket(int socketfd) {
 
 void getXmlDoc(int sockfd, int read_status, int read_config) {
 
-    if(client_util_debug>0) printf("getXmlDoc: from socket %d (read_status %d read_config %d)\n",sockfd,read_status,read_config);
+    if(client_util_debug>0) printf("[ getXmlDoc ]: from socket %d (read_status %d read_config %d)\n",sockfd,read_status,read_config);
 
     // check that I'm not already polling it
     if(xml_poll_status==1) {
-        if(client_util_debug>0) printf("getXmlDoc: already polling so don't continue for this process (%d,%p)\n",xml_poll_status,xml_string);    
+        if(client_util_debug>0) printf("[ getXmlDoc ]: already polling so don't continue for this process (%d,%p)\n",xml_poll_status,xml_string);    
         return;
     }
 
@@ -191,24 +194,24 @@ void getXmlDoc(int sockfd, int read_status, int read_config) {
     xml_poll_status = 1;
 
     //clear old documents
-    if(client_util_debug>1) printf("getXmlDoc: free xml string %p\n",xml_string);
+    if(client_util_debug>1) printf("[ getXmlDoc ]: free xml string %p\n",xml_string);
     free_xml_string();
     //if(xml_string!=NULL) {
     //  free(xml_string);
     //}
-    if(client_util_debug>1) printf("getXmlDoc: free xml string done %p\n",xml_string);
-    if(client_util_debug>1) printf("getXmlDoc: free xml doc\n");
+    if(client_util_debug>1) printf("[ getXmlDoc ]: free xml string done %p\n",xml_string);
+    if(client_util_debug>1) printf("[ getXmlDoc ]: free xml doc\n");
     if(doc!=NULL) {
         xmlFreeDoc(doc);
         xmlCleanupParser();
         doc=NULL;
         xml_root=NULL;
     }
-    if(client_util_debug>1) printf("getXmlDoc: free xml doc done\n");
+    if(client_util_debug>1) printf("[ getXmlDoc ]: free xml doc done\n");
 
     // check that the socket is open
     if(sockfd<=0) {
-        if(client_util_debug>0) printf("getXmlDoc: socket is not open.\n");
+        if(client_util_debug>0) printf("[ getXmlDoc ]: socket is not open.\n");
         //clear the flag
         xml_poll_status = 0;
         return;
@@ -221,7 +224,7 @@ void getXmlDoc(int sockfd, int read_status, int read_config) {
 
     if(read_status>0) {
 
-        if(client_util_debug>0) printf("getXmlDoc: ReadStatus\n");
+        if(client_util_debug>0) printf("[ getXmlDoc ]: ReadStatus\n");
 
         writeReadStatus(sockfd);
 
@@ -229,44 +232,44 @@ void getXmlDoc(int sockfd, int read_status, int read_config) {
 
     if(read_config>0) {
 
-        if(client_util_debug>0) printf("getXmlDoc: ReadConfig\n");
+        if(client_util_debug>0) printf("[ getXmlDoc ]: ReadConfig\n");
 
         writeReadConfig(sockfd);
 
     }
 
-    if(client_util_debug>1) printf("getXmlDoc: Before reading xml string (%p)\n",xml_string);
+    if(client_util_debug>1) printf("[ getXmlDoc ]: Before reading xml string (%p)\n",xml_string);
 
     pollXmlString(sockfd);
 
-    if(client_util_debug>1) printf("getXmlDoc: After reading xml string (%p)\n",xml_string);
+    if(client_util_debug>1) printf("[ getXmlDoc ]: After reading xml string (%p)\n",xml_string);
 
     if(xml_string!=NULL) {
         if(strlen(xml_string)>0) {
-            if(client_util_debug>1) printf("getXmlDoc: create xml document from xml string(strlen %ld)\n",strlen(xml_string));
-            if(client_util_debug>0) printf("getXmlDoc: xml string:\n%s\n",xml_string);
+            if(client_util_debug>1) printf("[ getXmlDoc ]: create xml document from xml string(strlen %ld)\n",strlen(xml_string));
+            if(client_util_debug>0) printf("[ getXmlDoc ]: xml string:\n%s\n",xml_string);
             doc = xmlReadMemory(xml_string,strlen(xml_string),"noname.xml",NULL,0);
-            if(client_util_debug>1) printf("getXmlDoc: xml doc done %p\n",doc);
+            if(client_util_debug>1) printf("[ getXmlDoc ]: xml doc done %p\n",doc);
             if(doc!=NULL) {
                 xml_root = xmlDocGetRootElement(doc);
                 if(xml_root!=NULL) {
-                    if(client_util_debug>1) printf("getXmlDoc: found xml_root name %s\n",(xml_root)->name);
+                    if(client_util_debug>1) printf("[ getXmlDoc ]: found xml_root name %s\n",(xml_root)->name);
                 }
             } else {
-                printf("getXmlDoc: problem building xml doc at %p from \n%s\n",doc,xml_string);
+                printf("[ getXmlDoc ]: [ ERROR ]: problem building xml doc at %p from \n%s\n",doc,xml_string);
                 exit(1);
             }
         } else {
-            printf("ERROR: getXmlDoc xml_string is there but has zero string length!\n");	
+            printf("[ getXmlDoc ]: [ ERROR ]: xml_string is there but has zero string length!\n");	
             exit(1);
         }
     } else {
-        printf("WARNING: getXmlDoc: xml_string is NULL after reading from socket!\n");	
+        printf("[ getXmlDoc ]: [ WARNING ]:  xml_string is NULL after reading from socket!\n");	
     }
 
     //clear the flag
     xml_poll_status = 0;
-    if(client_util_debug>0) printf("getXmlDoc: cleared the flag and return (%d)\n",xml_poll_status);
+    if(client_util_debug>0) printf("[ getXmlDoc ]: cleared the flag and return (%d)\n",xml_poll_status);
 
 }
 
@@ -358,18 +361,18 @@ void writeReadStatus(int sockfd) {
 
 
 void getXMLValue(char tag[], char value[],const unsigned int MAX) {
-    if(client_util_debug>0) printf("getXMLValue: tag \"%s\"\n",tag);
+    if(client_util_debug>0) printf("[ getXMLValue ]: tag \"%s\"\n",tag);
     if(doc==NULL) {
-        if(client_util_debug>0) printf("WARNING: getXMLValue: couldn't get xml document %p\n",doc);
+        if(client_util_debug>0) printf("[ getXMLValue ]: [ WARNING ]: no xml document available at %p.\n",doc);
         return;
     }
     if(xml_root==NULL) {
-        if(client_util_debug>0) printf("WARNING: getXMLValue: couldn't get root from document\n");
+        if(client_util_debug>0) printf("[ getXMLValue ]: [ WARNING ]: no xml root element available.\n");
         return;
     }  
-    if(client_util_debug>1) printf("getXMLValue: retrieve value from xml document\n");
+    if(client_util_debug>1) printf("[ getXMLValue ]: retrieve value from xml document\n");
     retrieveValue(doc,xml_root,tag,value,MAX);
-    if(client_util_debug>1) printf("getXMLValue: retrieved value \"%s\" from xml\n",value);
+    if(client_util_debug>1) printf("[ getXMLValue ]: retrieved value \"%s\" from xml\n",value);
 }
 
 
@@ -381,7 +384,7 @@ void readFebT(int feb_id, char value[],char ch_name[],const unsigned int MAX) {
     } else if(strcmp(ch_name,"FebTemp0")==0 || strcmp(ch_name,"FebTemp1")==0) {
         sprintf(tag,"system:status:FrontEndTestFpga:FebCore:PowerMonitor:%s",ch_name);
     } else {
-        printf("Error: wrong ch_name \"%s\" for readFebT\n",ch_name);
+        printf("[ readFebT }: [ERROR]: wrong ch_name \"%s\" for readFebT\n",ch_name);
         return;
     }
     getXMLValue(tag,value,MAX);
@@ -431,21 +434,21 @@ xmlNode* retrieveElement(xmlDoc* doc, xmlNode* node, char* tag) {
     //int debug = 1;
     for(cur_node = node; cur_node; cur_node = cur_node->next) {
         if(found_it!=NULL) {
-            if(client_util_debug>3) printf("stop at cur_node %s prev %s  \n",cur_node->name,cur_node->prev->name);
+            if(client_util_debug>3) printf("[ retrieveElement ]: stop at cur_node %s prev %s  \n",cur_node->name,cur_node->prev->name);
             break;
         }
-        if(client_util_debug>3) printf("Looking for %s and comparing to %s\n",tag,cur_node->name);
+        if(client_util_debug>3) printf("[ retrieveElement ]: Looking for %s and comparing to %s\n",tag,cur_node->name);
         if( (!xmlStrcmp(cur_node->name,(const xmlChar*)tag)) ) {
-            if(client_util_debug>3) printf("found an element of type %d\n",cur_node->type);
+            if(client_util_debug>3) printf("[ retrieveElement ]: found an element of type %d\n",cur_node->type);
             if (cur_node->type == XML_ELEMENT_NODE) {
-                if(client_util_debug>3) printf("found it\n");
+                if(client_util_debug>3) printf("[ retrieveElement ]: found it\n");
                 found_it = cur_node;
                 break;
             }
         }
 
         if(found_it!=NULL) {
-            if(client_util_debug>3) printf("found it at name %s \n",cur_node->name);
+            if(client_util_debug>3) printf("[ retrieveElement ]: found it at name %s \n",cur_node->name);
             return found_it;
         }
 
@@ -465,7 +468,7 @@ xmlNode* retrieveElement(xmlDoc* doc, xmlNode* node, char* tag) {
 
 
 int findSystemStr(char* buf, const int MAX, char** start) {
-    if(client_util_debug>1) printf("finding system string from %p and %d chars len with start at %p\n",buf,MAX,*start);
+    if(client_util_debug>1) printf("[ findSystemStr ]: finding system string from %p and %d chars len with start at %p\n",buf,MAX,*start);
     char* b;
     char* e;
     char* s;
@@ -481,24 +484,24 @@ int findSystemStr(char* buf, const int MAX, char** start) {
         if(s!=NULL) {
             if(p_ending!=NULL) {      
                 //check that status exists
-                if(client_util_debug>1) printf("found system at len %ld and ending and len %ld\n",s-b,p_ending-b);
+                if(client_util_debug>1) printf("[ findSystemStr ]: found system at len %ld and ending and len %ld\n",s-b,p_ending-b);
                 status_tag_s = strstr(b,"<status>");
                 status_tag_e = strstr(b,"</status>");
                 // look at this system string  if status tags are found inside the ending
                 if(status_tag_s!=NULL && status_tag_e!=NULL) {
-                    if(client_util_debug>1) printf("found status tags at len %ld and %ld\n",status_tag_s-b, status_tag_e-b);
+                    if(client_util_debug>1) printf("[ findSystemStr ]: found status tags at len %ld and %ld\n",status_tag_s-b, status_tag_e-b);
                     if((status_tag_s-b)<(p_ending-b) && (status_tag_e-b)<(p_ending-b)) {
-                        if(client_util_debug>1) printf("found status tags inside ending\n");
+                        if(client_util_debug>1) printf("[ findSystemStr ]: found status tags inside ending\n");
                         // return this
                         *start = s;
                         e = p_ending-1;
                         if(client_util_debug>1) {
-                            printf("found s at %p and e at %p and *start at %p with len %ld \n",s,e,*start,e-s);
-                            printf("last characters are:\n");
+                            printf("[ findSystemStr ]: found s at %p and e at %p and *start at %p with len %ld \n",s,e,*start,e-s);
+                            printf("[ findSystemStr ]: last characters are:\n");
                             int ii;
                             for(ii=-50;ii<=0;++ii) {
                                 char ee = *(e+ii);
-                                printf("%d: '%c'\n",ii,ee);
+                                printf("[ findSystemStr ]: %d: '%c'\n",ii,ee);
                             }
                         }
                         return (int)(e-s);
@@ -510,12 +513,12 @@ int findSystemStr(char* buf, const int MAX, char** start) {
                     if((b-buf)>MAX) return -1;
                 }
             } else {
-                if(client_util_debug>1) printf("p_ending couldn't be found\n"); 
+                if(client_util_debug>1) printf("[ findSystemStr ]: p_ending couldn't be found\n"); 
                 // nothing in this string to work with
                 break;
             }
         } else {
-            if(client_util_debug>1) printf("<system> couldn't be found\n"); 
+            if(client_util_debug>1) printf("[ findSystemStr ]: <system> couldn't be found\n"); 
             // nothing in this string to work with
             break;      
         }
@@ -544,7 +547,7 @@ void pollXmlString(int socketfd) {
     char *pch;
 
 
-    if(client_util_debug>0) printf("pollXmlString:  from socket %d \n", socketfd);
+    if(client_util_debug>0) printf("[ pollXmlString ]:  from socket %d \n", socketfd);
 
     free_xml_string();
 
@@ -552,7 +555,7 @@ void pollXmlString(int socketfd) {
 
     if(client_util_debug>0) {
         lt = localtime(&timer);
-        printf("pollXmlString: start_time at %s\n",asctime(lt));
+        printf("[ pollXmlString ]: start_time at %s\n",asctime(lt));
     }
 
     nsleep=0;
@@ -567,90 +570,90 @@ void pollXmlString(int socketfd) {
         time(&cur_time);
         dt = difftime(cur_time,timer);
 
-        if(client_util_debug>0) printf("pollXmlString: Try to read from socket (nsleep %d read_i %d time %ds)\n",nsleep,read_i,dt);
+        if(client_util_debug>0) printf("[ pollXmlString ]: Try to read from socket (nsleep %d read_i %d time %ds)\n",nsleep,read_i,dt);
 
         read_n = 0;
         ioctl(socketfd, FIONREAD, &read_n);
 
         if(client_util_debug>0) {
-            printf("pollXmlString: %d chars available on socket\n",read_n);
+            printf("[ pollXmlString ]: %d chars available on socket\n",read_n);
         }
 
         if(read_n>0) {      
 
             // allocate memory needed
-            if(client_util_debug>1) printf("pollXmlString: Allocate %d array\n",read_n);      
+            if(client_util_debug>1) printf("[ pollXmlString ]: Allocate %d array\n",read_n);      
 
             // check that the buffer used is not weird
             if(buf_loop!=NULL) {
-                printf("pollXmlString: ERROR: pollXmlString: buf_loop is not null!\n");
+                printf("[ pollXmlString ]: [ ERROR ]: buf_loop is not null!\n");
                 exit(1);
             }
 
             // allocate space to hold the input
             buf_loop = (char*) calloc(read_n+1,sizeof(char));
 
-            if(client_util_debug>1) printf("pollXmlString: Allocated buf_loop array at %p strlen %ld with %d length \n",buf_loop,strlen(buf_loop),(int)sizeof(char)*(read_n+1));      
+            if(client_util_debug>1) printf("[ pollXmlString ]: Allocated buf_loop array at %p strlen %ld with %d length \n",buf_loop,strlen(buf_loop),(int)sizeof(char)*(read_n+1));      
 
             // Read from socket
             read_n = read(socketfd,buf_loop,read_n);
 
-            if(client_util_debug>0) printf("pollXmlString: Read %d chars from socket\n",read_n);
+            if(client_util_debug>0) printf("[ pollXmlString ]: Read %d chars from socket\n",read_n);
 
-            if(client_util_debug>2) printf("pollXmlString: buf_loop strlen is %ld\n",strlen(buf_loop));
+            if(client_util_debug>2) printf("[ pollXmlString ]: buf_loop strlen is %ld\n",strlen(buf_loop));
 
             if (read_n < 0) {
-                printf("pollXmlString: ERROR: pollXmlString: read %d from socket\n",read_n);
+                printf("[ pollXmlString ]: [ ERROR ]: read %d from socket\n",read_n);
                 exit(1);
             }
 
             //fix c-string terminations, cases where there is a termination in the middle..
             int k;
             for(k=0;k<read_n;++k) {
-                //printf("pollXmlString: '%c'\n",buf_loop[k]);
+                //printf("[ pollXmlString ]: '%c'\n",buf_loop[k]);
                 if(buf_loop[k]=='\0') {
-                    if(client_util_debug>2) printf("pollXmlString: fix termination at idx %d in this buf_loop\n",k);
+                    if(client_util_debug>2) printf("[ pollXmlString ]: fix termination at idx %d in this buf_loop\n",k);
                     buf_loop[k]=' ';
                 }
             }
 
-            if(client_util_debug>2) printf("pollXmlString: Fixed buf_loop strlen %ld:\n%s\n",strlen(buf_loop),buf_loop);
+            if(client_util_debug>2) printf("[ pollXmlString ]: Fixed buf_loop strlen %ld:\n%s\n",strlen(buf_loop),buf_loop);
 
 
             // search for xml endings in this buffer
             pch = strchr(buf_loop,'\f'); 
             while(pch!=NULL) { 
-                if(client_util_debug>1) printf("pollXmlString: found ending at %p (array index %ld) in this buf!\n",pch,pch-buf_loop); 
+                if(client_util_debug>1) printf("[ pollXmlString ]: found ending at %p (array index %ld) in this buf!\n",pch,pch-buf_loop); 
                 n_endings++; 
                 pch = strchr(pch+1,'\f'); 
             } 
 
 
             // copy to other buffer while looping            
-            if(client_util_debug>2) printf("pollXmlString: Copy %d to other buffer (at %p before realloc) \n",read_n,buf);      
+            if(client_util_debug>2) printf("[ pollXmlString ]: Copy %d to other buffer (at %p before realloc) \n",read_n,buf);      
 
             // reallocate more memory
             buf = (char*) realloc(buf,sizeof(char)*(buf_len+read_n));
             if(buf==NULL) {
-                printf("pollXmlString: ERROR: pollXmlString: failed to allocated buf\n");
+                printf("[ pollXmlString ]: [ ERROR ]: failed to allocated buf\n");
                 if(buf_loop==NULL) {
                     free(buf_loop);
                 }
                 exit(1);
             }
 
-            if(client_util_debug>2) printf("pollXmlString: Allocated longer buf at %p and copy to pointer %p (offset= %d) \n",buf,buf+buf_len,buf_len);      
+            if(client_util_debug>2) printf("[ pollXmlString ]: Allocated longer buf at %p and copy to pointer %p (offset= %d) \n",buf,buf+buf_len,buf_len);      
 
 
             // do the copy
             memcpy(buf+buf_len,buf_loop,sizeof(char)*read_n);
 
-            if(client_util_debug>1) printf("pollXmlString: memcpy done\n");
+            if(client_util_debug>1) printf("[ pollXmlString ]: memcpy done\n");
 
             //update the buffer length counter
             buf_len += read_n;      
 
-            if(client_util_debug>1) printf("pollXmlString: free buf_loop\n");
+            if(client_util_debug>1) printf("[ pollXmlString ]: free buf_loop\n");
 
             // free loop buffer for next loop
             if(buf_loop!=NULL) {
@@ -658,13 +661,13 @@ void pollXmlString(int socketfd) {
                 buf_loop=NULL;
             }
 
-            if(client_util_debug>2) printf("pollXmlString: end of read_i %d with buf strlen %ld\n",read_i,strlen(buf));
+            if(client_util_debug>2) printf("[ pollXmlString ]: end of read_i %d with buf strlen %ld\n",read_i,strlen(buf));
 
             read_i++;
 
         } // read_n>0
         else {
-            if(client_util_debug>0) printf("pollXmlString: Nothing to read from socket. Sleep 1s..\n");      
+            if(client_util_debug>0) printf("[ pollXmlString ]: Nothing to read from socket. Sleep 1s..\n");      
             sleep(1);
             nsleep++;
         } 
@@ -672,7 +675,7 @@ void pollXmlString(int socketfd) {
 
 
         if(n_endings>1) {
-            if(client_util_debug>0) printf("pollXmlString: \nfound %d endings at read_i %d with at len %d and strlen %ld. Stop reading from buffer\n",n_endings,read_i,buf_len,strlen(buf));      
+            if(client_util_debug>0) printf("[ pollXmlString ]: \nfound %d endings at read_i %d with at len %d and strlen %ld. Stop reading from buffer\n",n_endings,read_i,buf_len,strlen(buf));      
             break;
         }
 
@@ -681,7 +684,7 @@ void pollXmlString(int socketfd) {
 
         // dummy check for time-out?
         if(counter>50) {
-            printf("pollXmlString: Many (%d) iterations to get XML string. Something is strange\n",counter);
+            printf("[ pollXmlString ]: Many (%d) iterations to get XML string. Something is strange\n",counter);
             break;
         }
 
@@ -690,14 +693,14 @@ void pollXmlString(int socketfd) {
 
 
     if(client_util_debug>0) {
-        printf("pollXmlString: Done reading from socket. Found %d endings and a buf_len of %d\n",n_endings, buf_len);
-        if(buf!=NULL) printf("pollXmlString: strlen %ld\n", strlen(buf));
+        printf("[ pollXmlString ]: Done reading from socket. Found %d endings and a buf_len of %d\n",n_endings, buf_len);
+        if(buf!=NULL) printf("[ pollXmlString ]: strlen %ld\n", strlen(buf));
     }
 
 
     if(n_endings>=1) {
-        if(client_util_debug>0) printf("pollXmlString: \nPick out config and status string between <system> and %d endings in string with strlen %ld and buf_len %d\n",n_endings,strlen(buf),buf_len);
-        if(client_util_debug>1) printf("pollXmlString: \nbuf: \n%s\n",buf);
+        if(client_util_debug>0) printf("[ pollXmlString ]: \nPick out config and status string between <system> and %d endings in string with strlen %ld and buf_len %d\n",n_endings,strlen(buf),buf_len);
+        if(client_util_debug>1) printf("[ pollXmlString ]: \nbuf: \n%s\n",buf);
 
         //search for the <status> tag in each <system>->'\f' substring
 
@@ -705,42 +708,42 @@ void pollXmlString(int socketfd) {
         int len = findSystemStr(buf, buf_len,&start);    
         if(len>0) {      
             char* stop = start+len;
-            if(client_util_debug>1) printf("pollXmlString: len %d start at %p stop at %p\n",len,start, stop);
-            if(client_util_debug>1) printf("pollXmlString: calloc xml string len %d\n",len);
+            if(client_util_debug>1) printf("[ pollXmlString ]: len %d start at %p stop at %p\n",len,start, stop);
+            if(client_util_debug>1) printf("[ pollXmlString ]: calloc xml string len %d\n",len);
             xml_string = (char*) calloc(len+1,sizeof(char));
             //xml_string = (char*) malloc(sizeof(char)*len);
-            if(client_util_debug>1) printf("pollXmlString: copy to xml string at %p\n",xml_string);	
+            if(client_util_debug>1) printf("[ pollXmlString ]: copy to xml string at %p\n",xml_string);	
             memcpy(xml_string,start,len);
             // terminate
             xml_string[len] = '\0'; 
-            if(client_util_debug>1) printf("pollXmlString: \ncopied %d chars to %p with strlen %ld\n%s\n",len+1,xml_string,strlen(xml_string),xml_string);
+            if(client_util_debug>1) printf("[ pollXmlString ]: \ncopied %d chars to %p with strlen %ld\n%s\n",len+1,xml_string,strlen(xml_string),xml_string);
 
             /*       char* config = strstr(start,"<config>"); */
             /*       if(config!=NULL && ((config-start)<len)) { */
             /* 	char* status = strstr(start,"<status>"); */
             /* 	if(status!=NULL && ((status-start)<len)) { */
             /* 	  // seems we found all of them.  */
-            /* 	  if(client_util_debug>1) printf("pollXmlString: calloc xml string len %d\n",len); */
+            /* 	  if(client_util_debug>1) printf("[ pollXmlString ]: calloc xml string len %d\n",len); */
             /* 	  xml_string = (char*) calloc(len,sizeof(char)); */
             /* 	  //xml_string = (char*) malloc(sizeof(char)*len); */
-            /* 	  if(client_util_debug>1) printf("pollXmlString: copy to xml string at %p\n",xml_string);	 */
+            /* 	  if(client_util_debug>1) printf("[ pollXmlString ]: copy to xml string at %p\n",xml_string);	 */
             /* 	  memcpy(xml_string,start,len); */
-            /* 	  if(client_util_debug>1) printf("pollXmlString: \ncopied %d chars to %p with strlen %ld\n%s\n",len,xml_string,strlen(xml_string),xml_string); */
+            /* 	  if(client_util_debug>1) printf("[ pollXmlString ]: \ncopied %d chars to %p with strlen %ld\n%s\n",len,xml_string,strlen(xml_string),xml_string); */
 
             /* 	} else { */
-            /* 	   if(client_util_debug>0) printf("pollXmlString: \n no status found\n"); */
+            /* 	   if(client_util_debug>0) printf("[ pollXmlString ]: \n no status found\n"); */
             /* 	} */
             /*       } else { */
-            /* 	if(client_util_debug>0) printf("pollXmlString: \n no config found\n"); */
+            /* 	if(client_util_debug>0) printf("[ pollXmlString ]: \n no config found\n"); */
             /*       } */
         }
         else {
-            if(client_util_debug>0) printf("pollXmlString: Couldn't find system and/or status string in xml buffer\n");
+            if(client_util_debug>0) printf("[ pollXmlString ]: Couldn't find system and/or status string in xml buffer\n");
         }
     } 
 
     if(xml_string==NULL) {
-        if(client_util_debug>0) printf("pollXmlString: No valid xml string extracted from this poll (%d endings)\n",n_endings);
+        if(client_util_debug>0) printf("[ pollXmlString ]: No valid xml string extracted from this poll (%d endings)\n",n_endings);
     }
 
     return;
@@ -759,25 +762,25 @@ void retrieveValue(xmlDoc* doc, xmlNode* node, char* tags, char value[], const u
     //use a copy since it modifies the original string
     //char* tags = (char*)malloc(strlen(tags)*sizeof(char));
     //strcpy(tags,tags);
-    if(client_util_debug>0) printf("retrieveValue: for tag \"%s\"\n",tags);
+    if(client_util_debug>0) printf("[ retrieveValue ]: for tag \"%s\"\n",tags);
     if(strlen(tags)>0) {
         pch = strtok(tags," :,.-");
         while(pch!=NULL) {
-            if(client_util_debug>2) printf("retrieveValue: Find element %s \n",pch);
+            if(client_util_debug>2) printf("[ retrieveValue ]: Find element %s \n",pch);
             if(pch_prev!=NULL) {
-                if(client_util_debug>2) printf("retrieveValue: Find element %s from children of prev element at %p\n",pch,prev_node->name);
+                if(client_util_debug>2) printf("[ retrieveValue ]: Find element %s from children of prev element at %p\n",pch,prev_node->name);
                 cur_node = retrieveElement(doc,prev_node->children,pch);
             }
             else {
-                if(client_util_debug>2) printf("retrieveValue: Find element %s from element %s\n",pch,prev_node->name);
+                if(client_util_debug>2) printf("[ retrieveValue ]: Find element %s from element %s\n",pch,prev_node->name);
                 cur_node = retrieveElement(doc,prev_node,pch);
             }
 
             // check that we found it
             if(cur_node != NULL) {
-                if(client_util_debug>2) printf("retrieveValue: found cur_node name %s\n",cur_node->name);
+                if(client_util_debug>2) printf("[ retrieveValue ]: found cur_node name %s\n",cur_node->name);
             } else {
-                if(client_util_debug>2) printf("retrieveValue: couldn't find cur_node\n");
+                if(client_util_debug>2) printf("[ retrieveValue ]: couldn't find cur_node\n");
                 break;
             }
 
@@ -791,25 +794,25 @@ void retrieveValue(xmlDoc* doc, xmlNode* node, char* tags, char value[], const u
         if(cur_node !=NULL) {
             value_str  = xmlNodeListGetString(doc,cur_node->children,0);
             if(value_str!=NULL) {
-                if(client_util_debug>2) printf("retrieveValue: Found value %s\n",value_str);
+                if(client_util_debug>2) printf("[ retrieveValue ]: Found value %s\n",value_str);
                 if(strlen((char*) value_str)>=MAX) {
-                    if(client_util_debug>2) printf("retrieveValue: the value for tags=%s is %ld i.e. larger than MAX=%d, return no value!\n",tags,strlen((char*)value_str),MAX);
+                    if(client_util_debug>2) printf("[ retrieveValue ]: the value for tags=%s is %ld i.e. larger than MAX=%d, return no value!\n",tags,strlen((char*)value_str),MAX);
                     value_str = NULL;
                 } else {
-                    if(client_util_debug>2) printf("retrieveValue: copy the value_str=\"%s\" (%ld) to %p\n",value_str,strlen((char*)value_str),value);
+                    if(client_util_debug>2) printf("[ retrieveValue ]: copy the value_str=\"%s\" (%ld) to %p\n",value_str,strlen((char*)value_str),value);
                     strcpy((char*)value,(char*)value_str);
                 }
             } else {
                 value_str = NULL;
-                if(client_util_debug>2) printf("retrieveValue: Found no value for tags %s\n",tags);
+                if(client_util_debug>2) printf("[ retrieveValue ]: Found no value for tags %s\n",tags);
             }
         } else {
             value_str = NULL;
-            if(client_util_debug>2) printf("retrieveValue: cur_node is null so no value found for tags=%s\n",tags);
+            if(client_util_debug>2) printf("[ retrieveValue ]: cur_node is null so no value found for tags=%s\n",tags);
         }
     }
     if(value_str!=NULL) {
-        if(client_util_debug>1) printf("retrieveValue: free value_str\n");
+        if(client_util_debug>1) printf("[ retrieveValue ]: free value_str\n");
         xmlFree(value_str);
     }
 }

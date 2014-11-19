@@ -19,6 +19,7 @@ dbLoadTemplate "db/userHost.substitutions"
 dbLoadRecords "db/dbHybT.db"
 dbLoadRecords "db/dbHybLV.db"
 dbLoadRecords "db/dbFebTemp.db"
+dbLoadRecords "db/dbHybSwitch.db"
 dbLoadRecords "db/dbSVT.db"
 
 ## Set this to see messages from mySub

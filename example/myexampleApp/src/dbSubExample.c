@@ -31,7 +31,7 @@ const double def_AxiXadcTemp = -999.9;
 static long subLVInit(subRecord *precord) {
   process_order++;
   if (mySubDebug) {
-    printf("%d Record %s called subLVInit(%p)\n", process_order, precord->name, (void*) precord);
+    printf("[ subLVInit ]: %d Record %s called subLVInit(%p)\n", process_order, precord->name, (void*) precord);
   }
 
   return 0;
@@ -40,7 +40,7 @@ static long subLVInit(subRecord *precord) {
 static long subTempInit(subRecord *precord) {
    process_order++;
   if (mySubDebug) {
-    printf("%d: Record %s called subTempInit(%p)\n", process_order, precord->name, (void*) precord);
+    printf("[ subTempInit ]: %d Record %s called subTempInit(%p)\n", process_order, precord->name, (void*) precord);
   }
 
   return 0;
@@ -53,26 +53,26 @@ static void getIpFromRecord(subRecord* precord, char value[], const int MAX) {
   if(strlen(inpa_val)>0) {
     dbAddr paddr;
     if(dbNameToAddr(inpa_val,&paddr)!=0) {
-      printf("ERROR: getIpFromRecord: dbNameToAddr for %s failed (paddr=%p)\n",inpa_val,&paddr);
+      printf("[ getIpFromRecord ]: [ ERROR ]: dbNameToAddr for %s failed (paddr=%p)\n",inpa_val,&paddr);
     }
     struct stringinRecord* recA = (stringinRecord*)paddr.precord;
-    if (mySubDebug>1) printf("getIpFromRecord: recA at %p\n",recA);
+    if (mySubDebug>1) printf("[ getIpFromRecord ]: recA at %p\n",recA);
     if(recA!=NULL) {
-      if (mySubDebug>1) printf("getIpFromRecord: recA name %s val %p\n",recA->name,recA->val);
+      if (mySubDebug>1) printf("[ getIpFromRecord ]: recA name %s val %p\n",recA->name,recA->val);
       char inpa_val2[40];
       memset(inpa_val2,0,40);
       snprintf( inpa_val2, 40, "%s", recA->val ) ;
-      if (mySubDebug>1) printf("getIpFromRecord: got IP %s\n",inpa_val2);
+      if (mySubDebug>1) printf("[ getIpFromRecord ]: got IP %s\n",inpa_val2);
       if(strlen(inpa_val2)<MAX) {
 	strcpy(value,inpa_val2);
       } else {
-	printf("WARNING: getIpFromRecord: IP from DB is too long? %s \n",inpa_val2);
+	printf("[ getIpFromRecord ]: [ WARNING ]: IP from DB is too long? %s \n",inpa_val2);
       }
     } else {
-      printf("WARNING: getIpFromRecord: cannot get IP record from inpa_val %s \n",inpa_val);
+      printf("[ getIpFromRecord ]: [ WARNING ]: cannot get IP record from inpa_val %s \n",inpa_val);
     }
   } else {
-      printf("WARNING: getIpFromRecord: INPA string has zero length \n");    
+      printf("[ getIpFromRecord ]: [ WARNING ]: INPA string has zero length \n");    
   }
 }
 static int getPortFromRecord(subRecord* precord) {
@@ -82,18 +82,18 @@ static int getPortFromRecord(subRecord* precord) {
   if(strlen(inpb_val)>0) {
     dbAddr paddr;
     if(dbNameToAddr(inpb_val,&paddr)!=0) {
-      printf("getPortFromRecord: dbNameToAddr for %s failed (paddr=%p)\n",inpb_val,&paddr);
+      printf("[ getPortFromRecord ]: [ ERROR ]: dbNameToAddr for %s failed (paddr=%p)\n",inpb_val,&paddr);
     }
     struct longinRecord* recA = (longinRecord*)paddr.precord;
-    if (mySubDebug>1) printf("getPortFromRecord: recA at %p\n",recA);
+    if (mySubDebug>1) printf("[ getPortFromRecord ]: recA at %p\n",recA);
     if(recA!=NULL) {
-      if (mySubDebug>1) printf("getPortFromRecord: recA name %s val %d\n",recA->name,recA->val);
+      if (mySubDebug>1) printf("[ getPortFromRecord ]: recA name %s val %d\n",recA->name,recA->val);
       return recA->val;
     } else {
-      printf("WARNING: getPortFromRecord: cannot get port record from inpb_val %s \n",inpb_val);
+      printf("[ getPortFromRecord ]: [ WARNING ]: getPortFromRecord: cannot get port record from inpb_val %s \n",inpb_val);
     }
   } else {
-      printf("WARNING: getIpFromRecord: INPB string has zero length \n");    
+      printf("[ getPortFromRecord ]: [ WARNING ]: getIpFromRecord: INPB string has zero length \n");    
   }
   return -1;
 }
@@ -101,21 +101,19 @@ static int getPortFromRecord(subRecord* precord) {
 static void setupSocket(subRecord *precord) {
   process_order++;
   if (mySubDebug>1) {
-    printf("%d: Record %s called setupSocket(%p)\n", process_order, precord->name, (void*) precord);
+    printf("[ setupSocket ]: %d Record %s called setupSocket(%p)\n", process_order, precord->name, (void*) precord);
   }
 
   // only setup socket from DB if it's the poll record?
   if(strcmp(precord->name,"SVT:poll_xml")==0) {    
     // look for host name and port in DB
-    if (mySubDebug>1) printf("setupSocket: look for host name and port in DB\n");
+    if (mySubDebug>1) printf("[ setupSocket ]: look for host name and port in DB\n");
     char host[40];
     int p;
     getIpFromRecord(precord,host,40);
     p = getPortFromRecord(precord);
-    if (mySubDebug>1) printf("Got host \"%s\" port %d\n",host,p);
     if(strlen(host)==0 || p<=0) {
-      printf("ERROR: setupSocket: No hostname or port found in DB.\n");
-      exit(1);
+      printf("[ setupSocket ]: [ ERROR ]: Couldn't get hostname or port from in DB.\n");
     } else {
       strcpy(hostName,host);
       port = p;
@@ -123,9 +121,12 @@ static void setupSocket(subRecord *precord) {
   }
 
   if(strcmp(hostName,"")==0) {
-    printf("ERROR: setupSocket: no valid hostname found. Fix this.\n");
-    exit(1);
+    printf("[ setupSocket ]: [ ERROR]: no valid hostname found.\n");
+    return;
   } 
+
+  if (mySubDebug>1) printf("[ setupSocket ]: Got host \"%s\" port %d\n",hostName,port);
+  
   
 }
 
@@ -133,7 +134,7 @@ static void setupSocket(subRecord *precord) {
 static long subPollInit(subRecord *precord) {
   process_order++;
   if (mySubDebug) {
-    printf("%d: Record %s called subPollInit(%p)\n", process_order, precord->name, (void*) precord);
+    printf("[ subPollInit ] %d Record %s called subPollInit(%p)\n", process_order, precord->name, (void*) precord);
   }
 
   return 0;
@@ -143,7 +144,7 @@ static long subPollInit(subRecord *precord) {
 static long subPollStatInit(subRecord *precord) {
   process_order++;
   if (mySubDebug) {
-    printf("%d: Record %s called subPollStatInit(%p)\n", process_order, precord->name, (void*) precord);
+    printf("[ subPollStatInit ] %d Record %s called subPollStatInit(%p)\n", process_order, precord->name, (void*) precord);
   }
   
   return 0;
@@ -152,9 +153,8 @@ static long subPollStatInit(subRecord *precord) {
 
   static void writeHybrid(subRecord* precord,char action[], int id, int feb_id, char ch_name[])
 {
-  if(mySubDebug) {
-    printf("Record %s called writeHybrid %s with val %f for feb_id= %d  id=%d ch_name=%s\n", precord->name,action,precord->val,feb_id,id,ch_name);
-  }
+  if(mySubDebug) printf("[ writeHybrid ]: Record %s called writeHybrid %s with val %f for feb_id= %d  id=%d ch_name=%s\n", precord->name,action,precord->val,feb_id,id,ch_name);
+  
   time_t cur_time;
   time_t timer;
   time(&timer);
@@ -162,28 +162,28 @@ static long subPollStatInit(subRecord *precord) {
   // get a valid socket
   dt = 0;
   if(sockfd>0) {
-    if (mySubDebug) printf("writeHybrid: socket %d is already open, wait for it to close\n", sockfd);    
+    if (mySubDebug) printf("[ writeHybrid ]: socket %d is already open, wait for it to close\n", sockfd);    
     while(sockfd>0 && dt<6) {
       time(&cur_time);
       dt = difftime(cur_time, timer);
-      if (mySubDebug) printf("writeHybrid: socket %d is still open after %ds, sleep 1s\n", sockfd, dt);    
+      if (mySubDebug) printf("[ writeHybrid ]: socket %d is still open after %ds, sleep 1s\n", sockfd, dt);    
       sleep(1);
     }    
   }
   
   if(sockfd>0) {    
-    printf("WARNING: writeHybrid: socket %d was still open after %ds, don't write anything\n", sockfd, dt); 
+    printf("[ writeHybrid ]: [ WARNING ]: socket %d was still open after %ds, don't write anything\n", sockfd, dt); 
     return;
   } 
   else {    
-    if (mySubDebug) printf("writeHybrid: Opening socket: host: %s:%d\n",hostName, port);    
+    if (mySubDebug) printf("[ writeHybrid ]: Opening socket: host: %s:%d\n",hostName, port);    
     setupSocket(precord);
     sockfd = open_socket(hostName,port);
-    if (mySubDebug) printf("writeHybrid: Opened socket : %d\n",sockfd);            
+    if (mySubDebug) printf("[ writeHybrid ]: Opened socket : %d\n",sockfd);            
   }
   
   if(sockfd<=0) {
-    printf("ERROR: writeHybrid: Failed to open socket in writeHybrid (host %s:%d) \n",hostName,sockfd);        
+    printf("[ writeHybrid ]: [ ERROR ]: Failed to open socket in writeHybrid (host %s:%d) \n",hostName,sockfd);        
     return;
   }
   
@@ -192,14 +192,14 @@ static long subPollStatInit(subRecord *precord) {
       
       writeHybridVTrim(sockfd,(int)precord->val, id, ch_name);    
       
-      if (mySubDebug) printf("writeHybrid: Poll xml string after write\n");
+      if (mySubDebug) printf("[ writeHybrid ]: Poll xml string after write\n");
       
       getXmlDoc(sockfd,0,0);
       
-      if (mySubDebug) printf("writeHybrid:  Poll XML done after write.\n");
+      if (mySubDebug) printf("[ writeHybrid ]:  Poll XML done after write.\n");
       
     } else {
-      printf("ERROR: writeHybrid: voltage trim %f is not allowed!\n",precord->val);
+      printf("[ writeHybrid ]: [ ERROR]: voltage trim %f is not allowed!\n",precord->val);
       exit(1);
     }
     
@@ -213,34 +213,34 @@ static long subPollStatInit(subRecord *precord) {
 	
 	writeHybridVSwitch(sockfd, val, id);    
 	
-	if (mySubDebug) printf("writeHybrid: Poll xml string after write\n");
+	if (mySubDebug) printf("[ writeHybrid ]: Poll xml string after write\n");
 
 	getXmlDoc(sockfd,0,0);
 
-	if (mySubDebug) printf("writeHybrid:  Poll XML done after write.\n");
+	if (mySubDebug) printf("[ writeHybrid ]: Poll XML done after write.\n");
 	
       } else {
-	printf("ERROR: writeHybrid: voltage switch %d is not allowed!\n",val);
+	printf("[ writeHybrid ]: [ ERROR ]: voltage switch %d is not allowed!\n",val);
 	exit(1);
       }
 
     } else {
-      printf("WARNING: writeHybrid: this ch_name %s for action %s is not defined yet\n",ch_name,action);
+      printf("[ writeHybrid ]: [ ERROR ]: this ch_name %s for action %s is not defined yet\n",ch_name,action);
     }    
   }
   else {
-    printf("ERROR: writeHybrid: this action \"%s\" for writeHybrid is not defined!\n",action);
+    printf("[ writeHybrid ]: [ ERROR ]: this action \"%s\" for writeHybrid is not defined!\n",action);
     exit(1);
   }
   
   if (mySubDebug) {
-    printf("writeHybrid: Closing socket\n");
+    printf("[ writeHybrid ]: Closing socket\n");
   }
   
   sockfd = close_socket(sockfd);
   
   if (mySubDebug) {
-    printf("writeHybrid:  after closing socket is %d\n",sockfd);
+    printf("[ writeHybrid ]:  after closing socket is %d\n",sockfd);
   }
 
 }
@@ -252,7 +252,7 @@ static long subPollStatInit(subRecord *precord) {
 {
   double constant;
   if(mySubDebug) {
-    printf("Record %s called readHybrid %s for feb_id= %d  id=%d ch_name=%s\n", precord->name,action,feb_id,id,ch_name);
+    printf("[ readHybrid ]: Record %s called readHybrid %s for feb_id= %d  id=%d ch_name=%s\n", precord->name,action,feb_id,id,ch_name);
   }
 
   //set to default
@@ -273,7 +273,7 @@ static long subPollStatInit(subRecord *precord) {
       tId = 1;
     }
     else {
-      printf("ERROR: in readHybrid: the ch_name %s for action %s is not defined!\n",ch_name,action);
+      printf("[ readHybrid ]: [ ERROR ]: the ch_name %s for action %s is not defined!\n",ch_name,action);
       exit(1);
     }
     readHybridT(feb_id, id, tId, value, BUF_SIZE);
@@ -288,16 +288,16 @@ static long subPollStatInit(subRecord *precord) {
     readHybridVTrim(feb_id, id, ch_name, value, BUF_SIZE);
   } 
   else {
-    printf("wrong action for readHybrid \"%s\"\n",action);
+    printf("[ readHybrid ]: [ ERROR]: wrong action for readHybrid \"%s\"\n",action);
     return;
   }
   if (mySubDebug) {
-    printf("Got value=\"%s\"\n",value);
+    printf("[ readHybrid ]: Got value=\"%s\"\n",value);
   }
   if(strlen(value)>0) {
     precord->val = atof(value)*constant;
     if (mySubDebug) {
-      printf("precord-val is now %f \n",precord->val);
+      printf("[ readHybrid ]: precord-val is now %f \n",precord->val);
     }
   }
 }
@@ -305,10 +305,7 @@ static long subPollStatInit(subRecord *precord) {
 
   static void readFeb(subRecord* precord,char action[], int feb_id, char ch_name[])
 {
-  if(mySubDebug) {
-    printf("Record %s called readFeb %s feb_id=%d ch_name=%s\n",precord->name,action,feb_id,ch_name);
-  }
-
+  if(mySubDebug) printf("[ readFeb ]: Record %s called readFeb %s feb_id=%d ch_name=%s\n",precord->name,action,feb_id,ch_name);
   
   char value[BUF_SIZE];
   memset(value,0,BUF_SIZE);
@@ -319,16 +316,16 @@ static long subPollStatInit(subRecord *precord) {
     
   } 
   else {
-    printf("No such action %s implemented for readFeb!\n",action);
+    printf("[ readFeb ]: [ ERROR ]: No such action %s implemented for readFeb!\n",action);
     return;
   } 
   if (mySubDebug) {
-    printf("Got value=\"%s\"\n",value);
+    printf("[ readFeb ]: Got value=\"%s\"\n",value);
   }
   if(strlen(value)>0) {
     precord->val = atof(value);
     if (mySubDebug) {
-      printf("precord-val is now %f \n",precord->val);
+      printf("[ readFeb ]: precord-val is now %f \n",precord->val);
     }
   }
 }
@@ -341,7 +338,7 @@ static long subPollStatInit(subRecord *precord) {
 static long subLVProcess(subRecord *precord) {
   process_order++;
   if (mySubDebug) {
-    printf("%d: Record %s called subLVProcess(%p)\n",process_order, precord->name, (void*) precord);
+    printf("[ subLVProcess ]: %d Record %s called subLVProcess(%p)\n",process_order, precord->name, (void*) precord);
   }
   //SVT:lv:hyb:bot:0:dvdd:vn_sub
   //SVT:lv:hyb:bot:0:dvdd:v_set_sub
@@ -360,11 +357,11 @@ static long subLVProcess(subRecord *precord) {
   getAction(precord->name,action,BUF_SIZE);
 
   if (mySubDebug) {
-    printf("Record %s has type %s board type \"%s\"\n", precord->name, type,board_type);
+    printf("[ subLVProcess ]: Record %s has type %s board type \"%s\"\n", precord->name, type,board_type);
   }
 
   if(strcmp(type,"lv")!=0) {
-    printf("ERROR this type is not valid \"%s\"\n",type);
+    printf("[ subLVProcess ]: [ ERROR ]: this type is not valid \"%s\"\n",type);
     return 0;
   }
   
@@ -372,16 +369,16 @@ static long subLVProcess(subRecord *precord) {
   long int li_id = strtol(id,&p_end,0);
   if(p_end!=id) {
     if(li_id<0 && li_id>17) {     
-      printf("ERROR this hybrid id %ld is not valid\n",li_id);
+      printf("[ subLVProcess ]: [ ERROR ]: this hybrid id %ld is not valid\n",li_id);
       return 0;
     }
   } else {
-    printf("ERROR converting this hybrid id %s is not valid\n",id);
+    printf("[ subLVProcess ]: [ ERROR ]: converting this hybrid id %s is not valid\n",id);
     return 0;      
   }
   feb_id = getFebIdFromDaqMap((int)li_id,half);
   if(feb_id<0) {
-    printf("ERROR getting feb id\n");
+    printf("[ subLVProcess ]: [ ERROR ]: getting feb id\n");
     return 0;
   } 
   
@@ -390,7 +387,7 @@ static long subLVProcess(subRecord *precord) {
     if(strcmp(action,"vn_sub")==0 || strcmp(action,"vf_sub")==0 || strcmp(action,"i_rd_sub")==0 || strcmp(action,"v_set_rd_sub")==0) {
 
       if(strcmp(ch_name,"dvdd")!=0 && strcmp(ch_name,"avdd")!=0 && strcmp(ch_name,"v125")!=0) {
-	printf("ERROR wrong option for hybrid ch: %s\n",ch_name);
+	printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
 	return 0;
       }
       readHybrid(precord,action,(int)li_id,feb_id,ch_name);  
@@ -398,19 +395,19 @@ static long subLVProcess(subRecord *precord) {
     } else if(strcmp(action,"v_set_sub")==0 || strcmp(action,"switch_sub")==0) { 
 
       if(strcmp(ch_name,"dvdd")!=0 && strcmp(ch_name,"avdd")!=0 && strcmp(ch_name,"v125")!=0 && strcmp(ch_name,"all")!=0) {
-	printf("ERROR wrong option for hybrid ch: %s\n",ch_name);
+	printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
 	return 0;
       }
 
       writeHybrid(precord,action,(int)li_id,feb_id,ch_name);  
 
     } else {
-      printf("ERROR this hybrid action type is not valid \"%s\"\n",action);
+      printf("[ subLVProcess ]: [ ERROR ]: this hybrid action type is not valid \"%s\"\n",action);
       return 0;
     }    
   }
   else {
-    printf("ERROR this board type is not valid \"%s\" for LV\n",board_type);
+    printf("[ subLVProcess ]: [ ERROR ]: this board type is not valid \"%s\" for LV\n",board_type);
     return 0;
   }
   
@@ -425,7 +422,7 @@ static long subLVProcess(subRecord *precord) {
 static long subTempProcess(subRecord *precord) {
   process_order++;
   if (mySubDebug) {
-    printf("%d: Record %s called subTempProcess(%p)\n",process_order, precord->name, (void*) precord);
+    printf("[ subTempProcess ]:%d Record %s called subTempProcess(%p)\n",process_order, precord->name, (void*) precord);
   }
   //SVT:temp:hyb:bot:0:temp1:t_rd_sub
   //SVT:temp:hyb:bot:0:temp2:t_rd_sub
@@ -444,13 +441,13 @@ static long subTempProcess(subRecord *precord) {
 
 
   if (mySubDebug) {
-    printf("Record %s has type %s board type \"%s\"\n", precord->name, type,board_type);
+    printf("[ subTempProcess ]:Record %s has type %s board type \"%s\"\n", precord->name, type,board_type);
   }
 
   //  char tmp[BUF_SIZE];
   int type_cmp;
   if((type_cmp=strcmp(type,"temp"))!=0) {
-    printf("ERROR this type is not valid \"%s\" cmp %d\n",type,type_cmp);
+    printf("[ subTempProcess ]: [ ERROR ]: this type is not valid \"%s\" cmp %d\n",type,type_cmp);
     return 0;
   }
 
@@ -461,7 +458,7 @@ static long subTempProcess(subRecord *precord) {
     getAction(precord->name,action,BUF_SIZE);
 
     if(strcmp(ch_name,"temp0")!=0 && strcmp(ch_name,"temp1")!=0) {
-      printf("ERROR wrong option for hybrid ch: %s\n",ch_name);
+      printf("[ subTempProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
       return 0;
     }
 
@@ -469,17 +466,17 @@ static long subTempProcess(subRecord *precord) {
     long int li_id = strtol(id,&p_end,0);
     if(p_end!=id) {
       if(li_id<0 && li_id>17) {     
-	printf("ERROR this hybrid id %ld is not valid\n",li_id);
+	printf("[ subTempProcess ]: [ ERROR ]: this hybrid id %ld is not valid\n",li_id);
 	return 0;
       }
     } else {
-      printf("ERROR converting this hybrid id %s is not valid\n",id);
+      printf("[ subTempProcess ]: [ ERROR ]: converting this hybrid id %s is not valid\n",id);
       return 0;      
     }
     
     feb_id = getFebIdFromDaqMap((int)li_id,half);
     if(feb_id<0) {
-      printf("ERROR getting feb id\n");
+      printf("[ subTempProcess ]: [ ERROR ]: getting feb id\n");
       return 0;
     } 
 
@@ -495,11 +492,11 @@ static long subTempProcess(subRecord *precord) {
     getFebAction(precord->name,action,BUF_SIZE);  
     feb_id = atoi(id);
     if(strcmp(action,"t_rd_sub")!=0) {
-      printf("ERROR this feb action type is not valid \"%s\"\n",action);
+      printf("[ subTempProcess ]: [ ERROR ]: this feb action type is not valid \"%s\"\n",action);
       return 0;
     }  
     if(strcmp(ch_name,"axixadc") !=0 && strcmp(ch_name,"FebTemp0") !=0 && strcmp(ch_name,"FebTemp1") !=0 ) {
-      printf("This ch name is not implemented for for readFeb: \"%s\" !\n",ch_name);
+      printf("[ subTempProcess ]: [ ERROR ]: This ch name is not implemented for for readFeb: \"%s\" !\n",ch_name);
       return 0;      
     }
     
@@ -508,7 +505,7 @@ static long subTempProcess(subRecord *precord) {
 
   } 
   else {
-    printf("ERROR this board type is not valid \"%s\"\n",board_type);
+    printf("[ subTempProcess ]: [ ERROR ]: this board type is not valid \"%s\"\n",board_type);
     return 0;
   }
   
@@ -547,58 +544,59 @@ static long subPollProcess(subRecord *precord) {
 
   process_order++;
   if (mySubDebug>0) {
-    printf("%d: Record %s called subPollProcess(%p)\n",process_order, precord->name, (void*) precord);
+    printf("[ subPollProcess ]: %d Record %s called subPollProcess(%p)\n",process_order, precord->name, (void*) precord);
   }
   
   // check that the socket is available
   dt=0;
   time(&timer);
   if(sockfd>0) {
-    if (mySubDebug>0) printf("subPollProcess: socket %d is already open, wait for it to close\n", sockfd);    
+    if (mySubDebug>0) printf("[ subPollProcess ]: socket %d is already open, wait for it to close\n", sockfd);    
     while(sockfd>0 && dt<6) {
       time(&cur_time);
       dt = difftime(cur_time, timer);
-      if (mySubDebug>0) printf("subPollProcess: socket %d is still open (%ds)\n", sockfd, dt);    
+      if (mySubDebug>0) printf("[ subPollProcess ]: socket %d is still open (%ds)\n", sockfd, dt);    
       sleep(1);
     }    
   }
   
   if(sockfd>0) {    
-    printf("WARNING: subPollProcess: socket %d was still open after %ds, don't write anything\n", sockfd, dt); 
+    printf("[ subPollProcess ]: [ WARNING ]: socket %d was still open after %ds, don't write anything\n", sockfd, dt); 
     return 0;
   } 
   else {
 
-    if (mySubDebug>0) printf("subPollProcess: socket is available now (socket %d after %ds)\n", sockfd, dt); 
+    if (mySubDebug>0) printf("[ subPollProcess ]: socket is available now (socket %d after %ds)\n", sockfd, dt); 
     // get a valid socket
     while(sockfd<=0 && dt<6) {
       time(&cur_time);
       dt = difftime(cur_time, timer);
-      if (mySubDebug>0) printf("subPollProcess: try to setup socket (%ds)\n",dt);
+      if (mySubDebug>0) printf("[ subPollProcess ]: try to setup socket (%ds)\n",dt);
 
       setupSocket(precord);
 
       sockfd = open_socket(hostName,port);
       
       if(sockfd<=0) {
-	if (mySubDebug>0) printf("subPollProcess: couln't get socket, sleep before retrying\n");	
+	if (mySubDebug>0) printf("[ subPollProcess ]: couln't get socket for host \"%s\" and port %d after %ds, sleep before retrying\n",hostName,port,dt);	
 	sleep(1);
       }
     }
 
   }
+
+  if(sockfd<=0) {
+    printf("[ subPollProcess ]: [ WARNING ]: couldn't open a socket (tried over %ds period). Check host and port?\n",dt);
+    return 0;
+  }
   
   // poll the xml string
   
-  if(sockfd<=0) {
-    printf("subPollProcess: couldn't open a socket (tried over %ds period). Check host and port?\n",dt);
-  }
-  
-  if (mySubDebug) printf("subPollProcess: Poll xml string\n");
+  if (mySubDebug) printf("[ subPollProcess] : Poll xml string\n");
   
   getXmlDoc(sockfd,0,0);
   
-  if (mySubDebug) printf("subPollProcess: Poll XML done. Close socket if needed\n");
+  if (mySubDebug) printf("[ subPollProcess ]: Poll XML done. Close socket if needed\n");
   if(sockfd>0) {
     sockfd = close_socket(sockfd);
   } 
@@ -607,20 +605,20 @@ static long subPollProcess(subRecord *precord) {
     char * s = NULL;
     int len;
     getXmlDocStrFormat(&s, &len);
-    printf("subPollProcess: got XML with len %d\n", len);
+    printf("[ subPollProcess ]: got XML with len %d\n", len);
     if(len>0) printf("\n%s\n",s);
     if(s!=NULL) {
-      printf("subPollProcess: free string at %p\n",s);      
+      printf("[ subPollProcess ]: free string at %p\n",s);      
       free(s);
-      printf("subPollProcess: done free string at %p\n",s);      
+      printf("[ subPollProcess ]: done free string at %p\n",s);      
     }
   }
 
-  if (mySubDebug) printf("subPollProcess: before update status_poll_flag = %d\n", status_poll_flag);
+  if (mySubDebug) printf("[ subPollProcess ]: before update status_poll_flag = %d\n", status_poll_flag);
   
   updatePollStatusFlag();
   
-  if (mySubDebug) printf("subPollProcess: after update status_poll_flag = %d\n", status_poll_flag);
+  if (mySubDebug) printf("[ subPollProcess ]: after update status_poll_flag = %d\n", status_poll_flag);
 
 
   return 0;
@@ -632,19 +630,19 @@ static long subPollProcess(subRecord *precord) {
 static long subPollStatProcess(subRecord *precord) {
   process_order++;
   if (mySubDebug>0) {
-    printf("%d: Record %s called subPollStatProcess(%p)\n",process_order, precord->name, (void*) precord);
-    printf("status_flag: %d\n",status_flag);
-    printf("status_poll_flag: %d\n",status_poll_flag);
+    printf("[ subPollStatProcess ]: %d Record %s called subPollStatProcess(%p)\n",process_order, precord->name, (void*) precord);
+    printf("[ subPollStatProcess ]: status_flag: %d\n",status_flag);
+    printf("[ subPollStatProcess ]: status_poll_flag: %d\n",status_poll_flag);
   }    
   
   if(status_flag==status_poll_flag) {
     if (mySubDebug>0) {
-      printf("same flag: no update was done\n");
+      printf("[ subPollStatProcess ]: same flag: no update was done\n");
     }    
     precord->val = 0;
   } else {
     if (mySubDebug>0) {
-      printf("diff flag: update was done, flip the status_flag\n");
+      printf("[ subPollStatProcess ]: diff flag: update was done, flip the status_flag\n");
     }    
     precord->val = 1;
     // update status_flag

@@ -28,6 +28,13 @@ record(bi, SVT:hb_check) {
   field(SCAN, "Passive") 
   field(INP, "SVT:poll_stat CPP")
   field(DTYP,"Soft Channel")
-  field(FLNK,"SVT:temp:fe:0:axixadc:t_rd")
+  field(FLNK,"SVT:process")
 }
 
+
+record(fanout, SVT:process)
+{
+  field(LNK1,"SVT:temp:fe:0:axixadc:t_rd")
+  field(LNK2,"SVT:lv:hyb:bot:0:dvdd:i_rd")
+  field(LNK3,"SVT:temp:hyb:bot:0:temp0:t_rd")
+}

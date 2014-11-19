@@ -1,7 +1,4 @@
 
-
-####### T_RD BOT
-
 record(sub,SVT:temp:hyb:bot:0:temp0:t_rd_sub)
 {
     field(SCAN,"Passive")
@@ -12,8 +9,7 @@ record(sub,SVT:temp:hyb:bot:0:temp0:t_rd_sub)
 
 record(ai, SVT:temp:hyb:bot:0:temp0:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:bot:0:temp0:t_rd_sub")
-  field(INP, "SVT:temp:hyb:bot:0:temp0:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:bot:0:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -28,12 +24,9 @@ record(sub,SVT:temp:hyb:bot:0:temp1:t_rd_sub)
 
 record(ai, SVT:temp:hyb:bot:0:temp1:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:bot:0:temp1:t_rd_sub")
-  field(INP, "SVT:temp:hyb:bot:0:temp1:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:bot:0:temp1:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
-
-
 
 record(sub,SVT:temp:hyb:bot:1:temp0:t_rd_sub)
 {
@@ -45,8 +38,7 @@ record(sub,SVT:temp:hyb:bot:1:temp0:t_rd_sub)
 
 record(ai, SVT:temp:hyb:bot:1:temp0:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:bot:1:temp0:t_rd_sub")
-  field(INP, "SVT:temp:hyb:bot:1:temp0:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:bot:1:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -61,15 +53,9 @@ record(sub,SVT:temp:hyb:bot:1:temp1:t_rd_sub)
 
 record(ai, SVT:temp:hyb:bot:1:temp1:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:bot:1:temp1:t_rd_sub")
-  field(INP, "SVT:temp:hyb:bot:1:temp1:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:bot:1:temp1:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
-
-
-
-
-
 
 record(sub,SVT:temp:hyb:bot:2:temp0:t_rd_sub)
 {
@@ -81,8 +67,7 @@ record(sub,SVT:temp:hyb:bot:2:temp0:t_rd_sub)
 
 record(ai, SVT:temp:hyb:bot:2:temp0:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:bot:2:temp0:t_rd_sub")
-  field(INP, "SVT:temp:hyb:bot:2:temp0:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:bot:2:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -97,14 +82,9 @@ record(sub,SVT:temp:hyb:bot:2:temp1:t_rd_sub)
 
 record(ai, SVT:temp:hyb:bot:2:temp1:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:bot:2:temp1:t_rd_sub")
-  field(INP, "SVT:temp:hyb:bot:2:temp1:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:bot:2:temp1:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
-
-
-
-
 
 record(sub,SVT:temp:hyb:bot:3:temp0:t_rd_sub)
 {
@@ -116,8 +96,7 @@ record(sub,SVT:temp:hyb:bot:3:temp0:t_rd_sub)
 
 record(ai, SVT:temp:hyb:bot:3:temp0:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:bot:3:temp0:t_rd_sub")
-  field(INP, "SVT:temp:hyb:bot:3:temp0:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:bot:3:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -132,13 +111,9 @@ record(sub,SVT:temp:hyb:bot:3:temp1:t_rd_sub)
 
 record(ai, SVT:temp:hyb:bot:3:temp1:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:bot:3:temp1:t_rd_sub")
-  field(INP, "SVT:temp:hyb:bot:3:temp1:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:bot:3:temp1:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
-
-
-
 
 record(sub,SVT:temp:hyb:bot:4:temp0:t_rd_sub)
 {
@@ -150,8 +125,7 @@ record(sub,SVT:temp:hyb:bot:4:temp0:t_rd_sub)
 
 record(ai, SVT:temp:hyb:bot:4:temp0:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:bot:4:temp0:t_rd_sub")
-  field(INP, "SVT:temp:hyb:bot:4:temp0:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:bot:4:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -161,29 +135,391 @@ record(sub,SVT:temp:hyb:bot:4:temp1:t_rd_sub)
     field(SCAN,"Passive")
     field(INAM,"subTempInit")
     field(SNAM,"subTempProcess")
-    field(FLNK,"SVT:temp:hyb:top:0:temp0:t_rd")
+    field(FLNK,"SVT:temp:hyb:bot:5:temp0:t_rd")
 }
 
 record(ai, SVT:temp:hyb:bot:4:temp1:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:bot:4:temp1:t_rd_sub")
-  field(INP, "SVT:temp:hyb:bot:4:temp1:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:bot:4:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:5:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:5:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:5:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:5:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
+record(sub,SVT:temp:hyb:bot:5:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:6:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:5:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:5:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:6:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:6:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:6:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:6:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
 
 
+record(sub,SVT:temp:hyb:bot:6:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:7:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:6:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:6:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:7:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:7:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:7:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:7:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
 
 
+record(sub,SVT:temp:hyb:bot:7:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:8:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:7:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:7:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:8:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:8:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:8:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:8:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
 
 
+record(sub,SVT:temp:hyb:bot:8:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:9:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:8:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:8:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:9:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:9:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:9:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:9:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
 
 
+record(sub,SVT:temp:hyb:bot:9:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:10:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:9:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:9:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:10:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:10:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:10:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:10:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
 
 
+record(sub,SVT:temp:hyb:bot:10:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:11:temp0:t_rd")
+}
 
-####### T_RD TOP
+record(ai, SVT:temp:hyb:bot:10:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:10:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:11:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:11:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:11:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:11:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:bot:11:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:12:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:11:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:11:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:12:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:12:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:12:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:12:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:bot:12:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:13:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:12:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:12:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:13:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:13:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:13:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:13:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:bot:13:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:14:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:13:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:13:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:14:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:14:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:14:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:14:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:bot:14:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:15:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:14:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:14:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:15:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:15:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:15:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:15:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:bot:15:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:16:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:15:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:15:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:16:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:16:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:16:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:16:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:bot:16:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:17:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:16:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:16:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:bot:17:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:bot:17:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:17:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:17:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:bot:17:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:0:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:bot:17:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:bot:17:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
 
 record(sub,SVT:temp:hyb:top:0:temp0:t_rd_sub)
 {
@@ -195,8 +531,7 @@ record(sub,SVT:temp:hyb:top:0:temp0:t_rd_sub)
 
 record(ai, SVT:temp:hyb:top:0:temp0:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:top:0:temp0:t_rd_sub")
-  field(INP, "SVT:temp:hyb:top:0:temp0:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:top:0:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -211,12 +546,9 @@ record(sub,SVT:temp:hyb:top:0:temp1:t_rd_sub)
 
 record(ai, SVT:temp:hyb:top:0:temp1:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:top:0:temp1:t_rd_sub")
-  field(INP, "SVT:temp:hyb:top:0:temp1:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:top:0:temp1:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
-
-
 
 record(sub,SVT:temp:hyb:top:1:temp0:t_rd_sub)
 {
@@ -228,8 +560,7 @@ record(sub,SVT:temp:hyb:top:1:temp0:t_rd_sub)
 
 record(ai, SVT:temp:hyb:top:1:temp0:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:top:1:temp0:t_rd_sub")
-  field(INP, "SVT:temp:hyb:top:1:temp0:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:top:1:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -244,15 +575,9 @@ record(sub,SVT:temp:hyb:top:1:temp1:t_rd_sub)
 
 record(ai, SVT:temp:hyb:top:1:temp1:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:top:1:temp1:t_rd_sub")
-  field(INP, "SVT:temp:hyb:top:1:temp1:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:top:1:temp1:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
-
-
-
-
-
 
 record(sub,SVT:temp:hyb:top:2:temp0:t_rd_sub)
 {
@@ -264,8 +589,7 @@ record(sub,SVT:temp:hyb:top:2:temp0:t_rd_sub)
 
 record(ai, SVT:temp:hyb:top:2:temp0:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:top:2:temp0:t_rd_sub")
-  field(INP, "SVT:temp:hyb:top:2:temp0:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:top:2:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -280,14 +604,9 @@ record(sub,SVT:temp:hyb:top:2:temp1:t_rd_sub)
 
 record(ai, SVT:temp:hyb:top:2:temp1:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:top:2:temp1:t_rd_sub")
-  field(INP, "SVT:temp:hyb:top:2:temp1:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:top:2:temp1:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
-
-
-
-
 
 record(sub,SVT:temp:hyb:top:3:temp0:t_rd_sub)
 {
@@ -299,8 +618,7 @@ record(sub,SVT:temp:hyb:top:3:temp0:t_rd_sub)
 
 record(ai, SVT:temp:hyb:top:3:temp0:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:top:3:temp0:t_rd_sub")
-  field(INP, "SVT:temp:hyb:top:3:temp0:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:top:3:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -315,13 +633,9 @@ record(sub,SVT:temp:hyb:top:3:temp1:t_rd_sub)
 
 record(ai, SVT:temp:hyb:top:3:temp1:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:top:3:temp1:t_rd_sub")
-  field(INP, "SVT:temp:hyb:top:3:temp1:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:top:3:temp1:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
-
-
-
 
 record(sub,SVT:temp:hyb:top:4:temp0:t_rd_sub)
 {
@@ -333,8 +647,7 @@ record(sub,SVT:temp:hyb:top:4:temp0:t_rd_sub)
 
 record(ai, SVT:temp:hyb:top:4:temp0:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(FLNK,"SVT:temp:hyb:top:4:temp0:t_rd_sub")
-  field(INP, "SVT:temp:hyb:top:4:temp0:t_rd_sub CPP")
+  field(INP, "SVT:temp:hyb:top:4:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -344,13 +657,388 @@ record(sub,SVT:temp:hyb:top:4:temp1:t_rd_sub)
     field(SCAN,"Passive")
     field(INAM,"subTempInit")
     field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:5:temp0:t_rd")
 }
 
 record(ai, SVT:temp:hyb:top:4:temp1:t_rd) {
-  field(SCAN, "Passive") field(PREC, "1") 
-  field(FLNK,"SVT:temp:hyb:top:4:temp1:t_rd_sub")
-  field(INP, "SVT:temp:hyb:top:4:temp1:t_rd_sub CPP")
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:4:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:5:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:5:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:5:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:5:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
+record(sub,SVT:temp:hyb:top:5:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:6:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:5:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:5:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:6:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:6:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:6:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:6:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:6:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:7:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:6:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:6:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:7:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:7:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:7:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:7:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:7:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:8:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:7:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:7:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:8:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:8:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:8:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:8:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:8:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:9:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:8:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:8:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:9:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:9:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:9:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:9:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:9:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:10:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:9:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:9:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:10:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:10:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:10:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:10:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:10:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:11:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:10:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:10:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:11:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:11:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:11:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:11:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:11:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:12:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:11:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:11:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:12:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:12:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:12:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:12:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:12:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:13:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:12:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:12:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:13:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:13:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:13:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:13:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:13:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:14:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:13:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:13:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:14:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:14:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:14:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:14:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:14:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:15:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:14:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:14:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:15:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:15:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:15:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:15:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:15:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:16:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:15:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:15:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:16:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:16:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:16:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:16:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:16:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:17:temp0:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:16:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:16:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:temp:hyb:top:17:temp0:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"SVT:temp:hyb:top:17:temp1:t_rd")
+}
+
+record(ai, SVT:temp:hyb:top:17:temp0:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:17:temp0:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:temp:hyb:top:17:temp1:t_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subTempInit")
+    field(SNAM,"subTempProcess")
+    field(FLNK,"")
+}
+
+record(ai, SVT:temp:hyb:top:17:temp1:t_rd) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:temp:hyb:top:17:temp1:t_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}

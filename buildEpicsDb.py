@@ -11,10 +11,14 @@ class Usage(Exception):
 
 def buildEpics():
     records = []
-    recs = utils.buildFebTempAxi()
+    recs = utils.buildFebTemp()
     printRecords(recs,"dbFebTemp")
     recs = utils.buildHybTemp()
     printRecords(recs,"dbHybT")
+    recs = utils.buildHybLV()
+    printRecords(recs,"dbHybLV")
+    recs = utils.buildHybLVSwitch()
+    printRecords(recs,"dbHybSwitch")
     
 
 
