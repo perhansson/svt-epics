@@ -1,3 +1,63 @@
+import sys
+
+class FEB:
+    def __init__(self,febid,half,hybridlist):
+        self.id = febid
+        self.half = half
+        self.hybrids = hybridlist
+
+            
+# mapping between hybrid and FEB IDs
+febs= [
+    FEB(0,"top",[0,1]),
+    FEB(1,"top",[2,3,4,5]),
+    FEB(2,"top",[6,7,8,9]),
+    FEB(3,"top",[10,11,12,13]),
+    FEB(4,"top",[14,15,16,17]),
+    FEB(0,"bot",[0,1]),
+    FEB(1,"bot",[2,3,4,5]),
+    FEB(2,"bot",[6,7,8,9]),
+    FEB(3,"bot",[10,11,12,13]),
+    FEB(4,"bot",[14,15,16,17])
+    ]
+
+
+
+
+
+def getFebId(half,hyb):
+    febid = -1
+    for feb in febs:
+        if feb.half is half:
+            if hyb in feb.hybrids:
+                febid = feb.id
+    return febid
+
+
+def buildSvtDaqMap():
+    s = """
+
+record(longin, SVT:daq:map:HALF:HYBID) {
+    field(VAL,"FEBID")
+}
+
+    """
+    records = []
+    for half in ["bot","top"]:
+        for hyb in range(0,18):
+            feb = getFebId(half,hyb)
+            if feb<0:
+                print "Invalid feb id for hyb ", hyb, " and half ", half
+                sys.exit(1)
+            rec = s
+            rec = rec.replace("HYBID",str(hyb))
+            rec = rec.replace("HALF",half)            
+            rec = rec.replace("FEBID",str(feb))
+            records.append(rec)
+    
+    return records
+
+
 
 
 def buildHybLV():
