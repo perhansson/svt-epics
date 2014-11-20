@@ -43,6 +43,7 @@ detDbLoadRecords
 #dbLoadRecords "db/hybLV.db"
 #dbLoadRecords "db/svtOnOff.db" 
 #dbLoadRecords "db/svtBiasSetpoints.db"
+dbLoadRecords "db/dbFlangeSwitch.db"
 
 
 
