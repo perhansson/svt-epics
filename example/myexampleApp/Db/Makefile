@@ -20,6 +20,7 @@ DB += dbHybT.db
 DB += dbHybLV.db
 DB += dbHybSwitch.db
 DB += dbFebTemp.db
+DB += dbSvtDaqMap.db
 DB += dbSVT.db
 
 #----------------------------------------------------

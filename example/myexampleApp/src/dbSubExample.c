@@ -11,7 +11,8 @@
 #include <dbAccess.h>
 #include <client_util.h>
 
-
+#define N_HYBRIDS 18
+#define N_HALVES 2
 int mySubDebug = 0;
 int process_order = 0;
 const int BUF_SIZE = 256;
@@ -19,6 +20,7 @@ char* hostNameDef = "134.79.229.141";
 char hostName[256];
 int portDef = 8091;
 int port;
+static int hybToFeb[N_HALVES][N_HYBRIDS];
 int sockfd = 0;
 int counter = 0;
 int status_poll_flag=0;
@@ -75,6 +77,7 @@ static void getIpFromRecord(subRecord* precord, char value[], const int MAX) {
       printf("[ getIpFromRecord ]: [ WARNING ]: INPA string has zero length \n");    
   }
 }
+
 static int getPortFromRecord(subRecord* precord) {
   char inpb_val[40]; // 40 is maximum size of stringin/out records
   memset(inpb_val,0,40);
@@ -97,7 +100,171 @@ static int getPortFromRecord(subRecord* precord) {
   }
   return -1;
 }
+
+static int getLonginRecord(char* inpb_val) {
+  if(strlen(inpb_val)>0) {
+    dbAddr paddr;
+    if(dbNameToAddr(inpb_val,&paddr)!=0) {
+      printf("[ getLonginRecord ]: [ ERROR ]: dbNameToAddr for %s failed (paddr=%p)\n",inpb_val,&paddr);
+    }
+    struct longinRecord* recA = (longinRecord*)paddr.precord;
+    if (mySubDebug>1) printf("[ getLonginRecord ]: recA at %p\n",recA);
+    if(recA!=NULL) {
+      if (mySubDebug>1) printf("[ getLonginRecord ]: recA name %s val %d\n",recA->name,recA->val);
+      return recA->val;
+    } else {
+      printf("[ getLonginRecord ]: [ WARNING ]: cannot get port record from inpb_val %s \n",inpb_val);
+    }
+  } else {
+      printf("[ getLonginRecord ]: [ WARNING ]: INPB string has zero length \n");    
+  }
+  return -1;
+
+}
+
+static void setFebMap(char* inpb_val, int value) {
+  char halfstr[BUF_SIZE];
+  char id[BUF_SIZE];
+  int half;
+  int hybid;
+  char* name = NULL;
+  if(strlen(inpb_val)>0) {
+    dbAddr paddr;
+    if(dbNameToAddr(inpb_val,&paddr)!=0) {
+      printf("[ setFebMap ]: [ ERROR ]: dbNameToAddr for %s failed (paddr=%p)\n",inpb_val,&paddr);      
+    }
+    else {
+      struct longinRecord* recA = (longinRecord*)paddr.precord;
+      if (mySubDebug>2) if (mySubDebug>2) printf("[ setFebMap ]: recA at %p\n",recA);
+      if(recA!=NULL) {
+	if (mySubDebug>2) if (mySubDebug>2) printf("[ setFebMap ]: recA name %s val %d\n",recA->name,recA->val);
+	name = recA->name;
+      } else {
+	printf("[ setFebMap ]: [ ERROR ]: recA is NULL!?\n");   
+      }
+    }
+  }
+
+  if(name==NULL) {
+    printf("[ setFebMap ]: [ ERROR ]: failed to find name of the record.\n");   
+    return;
+  }
   
+  if (mySubDebug>2) printf("[ setFebMap ]: get the half name from \"%s\"\n",name);
+  
+  getHalfFromDaqMapRecordName(name,halfstr,BUF_SIZE);
+
+  if (mySubDebug>2) printf("[ setFebMap ]: found halfstr \"%s\"\n",halfstr);
+
+  if(strcmp(halfstr,"top")==0) half=0;
+  else if(strcmp(halfstr,"bot")==0) half=1;
+  else {
+    printf("[ setFebMap ]: [ ERROR ]: invalid half name \"%s\"\n", halfstr);
+    return;
+  }
+
+  if (mySubDebug>2) printf("[ setFebMap ]: found half int %d\n",half);
+
+  if (mySubDebug>2) printf("[ setFebMap ]: get the hybrid id from \"%s\"\n",name);
+  
+  getHybridFromDaqMapRecordName(name,id,BUF_SIZE);  
+
+  if (mySubDebug>2) printf("[ setFebMap ]: found idstr \"%s\"\n",id);
+
+  hybid = (int) strtol(id, (char**)NULL, 10);
+
+  if (mySubDebug>2) printf("[ setFebMap ]: found id int %d\n",hybid);
+
+  hybToFeb[half][hybid] = value;
+
+  if (mySubDebug>2) printf("[ setFebMap ]: hybToFeb value %d\n",hybToFeb[half][hybid]);
+
+  //if(name!=NULL) free(name);
+
+  if (mySubDebug>2) printf("[ setFebMap ]: done\n");
+
+}
+
+static void setFebFromRecord(subRecord* precord) {
+
+  if (mySubDebug>2) printf("[ setFebFromRecord ]: precord name \"%s\"\n",precord->name);
+  
+  char inpb_val[40]; // 40 is maximum size of stringin/out records
+  int val;
+  if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKA\n");
+  
+  memset(inpb_val,0,40);
+  snprintf( inpb_val, 40, "%s", (char*) ((precord->inpa).value.constantStr) ) ;
+  val = getLonginRecord(inpb_val);  
+  setFebMap(inpb_val, val);
+ 
+
+ 
+  if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKB\n");
+
+  memset(inpb_val,0,40);
+  snprintf( inpb_val, 40, "%s", (char*) ((precord->inpb).value.constantStr) ) ;
+  val = getLonginRecord(inpb_val);
+  setFebMap(inpb_val, val);
+
+
+  if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKC\n");
+
+  memset(inpb_val,0,40);
+  snprintf( inpb_val, 40, "%s", (char*) ((precord->inpc).value.constantStr) ) ;
+  val = getLonginRecord(inpb_val);
+  setFebMap(inpb_val, val);
+
+  if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKD\n");
+
+  memset(inpb_val,0,40);
+  snprintf( inpb_val, 40, "%s", (char*) ((precord->inpd).value.constantStr) ) ;
+  val = getLonginRecord(inpb_val);
+  setFebMap(inpb_val, val);
+
+  if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKE\n");
+
+  memset(inpb_val,0,40);
+  snprintf( inpb_val, 40, "%s", (char*) ((precord->inpe).value.constantStr) ) ;
+  val = getLonginRecord(inpb_val);
+  setFebMap(inpb_val, val);
+
+  if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKF\n");
+
+  memset(inpb_val,0,40);
+  snprintf( inpb_val, 40, "%s", (char*) ((precord->inpf).value.constantStr) ) ;
+  val = getLonginRecord(inpb_val);
+  setFebMap(inpb_val, val);
+
+  if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKG\n");
+
+  memset(inpb_val,0,40);
+  snprintf( inpb_val, 40, "%s", (char*) ((precord->inpg).value.constantStr) ) ;
+  val = getLonginRecord(inpb_val);
+  setFebMap(inpb_val, val);
+
+  if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKH\n");
+
+  memset(inpb_val,0,40);
+  snprintf( inpb_val, 40, "%s", (char*) ((precord->inph).value.constantStr) ) ;
+  val = getLonginRecord(inpb_val);
+  setFebMap(inpb_val, val);
+
+  if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKI\n");
+
+  memset(inpb_val,0,40);
+  snprintf( inpb_val, 40, "%s", (char*) ((precord->inpi).value.constantStr) ) ;
+  val = getLonginRecord(inpb_val);
+  setFebMap(inpb_val, val);
+
+
+
+
+  if (mySubDebug>2) printf("[ setFebFromRecord ]: done\n");
+
+}
+
+ 
 static void setupSocket(subRecord *precord) {
   process_order++;
   if (mySubDebug>1) {
@@ -128,6 +295,75 @@ static void setupSocket(subRecord *precord) {
   if (mySubDebug>1) printf("[ setupSocket ]: Got host \"%s\" port %d\n",hostName,port);
   
   
+}
+
+static void printDaqMap() {
+  printf("\n%10s %10s %10s\n","half","hybrid","feb");
+  int i,j;
+  for(i=0;i<N_HALVES;++i) {
+    for(j=0;j<N_HYBRIDS;++j) {
+      printf("%10d %10d %10d\n",i,j, hybToFeb[i][j]);
+    }
+  }
+}
+
+static void resetDaqMap() {
+ 
+  int i,j;
+  for(i=0;i<N_HALVES;++i) {
+    for(j=0;j<N_HYBRIDS;++j) {
+      hybToFeb[i][j] = -1;
+    }
+  }
+  
+}
+
+
+static void setupDaqMap(subRecord *precord) {
+  process_order++;
+  if (mySubDebug>1) {
+    printf("[ setupDaqMap ]: %d Record %s called setupDaqMap(%p)\n", process_order, precord->name, (void*) precord);
+  }
+
+  if (mySubDebug>1) printf("[ setupDaqMap ]: initialize daq map\n");
+ 
+  
+  // only setup socket from DB if it's the correct record...
+  if(strstr(precord->name,"SVT:daqmap_sub:")!=NULL) {    
+    if (mySubDebug>1) printf("[ setupDaqMap ]: look for feb in DB\n");
+    setFebFromRecord(precord);
+  } else {
+    if (mySubDebug>1) printf("[ setupDaqMap ]: do not setup daqmap for this record\n");
+  }
+  if (mySubDebug>1) {
+    printf("[ setupDaqMap ]: Resulting daq map in mem:\n");
+    printDaqMap();
+    printf("[ setupDaqMap ]: done\n");
+  }
+  
+}
+
+
+static long subPollDaqMapInit(subRecord *precord) {
+  process_order++;
+  if (mySubDebug) {
+    printf("[ subPollDaqMapInit] %d Record %s called subPollDaqMapInit(%p)\n", process_order, precord->name, (void*) precord);
+  }
+
+  
+  if (mySubDebug) {
+    printf("[ subPollDaqMapInit] reset daq map\n");
+  }
+
+  resetDaqMap();
+  //setupDaqMap(precord);
+
+  if (mySubDebug) {
+    printf("[ subPollDaqMapInit] done\n");
+  }
+  
+
+  return 0;
 }
 
 
@@ -626,6 +862,28 @@ static long subPollProcess(subRecord *precord) {
 
 
 
+static long subPollDaqMapProcess(subRecord *precord) {
+  process_order++;
+  if (mySubDebug) {
+    printf("[ subPollDaqMapProcess] %d Record %s called subPollDaqMapProcess(%p)\n", process_order, precord->name, (void*) precord);
+  }
+
+  if (mySubDebug) {
+    printf("[ subPollDaqMapProcess] setup daq map\n");
+  }
+
+  setupDaqMap(precord);
+
+  if (mySubDebug) {
+    printf("[ subPollDaqMapProcess] done setup daq map\n");
+  }
+
+
+  return 0;
+}
+
+
+
 
 static long subPollStatProcess(subRecord *precord) {
   process_order++;
@@ -673,3 +931,5 @@ epicsRegisterFunction(subPollInit);
 epicsRegisterFunction(subPollProcess);
 epicsRegisterFunction(subPollStatInit);
 epicsRegisterFunction(subPollStatProcess);
+epicsRegisterFunction(subPollDaqMapInit);
+epicsRegisterFunction(subPollDaqMapProcess);

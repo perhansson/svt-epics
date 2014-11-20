@@ -115,6 +115,12 @@ void getFebChName(char name[], char board_type[], const int MAX) {
 void getFebAction(char name[], char board_type[], const int MAX) {
     return getSubStrFromName(name,5,board_type,MAX);
 }
+void getHalfFromDaqMapRecordName(char name[], char board_type[], const int MAX) {
+    return getSubStrFromName(name,3,board_type,MAX);
+}
+void getHybridFromDaqMapRecordName(char name[], char board_type[], const int MAX) {
+    return getSubStrFromName(name,4,board_type,MAX);
+}
 
 
 

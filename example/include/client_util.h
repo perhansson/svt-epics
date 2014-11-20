@@ -23,6 +23,8 @@ void getAction(char name[], char board_type[], const int MAX);
 void getFebId(char name[], char board_type[], const int MAX);
 void getFebChName(char name[], char board_type[], const int MAX);
 void getFebAction(char name[], char board_type[], const int MAX);
+void getHalfFromDaqMapRecordName(char name[], char board_type[], const int MAX);
+void getHybridFromDaqMapRecordName(char name[], char board_type[], const int MAX);
 void error(const char *msg);
 int open_socket(char* hostname, int portno);
 int close_socket(int socketfd);
