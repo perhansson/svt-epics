@@ -17,11 +17,14 @@ def buildEpics():
     printRecords(recs,"dbHybT")
     recs = utils.buildHybLV()
     printRecords(recs,"dbHybLV")
+    recs = utils.buildHybLVStat()
+    printRecords(recs,"dbHybLVStat")
     recs = utils.buildHybLVSwitch()
     printRecords(recs,"dbHybSwitch")
     recs = utils.buildSvtDaqMap()
     printRecords(recs,"dbSvtDaqMap")
     
+
 
 
 def printRecords(recs,name):

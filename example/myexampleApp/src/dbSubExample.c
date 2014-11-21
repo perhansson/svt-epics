@@ -523,6 +523,9 @@ static long subPollStatInit(subRecord *precord) {
   else if(strcmp(action,"v_set_rd_sub")==0) {
     readHybridVTrim(feb_id, id, ch_name, value, BUF_SIZE);
   } 
+  else if(strcmp(action,"stat_sub")==0) {
+    readHybridVSwitch(feb_id, id, value, BUF_SIZE);
+  } 
   else {
     printf("[ readHybrid ]: [ ERROR]: wrong action for readHybrid \"%s\"\n",action);
     return;

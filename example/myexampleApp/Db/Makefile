@@ -18,6 +18,7 @@ include $(TOP)/configure/CONFIG
 #DB += hybLV.db
 DB += dbHybT.db
 DB += dbHybLV.db
+DB += dbHybLVStat.db
 DB += dbHybSwitch.db
 DB += dbFebTemp.db
 DB += dbSvtDaqMap.db

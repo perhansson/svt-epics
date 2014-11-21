@@ -2086,3 +2086,94 @@ record(bo, SVT:lv:hyb:top:17:v125:switch)
 
 
 
+
+record(dfanout,SVT:lv:hyb:bot:all:switch_fanout1)
+{
+    field(LNKA,"SVT:lv:hyb:bot:0:all:switch.VAL PP")
+    field(LNKB,"SVT:lv:hyb:bot:1:all:switch.VAL PP")
+    field(LNKC,"SVT:lv:hyb:bot:2:all:switch.VAL PP")
+    field(LNKD,"SVT:lv:hyb:bot:3:all:switch.VAL PP")
+    field(LNKE,"SVT:lv:hyb:bot:4:all:switch.VAL PP")
+    field(LNKF,"SVT:lv:hyb:bot:5:all:switch.VAL PP")
+}
+
+record(dfanout,SVT:lv:hyb:bot:all:switch_fanout2)
+{
+    field(LNKA,"SVT:lv:hyb:bot:6:all:switch.VAL PP")
+    field(LNKB,"SVT:lv:hyb:bot:7:all:switch.VAL PP")
+    field(LNKC,"SVT:lv:hyb:bot:8:all:switch.VAL PP")
+    field(LNKD,"SVT:lv:hyb:bot:9:all:switch.VAL PP")
+    field(LNKE,"SVT:lv:hyb:bot:10:all:switch.VAL PP")
+    field(LNKF,"SVT:lv:hyb:bot:11:all:switch.VAL PP")
+}
+
+record(dfanout,SVT:lv:hyb:bot:all:switch_fanout3)
+{
+    field(LNKA,"SVT:lv:hyb:bot:12:all:switch.VAL PP")
+    field(LNKB,"SVT:lv:hyb:bot:13:all:switch.VAL PP")
+    field(LNKC,"SVT:lv:hyb:bot:14:all:switch.VAL PP")
+    field(LNKD,"SVT:lv:hyb:bot:15:all:switch.VAL PP")
+    field(LNKE,"SVT:lv:hyb:bot:16:all:switch.VAL PP")
+    field(LNKF,"SVT:lv:hyb:bot:17:all:switch.VAL PP")
+}
+
+record(dfanout,SVT:lv:hyb:bot:all:switch_fanout)
+{
+    field(LNKA,"SVT:lv:hyb:bot:all:switch_fanout1 PP")
+    field(LNKB,"SVT:lv:hyb:bot:all:switch_fanout2 PP")
+    field(LNKC,"SVT:lv:hyb:bot:all:switch_fanout3 PP")
+}
+
+
+record(dfanout,SVT:lv:hyb:top:all:switch_fanout1)
+{
+    field(LNKA,"SVT:lv:hyb:top:0:all:switch.VAL PP")
+    field(LNKB,"SVT:lv:hyb:top:1:all:switch.VAL PP")
+    field(LNKC,"SVT:lv:hyb:top:2:all:switch.VAL PP")
+    field(LNKD,"SVT:lv:hyb:top:3:all:switch.VAL PP")
+    field(LNKE,"SVT:lv:hyb:top:4:all:switch.VAL PP")
+    field(LNKF,"SVT:lv:hyb:top:5:all:switch.VAL PP")
+}
+
+record(dfanout,SVT:lv:hyb:top:all:switch_fanout2)
+{
+    field(LNKA,"SVT:lv:hyb:top:6:all:switch.VAL PP")
+    field(LNKB,"SVT:lv:hyb:top:7:all:switch.VAL PP")
+    field(LNKC,"SVT:lv:hyb:top:8:all:switch.VAL PP")
+    field(LNKD,"SVT:lv:hyb:top:9:all:switch.VAL PP")
+    field(LNKE,"SVT:lv:hyb:top:10:all:switch.VAL PP")
+    field(LNKF,"SVT:lv:hyb:top:11:all:switch.VAL PP")
+}
+
+record(dfanout,SVT:lv:hyb:top:all:switch_fanout3)
+{
+    field(LNKA,"SVT:lv:hyb:top:12:all:switch.VAL PP")
+    field(LNKB,"SVT:lv:hyb:top:13:all:switch.VAL PP")
+    field(LNKC,"SVT:lv:hyb:top:14:all:switch.VAL PP")
+    field(LNKD,"SVT:lv:hyb:top:15:all:switch.VAL PP")
+    field(LNKE,"SVT:lv:hyb:top:16:all:switch.VAL PP")
+    field(LNKF,"SVT:lv:hyb:top:17:all:switch.VAL PP")
+}
+
+record(dfanout,SVT:lv:hyb:top:all:switch_fanout)
+{
+    field(LNKA,"SVT:lv:hyb:top:all:switch_fanout1 PP")
+    field(LNKB,"SVT:lv:hyb:top:all:switch_fanout2 PP")
+    field(LNKC,"SVT:lv:hyb:top:all:switch_fanout3 PP")
+}
+
+
+
+record(bo, SVT:lv:hyb:all:switch) 
+{
+  field(OUT, "SVT:lv:hyb:all:switch_fanout PP")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+
+record(dfanout,SVT:lv:hyb:all:switch_fanout)
+{
+    field(LNKA,"SVT:lv:hyb:top:all:switch_fanout PP")
+    field(LNKB,"SVT:lv:hyb:bot:all:switch_fanout PP")
+}
+

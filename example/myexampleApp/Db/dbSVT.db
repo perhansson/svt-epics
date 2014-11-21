@@ -1,4 +1,4 @@
-
+'
 record(sub, SVT:poll_stat) {
     field(SCAN,"Passive")
     field(INAM,"subPollStatInit")
@@ -37,7 +37,8 @@ record(fanout, SVT:process)
   field(LNK1,"SVT:daqmap:fanout")
   field(LNK2,"SVT:temp:fe:0:axixadc:t_rd")
   field(LNK3,"SVT:lv:hyb:bot:0:dvdd:i_rd")
-  field(LNK4,"SVT:temp:hyb:bot:0:temp0:t_rd")
+  field(LNK4,"SVT:lv:hyb:bot:0:dvdd:stat")
+  field(LNK5,"SVT:temp:hyb:bot:0:temp0:t_rd")
 }
 
 record(fanout, SVT:daqmap:fanout)

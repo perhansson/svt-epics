@@ -45,6 +45,8 @@ DB += svtChanOnOff.db
 DB += svtOnOff.db
 DB += svtBiasSetpoints.db  
 DB += dbFlangeSwitch.db  
+DB += dbFebSwitch.db  
+DB += dbHVSwitch.db  
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

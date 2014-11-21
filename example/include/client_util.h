@@ -41,6 +41,7 @@ void readHybridI(int feb_id, int hyb_id,char ch_name[], char value[],const unsig
 void readHybridT(int feb_id, int hyb_id, int tId, char value[],const unsigned int MAX);
 void readFebT(int feb_id, char value[], char ch_name[], const unsigned int MAX);
 void readHybridV(int feb_id, int hyb_id,char ch_name[], char ch_pos[], char value[],const unsigned int MAX);
+void readHybridVSwitch(int feb_id, int hyb_id, char value[],const unsigned int MAX);
 void getXmlDoc(int sockfd, int read_status, int read_config);
 void getXmlDocStrFormat(char** xml_str, int * xml_str_len);
 int getFebIdFromDaqMap(int hyb_id, char half[]);

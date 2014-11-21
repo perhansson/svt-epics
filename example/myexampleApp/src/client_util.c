@@ -434,6 +434,17 @@ void readHybridVTrim(int feb_id, int hyb_id, char ch_name[], char value[],const 
 
 
 
+void readHybridVSwitch(int feb_id, int hyb_id, char value[],const unsigned int MAX) {  
+    char tag[256];
+    if(client_util_debug>2) printf("[ readHybridVSwitch ]: feb %d hyb %d\n",feb_id, hyb_id);
+    sprintf(tag,"system:config:FrontEndTestFpga:FebCore:Hybrid%dPwrEn",hyb_id);
+    getXMLValue(tag,value,MAX);
+}
+
+
+
+
+
 xmlNode* retrieveElement(xmlDoc* doc, xmlNode* node, char* tag) {
     xmlNode* cur_node = NULL;
     xmlNode* found_it = NULL;

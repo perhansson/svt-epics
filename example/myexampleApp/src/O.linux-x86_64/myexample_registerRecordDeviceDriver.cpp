@@ -274,6 +274,8 @@ epicsShareExtern void (*pvar_func_register_func_subPollInit)(void);
 epicsShareExtern void (*pvar_func_register_func_subPollProcess)(void);
 epicsShareExtern void (*pvar_func_register_func_subPollStatInit)(void);
 epicsShareExtern void (*pvar_func_register_func_subPollStatProcess)(void);
+epicsShareExtern void (*pvar_func_register_func_subPollDaqMapInit)(void);
+epicsShareExtern void (*pvar_func_register_func_subPollDaqMapProcess)(void);
 
 epicsShareExtern int *pvar_int_asCaDebug;
 epicsShareExtern int *pvar_int_dbRecordsOnceOnly;
@@ -316,6 +318,8 @@ int myexample_registerRecordDeviceDriver(DBBASE *pbase)
     (*pvar_func_register_func_subPollProcess)();
     (*pvar_func_register_func_subPollStatInit)();
     (*pvar_func_register_func_subPollStatProcess)();
+    (*pvar_func_register_func_subPollDaqMapInit)();
+    (*pvar_func_register_func_subPollDaqMapProcess)();
     iocshRegisterVariable(vardefs);
     return 0;
 }

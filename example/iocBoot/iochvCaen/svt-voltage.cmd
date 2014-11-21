@@ -44,6 +44,8 @@ detDbLoadRecords
 #dbLoadRecords "db/svtOnOff.db" 
 #dbLoadRecords "db/svtBiasSetpoints.db"
 dbLoadRecords "db/dbFlangeSwitch.db"
+dbLoadRecords "db/dbFebSwitch.db"
+dbLoadRecords "db/dbHVSwitch.db"
 
 
 
