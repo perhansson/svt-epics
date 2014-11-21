@@ -486,7 +486,6 @@ static long subPollStatInit(subRecord *precord) {
 
   static void readHybrid(subRecord* precord,char action[], int id, int feb_id, char ch_name[])
 {
-  double constant;
   if(mySubDebug) {
     printf("[ readHybrid ]: Record %s called readHybrid %s for feb_id= %d  id=%d ch_name=%s\n", precord->name,action,feb_id,id,ch_name);
   }
@@ -494,14 +493,20 @@ static long subPollStatInit(subRecord *precord) {
   //set to default
   //precord->val = def_hyb_t;
   
+  int tId;
+  double val;
+  double constant;
   char value[BUF_SIZE];
+  char value_type[BUF_SIZE];
+  char* value_upper;
   memset(value,0,BUF_SIZE);
+  strcpy(value_type,"double");
   constant = 1.;
+  
   if(strcmp(action,"i_rd_sub")==0) {
     readHybridI(feb_id, id, ch_name, value, BUF_SIZE);
   } 
   else if(strcmp(action,"t_rd_sub")==0) {
-    int tId;
     if(strcmp(ch_name,"temp0")==0) {
       tId = 0;
     }
@@ -525,6 +530,7 @@ static long subPollStatInit(subRecord *precord) {
   } 
   else if(strcmp(action,"stat_sub")==0) {
     readHybridVSwitch(feb_id, id, value, BUF_SIZE);
+    strcpy(value_type,"boolean");
   } 
   else {
     printf("[ readHybrid ]: [ ERROR]: wrong action for readHybrid \"%s\"\n",action);
@@ -534,7 +540,22 @@ static long subPollStatInit(subRecord *precord) {
     printf("[ readHybrid ]: Got value=\"%s\"\n",value);
   }
   if(strlen(value)>0) {
-    precord->val = atof(value)*constant;
+    if(strcmp(value_type,"double")==0) {
+      val = atof(value);
+    } else if(strcmp(value_type,"boolean")==0) {
+      value_upper = strToUpper(value);
+      if(strcmp(value_upper,"TRUE")==0) {
+	val = 1.0;
+      } else if(strcmp(value_upper,"FALSE")==0) {
+	val = 0.0;
+      } else {
+	printf("[ readHybrid ]: [ ERROR ]: this boolean value is not valid: %s\n",value);      
+      }
+    } else {
+      printf("[ readHybrid ]: [ ERROR ]: the value_type %s is not valid\n",value_type);      
+    }
+    precord->val = val*constant;
+    
     if (mySubDebug) {
       printf("[ readHybrid ]: precord-val is now %f \n",precord->val);
     }
@@ -623,7 +644,7 @@ static long subLVProcess(subRecord *precord) {
   
   if(strcmp(board_type,"hyb")==0) {
    
-    if(strcmp(action,"vn_sub")==0 || strcmp(action,"vf_sub")==0 || strcmp(action,"i_rd_sub")==0 || strcmp(action,"v_set_rd_sub")==0) {
+    if(strcmp(action,"vn_sub")==0 || strcmp(action,"vf_sub")==0 || strcmp(action,"i_rd_sub")==0 || strcmp(action,"v_set_rd_sub")==0 || strcmp(action,"stat_sub")==0) {
 
       if(strcmp(ch_name,"dvdd")!=0 && strcmp(ch_name,"avdd")!=0 && strcmp(ch_name,"v125")!=0) {
 	printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);

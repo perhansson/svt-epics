@@ -837,6 +837,6 @@ void retrieveValue(xmlDoc* doc, xmlNode* node, char* tags, char value[], const u
 
 void getXmlDocStrFormat(char** xml_str, int * xml_str_len) {
     if(doc!=NULL) {
-        xmlDocDumpFormatMemoryEnc	(doc,xml_str,xml_str_len, "UTF-8",1);    
+      xmlDocDumpFormatMemoryEnc	(doc,(xmlChar**)xml_str,xml_str_len, "UTF-8",1);    
     }
 }

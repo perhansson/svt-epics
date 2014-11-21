@@ -12,6 +12,7 @@
 #include <libxml/parser.h>
 
 
+char* strToUpper( char* s );
 double extractTempValFromString(char value[]);
 void getSubStrFromName(char name[],const int i, char board_type[], const int MAX);
 void getType(char name[], char board_type[], const int MAX);

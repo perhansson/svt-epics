@@ -387,7 +387,6 @@ record(sub,SVT:lv:hyb:HALF:HYBID:dvdd:stat_sub)
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:avdd:stat")
 }
 
 record(ai, SVT:lv:hyb:HALF:HYBID:dvdd:stat)
@@ -403,7 +402,6 @@ record(sub,SVT:lv:hyb:HALF:HYBID:avdd:stat_sub)
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:v125:stat")
 }
 
 record(ai, SVT:lv:hyb:HALF:HYBID:avdd:stat)
@@ -418,7 +416,6 @@ record(sub,SVT:lv:hyb:HALF:HYBID:v125:stat_sub)
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"FLNKNEXTHYB")
 }
 
 record(ai, SVT:lv:hyb:HALF:HYBID:v125:stat)
@@ -428,10 +425,21 @@ record(ai, SVT:lv:hyb:HALF:HYBID:v125:stat)
   field(DTYP,"Soft Channel")
 }
 
+record(calc, SVT:lv:hyb:HALF:HYBID:stat)
+{
+  field(SCAN, "Passive")
+  field(CALC, "A&&B&&C")
+  field(INPA, "SVT:lv:hyb:HALF:HYBID:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:hyb:HALF:HYBID:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:hyb:HALF:HYBID:v125:stat.VAL PP")
+  field(FLNK,"FLNKNEXTHYB")
+  
+}
+
 
 
 """
-    s_flnk = "SVT:lv:hyb:HALF:NEXTHYB:dvdd:stat"
+    s_flnk = "SVT:lv:hyb:HALF:NEXTHYB:stat"
 
     records = []
     for half in ["bot","top"]:
@@ -535,39 +543,46 @@ record(bo, SVT:lv:hyb:HALF:HYBID:v125:switch)
     s = """
 record(dfanout,SVT:lv:hyb:HALF:all:switch_fanout1)
 {
-    field(LNKA,"SVT:lv:hyb:HALF:0:all:switch.VAL PP")
-    field(LNKB,"SVT:lv:hyb:HALF:1:all:switch.VAL PP")
-    field(LNKC,"SVT:lv:hyb:HALF:2:all:switch.VAL PP")
-    field(LNKD,"SVT:lv:hyb:HALF:3:all:switch.VAL PP")
-    field(LNKE,"SVT:lv:hyb:HALF:4:all:switch.VAL PP")
-    field(LNKF,"SVT:lv:hyb:HALF:5:all:switch.VAL PP")
+    field(OUTA,"SVT:lv:hyb:HALF:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:HALF:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:HALF:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:HALF:3:all:switch.VAL PP")
+    field(OUTE,"SVT:lv:hyb:HALF:4:all:switch.VAL PP")
+    field(OUTF,"SVT:lv:hyb:HALF:5:all:switch.VAL PP")
 }
 
 record(dfanout,SVT:lv:hyb:HALF:all:switch_fanout2)
 {
-    field(LNKA,"SVT:lv:hyb:HALF:6:all:switch.VAL PP")
-    field(LNKB,"SVT:lv:hyb:HALF:7:all:switch.VAL PP")
-    field(LNKC,"SVT:lv:hyb:HALF:8:all:switch.VAL PP")
-    field(LNKD,"SVT:lv:hyb:HALF:9:all:switch.VAL PP")
-    field(LNKE,"SVT:lv:hyb:HALF:10:all:switch.VAL PP")
-    field(LNKF,"SVT:lv:hyb:HALF:11:all:switch.VAL PP")
+    field(OUTA,"SVT:lv:hyb:HALF:6:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:HALF:7:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:HALF:8:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:HALF:9:all:switch.VAL PP")
+    field(OUTE,"SVT:lv:hyb:HALF:10:all:switch.VAL PP")
+    field(OUTF,"SVT:lv:hyb:HALF:11:all:switch.VAL PP")
 }
 
 record(dfanout,SVT:lv:hyb:HALF:all:switch_fanout3)
 {
-    field(LNKA,"SVT:lv:hyb:HALF:12:all:switch.VAL PP")
-    field(LNKB,"SVT:lv:hyb:HALF:13:all:switch.VAL PP")
-    field(LNKC,"SVT:lv:hyb:HALF:14:all:switch.VAL PP")
-    field(LNKD,"SVT:lv:hyb:HALF:15:all:switch.VAL PP")
-    field(LNKE,"SVT:lv:hyb:HALF:16:all:switch.VAL PP")
-    field(LNKF,"SVT:lv:hyb:HALF:17:all:switch.VAL PP")
+    field(OUTA,"SVT:lv:hyb:HALF:12:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:HALF:13:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:HALF:14:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:HALF:15:all:switch.VAL PP")
+    field(OUTE,"SVT:lv:hyb:HALF:16:all:switch.VAL PP")
+    field(OUTF,"SVT:lv:hyb:HALF:17:all:switch.VAL PP")
 }
 
 record(dfanout,SVT:lv:hyb:HALF:all:switch_fanout)
 {
-    field(LNKA,"SVT:lv:hyb:HALF:all:switch_fanout1 PP")
-    field(LNKB,"SVT:lv:hyb:HALF:all:switch_fanout2 PP")
-    field(LNKC,"SVT:lv:hyb:HALF:all:switch_fanout3 PP")
+    field(OUTA,"SVT:lv:hyb:HALF:all:switch_fanout1 PP")
+    field(OUTB,"SVT:lv:hyb:HALF:all:switch_fanout2 PP")
+    field(OUTC,"SVT:lv:hyb:HALF:all:switch_fanout3 PP")
+}
+
+record(bo, SVT:lv:hyb:HALF:all:switch) 
+{
+  field(OUT, "SVT:lv:hyb:HALF:all:switch_fanout PP")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
 }
 
 """
@@ -590,8 +605,8 @@ record(bo, SVT:lv:hyb:all:switch)
 
 record(dfanout,SVT:lv:hyb:all:switch_fanout)
 {
-    field(LNKA,"SVT:lv:hyb:top:all:switch_fanout PP")
-    field(LNKB,"SVT:lv:hyb:bot:all:switch_fanout PP")
+    field(OUTA,"SVT:lv:hyb:top:all:switch_fanout PP")
+    field(OUTB,"SVT:lv:hyb:bot:all:switch_fanout PP")
 }
 
 """
