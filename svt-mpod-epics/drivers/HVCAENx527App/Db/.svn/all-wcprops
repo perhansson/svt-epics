@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/!svn/ver/9882/trunk/controls/epics/drivers/HVCAENx527App/Db
+END
+HVCAENx527cr.db
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/!svn/ver/9880/trunk/controls/epics/drivers/HVCAENx527App/Db/HVCAENx527cr.db
+END
+HVCAENx527ch.db
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/!svn/ver/9880/trunk/controls/epics/drivers/HVCAENx527App/Db/HVCAENx527ch.db
+END
+HVCAENx527chItLk.db
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/!svn/ver/9882/trunk/controls/epics/drivers/HVCAENx527App/Db/HVCAENx527chItLk.db
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/!svn/ver/9877/trunk/controls/epics/drivers/HVCAENx527App/Db/Makefile
+END
+HVCAENx527.db
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/!svn/ver/9880/trunk/controls/epics/drivers/HVCAENx527App/Db/HVCAENx527.db
+END
