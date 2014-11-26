@@ -1,1 +1,0 @@
-tcpipExample.o: ../tcpipExample.c
