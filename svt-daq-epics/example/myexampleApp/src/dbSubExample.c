@@ -16,7 +16,7 @@
 int mySubDebug = 0;
 int process_order = 0;
 const int BUF_SIZE = 256;
-char* hostNameDef = "134.79.229.141";
+char* hostNameDef = "localhost"; //"134.79.229.141";
 char hostName[256];
 int portDef = 8091;
 int port;
@@ -52,52 +52,71 @@ static void getIpFromRecord(subRecord* precord, char value[], const int MAX) {
   char inpa_val[40]; // 40 is maximum size of stringin/out records
   memset(inpa_val,0,40);
   snprintf( inpa_val, 40, "%s", (char*) ((precord->inpa).value.constantStr) ) ;
-  if(strlen(inpa_val)>0) {
-    dbAddr paddr;
-    if(dbNameToAddr(inpa_val,&paddr)!=0) {
-      printf("[ getIpFromRecord ]: [ ERROR ]: dbNameToAddr for %s failed (paddr=%p)\n",inpa_val,&paddr);
-    }
-    struct stringinRecord* recA = (stringinRecord*)paddr.precord;
-    if (mySubDebug>1) printf("[ getIpFromRecord ]: recA at %p\n",recA);
-    if(recA!=NULL) {
-      if (mySubDebug>1) printf("[ getIpFromRecord ]: recA name %s val %p\n",recA->name,recA->val);
-      char inpa_val2[40];
-      memset(inpa_val2,0,40);
-      snprintf( inpa_val2, 40, "%s", recA->val ) ;
-      if (mySubDebug>1) printf("[ getIpFromRecord ]: got IP %s\n",inpa_val2);
-      if(strlen(inpa_val2)<MAX) {
-	strcpy(value,inpa_val2);
-      } else {
-	printf("[ getIpFromRecord ]: [ WARNING ]: IP from DB is too long? %s \n",inpa_val2);
-      }
-    } else {
-      printf("[ getIpFromRecord ]: [ WARNING ]: cannot get IP record from inpa_val %s \n",inpa_val);
-    }
+  if(inpa_val!=NULL) {
+     if(strlen(inpa_val)>0) {
+        dbAddr paddr;
+        if(dbNameToAddr(inpa_val,&paddr)==0) {
+           struct stringinRecord* recA = (stringinRecord*)paddr.precord;
+           if (mySubDebug>1) printf("[ getIpFromRecord ]: recA at %p\n",recA);
+           if(recA!=NULL) {
+              if (mySubDebug>1) printf("[ getIpFromRecord ]: recA name %s val %p\n",recA->name,recA->val);
+              char inpa_val2[40];
+              memset(inpa_val2,0,40);
+              snprintf( inpa_val2, 40, "%s", recA->val ) ;
+              if (mySubDebug>1) printf("[ getIpFromRecord ]: got IP %s\n",inpa_val2);
+              if(strlen(inpa_val2)<MAX) {
+                 strcpy(value,inpa_val2);
+              } else {
+                 printf("[ getIpFromRecord ]: [ WARNING ]: IP from DB is too long? %s \n",inpa_val2);
+                 strcpy(value,"");
+              }
+           } else {
+              printf("[ getIpFromRecord ]: [ WARNING ]: cannot get IP record from inpa_val %s \n",inpa_val);
+              strcpy(value,"");
+           }
+        } else {
+           printf("[ getIpFromRecord ]: [ ERROR ]: dbNameToAddr for %s failed (paddr=%p)\n",inpa_val,&paddr);
+           strcpy(value,"");
+        }
+        
+     } else {
+        printf("[ getIpFromRecord ]: [ WARNING ]: INPA string has zero length \n");    
+        strcpy(value,"");
+     }
   } else {
-      printf("[ getIpFromRecord ]: [ WARNING ]: INPA string has zero length \n");    
+     printf("[ getIpFromRecord ]: [ ERROR ]: failed to get value from inpa\n");
+     strcpy(value,"");
   }
+  
 }
 
 static int getPortFromRecord(subRecord* precord) {
   char inpb_val[40]; // 40 is maximum size of stringin/out records
   memset(inpb_val,0,40);
   snprintf( inpb_val, 40, "%s", (char*) ((precord->inpb).value.constantStr) ) ;
-  if(strlen(inpb_val)>0) {
-    dbAddr paddr;
-    if(dbNameToAddr(inpb_val,&paddr)!=0) {
-      printf("[ getPortFromRecord ]: [ ERROR ]: dbNameToAddr for %s failed (paddr=%p)\n",inpb_val,&paddr);
-    }
-    struct longinRecord* recA = (longinRecord*)paddr.precord;
-    if (mySubDebug>1) printf("[ getPortFromRecord ]: recA at %p\n",recA);
-    if(recA!=NULL) {
-      if (mySubDebug>1) printf("[ getPortFromRecord ]: recA name %s val %d\n",recA->name,recA->val);
-      return recA->val;
-    } else {
-      printf("[ getPortFromRecord ]: [ WARNING ]: getPortFromRecord: cannot get port record from inpb_val %s \n",inpb_val);
-    }
+  if(inpb_val!=NULL) {
+     if(strlen(inpb_val)>0) {
+        dbAddr paddr;
+        if(dbNameToAddr(inpb_val,&paddr)==0) {
+           struct longinRecord* recA = (longinRecord*)paddr.precord;
+           if (mySubDebug>1) printf("[ getPortFromRecord ]: recA at %p\n",recA);
+           if(recA!=NULL) {
+              if (mySubDebug>1) printf("[ getPortFromRecord ]: recA name %s val %d\n",recA->name,recA->val);
+              return recA->val;
+           } else {
+              printf("[ getPortFromRecord ]: [ WARNING ]: getPortFromRecord: cannot get port record from inpb_val %s \n",inpb_val);
+           }
+        } else {
+           printf("[ getPortFromRecord ]: [ ERROR ]: dbNameToAddr for %s failed (paddr=%p)\n",inpb_val,&paddr);
+        }
+        
+     } else {
+        printf("[ getPortFromRecord ]: [ WARNING ]: getIpFromRecord: INPB string has zero length \n");    
+     }
   } else {
-      printf("[ getPortFromRecord ]: [ WARNING ]: getIpFromRecord: INPB string has zero length \n");    
+     printf("[ getPortFromRecord ]: [ ERROR ]: failed to get value from inpb\n");
   }
+  
   return -1;
 }
 

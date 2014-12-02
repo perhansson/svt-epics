@@ -1,4 +1,3 @@
-'
 record(sub, SVT:poll_stat) {
     field(SCAN,"Passive")
     field(INAM,"subPollStatInit")
@@ -11,13 +10,14 @@ record(sub,SVT:poll_xml)
     field(SCAN,"5 second")
     field(INAM,"subPollInit")
     field(SNAM,"subPollProcess")
-    field(FLNK,"SVT:poll_stat")
-    field(INPA, "SVT:poll_xml_ip PP")
-    field(INPB, "SVT:poll_xml_port PP")
+    #field(FLNK,"SVT:poll_stat")
+    field(INPA, "SVT:poll_xml_ip")
+    field(INPB, "SVT:poll_xml_port")
 }
 
+
 record(stringin, SVT:poll_xml_ip) {
-    field(VAL,"134.79.229.141")
+    field(VAL,"localhost")
 }
 
 record(longin, SVT:poll_xml_port) {
@@ -34,15 +34,16 @@ record(bi, SVT:hb_check) {
 
 record(fanout, SVT:process)
 {
-  field(LNK1,"SVT:daqmap:fanout")
-  field(LNK2,"SVT:temp:fe:0:axixadc:t_rd")
-  field(LNK3,"SVT:lv:hyb:bot:0:dvdd:i_rd")
-  field(LNK4,"SVT:lv:hyb:bot:0:stat")
-  field(LNK5,"SVT:temp:hyb:bot:0:temp0:t_rd")
+  #field(LNK1,"SVT:daqmap:fanout")
+  #field(LNK2,"SVT:temp:fe:0:axixadc:t_rd")
+  #field(LNK3,"SVT:lv:hyb:bot:0:dvdd:i_rd")
+  #field(LNK4,"SVT:lv:hyb:bot:0:stat")
+  #field(LNK5,"SVT:temp:hyb:bot:0:temp0:t_rd")
 }
 
 record(fanout, SVT:daqmap:fanout)
 {
+  field(SCAN,"Passive")
   field(LNK1,"SVT:daqmap_sub:1")
   field(LNK2,"SVT:daqmap_sub:2")
   field(LNK3,"SVT:daqmap_sub:3")

@@ -1,4 +1,4 @@
-#!../../bin/linux-x86_64/myexample
+#!../../bin/linux-arm/myexample
 
 ## You may have to change myexample to something else
 ## everywhere it appears in this file
@@ -16,12 +16,12 @@ myexample_registerRecordDeviceDriver pdbbase
 dbLoadTemplate "db/userHost.substitutions"
 #dbLoadRecords "db/hybLV.db"
 #dbLoadRecords "db/dbSubExample.db", "user=trackerHost"
-dbLoadRecords "db/dbHybT.db"
-dbLoadRecords "db/dbHybLV.db"
-dbLoadRecords "db/dbHybLVStat.db"
-dbLoadRecords "db/dbFebTemp.db"
-dbLoadRecords "db/dbHybSwitch.db"
-dbLoadRecords "db/dbSvtDaqMap.db"
+#dbLoadRecords "db/dbHybT.db"
+#dbLoadRecords "db/dbHybLV.db"
+#dbLoadRecords "db/dbHybLVStat.db"
+#dbLoadRecords "db/dbFebTemp.db"
+#dbLoadRecords "db/dbHybSwitch.db"
+#dbLoadRecords "db/dbSvtDaqMap.db"
 dbLoadRecords "db/dbSVT.db"
 
 ## Set this to see messages from mySub
