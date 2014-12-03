@@ -10,9 +10,9 @@ record(sub,SVT:poll_xml)
     field(SCAN,"5 second")
     field(INAM,"subPollInit")
     field(SNAM,"subPollProcess")
-    #field(FLNK,"SVT:poll_stat")
-    field(INPA, "SVT:poll_xml_ip")
-    field(INPB, "SVT:poll_xml_port")
+    field(FLNK,"SVT:poll_stat")
+    #field(INPA, "SVT:poll_xml_ip")
+    #field(INPB, "SVT:poll_xml_port")
 }
 
 
@@ -35,7 +35,7 @@ record(bi, SVT:hb_check) {
 record(fanout, SVT:process)
 {
   #field(LNK1,"SVT:daqmap:fanout")
-  #field(LNK2,"SVT:temp:fe:0:axixadc:t_rd")
+  field(LNK2,"SVT:temp:fe:0:axixadc:t_rd")
   #field(LNK3,"SVT:lv:hyb:bot:0:dvdd:i_rd")
   #field(LNK4,"SVT:lv:hyb:bot:0:stat")
   #field(LNK5,"SVT:temp:hyb:bot:0:temp0:t_rd")

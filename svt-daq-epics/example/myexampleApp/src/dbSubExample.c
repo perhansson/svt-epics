@@ -16,9 +16,9 @@
 int mySubDebug = 0;
 int process_order = 0;
 const int BUF_SIZE = 256;
-char* hostNameDef = "localhost"; //"134.79.229.141";
+char* hostNameDef = "192.168.1.17"; //"localhost"; //"134.79.229.141";
 char hostName[256];
-int portDef = 8091;
+int portDef = 8090;
 int port;
 static int hybToFeb[N_HALVES][N_HYBRIDS];
 int sockfd = 0;
@@ -299,7 +299,11 @@ static void setupSocket(subRecord *precord) {
     getIpFromRecord(precord,host,40);
     p = getPortFromRecord(precord);
     if(strlen(host)==0 || p<=0) {
-      printf("[ setupSocket ]: [ ERROR ]: Couldn't get hostname or port from in DB.\n");
+      printf("[ setupSocket ]: [ WARNING ]: Couldn't get hostname or port from in DB.\n");
+      strcpy(hostName,hostNameDef);
+      port = portDef;
+      printf("[ setupSocket ]: [ WARNING ]: Using default host and port name: %s:%d.\n",host,port);
+      
     } else {
       strcpy(hostName,host);
       port = p;

@@ -386,9 +386,11 @@ void readFebT(int feb_id, char value[],char ch_name[],const unsigned int MAX) {
     char tag[256];// = "system:status:FrontEndTestFpga:FebCore:AxiXadc:Temperature";
     memset(tag,0,256);
     if(strcmp(ch_name,"axixadc")==0) {
-        strcpy(tag,"system:status:FrontEndTestFpga:FebCore:AxiXadc:Temperature");
+       //strcpy(tag,"system:status:FrontEndTestFpga:FebCore:AxiXadc:Temperature");
+       strcpy(tag,"system:status:FebCore:SoftPowerMonitor:FebFpgaTemp");
     } else if(strcmp(ch_name,"FebTemp0")==0 || strcmp(ch_name,"FebTemp1")==0) {
-        sprintf(tag,"system:status:FrontEndTestFpga:FebCore:PowerMonitor:%s",ch_name);
+       //sprintf(tag,"system:status:FrontEndTestFpga:FebCore:PowerMonitor:%s",ch_name);
+       sprintf(tag,"system:status:FebCore:SoftPowerMonitor:%s",ch_name);
     } else {
         printf("[ readFebT }: [ERROR]: wrong ch_name \"%s\" for readFebT\n",ch_name);
         return;
@@ -398,13 +400,14 @@ void readFebT(int feb_id, char value[],char ch_name[],const unsigned int MAX) {
 
 void readHybridI(int feb_id, int hyb_id,char ch_name[], char value[],const unsigned int MAX) {
     char tag[256];
-    sprintf(tag,"system:status:FrontEndTestFpga:FebCore:PowerMonitor:Hybrid%d_%s_Current",hyb_id,strToUpper(ch_name));
+    //sprintf(tag,"system:status:FrontEndTestFpga:FebCore:PowerMonitor:Hybrid%d_%s_Current",hyb_id,strToUpper(ch_name));
+    sprintf(tag,"system:status:FebCore:SoftPowerMonitor:Hybrid%d_%s_Current",hyb_id,strToUpper(ch_name));
     getXMLValue(tag,value,MAX);
 }
 
 void readHybridT(int feb_id, int hyb_id, int tId, char value[],const unsigned int MAX) {
     char tag[256];
-    sprintf(tag,"system:status:FrontEndTestFpga:FebCore:PowerMonitor:Hybrid%d_ZTemp%d",hyb_id,tId);
+    sprintf(tag,"system:status:FebCore:PowerMonitor:Hybrid%d_ZTemp%d",hyb_id,tId);
     getXMLValue(tag,value,MAX);
 }
 
@@ -413,7 +416,13 @@ void readHybridV(int feb_id, int hyb_id,char ch_name[], char ch_pos[], char valu
     char* ch_name_upper;
     ch_name_upper = strToUpper(ch_name);
     if(client_util_debug>1) printf("ch_name %s\n",ch_name_upper);
-    sprintf(tag,"system:status:FrontEndTestFpga:FebCore:PowerMonitor:Hybrid%d_%s_%s",hyb_id,ch_name_upper,ch_pos);
+    if(strcmp(ch_pos,"Near")) sprintf(tag,"system:status:FebCore:SoftPowerMonitor:Hybrid%d_%s_%s",hyb_id,ch_name_upper,ch_pos);
+    else if(strcmp(ch_pos,"Far") || strcmp(ch_pos,"Sense")) sprintf(tag,"system:status:FebCore:SoftPowerMonitor:Hybrid%d_%s_Sense",hyb_id,ch_name_upper);
+    else {
+        printf("[ readHybridV ]: [ ERROR ]: wrong ch_pos \"%s\" \n",ch_pos);
+    }
+//sprintf(tag,"system:status:FrontEndTestFpga:FebCore:PowerMonitor:Hybrid%d_%s_%s",hyb_id,ch_name_upper,ch_pos);
+       //sprintf(tag,"system:status:FebCore:SoftPowerMonitor:Hybrid%d_%s_%s",hyb_id,ch_name_upper,ch_pos);
     getXMLValue(tag,value,MAX);
 }
 
@@ -427,7 +436,8 @@ void readHybridVTrim(int feb_id, int hyb_id, char ch_name[], char value[],const 
     if(strcmp(ch_name,"dvdd")==0) strcpy(ch_name_corr,"Dvdd");
     if(strcmp(ch_name,"avdd")==0) strcpy(ch_name_corr,"Avdd");
     if(strcmp(ch_name,"v125")==0) strcpy(ch_name_corr,"V1_25");
-    sprintf(tag,"system:config:FrontEndTestFpga:FebCore:Hybrid%d%sTrim",hyb_id,ch_name_corr);
+    //sprintf(tag,"system:config:FrontEndTestFpga:FebCore:Hybrid%d%sTrim",hyb_id,ch_name_corr);
+    sprintf(tag,"system:config:ControlDpm:FebFpga:FebCore:Hybrid%d%sTrim",hyb_id,ch_name_corr);
     getXMLValue(tag,value,MAX);
     return;  
 }
@@ -437,7 +447,8 @@ void readHybridVTrim(int feb_id, int hyb_id, char ch_name[], char value[],const 
 void readHybridVSwitch(int feb_id, int hyb_id, char value[],const unsigned int MAX) {  
     char tag[256];
     if(client_util_debug>2) printf("[ readHybridVSwitch ]: feb %d hyb %d\n",feb_id, hyb_id);
-    sprintf(tag,"system:config:FrontEndTestFpga:FebCore:Hybrid%dPwrEn",hyb_id);
+    //sprintf(tag,"system:config:FrontEndTestFpga:FebCore:Hybrid%dPwrEn",hyb_id);
+    sprintf(tag,"system:config:ControlDpm:FebFpga:FebCore:Hybrid%dPwrEn",hyb_id);
     getXMLValue(tag,value,MAX);
 }
 

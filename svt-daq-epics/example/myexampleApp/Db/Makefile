@@ -23,6 +23,7 @@ DB += dbHybSwitch.db
 DB += dbFebTemp.db
 DB += dbSvtDaqMap.db
 DB += dbSVT.db
+#DB += dbSVTtest.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
