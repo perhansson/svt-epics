@@ -2,7 +2,7 @@
 #include "common.h"
 #include <libxml/parser.h>
 #include <libxml/xpath.h>
-#include <cstring>
+#include <string.h>
 
 xmlNodePtr getFebNode(xmlDocPtr doc, xmlXPathObjectPtr result, int index, int depth) {
    xmlNodeSetPtr nodeset;
