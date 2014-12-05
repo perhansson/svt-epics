@@ -1,0 +1,12 @@
+#!/bin/tcsh
+
+echo "Setup EPICS environment"
+source ./setup_epics.csh
+
+echo $PWD 
+pushd example/iocBoot/iochvCaen
+echo $PWD
+echo "Start IOC"
+./svt-voltage.cmd
+popd
+
