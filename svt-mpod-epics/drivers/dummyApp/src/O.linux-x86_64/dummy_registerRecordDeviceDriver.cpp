@@ -285,7 +285,7 @@ static struct iocshVarDef vardefs[] = {
 
 int dummy_registerRecordDeviceDriver(DBBASE *pbase)
 {
-    const char *bldTop = "/home/tracker/pelle/epics/drivers";
+    const char *bldTop = "/home/tracker/pelle/epics/svt-epics/svt-mpod-epics/drivers";
     const char *envTop = getenv("TOP");
 
     if (envTop && strcmp(envTop, bldTop)) {

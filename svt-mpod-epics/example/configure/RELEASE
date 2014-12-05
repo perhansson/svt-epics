@@ -24,7 +24,7 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 # If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
 
-EPICS_SUPPORT=/mnt/host/daq/epics/base-3.14.12.4/support
+EPICS_SUPPORT=/u1/packages/support
 DEVSNMP=$(EPICS_SUPPORT)/snmp-nscl-1.0.RC6
 IPAC=$(EPICS_SUPPORT)/ipac-2.11
 SEQ=$(EPICS_SUPPORT)/seq-2.1.12
@@ -35,11 +35,10 @@ STD=$(EPICS_SUPPORT)/std-3-2
 AUTOSAVE=$(EPICS_SUPPORT)/autosave-5-1
 CALC=$(EPICS_SUPPORT)/calc-3-2
 
-EPICS_DRIVERS=/home/tracker/pelle/epics/svt-epics/drivers
+EPICS_DRIVERS=/home/tracker/pelle/epics/svt-epics/svt-mpod-epics/drivers
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-#EPICS_BASE=/u1/packages/base-3.14.12.2/
-EPICS_BASE=/mnt/host/daq/epics/base-3.14.12.4/
+EPICS_BASE=/u1/packages/base-3.14.12.2/
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
