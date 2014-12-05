@@ -1,0 +1,1893 @@
+
+file {
+	name="/home/tracker/pelle/epics/medm_hps/svtTempSensors.adl"
+	version=030108
+}
+display {
+	object {
+		x=2326
+		y=158
+		width=691
+		height=767
+	}
+	clr=14
+	bclr=12
+	cmap=""
+	gridSpacing=5
+	gridOn=1
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=213
+		y=15
+		width=250
+		height=35
+	}
+	"basic attribute" {
+		clr=15
+	}
+	textix="SVT TEMPERATURES"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=143
+		y=35
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrids"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=500
+		y=35
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FEBs"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=103
+		y=65
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Bottom"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=183
+		y=65
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Top"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=440
+		y=65
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FPGA"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=500
+		y=65
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FebTemp0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=560
+		y=65
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FebTemp1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=370
+		y=88
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FEB 0"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=440
+		y=86
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:0:axixadc:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=86
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:0:FebTemp0:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=560
+		y=86
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:0:FebTemp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=370
+		y=118
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FEB 1"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=440
+		y=116
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:1:axixadc:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=116
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:1:FebTemp0:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=560
+		y=116
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:1:FebTemp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=370
+		y=148
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FEB 2"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=440
+		y=146
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:2:axixadc:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=146
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:2:FebTemp0:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=560
+		y=146
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:2:FebTemp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=370
+		y=178
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FEB 3"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=440
+		y=176
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:3:axixadc:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=176
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:3:FebTemp0:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=560
+		y=176
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:3:FebTemp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=370
+		y=208
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FEB 4"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=440
+		y=206
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:4:axixadc:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=206
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:4:FebTemp0:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=560
+		y=206
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:4:FebTemp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=370
+		y=238
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FEB 5"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=440
+		y=236
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:5:axixadc:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=236
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:5:FebTemp0:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=560
+		y=236
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:5:FebTemp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=370
+		y=268
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FEB 6"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=440
+		y=266
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:6:axixadc:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=266
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:6:FebTemp0:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=560
+		y=266
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:6:FebTemp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=370
+		y=298
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FEB 7"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=440
+		y=296
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:7:axixadc:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=296
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:7:FebTemp0:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=560
+		y=296
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:7:FebTemp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=370
+		y=328
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FEB 8"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=440
+		y=326
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:8:axixadc:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=326
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:8:FebTemp0:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=560
+		y=326
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:8:FebTemp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=370
+		y=358
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="FEB 9"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=440
+		y=356
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:9:axixadc:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=356
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:9:FebTemp0:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=560
+		y=356
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:fe:9:FebTemp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=88
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 0"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=86
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:0:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=86
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:0:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=118
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 1"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=116
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:1:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=116
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:1:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=148
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 2"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=146
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:2:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=146
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:2:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=178
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 3"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=176
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:3:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=176
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:3:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=208
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 4"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=206
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:4:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=206
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:4:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=238
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 5"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=236
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:5:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=236
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:5:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=268
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 6"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=266
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:6:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=266
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:6:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=298
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 7"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=296
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:7:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=296
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:7:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=328
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 8"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=326
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:8:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=326
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:8:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=358
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 9"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=356
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:9:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=356
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:9:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=388
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 10"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=386
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:10:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=386
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:10:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=418
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 11"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=416
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:11:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=416
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:11:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=448
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 12"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=446
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:12:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=446
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:12:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=478
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 13"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=476
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:13:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=476
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:13:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=508
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 14"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=506
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:14:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=506
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:14:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=538
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 15"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=536
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:15:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=536
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:15:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=568
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 16"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=566
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:16:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=566
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:16:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+text {
+	object {
+		x=20
+		y=598
+		width=50
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Hybrid 17"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=83
+		y=596
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:bot:17:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=203
+		y=596
+		width=50
+		height=25
+	}
+	monitor {
+		chan="SVT:temp:hyb:top:17:temp1:t_rd"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+		precSrc="default"
+		precDefault=1
+	}
+}
+oval {
+	object {
+		x=147
+		y=670
+		width=12
+		height=12
+	}
+	"basic attribute" {
+		clr=19
+	}
+	"dynamic attribute" {
+		vis="calc"
+		calc="A>0&&B>0"
+		chan="HpsTrackerHeartBeat"
+		chanB="iochpsSVTemps:svt_hb_check"
+	}
+}
+oval {
+	object {
+		x=137
+		y=700
+		width=12
+		height=12
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="calc"
+		calc="A>0"
+		chan="SVT:hb_check"
+	}
+}
+text {
+	object {
+		x=11
+		y=700
+		width=100
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="SVT DAQ HEARTBEAT"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=109
+		y=730
+		width=30
+		height=20
+	}
+	monitor {
+		chan="SVT:hb_check"
+		clr=0
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	format="string"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=501
+		y=700
+		width=45
+		height=17
+	}
+	monitor {
+		chan="minit_t_v_LCW_IN"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=501
+		y=730
+		width=45
+		height=17
+	}
+	monitor {
+		chan="minit_t_v_LCW_OUT"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=362
+		y=700
+		width=150
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Vacuum Chamber Input "
+}
+text {
+	object {
+		x=362
+		y=730
+		width=150
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Vacuum Chamber Output "
+}
+oval {
+	object {
+		x=127
+		y=700
+		width=12
+		height=12
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="calc"
+		calc="A<1"
+		chan="SVT:hb_check"
+	}
+}
+text {
+	object {
+		x=1
+		y=730
+		width=80
+		height=25
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="SVT DAQ IS"
+	align="horiz. centered"
+}
+"shell command" {
+	object {
+		x=559
+		y=730
+		width=80
+		height=20
+	}
+	command[0] {
+		label="SVT Temperatures"
+		name="StripTool"
+		args="/usr/local/clas/devel/R3.14.12/support/strip/svt_temps.stp &"
+	}
+	clr=0
+	bclr=39
+	label="StripCharts"
+}
+oval {
+	object {
+		x=173
+		y=670
+		width=12
+		height=12
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="calc"
+		calc="A<1&&B>0"
+		chan="HpsTrackerHeartBeat"
+		chanB="iochpsSVTemps:svt_hb_check"
+	}
+}

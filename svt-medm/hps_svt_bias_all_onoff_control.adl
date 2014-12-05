@@ -1,0 +1,8955 @@
+
+file {
+	name="/home/tracker/pelle/epics/svt-medm/hps_svt_bias_all_onoff_control.adl"
+	version=030108
+}
+display {
+	object {
+		x=1460
+		y=80
+		width=1561
+		height=1018
+	}
+	clr=14
+	bclr=12
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=10
+		y=23
+		width=121
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Name"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=146
+		y=23
+		width=51
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Slot"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=233
+		y=23
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Voltage"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=312
+		y=23
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Setpoint"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=387
+		y=23
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Setpoint"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=470
+		y=23
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="On/Off"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=544
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Status"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=624
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Current"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=702
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Current"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=778
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Current"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=863
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Rate"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=940
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Rate"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1023
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Rate"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1097
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Rate"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=17
+		y=57
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 0"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=57
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:0:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=57
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:0:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=57
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:0:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=57
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:0:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=56
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:0:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=56
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=56
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:0:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=83
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 1"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=83
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:1:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=83
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:1:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=83
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:1:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=83
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:1:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=82
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:1:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=82
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=82
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:1:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=109
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 2"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=109
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:2:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=109
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:2:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=109
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:2:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=109
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:2:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=108
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:2:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=108
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=108
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:2:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=135
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 3"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=135
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:3:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=135
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:3:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=135
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:3:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=135
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:3:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=134
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:3:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=134
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=134
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:3:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=161
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 4"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=161
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:4:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=161
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:4:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=161
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:4:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=161
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:4:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=160
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:4:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=160
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:4:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=160
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:4:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=187
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 5"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=187
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:5:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=187
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:5:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=187
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:5:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=187
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:5:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=186
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:5:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=186
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:5:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=186
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:5:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=213
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 6"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=213
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:6:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=213
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:6:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=213
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:6:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=213
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:6:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=212
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:6:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=212
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:6:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=212
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:6:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=239
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 7"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=239
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:7:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=239
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:7:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=239
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:7:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=239
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:7:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=238
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:7:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=238
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:7:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=238
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:7:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=265
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 8"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=265
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:8:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=265
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:8:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=265
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:8:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=265
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:8:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=264
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:8:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=264
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:8:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=264
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:8:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=291
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 9"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=291
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:9:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=291
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:9:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=291
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:9:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=291
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:9:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=290
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:9:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=290
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:9:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=290
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:9:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=317
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 10"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=317
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:10:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=317
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:10:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=317
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:10:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=317
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:10:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=316
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:10:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=316
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:10:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=316
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:10:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=343
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 11"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=343
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:11:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=343
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:11:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=343
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:11:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=343
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:11:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=342
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:11:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=342
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:11:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=342
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:11:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=369
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 12"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=369
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:12:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=369
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:12:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=369
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:12:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=369
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:12:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=368
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:12:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=368
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:12:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=368
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:12:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=395
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 13"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=395
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:13:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=395
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:13:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=395
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:13:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=395
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:13:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=394
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:13:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=394
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:13:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=394
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:13:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=421
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 14"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=421
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:14:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=421
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:14:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=421
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:14:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=421
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:14:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=420
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:14:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=420
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:14:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=420
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:14:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=450
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 15"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=450
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:15:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=450
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:15:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=450
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:15:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=450
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:15:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=449
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:15:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=449
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:15:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=449
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:15:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=476
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 16"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=476
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:16:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=476
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:16:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=476
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:16:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=476
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:16:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=475
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:16:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=475
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:16:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=475
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:16:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=502
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 17"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=502
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:17:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=502
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:17:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=502
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:17:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=502
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:17:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=501
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:17:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=501
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:17:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=501
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:17:stat"
+	}
+}
+text {
+	object {
+		x=147
+		y=39
+		width=51
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Channel"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=388
+		y=39
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Readback"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=703
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Setpoint"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=779
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Readback"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=864
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Setpoint"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=941
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Readback"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1024
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Setpoint"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1098
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Readback"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=11
+		y=8
+		width=121
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Channel"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=147
+		y=8
+		width=51
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Crate"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=234
+		y=8
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Measured"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=313
+		y=8
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Voltage"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=388
+		y=8
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Voltage"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=471
+		y=8
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="HV"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=545
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Channel"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=625
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Measured"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=703
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Trip"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=779
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Trip"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=864
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Ramp Up"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=941
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Ramp Up"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1024
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Ramp Down"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1098
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Ramp Down"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1
+		y=519
+		width=55
+		height=18
+	}
+	"basic attribute" {
+		clr=15
+	}
+	textix="Bottom"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1
+		y=38
+		width=55
+		height=18
+	}
+	"basic attribute" {
+		clr=15
+	}
+	textix="Top"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=17
+		y=539
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 0"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=539
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:20:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=539
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:20:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=539
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:20:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=539
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:20:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=538
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:20:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=538
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:20:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=538
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:20:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=565
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 1"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=565
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:21:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=565
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:21:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=565
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:21:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=565
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:21:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=564
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:21:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=564
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:21:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=564
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:21:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=591
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 2"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=591
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:22:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=591
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:22:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=591
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:22:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=591
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:22:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=590
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:22:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=590
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:22:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=590
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:22:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=617
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 3"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=617
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:23:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=617
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:23:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=617
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:23:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=617
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:23:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=616
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:23:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=616
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:23:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=616
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:23:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=643
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 4"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=643
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:24:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=643
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:24:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=643
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:24:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=643
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:24:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=642
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:24:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=642
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:24:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=642
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:24:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=669
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 5"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=669
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:25:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=669
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:25:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=669
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:25:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=669
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:25:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=668
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:25:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=668
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:25:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=668
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:25:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=695
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 6"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=695
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:26:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=695
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:26:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=695
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:26:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=695
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:26:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=694
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:26:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=694
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:26:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=694
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:26:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=721
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 7"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=721
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:27:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=721
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:27:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=721
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:27:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=721
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:27:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=720
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:27:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=720
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:27:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=720
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:27:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=747
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 8"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=747
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:28:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=747
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:28:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=747
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:28:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=747
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:28:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=746
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:28:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=746
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:28:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=746
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:28:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=774
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 9"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=774
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:29:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=774
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:29:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=774
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:29:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=774
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:29:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=773
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:29:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=773
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:29:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=773
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:29:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=800
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 10"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=800
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:30:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=800
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:30:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=800
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:30:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=800
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:30:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=799
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:30:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=799
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:30:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=799
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:30:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=826
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 11"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=826
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:31:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=826
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:31:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=826
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:31:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=826
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:31:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=825
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:31:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=825
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:31:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=825
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:31:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=852
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 12"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=852
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:32:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=852
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:32:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=852
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:32:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=852
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:32:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=851
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:32:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=851
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:32:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=851
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:32:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=878
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 13"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=878
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:33:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=878
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:33:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=878
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:33:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=878
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:33:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=877
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:33:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=877
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:33:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=877
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:33:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=904
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 14"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=904
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:34:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=904
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:34:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=904
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:34:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=904
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:34:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=903
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:34:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=903
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:34:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=903
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:34:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=930
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 15"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=930
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:35:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=930
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:35:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=930
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:35:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=930
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:35:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=929
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:35:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=929
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:35:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=929
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:35:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=956
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 16"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=956
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:36:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=956
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:36:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=956
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:36:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=956
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:36:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=955
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:36:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=955
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:36:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=955
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:36:stat"
+	}
+}
+text {
+	object {
+		x=17
+		y=982
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 17"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=696
+		y=982
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:37:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=857
+		y=982
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:37:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1012
+		y=982
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:37:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=299
+		y=982
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:37:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=461
+		y=981
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:37:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=554
+		y=981
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:bot:37:stat"
+	}
+}
+rectangle {
+	object {
+		x=553
+		y=981
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:bot:37:stat"
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=57
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:0:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=83
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:1:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=109
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:2:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=135
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:3:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=161
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:4:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=187
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:5:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=213
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:6:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=239
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:7:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=265
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:8:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=291
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:9:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=317
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:10:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=343
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:11:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=369
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:12:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=395
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:13:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=421
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:14:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=450
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:15:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=476
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:16:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=502
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:17:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=539
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:20:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=565
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:21:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=591
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:22:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=617
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:23:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=643
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:24:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=669
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:25:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=695
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:26:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=721
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:27:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=747
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:28:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=774
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:29:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=800
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:30:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=826
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:31:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=852
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:32:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=878
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:33:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=904
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:34:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=930
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:35:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=956
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:36:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=223
+		y=982
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:37:v_sens"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=57
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:0:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=83
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:1:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=109
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:2:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=135
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:3:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=161
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:4:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=187
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:5:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=213
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:6:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=239
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:7:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=265
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:8:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=291
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:9:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=317
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:10:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=343
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:11:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=369
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:12:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=395
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:13:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=421
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:14:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=450
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:15:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=476
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:16:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=502
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:17:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=539
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:20:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=565
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:21:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=591
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:22:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=617
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:23:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=643
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:24:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=669
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:25:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=695
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:26:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=721
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:27:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=747
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:28:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=774
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:29:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=800
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:30:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=826
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:31:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=852
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:32:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=878
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:33:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=904
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:34:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=930
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:35:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=956
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:36:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=376
+		y=982
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:37:v_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=57
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:0:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=83
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:1:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=109
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:2:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=135
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:3:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=161
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:4:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=187
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:5:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=213
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:6:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=239
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:7:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=265
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:8:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=291
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:9:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=317
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:10:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=343
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:11:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=369
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:12:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=395
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:13:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=421
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:14:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=450
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:15:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=476
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:16:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=502
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:17:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=539
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:20:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=565
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:21:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=591
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:22:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=617
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:23:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=643
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:24:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=669
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:25:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=695
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:26:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=721
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:27:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=747
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:28:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=774
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:29:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=800
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:30:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=826
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:31:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=852
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:32:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=878
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:33:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=904
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:34:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=930
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:35:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=956
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:36:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=617
+		y=982
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:37:i_rd"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=57
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:0:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=83
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:1:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=109
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:2:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=135
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:3:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=161
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:4:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=187
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:5:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=213
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:6:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=239
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:7:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=265
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:8:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=291
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:9:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=317
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:10:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=343
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:11:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=369
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:12:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=395
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:13:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=421
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:14:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=450
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:15:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=476
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:16:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=502
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:17:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=539
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:20:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=565
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:21:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=591
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:22:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=617
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:23:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=643
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:24:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=669
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:25:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=695
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:26:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=721
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:27:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=747
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:28:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=774
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:29:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=800
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:30:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=826
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:31:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=852
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:32:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=878
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:33:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=904
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:34:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=930
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:35:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=956
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:36:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=772
+		y=982
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:37:i_set:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=57
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:0:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=83
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:1:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=109
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:2:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=135
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:3:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=161
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:4:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=187
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:5:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=213
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:6:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=239
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:7:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=265
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:8:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=291
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:9:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=317
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:10:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=343
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:11:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=369
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:12:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=395
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:13:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=421
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:14:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=450
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:15:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=476
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:16:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=502
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:17:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=539
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:20:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=565
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:21:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=591
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:22:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=617
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:23:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=643
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:24:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=669
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:25:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=695
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:26:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=721
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:27:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=747
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:28:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=774
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:29:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=800
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:30:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=826
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:31:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=852
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:32:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=878
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:33:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=904
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:34:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=930
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:35:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=956
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:36:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=982
+		width=51
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:37:vrise:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=57
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:0:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=83
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:1:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=109
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:2:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=135
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:3:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=161
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:4:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=187
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:5:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=213
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:6:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=239
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:7:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=265
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:8:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=291
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:9:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=317
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:10:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=343
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:11:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=369
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:12:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=395
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:13:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=421
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:14:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=450
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:15:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=476
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:16:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=502
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:top:17:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=539
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:20:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=565
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:21:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=591
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:22:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=617
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:23:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=643
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:24:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=669
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:25:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=695
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:26:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=721
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:27:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=747
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:28:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=774
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:29:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=800
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:30:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=826
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:31:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=852
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:32:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=878
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:33:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=904
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:34:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=930
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:35:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=956
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:36:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1091
+		y=982
+		width=40
+		height=20
+	}
+	monitor {
+		chan="SVT:bias:bot:37:vfall:fbk"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=56
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=82
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=108
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=134
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=160
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=186
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=212
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=238
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=264
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=290
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=316
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=342
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=368
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=394
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=420
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=449
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=475
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=501
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=538
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=564
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=590
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=616
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=642
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=668
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=694
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=720
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=746
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=773
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=799
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=825
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=851
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=877
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=903
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=929
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=955
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=981
+		width=51
+		height=20
+	}
+	monitor {
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+composite {
+	object {
+		x=1233
+		y=102
+		width=274
+		height=38
+	}
+	"composite name"=""
+	children {
+		rectangle {
+			object {
+				x=1233
+				y=102
+				width=274
+				height=37
+			}
+			"basic attribute" {
+				clr=10
+			}
+		}
+		"choice button" {
+			object {
+				x=1417
+				y=109
+				width=82
+				height=23
+			}
+			control {
+				chan="SVT:bias:bot:switch"
+				clr=55
+				bclr=12
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=1313
+				y=115
+				width=35
+				height=25
+			}
+			"basic attribute" {
+				clr=0
+			}
+			textix="SVT BIAS BOT ALL ON/OFF"
+			align="horiz. centered"
+		}
+	}
+}
+rectangle {
+	object {
+		x=1233
+		y=149
+		width=274
+		height=37
+	}
+	"basic attribute" {
+		clr=10
+	}
+}
+text {
+	object {
+		x=1313
+		y=162
+		width=35
+		height=25
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="SVT BIAS ALL V_SET"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=1417
+		y=156
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:0:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=1234
+		y=55
+		width=274
+		height=37
+	}
+	"basic attribute" {
+		clr=10
+	}
+}
+"choice button" {
+	object {
+		x=1418
+		y=62
+		width=82
+		height=23
+	}
+	control {
+		chan="SVT:bias:top:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+text {
+	object {
+		x=1314
+		y=68
+		width=35
+		height=25
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="SVT BIAS TOP ALL ON/OFF"
+	align="horiz. centered"
+}
+rectangle {
+	object {
+		x=1233
+		y=8
+		width=274
+		height=37
+	}
+	"basic attribute" {
+		clr=10
+	}
+}
+"choice button" {
+	object {
+		x=1417
+		y=15
+		width=82
+		height=23
+	}
+	control {
+		chan="SVT:bias:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+text {
+	object {
+		x=1313
+		y=21
+		width=35
+		height=25
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="SVT BIAS ALL ON/OFF"
+	align="horiz. centered"
+}
