@@ -1,0 +1,2106 @@
+<system>
+<structure>
+<name>Tracker</name>
+<description>Tracker Control</description>
+<variable>
+<name>DataCompress</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Compress Data Files</description>
+<hidden/>
+</variable>
+<variable>
+<name>DataFile</name>
+<type>Configuration</type>
+<description>Data File For Write</description>
+<hidden/>
+</variable>
+<variable>
+<name>DebugCmdTime</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Enable showi<g command execution time.</description>
+</variable>
+<variable>
+<name>DebugEnable</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Enable console debug messages.</description>
+</variable>
+<variable>
+<name>FilterFile</nam<>
+<type>Configuration</type>
+<description>Filter File</description>
+</variable>
+<variable>
+<name>IgnoreErrors</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+</variable>
+<variable>
+<name>IntTrigEn</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+</variable>
+<variable>
+<name>LiveDisplay</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+</variable>
+<variable>
+<name>RunCount</name>
+<type>Configuration</type>
+<description>SW Run Count</descrip<ion>
+<hidden/>
+</variable>
+<variable>
+<name>RunRate</name>
+<type>Configuration</type>
+<enum>1Hz</enum>
+<enum>10Hz</enum>
+<enum>100Hz</enum>
+<enum>120Hz</enum>
+<enum>1000Hz</enum>
+<enum>2000Hz</enum>
+<description>Run rate</description>
+<hidden/>
+</variabl<>
+<variable>
+<name>TempPollPer</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>1</compB>
+<compC>0</compC>
+<compUnits>S</compUnits>
+<min>0</min>
+<max>3600</max>
+<description>Temperature polling period for epics in seconds</description>
+</variabl<>
+<variable>
+<name>TholdFile</name>
+<type>Configuration</type>
+<description>Threshold File</description>
+</variable>
+<variable>
+<name>TrigPollEn</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+</variable>
+<device>
+<name>cntrlFpga</<ame>
+<description>Control FPGA Object.</description>
+<variable>
+<name>ApvTrigGenPause</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>0.025</compB>
+<compC>0</compC>
+<compUnits>uS</compUnits>
+<min>0</min>
+<max>99999999</max>
+<description>Set int<rnal trigger generation period.</description>
+</variable>
+<variable>
+<name>ApvTrigSource</name>
+<type>Configuration</type>
+<enum>None</enum>
+<enum>Internal</enum>
+<enum>Software</enum>
+<enum>External</enum>
+<description>Set trigger source.</description>
+</variable>
+<variable>
+<name>ApvTrigType</name>
+<type>Configuration</type>
+<enum>Test</enum>
+<enum>SingleTrig</enum>
+<enum>DoubleTrig</enum>
+<enum>SingleCalib</enum>
+<enum>DoubleCalib</enum>
+<enum>SyncRead</enum>
+<description>Set APV trigger type. Double <r single.</description>
+</variable>
+<variable>
+<name>CalDelay</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>25</compB>
+<compC>0</compC>
+<compUnits>nS</compUnits>
+<min>0</min>
+<max>65535</max>
+<description>Cal to trig delay.</description>
+</va<iable>
+<variable>
+<name>ClockSelect</name>
+<type>Configuration</type>
+<enum>Internal</enum>
+<enum>External</enum>
+<description>Selects between internally and externally generated APV and ADC Clk.</description>
+</variable>
+<variable>
+<name>DataBypass</nam<>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Data bypass</description>
+</variable>
+<variable>
+<name>FiltEnable</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>FIR FIlter Enable</descri<tion>
+</variable>
+<variable>
+<name>FrameDelayA</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Frame 0 input delay.</description>
+</variable>
+<var<able>
+<name>FrameDelayB</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Frame 1 input delay.</description>
+</variable>
+<variable>
+<name>HybridType</name>
+<type>Configuration</type>
+<enum>Old</enum>
+<enum>New</enum>
+<description>New or old Hybrid</description>
+</variable>
+<variable>
+<name>InputDelayA</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS<<compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Channel 0 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayB</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</m<n>
+<max>63</max>
+<description>ADC Channel 1 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayC</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<de<cription>ADC Channel 3 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayD</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Channel<4 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayE</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Channel 5 input delay.</desc<iption>
+</variable>
+<variable>
+<name>InputDelayF</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Channel 6 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayG</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Channel 7 input delay.</description>
+</variable>
+<variable>
+<name>Inpu<DelayH</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Channel 8 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayI</name>
+<type><onfiguration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Channel 9 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayJ</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Channel 10 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayK</name>
+<type>Configuration</type>
+<compA>0</compA>
+<co<pB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Channel 11 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayL</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<comp<>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Channel 12 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayM</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUni<s>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Channel 13 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayN</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<m<n>0</min>
+<max>63</max>
+<description>ADC Channel 14 input delay.</description>
+</variable>
+<variable>
+<name>InputDelayO</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</compC>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</<ax>
+<description>ADC Channel 15 input delay.</description>
+</variable>
+<variable>
+<name>NewRegisters</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Enable new registers</description>
+</variable>
+<variable>
+<name>TempP<llPer</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>0.008</compB>
+<compC>0</compC>
+<compUnits>uS</compUnits>
+<min>0</min>
+<max>2147483647</max>
+<description>Temp Polling Period.</description>
+</variable>
+<variable>
+<name>TholdEnable</name>
+<t<pe>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Threshold Enable</description>
+</variable>
+<variable>
+<name>TisClkEn</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>TIS Clock Enable</descripti<n>
+</variable>
+<variable>
+<name>TrigEdgeNeg</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Trigger Edge Negative</description>
+</variable>
+<device>
+<name>ad9252</name>
+<description>AD9252 ADC object.</description>
+<va<iable>
+<name>ChanPowerDown</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set channel power down.</description>
+</variable>
+<variable>
+<name>ConfigEn</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</en<m>
+<description>Set to 'True' to enable register writes to ADC.</description>
+</variable>
+<variable>
+<name>DcoFcoDrive2x</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set DCO and DCO output drive strength.</descripti<n>
+</variable>
+<variable>
+<name>DutyCycleStabilizer</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Turns on internal duty cycle stabilizer. (default=True).</description>
+</variable>
+<variable>
+<name>LowEncodeRate</nam<>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set low rate less than 10mbs mode.</description>
+</variable>
+<variable>
+<name>OutputFormat</name>
+<type>Configuration</type>
+<enum>OffsetBinary</enum>
+<enum>TwosCompliment</en<m>
+<description>Set output format. binary or two's complement.</description>
+</variable>
+<variable>
+<name>OutputInvert</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Enable output inversion.</description>
+</variable>
+<variable>
+<name>OutputMode</name>
+<type>Configuration</type>
+<enum>LvdsAnsi-644</enum>
+<enum>LvdsLowPower</enum>
+<description>Set output mode of device. Default=LVDS.</description>
+</variable>
+<variable>
+<name>OutputPhase</name>
+<type>Configuration</type<
+<enum>Deg0</enum>
+<enum>Deg60</enum>
+<enum>Deg120</enum>
+<enum>Deg180</enum>
+<enum>Unused1</enum>
+<enum>Deg300</enum>
+<enum>Deg360</enum>
+<enum>Unused2</enum>
+<enum>Deg480</enum>
+<enum>Deg540</enum>
+<enum>Deg600</enum>
+<enum>Deg660</enum>
+<description>S<t output phase adjustment.</description>
+</variable>
+<variable>
+<name>OutputTermDrive</name>
+<type>Configuration</type>
+<enum>None</enum>
+<enum>Ohm200</enum>
+<enum>Ohm100</enum>
+<enum>Ohm100</enum>
+<description>Set output driver termination.</description<
+</variable>
+<variable>
+<name>OutputTestMode</name>
+<type>Configuration</type>
+<enum>Off</enum>
+<enum>MidscaleShort</enum>
+<enum>PosFsShort</enum>
+<enum>NegFsShort</enum>
+<enum>Checkerboard</enum>
+<enum>Pn23Seq</enum>
+<enum>Pn9Seq</enum>
+<enum>OneZeroWor<</enum>
+<enum>UserInput</enum>
+<enum>OneZeroBit</enum>
+<enum>Sync1x</enum>
+<enum>OneBitHigh</enum>
+<enum>MixedBitFreq</enum>
+<description>Set output test mode.</description>
+</variable>
+<variable>
+<name>PowerDownMode</name>
+<type>Configuration</type>
+<en<m>ChipRun</enum>
+<enum>FullPowerDown</enum>
+<enum>Standby</enum>
+<enum>Reset</enum>
+<description>Set power mode of device.</description>
+</variable>
+<variable>
+<name>ResetPnLongGen</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<d<scription>Reset PN long gen test mode.</description>
+</variable>
+<variable>
+<name>ResetPnShortGen</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Reset PN short gen test mode.</description>
+</variable>
+<variable>
+<name<SerialBits</name>
+<type>Configuration</type>
+<enum>Bits-14</enum>
+<enum>Bits-8</enum>
+<enum>Bits-10</enum>
+<enum>Bits-12</enum>
+<enum>Bits-14</enum>
+<description>Set number of serial bits.</description>
+</variable>
+<variable>
+<name>SerialLsbFirst</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set LSB first mode of device.</description>
+</variable>
+<variable>
+<name>UserPattern1</name>
+<type>Configuration</type>
+<description>Set user test pattern 1 data.</description>
+<<variable>
+<variable>
+<name>UserPattern2</name>
+<type>Configuration</type>
+<description>Set user test pattern 2 data.</description>
+</variable>
+<variable>
+<name>UserTestMode</name>
+<type>Configuration</type>
+<enum>Off</enum>
+<enum>OnSingleAlt</enum>
+<enum<OnSingleOnce</enum>
+<enum>OnAlternateOnce</enum>
+<description>Sets user test mode of all channels.</description>
+</variable>
+</device>
+<device>
+<name>hybrid</name>
+<description>Heavy Photon tracker hybrid container.</description>
+<device>
+<name>apv25</na<e>
+<description>APV25 Object.</description>
+<variable>
+<name>CalGroup</name>
+<type>Configuration</type>
+<min>0</min>
+<max>7</max>
+<description>Select which set of 16 channels to calibrate.
+Valid range is 0 to 7.</description>
+</variable>
+<variable>
+<name<CalibInhibit</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set calibration inhibit.</description>
+</variable>
+<variable>
+<name>Csel</name>
+<type>Configuration</type>
+<enum>Dly_0x3_125ns</enum>
+<enum>Dly_1x3_125ns</en<m>
+<enum>Dly_2x3_125ns</enum>
+<enum>Dly_3x3_125ns</enum>
+<enum>Dly_4x3_125ns</enum>
+<enum>Dly_5x3_125ns</enum>
+<enum>Dly_6x3_125ns</enum>
+<enum>Dly_7x3_125ns</enum>
+<enum>Dly_8x3_125ns</enum>
+<description>Number of delays (3.125ns) to insert from edge of<calibration generator.</description>
+</variable>
+<variable>
+<name>Ical</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>625</compB>
+<compC>0</compC>
+<compUnits>el</compUnits>
+<min>0</min>
+<max>255</max>
+<description>Calibrate edge generator curr<nt bias
+8-bit value. 0 - 255</description>
+</variable>
+<variable>
+<name>ImuxIn</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>1</compB>
+<compC>0</compC>
+<compUnits>uA</compUnits>
+<min>0</min>
+<max>255</max>
+<description>Multiplexer input curre<t bias.
+8-bit value. 0 - 255</description>
+</variable>
+<variable>
+<name>Ipcasc</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>1</compB>
+<compC>0</compC>
+<compUnits>uA</compUnits>
+<min>0</min>
+<max>255</max>
+<description>Preamp cascode current <ias.
+8-bit value. 0 - 255</description>
+</variable>
+<variable>
+<name>Ipre</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>4</compB>
+<compC>0</compC>
+<compUnits>uA</compUnits>
+<min>0</min>
+<max>255</max>
+<description>Peramp input FET current bia<.
+8-bit value. 0 - 255</description>
+</variable>
+<variable>
+<name>Ipsf</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>1</compB>
+<compC>0</compC>
+<compUnits>uA</compUnits>
+<min>0</min>
+<max>255</max>
+<description>Shaper source follower current <ias.
+8-bit value. 0 - 255</description>
+</variable>
+<variable>
+<name>Ipsp</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>1</compB>
+<compC>0</compC>
+<compUnits>uA</compUnits>
+<min>0</min>
+<max>255</max>
+<description>APSP current bias.
+8-bit val<e. 0 - 255</description>
+</variable>
+<variable>
+<name>Isha</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>1</compB>
+<compC>0</compC>
+<compUnits>uA</compUnits>
+<min>0</min>
+<max>255</max>
+<description>Shaper input FET current bias.
+8-bit value.<0 - 255</description>
+</variable>
+<variable>
+<name>Issf</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>1</compB>
+<compC>0</compC>
+<compUnits>uA</compUnits>
+<min>0</min>
+<max>255</max>
+<description>Shaper source follower current bias.
+8-bit val<e. 0 - 255</description>
+</variable>
+<variable>
+<name>Latency</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>25</compB>
+<compC>0</compC>
+<compUnits>nS</compUnits>
+<min>0</min>
+<max>255</max>
+<description>Determine the distance between read and<write pointers.
+8-bit value. 0 - 255</description>
+</variable>
+<variable>
+<name>MuxGain</name>
+<type>Configuration</type>
+<enum>Mip_0_8mA</enum>
+<enum>Mip_0_9mA</enum>
+<enum>Mip_1_0mA</enum>
+<enum>Mip_1_1mA</enum>
+<enum>Mip_1_2mA</enum>
+<description>Dete<mine output mux stage gain.</description>
+</variable>
+<variable>
+<name>PreampPolarity</name>
+<type>Configuration</type>
+<enum>NonInverting</enum>
+<enum>Inverting</enum>
+<description>Set pre-amp input polarity.</description>
+</variable>
+<variable>
+<name>R<adOutFrequency</name>
+<type>Configuration</type>
+<enum>Mhz20</enum>
+<enum>Mhz40</enum>
+<description>Set readout frequency to enable muxing.</description>
+</variable>
+<variable>
+<name>ReadOutMode</name>
+<type>Configuration</type>
+<enum>Deconvolution</enum<
+<enum>Peak</enum>
+<description>Set readout mode.</description>
+</variable>
+<variable>
+<name>TriggerMode</name>
+<type>Configuration</type>
+<enum>Sample3</enum>
+<enum>Sample1</enum>
+<description>Set number of samples in trigger.</description>
+</variable>
+<variable>
+<name>Vfp</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>0.0075</compB>
+<compC>-1.25</compC>
+<compUnits>V</compUnits>
+<min>0</min>
+<max>255</max>
+<description>Preamp feedback voltage bias.
+8-bit value. 0 - 255</description>
+</variabl<>
+<variable>
+<name>Vfs</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>0.0075</compB>
+<compC>-1.25</compC>
+<compUnits>V</compUnits>
+<min>0</min>
+<max>255</max>
+<description>Shaper feedback voltage bias.
+8-bit value. 0 - 255</description>
+</vari<ble>
+<variable>
+<name>Vpsp</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>-0.0075</compB>
+<compC>1.25</compC>
+<compUnits>V</compUnits>
+<min>0</min>
+<max>255</max>
+<description>APSP voltage level adjust.
+8-bit value. 0 - 255</description>
+</var<able>
+</device>
+</device>
+</device>
+<variable>
+<name>CodaState</name>
+<type>Status</type>
+<description>Coda State</description>
+<perInstance/>
+</variable>
+<variable>
+<name>DataFileCount</name>
+<type>Status</type>
+<description>Number of events written to <he data file</description>
+<perInstance/>
+<hidden/>
+</variable>
+<variable>
+<name>DataOpen</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Data file is open</description>
+<perInstance/>
+<hidden/>
+</variable>
+<variable>
+<name>D<taRxCount</name>
+<type>Status</type>
+<description>Number of events received</description>
+<perInstance/>
+<hidden/>
+</variable>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to ena<le device for physical access</description>
+<perInstance/>
+<hidden/>
+</variable>
+<variable>
+<name>ErrorCount</name>
+<type>Status</type>
+<description>Number of errors</description>
+<perInstance/>
+<hidden/>
+</variable>
+<variable>
+<name>FilterId</name>
+<typ<>Status</type>
+<description>Filter ID Value From File</description>
+<perInstance/>
+</variable>
+<variable>
+<name>ReadRegisterResult</name>
+<type>Status</type>
+<perInstance/>
+<hidden/>
+</variable>
+<variable>
+<name>RegRxCount</name>
+<type>Status</type>
+<des<ription>Number of register responses received</description>
+<perInstance/>
+<hidden/>
+</variable>
+<variable>
+<name>RunNumber</name>
+<type>Status</type>
+<description>Run Number Since Start</description>
+<perInstance/>
+</variable>
+<variable>
+<name>RunProgre<s</name>
+<type>Status</type>
+<description>Run Total</description>
+<perInstance/>
+<hidden/>
+</variable>
+<variable>
+<name>RunState</name>
+<type>Status</type>
+<enum>Stopped</enum>
+<enum>Running</enum>
+<description>Run state</description>
+<perInstance/>
+<hid<en/>
+</variable>
+<variable>
+<name>SystemState</name>
+<type>Status</type>
+<description>Current system state.</description>
+<perInstance/>
+<hidden/>
+</variable>
+<variable>
+<name>TholdId</name>
+<type>Status</type>
+<description>Threshold ID Value From File</<escription>
+<perInstance/>
+</variable>
+<variable>
+<name>TimeoutCount</name>
+<type>Status</type>
+<description>Number of timeout errors</description>
+<perInstance/>
+<hidden/>
+</variable>
+<variable>
+<name>TrigCount</name>
+<type>Status</type>
+<perInstance/>
+</variable>
+<variable>
+<name>TrigDropCount</name>
+<type>Status</type>
+<perInstance/>
+</variable>
+<variable>
+<name>UnexpectedCount</name>
+<type>Status</type>
+<description>Number of unexpected receive packets</description>
+<perInstance/>
+<hidden/>
+</variabl<>
+<variable>
+<name>UserStatus</name>
+<type>Status</type>
+<description>User defined status string.</description>
+<perInstance/>
+<hidden/>
+</variable>
+<command>
+<name>CloseDataFile</name>
+<description>Close data file.</description>
+<hidden/>
+</command>
+<co<mand>
+<name>CodaEnd</name>
+<description>Coda Done</description>
+</command>
+<command>
+<name>CodaGo</name>
+<description>Coda Go</description>
+</command>
+<command>
+<name>CodaPause</name>
+<description>Coda Pause</description>
+</command>
+<command>
+<name>CodaP<estart</name>
+<description>Coda Prestart</description>
+</command>
+<command>
+<name>DumpFilter</name>
+<description>Dump Filter To File</description>
+</command>
+<command>
+<name>DumpThreshold</name>
+<description>Dump Threshold To File</description>
+</command<
+<command>
+<name>HardReset</name>
+<description>Hard reset System.</description>
+<hidden/>
+</command>
+<command>
+<name>IntTrigStart</name>
+<description>Start Internal Trigger</description>
+</command>
+<command>
+<name>OpenDataFile</name>
+<description>Open da<a file.</description>
+<hidden/>
+</command>
+<command>
+<name>ReadConfig</name>
+<description>Read configuration.</description>
+<hidden/>
+</command>
+<command>
+<name>ReadRegister</name>
+<hidden/>
+</command>
+<command>
+<name>ReadStatus</name>
+<description>Read <tatus.</description>
+<hidden/>
+</command>
+<command>
+<name>ReadXmlFile</name>
+<description>Read XML command or config file from disk. Pass filename as arg.</description>
+<hidden/>
+<hasArg/>
+</command>
+<command>
+<name>RefreshState</name>
+<description>Refre<h System State.</description>
+<hidden/>
+</command>
+<command>
+<name>ResetCount</name>
+<description>Reset top level counters.</description>
+<hidden/>
+</command>
+<command>
+<name>SetDefaults</name>
+<description>Read XML defaults file.</description>
+<hidden/><</command>
+<command>
+<name>SetRunState</name>
+<description>Set run state</description>
+<hidden/>
+</command>
+<command>
+<name>SoftReset</name>
+<description>Soft reset System.</description>
+<hidden/>
+</command>
+<command>
+<name>VerifyConfig</name>
+<descripti<n>Verify configuration</description>
+<hidden/>
+</command>
+<command>
+<name>WriteConfigXml</name>
+<description>Write configuration to disk. Pass filename as arg.</description>
+<hidden/>
+<hasArg/>
+</command>
+<command>
+<name>WriteRegister</name>
+<hidden/>
+</<ommand>
+<command>
+<name>WriteStatusXml</name>
+<description>Write status to disk. Pass filename as arg.</description>
+<hidden/>
+<hasArg/>
+</command>
+<command>
+<name>WriteStructureXml</name>
+<description>Write system structure to disk. Pass filename as arg<</description>
+<hidden/>
+<hasArg/>
+</command>
+<device>
+<index>0</index>
+<name>cntrlFpga</name>
+<description>Control FPGA Object.</description>
+<variable>
+<name>AdcClkDelay</name>
+<type>Configuration</type>
+<compA>0</compA>
+<compB>78</compB>
+<compC>0</com<C>
+<compUnits>pS</compUnits>
+<min>0</min>
+<max>63</max>
+<description>ADC Output Clock Delay.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>AdcClkInvert</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Invert<ADC clock</description>
+<perInstance/>
+</variable>
+<variable>
+<name>AdcEnable</name>
+<type>Configuration</type>
+<description>Enable ADC channel mask</description>
+<perInstance/>
+</variable>
+<variable>
+<name>ApvSyncDetect</name>
+<type>Status</type>
+<descr<ption>APV sync detect status. 8-bit mask.
+One bit per channe. 0=APV0, 1=APV1...</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable de<ice for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FpgaVersion</name>
+<type>Status</type>
+<description>FPGA version field</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FramePolA</name>
+<type>Status</type>
+<descr<ption>ADC Frame 0 polarity.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FramePolB</name>
+<type>Status</type>
+<description>ADC Frame 1 polarity.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncDataA</name>
+<type>Status</type>
+<<escription>Sync Data A</description>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncDataB</name>
+<type>Status</type>
+<description>Sync Data B</description>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncDataC</name>
+<type>Status</type>
+<description>Syn< Data C</description>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncDataD</name>
+<type>Status</type>
+<description>Sync Data D</description>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncDataE</name>
+<type>Status</type>
+<description>Sync Data E</descr<ption>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncDataF</name>
+<type>Status</type>
+<description>Sync Data F</description>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncDataG</name>
+<type>Status</type>
+<description>Sync Data G</description>
+<perIns<ance/>
+</variable>
+<variable>
+<name>SyncDataH</name>
+<type>Status</type>
+<description>Sync Data H</description>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncDataI</name>
+<type>Status</type>
+<description>Sync Data I</description>
+<perInstance/>
+</varia<le>
+<variable>
+<name>SyncDataJ</name>
+<type>Status</type>
+<description>Sync Data J</description>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncDataK</name>
+<type>Status</type>
+<description>Sync Data K</description>
+<perInstance/>
+</variable>
+<variable><<name>SyncDataL</name>
+<type>Status</type>
+<description>Sync Data L</description>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncDataM</name>
+<type>Status</type>
+<description>Sync Data M</description>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncData<</name>
+<type>Status</type>
+<description>Sync Data N</description>
+<perInstance/>
+</variable>
+<variable>
+<name>SyncDataO</name>
+<type>Status</type>
+<description>Sync Data O</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_0_0</name>
+<type>S<atus</type>
+<description>Hybrid 0, Temp 0</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_0_1</name>
+<type>Status</type>
+<description>Hybrid 0, Temp 1</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_0_2</name>
+<type>Status</<ype>
+<description>Hybrid 0, Temp 2</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_0_3</name>
+<type>Status</type>
+<description>Hybrid 0, Temp 3</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_1_0</name>
+<type>Status</type>
+<<escription>Hybrid 1, Temp 0</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_1_1</name>
+<type>Status</type>
+<description>Hybrid 1, Temp 1</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_1_2</name>
+<type>Status</type>
+<descrip<ion>Hybrid 1, Temp 2</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_1_3</name>
+<type>Status</type>
+<description>Hybrid 1, Temp 3</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_2_0</name>
+<type>Status</type>
+<description>Hy<rid 2, Temp 0</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_2_1</name>
+<type>Status</type>
+<description>Hybrid 2, Temp 1</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_2_2</name>
+<type>Status</type>
+<description>Hybrid 2,<Temp 2</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Temp_2_3</name>
+<type>Status</type>
+<description>Hybrid 2, Temp 3</description>
+<perInstance/>
+</variable>
+<variable>
+<name>TrigCount</name>
+<type>Status</type>
+<compA>0</compA>
+<compB>1</c<mpB>
+<compC>0</compC>
+<compUnits></compUnits>
+<description>Trig Count Value</description>
+<perInstance/>
+</variable>
+<command>
+<name>Apv25HardReset</name>
+<description>Assert reset line to APV25s.</description>
+</command>
+<command>
+<name>Apv25Reset</name<
+<description>Send APV25 RESET101.</description>
+</command>
+<command>
+<name>ApvClkRst</name>
+<description>APV Clock Reset.</description>
+</command>
+<command>
+<name>ApvSWTrig</name>
+<description>Generate APV software trigger + calibration.</description>
+<<command>
+<command>
+<name>MasterReset</name>
+<description>Send master FPGA reset.
+Wait a few moments following reset generation before
+issuing addition commands or configuration read/writes</description>
+</command>
+<command>
+<name>TrigCntRst</name>
+<descr<ption>Trigger count reset</description>
+</command>
+<device>
+<index>0</index>
+<name>ad9252</name>
+<description>AD9252 ADC object.</description>
+<variable>
+<name>ChipGrade</name>
+<type>Status</type>
+<description>Read only chip grade value.</description>
+<p<rInstance/>
+</variable>
+<variable>
+<name>ChipId</name>
+<type>Status</type>
+<description>Read only chip ID value.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<des<ription>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>1</index>
+<name>ad9252</name>
+<description>AD9252 ADC object.</description>
+<variable>
+<name>ChipGrade</name>
+<type>Status</type>
+<description>Read only chip grade value.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>ChipId</name>
+<type>Status</type>
+<description>Read only chip ID value.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Enabled</name>
+<type>Confi<uration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>0</index>
+<name>hybrid</name>
+<description>Heavy Photon tracker hybrid co<tainer.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<device>
+<index>0</index>
+<name>a<v25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<va<iable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>1</index>
+<name>apv25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum<True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</description>
+<p<rInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>2</index>
+<name>apv25</name>
+<desc<iption>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>Fif<Error</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Late<cy error status.</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>3</index>
+<name>apv25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<des<ription>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</description>
+<perInstance/>
+</va<iable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>4</index>
+<name>apv25</name>
+<description>APV25 Obj<ct.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FifoError</name>
+<ty<e>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+</device>
+<device>
+<index>1</index>
+<name>hybrid</name>
+<description>Heavy Photon tracker hybrid container.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<en<m>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<device>
+<index>0</index>
+<name>apv25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fif< error status.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>1<<index>
+<name>apv25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<en<m>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>2</index>
+<name>apv25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>Fal<e</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</<escription>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>3</index>
+<name>apv<5</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<vari<ble>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<d<scription>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>4</index>
+<name>apv25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>T<ue</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</description>
+<per<nstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+</device>
+<device>
+<index>2</index>
+<name>hybrid</na<e>
+<description>Heavy Photon tracker hybrid container.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/<
+</variable>
+<device>
+<index>0</index>
+<name>apv25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical acce<s</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Stat<s</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>1</index>
+<name>apv25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<typ<>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<<escription>Fifo error status.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+<de<ice>
+<index>2</index>
+<name>apv25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>F<lse</enum>
+<enum>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>3</index>
+<name>apv25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</<ype>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</variable>
+<variable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo <rror status.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+<device>
+<index>4</i<dex>
+<name>apv25</name>
+<description>APV25 Object.</description>
+<variable>
+<name>Enabled</name>
+<type>Configuration</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Set to true to enable device for physical access</description>
+<perInstance/>
+</<ariable>
+<variable>
+<name>FifoError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum>True</enum>
+<description>Fifo error status.</description>
+<perInstance/>
+</variable>
+<variable>
+<name>LatencyError</name>
+<type>Status</type>
+<enum>False</enum>
+<enum<True</enum>
+<description>Latency error status.</description>
+<perInstance/>
+</variable>
+</device>
+</device>
+</device>
+</structure>
+<config>
+<DataCompress>False</DataCompress>
+<DataFile>/u1/data/l123_qa/hm2/1//data//hm2_1_cal_g7_d8.bin</DataFile>
+<DebugCm<Time>True</DebugCmdTime>
+<DebugEnable>False</DebugEnable>
+<Enabled>True</Enabled>
+<FilterFile></FilterFile>
+<IgnoreErrors>True</IgnoreErrors>
+<IntTrigEn>False</IntTrigEn>
+<LiveDisplay>True</LiveDisplay>
+<RunCount>2000</RunCount>
+<RunRate>1000Hz</RunRate><<TempPollPer>0</TempPollPer>
+<TholdFile></TholdFile>
+<TrigPollEn>False</TrigPollEn>
+<cntrlFpga>
+<AdcClkDelay>10</AdcClkDelay>
+<AdcClkInvert>False</AdcClkInvert>
+<AdcEnable>0x1F</AdcEnable>
+<ApvTrigGenPause>6999999</ApvTrigGenPause>
+<ApvTrigSource>Softwar<</ApvTrigSource>
+<ApvTrigType>DoubleCalib</ApvTrigType>
+<CalDelay>0x81</CalDelay>
+<ClockSelect>Internal</ClockSelect>
+<DataBypass>False</DataBypass>
+<Enabled>True</Enabled>
+<FiltEnable>False</FiltEnable>
+<FrameDelayA>0x21</FrameDelayA>
+<FrameDelayB>0x21<<FrameDelayB>
+<HybridType>Old</HybridType>
+<InputDelayA>0x21</InputDelayA>
+<InputDelayB>0x21</InputDelayB>
+<InputDelayC>0x21</InputDelayC>
+<InputDelayD>0x21</InputDelayD>
+<InputDelayE>0x21</InputDelayE>
+<InputDelayF>0x21</InputDelayF>
+<InputDelayG>0x21</I<putDelayG>
+<InputDelayH>0x21</InputDelayH>
+<InputDelayI>0x21</InputDelayI>
+<InputDelayJ>0x21</InputDelayJ>
+<InputDelayK>0x21</InputDelayK>
+<InputDelayL>0x21</InputDelayL>
+<InputDelayM>0x21</InputDelayM>
+<InputDelayN>0x21</InputDelayN>
+<InputDelayO>0x21</<nputDelayO>
+<NewRegisters>False</NewRegisters>
+<TempPollPer>200000000</TempPollPer>
+<TholdEnable>False</TholdEnable>
+<TisClkEn>False</TisClkEn>
+<TrigEdgeNeg>False</TrigEdgeNeg>
+<ad9252>
+<ChanPowerDown>False</ChanPowerDown>
+<ConfigEn>False</ConfigEn>
+<Dco<coDrive2x>False</DcoFcoDrive2x>
+<DutyCycleStabilizer>False</DutyCycleStabilizer>
+<Enabled>False</Enabled>
+<LowEncodeRate>False</LowEncodeRate>
+<OutputFormat>OffsetBinary</OutputFormat>
+<OutputInvert>False</OutputInvert>
+<OutputMode>LvdsAnsi-644</OutputMo<e>
+<OutputPhase>Deg0</OutputPhase>
+<OutputTermDrive>None</OutputTermDrive>
+<OutputTestMode>Off</OutputTestMode>
+<PowerDownMode>ChipRun</PowerDownMode>
+<ResetPnLongGen>False</ResetPnLongGen>
+<ResetPnShortGen>False</ResetPnShortGen>
+<SerialBits>Bits-14</Se<ialBits>
+<SerialLsbFirst>False</SerialLsbFirst>
+<UserPattern1></UserPattern1>
+<UserPattern2></UserPattern2>
+<UserTestMode>Off</UserTestMode>
+</ad9252>
+<hybrid>
+<Enabled>True</Enabled>
+<apv25>
+<CalGroup>7</CalGroup>
+<CalibInhibit>False</CalibInhibit>
+<Cse<>Dly_8x3_125ns</Csel>
+<Enabled>True</Enabled>
+<Ical>0x1D</Ical>
+<ImuxIn>0x22</ImuxIn>
+<Ipcasc>0x34</Ipcasc>
+<Ipre>0x62</Ipre>
+<Ipsf>0x22</Ipsf>
+<Ipsp>0x37</Ipsp>
+<Isha>0x22</Isha>
+<Issf>0x22</Issf>
+<Latency>132</Latency>
+<MuxGain>Mip_1_0mA</MuxGain>
+<Pre<mpPolarity>Inverting</PreampPolarity>
+<ReadOutFrequency>Mhz40</ReadOutFrequency>
+<ReadOutMode>Peak</ReadOutMode>
+<TriggerMode>Sample3</TriggerMode>
+<Vfp>0x1e</Vfp>
+<Vfs>0x3c</Vfs>
+<Vpsp>0x0f</Vpsp>
+</apv25>
+</hybrid>
+</cntrlFpga>
+<Enabled>True</Enabled>
+<cntrlFpga index="0">
+<AdcClkDelay>10</AdcClkDelay>
+<AdcClkInvert>False</AdcClkInvert>
+<AdcEnable>0x1F</AdcEnable>
+<Enabled>True</Enabled>
+<ad9252 index="0">
+<Enabled>False</Enabled>
+</ad9252>
+<ad9252 index="1">
+<Enabled>False</Enabled>
+</ad9252>
+<hybrid <ndex="0">
+<Enabled>True</Enabled>
+<apv25 index="0">
+<Enabled>True</Enabled>
+</apv25>
+<apv25 index="1">
+<Enabled>True</Enabled>
+</apv25>
+<apv25 index="2">
+<Enabled>True</Enabled>
+</apv25>
+<apv25 index="3">
+<Enabled>True</Enabled>
+</apv25>
+<apv25 index="4"<
+<Enabled>True</Enabled>
+</apv25>
+</hybrid>
+<hybrid index="1">
+<Enabled>False</Enabled>
+<apv25 index="0">
+<Enabled>False</Enabled>
+</apv25>
+<apv25 index="1">
+<Enabled>False</Enabled>
+</apv25>
+<apv25 index="2">
+<Enabled>False</Enabled>
+</apv25>
+<apv25 ind<x="3">
+<Enabled>False</Enabled>
+</apv25>
+<apv25 index="4">
+<Enabled>False</Enabled>
+</apv25>
+</hybrid>
+<hybrid index="2">
+<Enabled>False</Enabled>
+<apv25 index="0">
+<Enabled>False</Enabled>
+</apv25>
+<apv25 index="1">
+<Enabled>False</Enabled>
+</apv25>
+<ap<25 index="2">
+<Enabled>False</Enabled>
+</apv25>
+<apv25 index="3">
+<Enabled>False</Enabled>
+</apv25>
+<apv25 index="4">
+<Enabled>False</Enabled>
+</apv25>
+</hybrid>
+</cntrlFpga>
+</config>
+<status>
+<CodaState></CodaState>
+<DataFileCount>0 - 0 Hz</DataFileCou<t>
+<DataOpen>False</DataOpen>
+<DataRxCount>1970 - 0 Hz</DataRxCount>
+<ErrorCount>0x0</ErrorCount>
+<FilterId>None</FilterId>
+<ReadRegisterResult></ReadRegisterResult>
+<RegRxCount>0x36</RegRxCount>
+<RunNumber>0xc7</RunNumber>
+<RunProgress>0x64</RunProgress<
+<RunState>Stopped</RunState>
+<SystemState>System Configured From devboard.xml.
+System is is in run state 'Stopped'
+5 Out Of 5 Apvs Are Synced!
+</SystemState>
+<TholdId></TholdId>
+<TimeoutCount>0x0</TimeoutCount>
+<TrigCount></TrigCount>
+<TrigDropCount></T<igDropCount>
+<UnexpectedCount>0x0</UnexpectedCount>
+<UserStatus>129 32767 0 0 1
+</UserStatus>
+<cntrlFpga index="0">
+<ApvSyncDetect>0x1f</ApvSyncDetect>
+<FpgaVersion>0xd0000017</FpgaVersion>
+<FramePolA>0x1</FramePolA>
+<FramePolB>0x0</FramePolB>
+<SyncDataA<0x00000000 0</SyncDataA>
+<SyncDataB>0x00000000 0</SyncDataB>
+<SyncDataC>0x00000000 0</SyncDataC>
+<SyncDataD>0x00000000 0</SyncDataD>
+<SyncDataE>0x00000000 0</SyncDataE>
+<SyncDataF>0x00000000 0</SyncDataF>
+<SyncDataG>0x00000000 0</SyncDataG>
+<SyncDataH>0x<0000000 0</SyncDataH>
+<SyncDataI>0x00000000 0</SyncDataI>
+<SyncDataJ>0x00000000 0</SyncDataJ>
+<SyncDataK>0x00000000 0</SyncDataK>
+<SyncDataL>0x00000000 0</SyncDataL>
+<SyncDataM>0x00000000 0</SyncDataM>
+<SyncDataN>0x00000000 0</SyncDataN>
+<SyncDataO>0x000<0000 0</SyncDataO>
+<Temp_0_0>24.04 C (0x0829)</Temp_0_0>
+<Temp_0_1>23.94 C (0x082d)</Temp_0_1>
+<Temp_0_2>0 C (0x0ffc)</Temp_0_2>
+<Temp_0_3>0 C (0x0fff)</Temp_0_3>
+<Temp_1_0></Temp_1_0>
+<Temp_1_1></Temp_1_1>
+<Temp_1_2></Temp_1_2>
+<Temp_1_3></Temp_1_3>
+<Te<p_2_0></Temp_2_0>
+<Temp_2_1></Temp_2_1>
+<Temp_2_2></Temp_2_2>
+<Temp_2_3></Temp_2_3>
+<TrigCount>0x20b33</TrigCount>
+<ad9252 index="0">
+<ChipGrade>0x0</ChipGrade>
+<ChipId>0x0</ChipId>
+</ad9252>
+<ad9252 index="1">
+<ChipGrade>0x0</ChipGrade>
+<ChipId>0x0</Chi<Id>
+</ad9252>
+<hybrid index="0">
+<apv25 index="0">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+<apv25 index="1">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+<apv25 index="2">
+<FifoError>False</Fif<Error>
+<LatencyError>False</LatencyError>
+</apv25>
+<apv25 index="3">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+<apv25 index="4">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+</hybrid>
+<hybrid ind<x="1">
+<apv25 index="0">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+<apv25 index="1">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+<apv25 index="2">
+<FifoError>False</FifoError>
+<LatencyError>Fals<</LatencyError>
+</apv25>
+<apv25 index="3">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+<apv25 index="4">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+</hybrid>
+<hybrid index="2">
+<apv25 index="0">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+<apv25 index="1">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+<apv25 index="2">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+<apv25 index="3">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+<apv25 index="4">
+<FifoError>False</FifoError>
+<LatencyError>False</LatencyError>
+</apv25>
+</hybrid>
+</cntrlFpga>
+</status>
+</system>
