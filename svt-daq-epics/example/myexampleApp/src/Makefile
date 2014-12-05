@@ -27,7 +27,13 @@ myexampleSupport_SRCS += dbSubExample.c
 myexampleSupport_SRCS += myexampleHello.c
 myexampleSupport_SRCS += initTrace.c
 myexampleSupport_SRCS += tcpipExample.c
+myexampleSupport_SRCS += constants.c
+myexampleSupport_SRCS += daqmap.c
 myexampleSupport_SRCS += client_util.c
+myexampleSupport_SRCS += febxml.c
+myexampleSupport_SRCS += hybxml.c
+myexampleSupport_SRCS += common.c
+myexampleSupport_SRCS += socket.c
 
 
 myexampleSupport_LIBS += $(EPICS_BASE_IOC_LIBS)

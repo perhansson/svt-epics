@@ -9,10 +9,11 @@
 #include <stringinRecord.h>
 #include <longinRecord.h>
 #include <dbAccess.h>
-#include <client_util.h>
+#include "constants.h"
+#include "daqmap.h"
+#include "client_util.h"
+#include "socket.h"
 
-#define N_HYBRIDS 18
-#define N_HALVES 2
 int mySubDebug = 0;
 int process_order = 0;
 const int BUF_SIZE = 256;
@@ -21,6 +22,7 @@ char hostName[256];
 int portDef = 8090;
 int port;
 static int hybToFeb[N_HALVES][N_HYBRIDS];
+static int hybToFebCh[N_HALVES][N_HYBRIDS];
 int sockfd = 0;
 int counter = 0;
 int status_poll_flag=0;
@@ -141,7 +143,7 @@ static int getLonginRecord(char* inpb_val) {
 
 }
 
-static void setFebMap(char* inpb_val, int value) {
+static void setFebMap(char* inpb_val, int value, int (*map)[N_HYBRIDS]) {
   char halfstr[BUF_SIZE];
   char id[BUF_SIZE];
   int half;
@@ -194,9 +196,10 @@ static void setFebMap(char* inpb_val, int value) {
 
   if (mySubDebug>2) printf("[ setFebMap ]: found id int %d\n",hybid);
 
-  hybToFeb[half][hybid] = value;
+  //hybToFeb[half][hybid] = value;
+  map[half][hybid] = value;
 
-  if (mySubDebug>2) printf("[ setFebMap ]: hybToFeb value %d\n",hybToFeb[half][hybid]);
+  if (mySubDebug>2) printf("[ setFebMap ]: map value %d\n", map[half][hybid]);
 
   //if(name!=NULL) free(name);
 
@@ -204,7 +207,9 @@ static void setFebMap(char* inpb_val, int value) {
 
 }
 
-static void setFebFromRecord(subRecord* precord) {
+
+
+static void setFebFromRecord(subRecord* precord, int (*map)[N_HYBRIDS]) {
 
   if (mySubDebug>2) printf("[ setFebFromRecord ]: precord name \"%s\"\n",precord->name);
   
@@ -215,16 +220,14 @@ static void setFebFromRecord(subRecord* precord) {
   memset(inpb_val,0,40);
   snprintf( inpb_val, 40, "%s", (char*) ((precord->inpa).value.constantStr) ) ;
   val = getLonginRecord(inpb_val);  
-  setFebMap(inpb_val, val);
- 
-
+  setFebMap(inpb_val, val, map);
  
   if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKB\n");
 
   memset(inpb_val,0,40);
   snprintf( inpb_val, 40, "%s", (char*) ((precord->inpb).value.constantStr) ) ;
   val = getLonginRecord(inpb_val);
-  setFebMap(inpb_val, val);
+  setFebMap(inpb_val, val, map);
 
 
   if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKC\n");
@@ -232,100 +235,138 @@ static void setFebFromRecord(subRecord* precord) {
   memset(inpb_val,0,40);
   snprintf( inpb_val, 40, "%s", (char*) ((precord->inpc).value.constantStr) ) ;
   val = getLonginRecord(inpb_val);
-  setFebMap(inpb_val, val);
+  setFebMap(inpb_val, val, map);
 
   if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKD\n");
 
   memset(inpb_val,0,40);
   snprintf( inpb_val, 40, "%s", (char*) ((precord->inpd).value.constantStr) ) ;
   val = getLonginRecord(inpb_val);
-  setFebMap(inpb_val, val);
+  setFebMap(inpb_val, val, map);
 
   if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKE\n");
 
   memset(inpb_val,0,40);
   snprintf( inpb_val, 40, "%s", (char*) ((precord->inpe).value.constantStr) ) ;
   val = getLonginRecord(inpb_val);
-  setFebMap(inpb_val, val);
+  setFebMap(inpb_val, val, map);
 
   if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKF\n");
 
   memset(inpb_val,0,40);
   snprintf( inpb_val, 40, "%s", (char*) ((precord->inpf).value.constantStr) ) ;
   val = getLonginRecord(inpb_val);
-  setFebMap(inpb_val, val);
+  setFebMap(inpb_val, val, map);
 
   if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKG\n");
 
   memset(inpb_val,0,40);
   snprintf( inpb_val, 40, "%s", (char*) ((precord->inpg).value.constantStr) ) ;
   val = getLonginRecord(inpb_val);
-  setFebMap(inpb_val, val);
+  setFebMap(inpb_val, val, map);
 
   if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKH\n");
 
   memset(inpb_val,0,40);
   snprintf( inpb_val, 40, "%s", (char*) ((precord->inph).value.constantStr) ) ;
   val = getLonginRecord(inpb_val);
-  setFebMap(inpb_val, val);
+  setFebMap(inpb_val, val, map);
 
   if (mySubDebug>2) printf("[ setFebFromRecord ]: get LNKI\n");
 
   memset(inpb_val,0,40);
   snprintf( inpb_val, 40, "%s", (char*) ((precord->inpi).value.constantStr) ) ;
   val = getLonginRecord(inpb_val);
-  setFebMap(inpb_val, val);
-
-
-
+  setFebMap(inpb_val, val, map);
 
   if (mySubDebug>2) printf("[ setFebFromRecord ]: done\n");
 
 }
 
+
+
+
  
-static void setupSocket(subRecord *precord) {
+static int setupSocket(subRecord *precord) {
   process_order++;
   if (mySubDebug>1) {
     printf("[ setupSocket ]: %d Record %s called setupSocket(%p)\n", process_order, precord->name, (void*) precord);
   }
-
-  // only setup socket from DB if it's the poll record?
-  if(strcmp(precord->name,"SVT:poll_xml")==0) {    
-    // look for host name and port in DB
-    if (mySubDebug>1) printf("[ setupSocket ]: look for host name and port in DB\n");
-    char host[40];
-    int p;
-    getIpFromRecord(precord,host,40);
-    p = getPortFromRecord(precord);
-    if(strlen(host)==0 || p<=0) {
-      printf("[ setupSocket ]: [ WARNING ]: Couldn't get hostname or port from in DB.\n");
-      strcpy(hostName,hostNameDef);
-      port = portDef;
-      printf("[ setupSocket ]: [ WARNING ]: Using default host and port name: %s:%d.\n",host,port);
-      
-    } else {
-      strcpy(hostName,host);
-      port = p;
-    }      
-  }
-
-  if(strcmp(hostName,"")==0) {
-    printf("[ setupSocket ]: [ ERROR]: no valid hostname found.\n");
-    return;
-  } 
-
-  if (mySubDebug>1) printf("[ setupSocket ]: Got host \"%s\" port %d\n",hostName,port);
   
+  // Setup a socket based on EPICS DB info
+  // If there is no info then use a default hostname and port
+  // If not found step through a couple of ports
+  // repeat after waiting
+  char host[40];
+  int p;
+  
+  int sockfd = -1;
+  int dt = 0;
+  int j=0;
+  
+  // get a valid socket
+  while(sockfd<=0 && dt<5) {
+     if (mySubDebug>0) printf("[ subPollProcess ]: try to setup socket (%ds)\n",dt);
+     
+     
+     // only setup socket from DB if it's the poll record?
+     if(strcmp(precord->name,"SVT:poll_xml")==0) {    
+        // look for host name and port in DB
+        if (mySubDebug>1) printf("[ setupSocket ]: look for host name and port in DB\n");
+        getIpFromRecord(precord,host,40);
+        p = getPortFromRecord(precord);
+        if(strlen(host)>0 && p>0) {
+           strcpy(hostName,host);
+           port = p;
+        }        
+        else {
+           printf("[ setupSocket ]: [ WARNING ]: Couldn't get hostname or port from in DB.\n");        
+        }
+     }
+     
+     if(strlen(hostName)<=0 || port<0) {
+        printf("[ setupSocket ]: Use defaults\n");        
+        strcpy(hostName,hostNameDef);
+        port = portDef;
+     }
+     
+     //try a set of ports if failing
+     j=0;
+     while(j<10 && sockfd<0) {
+        port = port+j;        
+        if (mySubDebug>0) printf("[ setupSocket ]: Trying %s:%d\n",hostName,port);        
+        sockfd = open_socket(hostName,port);
+        if(sockfd<0) {
+           printf("[ setupSocket ]: %s:%d failed\n",hostName,port);                
+           sleep(0.5);
+        } else {
+           printf("[ setupSocket ]: %s:%d open at %d\n",hostName,port, sockfd);                
+        }
+        j++;
+     }
+     
+     if(sockfd<=0) {
+        if (mySubDebug>0) printf("[ subPollProcess ]: couln't get socket, sleep 1s before retrying\n");	
+        sleep(1);
+     }
+     
+     dt++;
+  }
+  
+  
+  if (mySubDebug>1) printf("[ setupSocket ]: Returning with socket %d\n",sockfd);
+  
+  return sockfd;
   
 }
 
 static void printDaqMap() {
-  printf("\n%10s %10s %10s\n","half","hybrid","feb");
+  printf("FEB DAQ MAP:\n");
+  printf("\n%10s %10s %10s %10s\n","half","hybrid","feb","febch");
   int i,j;
   for(i=0;i<N_HALVES;++i) {
     for(j=0;j<N_HYBRIDS;++j) {
-      printf("%10d %10d %10d\n",i,j, hybToFeb[i][j]);
+       printf("%10d %10d %10d %10d\n",i,j, hybToFeb[i][j], hybToFebCh[i][j]);
     }
   }
 }
@@ -336,6 +377,7 @@ static void resetDaqMap() {
   for(i=0;i<N_HALVES;++i) {
     for(j=0;j<N_HYBRIDS;++j) {
       hybToFeb[i][j] = -1;
+      hybToFebCh[i][j] = -1;
     }
   }
   
@@ -353,15 +395,20 @@ static void setupDaqMap(subRecord *precord) {
   
   // only setup socket from DB if it's the correct record...
   if(strstr(precord->name,"SVT:daqmap_sub:")!=NULL) {    
-    if (mySubDebug>1) printf("[ setupDaqMap ]: look for feb in DB\n");
-    setFebFromRecord(precord);
+     if(strstr(precord->name,":febch")!=NULL) {    
+        if (mySubDebug>1) printf("[ setupDaqMap ]: look for febch in DB\n");
+        setFebFromRecord(precord, hybToFebCh);
+     } else {
+        if (mySubDebug>1) printf("[ setupDaqMap ]: look for feb in DB\n");
+        setFebFromRecord(precord,hybToFeb);
+     }
   } else {
-    if (mySubDebug>1) printf("[ setupDaqMap ]: do not setup daqmap for this record\n");
+     if (mySubDebug>1) printf("[ setupDaqMap ]: do not setup daqmap for this record\n");
   }
   if (mySubDebug>1) {
-    printf("[ setupDaqMap ]: Resulting daq map in mem:\n");
-    printDaqMap();
-    printf("[ setupDaqMap ]: done\n");
+     printf("[ setupDaqMap ]: Resulting daq map in mem:\n");
+     printDaqMap();
+     printf("[ setupDaqMap ]: done\n");
   }
   
 }
@@ -435,31 +482,32 @@ static long subPollStatInit(subRecord *precord) {
     return;
   } 
   else {    
-    if (mySubDebug) printf("[ writeHybrid ]: Opening socket: host: %s:%d\n",hostName, port);    
-    setupSocket(precord);
-    sockfd = open_socket(hostName,port);
-    if (mySubDebug) printf("[ writeHybrid ]: Opened socket : %d\n",sockfd);            
+     if (mySubDebug) printf("[ writeHybrid ]: Opening socket\n");    
+     sockfd = setupSocket(precord);
+     if (mySubDebug) printf("[ writeHybrid ]: Opened socket : %d\n",sockfd);            
   }
   
   if(sockfd<=0) {
-    printf("[ writeHybrid ]: [ ERROR ]: Failed to open socket in writeHybrid (host %s:%d) \n",hostName,sockfd);        
-    return;
+     printf("[ writeHybrid ]: [ ERROR ]: Failed to open socket in writeHybrid (host %s:%d) \n",hostName,sockfd);        
+     return;
   }
   
   if(strcmp(action,"v_set_sub")==0) {    
-    if(precord->val<255 && precord->val>0) {
+     if(precord->val<255 && precord->val>0) {
+        
+        if (mySubDebug) printf("[ writeHybrid ]: write %s trim %d to feb %d hyb %d\n",ch_name,(int)precord->val, feb_id, id);
+        
+        writeHybridVTrim(sockfd,(int)precord->val, feb_id, id, ch_name);    
+        
+      //if (mySubDebug) printf("[ writeHybrid ]: Poll xml string after write\n");
       
-      writeHybridVTrim(sockfd,(int)precord->val, id, ch_name);    
+      //getXmlDoc(sockfd,0,0);
       
-      if (mySubDebug) printf("[ writeHybrid ]: Poll xml string after write\n");
-      
-      getXmlDoc(sockfd,0,0);
-      
-      if (mySubDebug) printf("[ writeHybrid ]:  Poll XML done after write.\n");
+      //if (mySubDebug) printf("[ writeHybrid ]:  Poll XML done after write.\n");
       
     } else {
-      printf("[ writeHybrid ]: [ ERROR]: voltage trim %f is not allowed!\n",precord->val);
-      exit(1);
+       printf("[ writeHybrid ]: [ ERROR]: voltage trim %f is not allowed!\n",precord->val);
+       exit(1);
     }
     
   } 
@@ -469,14 +517,16 @@ static long subPollStatInit(subRecord *precord) {
       
       int val = (int)precord->val;
       if(val==0 || val==1) {
-	
-	writeHybridVSwitch(sockfd, val, id);    
-	
-	if (mySubDebug) printf("[ writeHybrid ]: Poll xml string after write\n");
 
-	getXmlDoc(sockfd,0,0);
+         if (mySubDebug) printf("[ writeHybrid ]: write %d switch to feb %d hyb %d\n",(int)precord->val, feb_id, id);
+         
+         writeHybridVSwitch(sockfd, val, feb_id, id);    
+         
+         //if (mySubDebug) printf("[ writeHybrid ]: Poll xml string after write\n");
 
-	if (mySubDebug) printf("[ writeHybrid ]: Poll XML done after write.\n");
+         //getXmlDoc(sockfd,0,0);
+
+         //if (mySubDebug) printf("[ writeHybrid ]: Poll XML done after write.\n");
 	
       } else {
 	printf("[ writeHybrid ]: [ ERROR ]: voltage switch %d is not allowed!\n",val);
@@ -513,105 +563,67 @@ static long subPollStatInit(subRecord *precord) {
     printf("[ readHybrid ]: Record %s called readHybrid %s for feb_id= %d  id=%d ch_name=%s\n", precord->name,action,feb_id,id,ch_name);
   }
 
-  //set to default
-  //precord->val = def_hyb_t;
-  
-  int tId;
   double val;
   double constant;
-  char value[BUF_SIZE];
-  char value_type[BUF_SIZE];
-  char* value_upper;
-  memset(value,0,BUF_SIZE);
-  strcpy(value_type,"double");
   constant = 1.;
   
   if(strcmp(action,"i_rd_sub")==0) {
-    readHybridI(feb_id, id, ch_name, value, BUF_SIZE);
+     val = getHybridI(feb_id, id, ch_name);
   } 
   else if(strcmp(action,"t_rd_sub")==0) {
-    if(strcmp(ch_name,"temp0")==0) {
-      tId = 0;
-    }
-    else if(strcmp(ch_name,"temp1")==0) {
-      tId = 1;
-    }
-    else {
-      printf("[ readHybrid ]: [ ERROR ]: the ch_name %s for action %s is not defined!\n",ch_name,action);
-      exit(1);
-    }
-    readHybridT(feb_id, id, tId, value, BUF_SIZE);
+     val = getHybridT(feb_id, id, ch_name);
   } 
   else if(strcmp(action,"vn_sub")==0) {
-    readHybridV(feb_id, id, ch_name, "Near", value, BUF_SIZE);
+     val = getHybridV(feb_id, id, ch_name, "Near");
   } 
   else if(strcmp(action,"vf_sub")==0) {
-    readHybridV(feb_id, id, ch_name, "Far", value, BUF_SIZE);
+     val = getHybridV(feb_id, id, ch_name, "Sense");
   } 
   else if(strcmp(action,"v_set_rd_sub")==0) {
-    readHybridVTrim(feb_id, id, ch_name, value, BUF_SIZE);
+     val = getHybridTrim(feb_id, id, ch_name);
   } 
   else if(strcmp(action,"stat_sub")==0) {
-    readHybridVSwitch(feb_id, id, value, BUF_SIZE);
-    strcpy(value_type,"boolean");
+     val = getHybridSwitch(feb_id, id);
   } 
   else {
     printf("[ readHybrid ]: [ ERROR]: wrong action for readHybrid \"%s\"\n",action);
     return;
   }
+  precord->val = val*constant;
   if (mySubDebug) {
-    printf("[ readHybrid ]: Got value=\"%s\"\n",value);
+     printf("[ readHybrid ]: precord-val is now %f \n",precord->val);
   }
-  if(strlen(value)>0) {
-    if(strcmp(value_type,"double")==0) {
-      val = atof(value);
-    } else if(strcmp(value_type,"boolean")==0) {
-      value_upper = strToUpper(value);
-      if(strcmp(value_upper,"TRUE")==0) {
-	val = 1.0;
-      } else if(strcmp(value_upper,"FALSE")==0) {
-	val = 0.0;
-      } else {
-	printf("[ readHybrid ]: [ ERROR ]: this boolean value is not valid: %s\n",value);      
-      }
-    } else {
-      printf("[ readHybrid ]: [ ERROR ]: the value_type %s is not valid\n",value_type);      
-    }
-    precord->val = val*constant;
-    
-    if (mySubDebug) {
-      printf("[ readHybrid ]: precord-val is now %f \n",precord->val);
-    }
-  }
-}
-
-
-  static void readFeb(subRecord* precord,char action[], int feb_id, char ch_name[])
-{
-  if(mySubDebug) printf("[ readFeb ]: Record %s called readFeb %s feb_id=%d ch_name=%s\n",precord->name,action,feb_id,ch_name);
   
-  char value[BUF_SIZE];
-  memset(value,0,BUF_SIZE);
-  if(strcmp(action,"t_rd_sub")==0) {
-    //set to default
-    //precord->val=def_AxiXadcTemp;
-    readFebT(feb_id, value, ch_name, BUF_SIZE);
-    
-  } 
-  else {
-    printf("[ readFeb ]: [ ERROR ]: No such action %s implemented for readFeb!\n",action);
-    return;
-  } 
-  if (mySubDebug) {
-    printf("[ readFeb ]: Got value=\"%s\"\n",value);
-  }
-  if(strlen(value)>0) {
-    precord->val = atof(value);
-    if (mySubDebug) {
-      printf("[ readFeb ]: precord-val is now %f \n",precord->val);
-    }
-  }
+  
 }
+
+
+static void readFeb(subRecord* precord,char action[], int feb_id, char ch_name[])
+{
+   if(mySubDebug) printf("[ readFeb ]: Record %s called readFeb %s feb_id=%d ch_name=%s\n",precord->name,action,feb_id,ch_name);
+   
+   double v;
+   
+   
+   v = 0.0;   
+   if(strcmp(action,"t_rd_sub")==0) {
+      v = getFebT(feb_id, ch_name);
+      if (mySubDebug) {
+         printf("[ readFeb ]: Got value=%f\n",v);
+      }
+   } 
+   else {
+      printf("[ readFeb ]: [ ERROR ]: No such action %s implemented for readFeb!\n",action);
+   } 
+   precord->val = v;
+
+   if (mySubDebug) {
+      printf("[ readFeb ]: precord-val is now %f \n",precord->val);
+   }
+
+}
+
+
 
 
 
@@ -626,6 +638,7 @@ static long subLVProcess(subRecord *precord) {
   //SVT:lv:hyb:bot:0:dvdd:vn_sub
   //SVT:lv:hyb:bot:0:dvdd:v_set_sub
   int feb_id;
+  int feb_ch;
   char type[BUF_SIZE];
   char board_type[BUF_SIZE];
   char half[BUF_SIZE];
@@ -651,19 +664,32 @@ static long subLVProcess(subRecord *precord) {
   char* p_end = id;
   long int li_id = strtol(id,&p_end,0);
   if(p_end!=id) {
-    if(li_id<0 && li_id>17) {     
-      printf("[ subLVProcess ]: [ ERROR ]: this hybrid id %ld is not valid\n",li_id);
-      return 0;
-    }
+     if(li_id<0 && li_id>17) {     
+        printf("[ subLVProcess ]: [ ERROR ]: this hybrid id %ld is not valid\n",li_id);
+        return 0;
+     }
   } else {
-    printf("[ subLVProcess ]: [ ERROR ]: converting this hybrid id %s is not valid\n",id);
-    return 0;      
+     printf("[ subLVProcess ]: [ ERROR ]: converting this hybrid id %s is not valid\n",id);
+     return 0;      
   }
-  feb_id = getFebIdFromDaqMap((int)li_id,half);
+  
+  feb_id = getFebInfoFromDaqMap((int)li_id,half,hybToFeb);
+  
   if(feb_id<0) {
-    printf("[ subLVProcess ]: [ ERROR ]: getting feb id\n");
-    return 0;
+     printf("[ subLVProcess ]: [ ERROR ]: getting feb id\n");
+     return 0;
   } 
+  
+  feb_ch = getFebInfoFromDaqMap((int)li_id,half,hybToFebCh);
+  
+  if(feb_ch<0) {
+     printf("[ subLVProcess ]: [ ERROR ]: getting feb ch\n");
+     return 0;
+  } 
+
+  if ( mySubDebug) {
+     printf("[ subLVProcess ]: %s hyb %ld -> feb_id %d febch %d \n", half, li_id, feb_id, feb_ch);
+  }
   
   if(strcmp(board_type,"hyb")==0) {
    
@@ -673,7 +699,7 @@ static long subLVProcess(subRecord *precord) {
 	printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
 	return 0;
       }
-      readHybrid(precord,action,(int)li_id,feb_id,ch_name);  
+      readHybrid(precord,action,feb_ch,feb_id,ch_name);  
       
     } else if(strcmp(action,"v_set_sub")==0 || strcmp(action,"switch_sub")==0) { 
 
@@ -682,7 +708,7 @@ static long subLVProcess(subRecord *precord) {
 	return 0;
       }
 
-      writeHybrid(precord,action,(int)li_id,feb_id,ch_name);  
+      writeHybrid(precord,action,feb_ch,feb_id,ch_name);  
 
     } else {
       printf("[ subLVProcess ]: [ ERROR ]: this hybrid action type is not valid \"%s\"\n",action);
@@ -711,6 +737,7 @@ static long subTempProcess(subRecord *precord) {
   //SVT:temp:hyb:bot:0:temp2:t_rd_sub
   //SVT:temp:fe:0:axixadc:t_rd_sub)
   int feb_id;
+  int feb_ch;
   char type[BUF_SIZE];
   memset(type,0,BUF_SIZE);
   char board_type[BUF_SIZE];
@@ -757,14 +784,27 @@ static long subTempProcess(subRecord *precord) {
       return 0;      
     }
     
-    feb_id = getFebIdFromDaqMap((int)li_id,half);
+    feb_id = getFebInfoFromDaqMap((int)li_id,half,hybToFeb);
+
     if(feb_id<0) {
       printf("[ subTempProcess ]: [ ERROR ]: getting feb id\n");
       return 0;
     } 
 
+    feb_ch = getFebInfoFromDaqMap((int)li_id,half,hybToFebCh);
+
+    if(feb_ch<0) {
+      printf("[ subTempProcess ]: [ ERROR ]: getting feb ch\n");
+      return 0;
+    } 
+
+
+    if ( mySubDebug) {
+       printf("[ subLVProcess ]: %s hyb %ld -> feb_id %d febch %d \n", half, li_id, feb_id, feb_ch);
+    }
+
    
-    readHybrid(precord,action,(int)li_id,feb_id,ch_name);  
+    readHybrid(precord,action,feb_ch,feb_id,ch_name);  
 
 
   } 
@@ -844,33 +884,21 @@ static long subPollProcess(subRecord *precord) {
   }
   
   if(sockfd>0) {    
-    printf("[ subPollProcess ]: [ WARNING ]: socket %d was still open after %ds, don't write anything\n", sockfd, dt); 
-    return 0;
-  } 
-  else {
-
-    if (mySubDebug>0) printf("[ subPollProcess ]: socket is available now (socket %d after %ds)\n", sockfd, dt); 
-    // get a valid socket
-    while(sockfd<=0 && dt<6) {
-      time(&cur_time);
-      dt = difftime(cur_time, timer);
-      if (mySubDebug>0) printf("[ subPollProcess ]: try to setup socket (%ds)\n",dt);
-
-      setupSocket(precord);
-
-      sockfd = open_socket(hostName,port);
-      
-      if(sockfd<=0) {
-	if (mySubDebug>0) printf("[ subPollProcess ]: couln't get socket for host \"%s\" and port %d after %ds, sleep before retrying\n",hostName,port,dt);	
-	sleep(1);
-      }
-    }
-
+     printf("[ subPollProcess ]: [ WARNING ]: socket %d was still open after %ds, don't do anything\n", sockfd, dt); 
+     return 0;
+  }else {
+     
+     if (mySubDebug>0) printf("[ subPollProcess ]: socket is available now (socket %d after %ds)\n", sockfd, dt); 
+     
+     sockfd = setupSocket(precord);
+     
   }
-
+  
+  
+  
   if(sockfd<=0) {
-    printf("[ subPollProcess ]: [ WARNING ]: couldn't open a socket (tried over %ds period). Check host and port?\n",dt);
-    return 0;
+     printf("[ subPollProcess ]: [ WARNING ]: couldn't open a socket (tried over %ds period). Check host and port?\n",dt);
+     return 0;
   }
   
   // poll the xml string

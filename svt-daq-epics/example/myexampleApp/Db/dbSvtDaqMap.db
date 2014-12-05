@@ -1,109 +1,109 @@
 
 
 record(longin, SVT:daq:map:bot:0) {
-    field(VAL,"0")
+    field(VAL,"5")
 }
 
     
 
 record(longin, SVT:daq:map:bot:1) {
-    field(VAL,"0")
+    field(VAL,"5")
 }
 
     
 
 record(longin, SVT:daq:map:bot:2) {
-    field(VAL,"1")
+    field(VAL,"6")
 }
 
     
 
 record(longin, SVT:daq:map:bot:3) {
-    field(VAL,"1")
+    field(VAL,"6")
 }
 
     
 
 record(longin, SVT:daq:map:bot:4) {
-    field(VAL,"1")
+    field(VAL,"6")
 }
 
     
 
 record(longin, SVT:daq:map:bot:5) {
-    field(VAL,"1")
+    field(VAL,"6")
 }
 
     
 
 record(longin, SVT:daq:map:bot:6) {
-    field(VAL,"2")
+    field(VAL,"7")
 }
 
     
 
 record(longin, SVT:daq:map:bot:7) {
-    field(VAL,"2")
+    field(VAL,"7")
 }
 
     
 
 record(longin, SVT:daq:map:bot:8) {
-    field(VAL,"2")
+    field(VAL,"7")
 }
 
     
 
 record(longin, SVT:daq:map:bot:9) {
-    field(VAL,"2")
+    field(VAL,"7")
 }
 
     
 
 record(longin, SVT:daq:map:bot:10) {
-    field(VAL,"3")
+    field(VAL,"8")
 }
 
     
 
 record(longin, SVT:daq:map:bot:11) {
-    field(VAL,"3")
+    field(VAL,"8")
 }
 
     
 
 record(longin, SVT:daq:map:bot:12) {
-    field(VAL,"3")
+    field(VAL,"8")
 }
 
     
 
 record(longin, SVT:daq:map:bot:13) {
-    field(VAL,"3")
+    field(VAL,"8")
 }
 
     
 
 record(longin, SVT:daq:map:bot:14) {
-    field(VAL,"4")
+    field(VAL,"9")
 }
 
     
 
 record(longin, SVT:daq:map:bot:15) {
-    field(VAL,"4")
+    field(VAL,"9")
 }
 
     
 
 record(longin, SVT:daq:map:bot:16) {
-    field(VAL,"4")
+    field(VAL,"9")
 }
 
     
 
 record(longin, SVT:daq:map:bot:17) {
-    field(VAL,"4")
+    field(VAL,"9")
 }
 
     
