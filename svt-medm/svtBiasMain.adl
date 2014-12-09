@@ -1,11 +1,11 @@
 
 file {
-	name="/home/tracker/pelle/epics/svt-medm/hps_svt_bias_all_onoff_control.adl"
+	name="/u1/epics/svt-epics/svt-medm/svtBiasMain.adl"
 	version=030108
 }
 display {
 	object {
-		x=1460
+		x=34
 		y=80
 		width=1561
 		height=1018
@@ -8789,54 +8789,43 @@ rectangle {
 	limits {
 	}
 }
-composite {
+rectangle {
 	object {
 		x=1233
 		y=102
 		width=274
-		height=38
+		height=37
 	}
-	"composite name"=""
-	children {
-		rectangle {
-			object {
-				x=1233
-				y=102
-				width=274
-				height=37
-			}
-			"basic attribute" {
-				clr=10
-			}
-		}
-		"choice button" {
-			object {
-				x=1417
-				y=109
-				width=82
-				height=23
-			}
-			control {
-				chan="SVT:bias:bot:switch"
-				clr=55
-				bclr=12
-			}
-			stacking="column"
-		}
-		text {
-			object {
-				x=1313
-				y=115
-				width=35
-				height=25
-			}
-			"basic attribute" {
-				clr=0
-			}
-			textix="SVT BIAS BOT ALL ON/OFF"
-			align="horiz. centered"
-		}
+	"basic attribute" {
+		clr=10
 	}
+}
+"choice button" {
+	object {
+		x=1417
+		y=109
+		width=82
+		height=23
+	}
+	control {
+		chan="SVT:bias:bot:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+text {
+	object {
+		x=1313
+		y=115
+		width=35
+		height=25
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="SVT BIAS BOT ALL ON/OFF"
+	align="horiz. centered"
 }
 rectangle {
 	object {
@@ -8861,21 +8850,6 @@ text {
 	}
 	textix="SVT BIAS ALL V_SET"
 	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=1417
-		y=156
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:0:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
 }
 rectangle {
 	object {

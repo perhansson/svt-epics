@@ -9,15 +9,16 @@ popd
 echo "Start SVT DAQ Setup GUI"
 set cmd = ""
 if($#argv == 0) then
-    echo "Need to supply x for execution or e for edit"
+    echo "Need to supply -x for execution or -e for edit"
 else
-    if($argv[1] == "x") then
-	set cmd = "-x"
+	set cmd = $argv[1]
+    #if($argv[1] == "x") then
+	#set cmd = "-x"
 	#echo "what"
-    else
+    #else
 	#echo "dfsd"
-	set cmd = ""
-    endif
+	#set cmd = ""
+    #endif
     echo $cmd
     medm $cmd svtDaqMap.adl &
     medm $cmd svtDaqSocketSetup.adl &
