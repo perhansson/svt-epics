@@ -28,6 +28,7 @@ myexampleSupport_SRCS += myexampleHello.c
 myexampleSupport_SRCS += initTrace.c
 myexampleSupport_SRCS += tcpipExample.c
 myexampleSupport_SRCS += constants.c
+myexampleSupport_SRCS += status.c
 myexampleSupport_SRCS += daqmap.c
 myexampleSupport_SRCS += client_util.c
 myexampleSupport_SRCS += febxml.c

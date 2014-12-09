@@ -69,24 +69,24 @@ static void getIpFromRecord(subRecord* precord, char value[], const int MAX) {
               if(strlen(inpa_val2)<MAX) {
                  strcpy(value,inpa_val2);
               } else {
-                 printf("[ getIpFromRecord ]: [ WARNING ]: IP from DB is too long? %s \n",inpa_val2);
+                 printf("[ getIpFromRecord ]: [ ERROR ]: IP from DB is too long? %s \n",inpa_val2);
                  strcpy(value,"");
               }
            } else {
-              printf("[ getIpFromRecord ]: [ WARNING ]: cannot get IP record from inpa_val %s \n",inpa_val);
+              printf("[ getIpFromRecord ]: [ ERROR ]: cannot get IP record from inpa_val %s \n",inpa_val);
               strcpy(value,"");
            }
         } else {
-           printf("[ getIpFromRecord ]: [ ERROR ]: dbNameToAddr for %s failed (paddr=%p)\n",inpa_val,&paddr);
+           if (mySubDebug>0) printf("[ getIpFromRecord ]: [ WARNING ]: dbNameToAddr for %s failed (paddr=%p)\n",inpa_val,&paddr);
            strcpy(value,"");
         }
         
      } else {
-        printf("[ getIpFromRecord ]: [ WARNING ]: INPA string has zero length \n");    
+        if (mySubDebug>0) printf("[ getIpFromRecord ]: [ WARNING ]: INPA string has zero length \n");    
         strcpy(value,"");
      }
   } else {
-     printf("[ getIpFromRecord ]: [ ERROR ]: failed to get value from inpa\n");
+     if (mySubDebug>0) printf("[ getIpFromRecord ]: [ WARNING ]: failed to get value from subrecord INPA\n");
      strcpy(value,"");
   }
   
@@ -101,22 +101,22 @@ static int getPortFromRecord(subRecord* precord) {
         dbAddr paddr;
         if(dbNameToAddr(inpb_val,&paddr)==0) {
            struct longinRecord* recA = (longinRecord*)paddr.precord;
-           if (mySubDebug>1) printf("[ getPortFromRecord ]: recA at %p\n",recA);
+           if (mySubDebug>0) printf("[ getPortFromRecord ]: recA at %p\n",recA);
            if(recA!=NULL) {
-              if (mySubDebug>1) printf("[ getPortFromRecord ]: recA name %s val %d\n",recA->name,recA->val);
+              if (mySubDebug>0) printf("[ getPortFromRecord ]: recA name %s val %d\n",recA->name,recA->val);
               return recA->val;
            } else {
-              printf("[ getPortFromRecord ]: [ WARNING ]: getPortFromRecord: cannot get port record from inpb_val %s \n",inpb_val);
+               if (mySubDebug>0) printf("[ getPortFromRecord ]: [ WARNING ]: getPortFromRecord: cannot get port record from inpb_val %s \n",inpb_val);
            }
         } else {
-           printf("[ getPortFromRecord ]: [ ERROR ]: dbNameToAddr for %s failed (paddr=%p)\n",inpb_val,&paddr);
+            if (mySubDebug>0) printf("[ getPortFromRecord ]: [ WARNING ]: dbNameToAddr for %s failed (paddr=%p)\n",inpb_val,&paddr);
         }
         
      } else {
-        printf("[ getPortFromRecord ]: [ WARNING ]: getIpFromRecord: INPB string has zero length \n");    
+         if (mySubDebug>0) printf("[ getPortFromRecord ]: [ WARNING ]: getIpFromRecord: INPB string has zero length \n");    
      }
   } else {
-     printf("[ getPortFromRecord ]: [ ERROR ]: failed to get value from inpb\n");
+      if (mySubDebug>0) printf("[ getPortFromRecord ]: [ WARNING ]: failed to get value from  subrecord INPB\n");
   }
   
   return -1;
@@ -320,7 +320,7 @@ static int setupSocket(subRecord *precord) {
            port = p;
         }        
         else {
-           printf("[ setupSocket ]: [ WARNING ]: Couldn't get hostname or port from in DB.\n");        
+           printf("[ setupSocket ]: [ WARNING ]: Couldn't get hostname or port from EPICS db.\n");        
         }
      }
      
@@ -346,8 +346,11 @@ static int setupSocket(subRecord *precord) {
      }
      
      if(sockfd<=0) {
-        if (mySubDebug>0) printf("[ subPollProcess ]: couln't get socket, sleep 1s before retrying\n");	
+        if (mySubDebug>0) printf("[ subPollProcess ]: couldn't get socket, sleep 1s before retrying\n");	
         sleep(1);
+        // reset
+        strcpy(hostName,"");
+        port = -1;
      }
      
      dt++;
@@ -841,13 +844,13 @@ static long subTempProcess(subRecord *precord) {
 
 
 static void updatePollStatusFlag() {
-  // get the status from the client utils
-  int status = getXMLPollStatus();
+   // get the status from the client utils
+   int status;
+   status= getXmlPollStatus();
   // flip the status flag if xml poll was ok.
-  if (mySubDebug) {
-    printf("updatePollStatusFlag: start status_poll_flag = %d\n",status_poll_flag);
-    printf("updatePollStatusFlag: getXMLPollStatus=%d\n",status);
-  }
+  if (mySubDebug) 
+     printf("[ updatePollStatusFlag ] : start status_poll_flag = %d and status = %d\n",status_poll_flag, status);
+  
   if(status==1) {
     if(status_poll_flag==0) {
       status_poll_flag = 1;
@@ -855,7 +858,8 @@ static void updatePollStatusFlag() {
       status_poll_flag = 0;
     }
   }
-  if (mySubDebug) printf("updatePollStatusFlag: end status_poll_flag = %d\n",status_poll_flag);
+  if (mySubDebug) 
+     printf("[ updatePollStatusFlag ] : end status_poll_flag = %d\n",status_poll_flag);
 }
 
 

@@ -7,10 +7,12 @@
 #include "hybxml.h"
 #include "socket.h"
 #include "constants.h"
+#include "status.h"
 
 //int client_util_debug = 2;
 char *xml_string = NULL;
 xmlDoc* doc = NULL;
+xmlDoc* doc_prev = NULL;
 xmlNode* xml_root = NULL;
 int xml_poll_status = 0;
 
@@ -122,20 +124,20 @@ void getXmlDoc(int sockfd, int read_status, int read_config) {
     xml_poll_status = 1;
 
     //clear old documents
-    if(DEBUG>1) printf("[ getXmlDoc ]: free xml string %p\n",xml_string);
+    if(DEBUG>2) printf("[ getXmlDoc ]: free xml string %p\n",xml_string);
     free_xml_string();
     //if(xml_string!=NULL) {
     //  free(xml_string);
     //}
-    if(DEBUG>1) printf("[ getXmlDoc ]: free xml string done %p\n",xml_string);
-    if(DEBUG>1) printf("[ getXmlDoc ]: free xml doc\n");
+    if(DEBUG>2) printf("[ getXmlDoc ]: free xml string done %p\n",xml_string);
+    if(DEBUG>2) printf("[ getXmlDoc ]: free xml doc\n");
     if(doc!=NULL) {
         xmlFreeDoc(doc);
         xmlCleanupParser();
         doc=NULL;
         xml_root=NULL;
     }
-    if(DEBUG>1) printf("[ getXmlDoc ]: free xml doc done\n");
+    if(DEBUG>2) printf("[ getXmlDoc ]: free xml doc done\n");
 
     // check that the socket is open
     if(sockfd<=0) {
@@ -152,7 +154,7 @@ void getXmlDoc(int sockfd, int read_status, int read_config) {
 
     if(read_status>0) {
 
-        if(DEBUG>0) printf("[ getXmlDoc ]: ReadStatus\n");
+        if(DEBUG>2) printf("[ getXmlDoc ]: ReadStatus\n");
 
         writeReadStatus(sockfd);
 
@@ -160,17 +162,17 @@ void getXmlDoc(int sockfd, int read_status, int read_config) {
 
     if(read_config>0) {
 
-        if(DEBUG>0) printf("[ getXmlDoc ]: ReadConfig\n");
+        if(DEBUG>2) printf("[ getXmlDoc ]: ReadConfig\n");
 
         writeReadConfig(sockfd);
 
     }
 
-    if(DEBUG>1) printf("[ getXmlDoc ]: Before reading xml string (%p)\n",xml_string);
+    if(DEBUG>2) printf("[ getXmlDoc ]: Before reading xml string (%p)\n",xml_string);
 
     pollXmlString(sockfd);
 
-    if(DEBUG>1) printf("[ getXmlDoc ]: After reading xml string (%p)\n",xml_string);
+    if(DEBUG>2) printf("[ getXmlDoc ]: After reading xml string (%p)\n",xml_string);
 
     if(xml_string!=NULL) {
         if(strlen(xml_string)>0) {
@@ -181,7 +183,14 @@ void getXmlDoc(int sockfd, int read_status, int read_config) {
             if(doc!=NULL) {
                 xml_root = xmlDocGetRootElement(doc);
                 if(xml_root!=NULL) {
-                    if(DEBUG>1) printf("[ getXmlDoc ]: found xml_root name %s\n",(xml_root)->name);
+                   if(DEBUG>2) {
+                      printf("[ getXmlDoc ]: found xml_root name %s\n",(xml_root)->name);
+                      printf("[ getXmlDoc ]: print xml to file\n");
+                   }
+                   int bytes_written = xmlSaveFormatFile("svtdaq.xml",doc,1);
+                   if(DEBUG>2) {
+                      printf("[ getXmlDoc ]: printed %d bytes of xml to file\n",bytes_written);
+                   }
                 }
             } else {
                 printf("[ getXmlDoc ]: [ ERROR ]: problem building xml doc at %p from \n%s\n",doc,xml_string);
@@ -202,18 +211,89 @@ void getXmlDoc(int sockfd, int read_status, int read_config) {
 }
 
 
-int getXMLPollStatus() {
-    int status = 0;
-    if(xml_string!=NULL) {
-        if(strlen(xml_string)>0) {
-            if(doc!=NULL) {
-                if(xml_root!=NULL) {
-                    status = 1;
-                }
+
+
+
+
+
+
+int getXmlPollStatus() {
+   // check that we have an xml file
+   int cmpDump;
+   int nonZero;
+   int cmpNodes;
+   cmpDump = 0;
+   nonZero = 0;
+   cmpNodes = 0;
+   if(xml_string!=NULL) {
+      if(strlen(xml_string)>0) {
+         if(doc!=NULL) {
+            if(DEBUG>0) printf("[ getXmlPollStatus ] : xml doc exists.\n");
+
+            if(DEBUG>0) printf("[ getXmlPollStatus ] : check non-zero nodes.\n");
+            nonZero = checkNonZeroNodes(doc);
+            if(DEBUG>0) printf("[ getXmlPollStatus ] : nonZero = %d\n",nonZero);
+            
+            // compare a xml dump to previous
+            if(doc_prev!=NULL) {
+               
+               if(DEBUG>0) printf("[ getXmlPollStatus ] : compare xml doc to prev.\n");
+               cmpDump = compareXmlDump(doc, doc_prev);
+               if(cmpDump == 1) 
+                  cmpDump = 0;
+               else 
+                  cmpDump = 1;
+               if(DEBUG>0) printf("[ getXmlPollStatus ] : cmpDump = %d\n", cmpDump);                              
+               
+               if(DEBUG>0) printf("[ getXmlPollStatus ] : check node contents.\n");
+               cmpNodes = compareNodeSets(doc, doc_prev);
+               if(DEBUG>0) printf("[ getXmlPollStatus ] : cmpNodes = %d\n",cmpNodes);            
+               
+               free(doc_prev);
+               
+            } else {
+               if(DEBUG>0) printf("[ getXmlPollStatus ] : no prev doc to compare to.\n");
+               cmpDump = 1;
+               cmpNodes = 1;
             }
-        }
-    }
-    return status;
+            
+            if(DEBUG>1) printf("[ getXmlPollStatus ] : copy cur to prev doc\n");
+            
+            doc_prev = xmlCopyDoc(doc,1);
+
+            if(DEBUG>1) printf("[ getXmlPollStatus ] : copy cur to prev doc DONE\n");
+            
+            
+         }
+      }
+   }
+   
+   if(nonZero == 1) {
+      printf("[ getXmlPollStatus ] : check nodes are non-empty.\n");
+   } else {
+      printf("[ getXmlPollStatus ] :  [ ERROR ] : xml elements checked are empty!\n");
+   }
+   
+   if(cmpDump == 1) {
+      printf("[ getXmlPollStatus ] : previous xml dump is different.\n");
+   } else {
+      printf("[ getXmlPollStatus ] : [ ERROR ] : previous xml dump is the same as the current one!\n");
+   }
+
+   if(cmpNodes == 1) {
+      printf("[ getXmlPollStatus ] : element values checked  are different.\n");
+   } else {
+      printf("[ getXmlPollStatus ] : [ ERROR ] : value of elements checked are identical to previous xml!\n");
+   }
+   
+   
+   if(nonZero == 1 && cmpDump == 1 && cmpNodes == 1 ) {
+      printf("[ getXmlPollStatus ] : XML document seems to be ok.\n");
+      return 1;
+   } else {
+      printf("[ getXmlPollStatus ] : [ ERROR ] : XML document is not ok.\n");
+      return 0;
+   }
 }
 
 
@@ -707,7 +787,7 @@ double getHybridT(int index, int hyb, const char* type) {
          printf("[ getHybridT ]: [ ERROR ]: the typee %s is invalid\n",type);
       }     
    } else {
-      printf("[ getHybridT ]: [ WARNING ]: the xml doc status is invalid\n");
+      if(DEBUG>1) printf("[ getHybridT ]: [ WARNING ]: the xml doc status is invalid\n");
    }
    return val; 
 }
@@ -719,7 +799,7 @@ double getHybridI(int index, int hyb, const char* type) {
       strcpy(tmp,type);
       val = getHybIValue(doc, strToUpper(tmp), index, hyb);
    } else {
-      printf("[ getHybridI ]: [ WARNING ]: the xml doc status is invalid\n");
+      if(DEBUG>1) printf("[ getHybridI ]: [ WARNING ]: the xml doc status is invalid\n");
    }
    return val; 
 }
@@ -732,7 +812,7 @@ double getHybridV(int feb_id, int hyb_id,char ch_name[], char ch_pos[]) {
       strcpy(tmp,ch_name);
       val = getHybVValue(doc, strToUpper(tmp), feb_id, hyb_id, ch_pos);
    } else {
-      printf("[ getHybridV ]: [ WARNING ]: the xml doc status is invalid\n");
+      if(DEBUG>1) printf("[ getHybridV ]: [ WARNING ]: the xml doc status is invalid\n");
    }
    return val; 
 }
@@ -742,7 +822,7 @@ double getHybridSwitch(int index, int hyb) {
    if(getXmlDocStatus()==0) {      
       val = getHybSwitchValue(doc, index, hyb);
    } else {
-      printf("[ getHybridSwitch ]: [ WARNING ]: the xml doc status is invalid\n");
+      if(DEBUG>1) printf("[ getHybridSwitch ]: [ WARNING ]: the xml doc status is invalid\n");
    }
    return val; 
 }
@@ -762,7 +842,7 @@ double getHybridTrim(int index, int hyb, char* type) {
       }   
       val = getHybTrimValue(doc, s, index, hyb);
    } else {
-      printf("[ getHybridTrim ]: [ WARNING ]: the xml doc status is invalid\n");
+      if(DEBUG>1) printf("[ getHybridTrim ]: [ WARNING ]: the xml doc status is invalid\n");
    }
    return val; 
 }
@@ -785,9 +865,8 @@ void writeHybridVSwitch(int sockid, int value, int feb_id, int hyb_id) {
     
     getHybSwitchCmd(toggle, feb_id, hyb_id, buffer, 256);
 
-    if(DEBUG > 0) 
-       printf("[ writeHybridVSwitch ] : cmd to write \"%s\"\n",buffer);
-
+    printf("[ writeHybridVSwitch ] : cmd \"%s\"\n",buffer);
+    
     n = write(sockid,buffer,strlen(buffer));
     
     if(n<0) 
