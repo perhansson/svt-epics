@@ -2,7 +2,7 @@
 
 echo "Setup environment"
 pushd ../svt-daq-epics
-echo $PWD
+#echo $PWD
 source setup_epics.csh
 popd
 
