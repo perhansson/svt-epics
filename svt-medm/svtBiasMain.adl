@@ -1,14 +1,14 @@
 
 file {
-	name="/u1/epics/svt-epics/svt-medm/svtBiasMain.adl"
+	name="/home/tracker/pelle/epics/svt-epics/svt-medm/svtBiasMain.adl"
 	version=030108
 }
 display {
 	object {
-		x=34
-		y=80
-		width=1561
-		height=1018
+		x=-73
+		y=76
+		width=1440
+		height=856
 	}
 	clr=14
 	bclr=12
@@ -8926,4 +8926,97 @@ text {
 	}
 	textix="SVT BIAS ALL ON/OFF"
 	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=1389
+		y=157
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=1156
+		y=226
+		width=274
+		height=37
+	}
+	"basic attribute" {
+		clr=10
+	}
+}
+text {
+	object {
+		x=1236
+		y=239
+		width=35
+		height=25
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="SVT BIAS TOP V_SET"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=1312
+		y=234
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=1156
+		y=272
+		width=274
+		height=37
+	}
+	"basic attribute" {
+		clr=10
+	}
+}
+text {
+	object {
+		x=1236
+		y=285
+		width=35
+		height=25
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="SVT BIAS BOT V_SET"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=1312
+		y=280
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:bot:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
 }
