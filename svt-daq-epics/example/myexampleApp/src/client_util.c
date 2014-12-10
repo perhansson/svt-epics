@@ -248,7 +248,7 @@ int getXmlPollStatus() {
                
                if(DEBUG>0) printf("[ getXmlPollStatus ] : compare xml doc to prev.\n");
                //cmpDump = compareXmlDump(doc, doc_prev);
-               cmpDump = 1;
+               cmpDump = 0;
                if(cmpDump == 1) 
                   cmpDump = 0;
                else 

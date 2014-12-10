@@ -1,5 +1,6 @@
-#!/bin/tcsh
+###!/bin/tcsh
 
+source ./setup_epics.csh
 echo "Start SVT DAQ Setup GUI"
 set cmd = ""
 if($#argv == 0) then
