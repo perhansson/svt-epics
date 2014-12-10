@@ -1,12 +1,12 @@
 
 file {
-	name="/home/tracker/pelle/epics/svt-medm/svtStatusPS_latest_onoff_control.adl"
+	name="/home/tracker/pelle/epics/svt-epics/svt-medm/svtHybridMain.adl"
 	version=030108
 }
 display {
 	object {
-		x=1551
-		y=267
+		x=27
+		y=623
 		width=1426
 		height=805
 	}
@@ -100,58 +100,47 @@ text {
 	textix="TOP & BOTTOM SVT"
 	align="horiz. centered"
 }
-composite {
+oval {
 	object {
-		x=1160
+		x=1385
 		y=665
-		width=178
-		height=28
+		width=20
+		height=20
 	}
-	"composite name"=""
-	children {
-		oval {
-			object {
-				x=1318
-				y=665
-				width=20
-				height=20
-			}
-			"basic attribute" {
-				clr=61
-			}
-			"dynamic attribute" {
-				vis="if not zero"
-				chan="tmp:svt:ps_inlck"
-			}
-		}
-		oval {
-			object {
-				x=1318
-				y=665
-				width=20
-				height=20
-			}
-			"basic attribute" {
-				clr=20
-			}
-			"dynamic attribute" {
-				vis="if zero"
-				chan="tmp:svt:ps_inlck"
-			}
-		}
-		text {
-			object {
-				x=1160
-				y=668
-				width=140
-				height=25
-			}
-			"basic attribute" {
-				clr=30
-			}
-			textix="Power Supply Interlock"
-		}
+	"basic attribute" {
+		clr=61
 	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="tmp:svt:ps_inlck"
+	}
+}
+oval {
+	object {
+		x=1390
+		y=665
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="tmp:svt:ps_inlck"
+	}
+}
+text {
+	object {
+		x=1240
+		y=668
+		width=140
+		height=25
+	}
+	"basic attribute" {
+		clr=30
+	}
+	textix="Power Supply Interlock"
 }
 "related display" {
 	object {
@@ -250,54 +239,22 @@ text {
 	textix="TOP SVT"
 	align="horiz. centered"
 }
-"text update" {
-	object {
-		x=151
-		y=751
-		width=52
-		height=20
-	}
-	monitor {
-		chan="minit_t_v_LCW_OUT"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=477
-		y=751
-		width=52
-		height=20
-	}
-	monitor {
-		chan="minit_t_v_LCW_CoilA"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
 text {
 	object {
-		x=43
-		y=751
+		x=1260
+		y=375
 		width=106
 		height=20
 	}
 	"basic attribute" {
 		clr=50
 	}
-	textix="SVT Temperature"
+	textix="SVT Hybrid Chiller"
 }
 text {
 	object {
-		x=413
-		y=751
+		x=1275
+		y=420
 		width=73
 		height=20
 	}
@@ -356,27 +313,10 @@ text {
 	textix="SVT TOP ALL ON/OFF"
 	align="horiz. centered"
 }
-"text update" {
-	object {
-		x=773
-		y=751
-		width=83
-		height=20
-	}
-	monitor {
-		chan="hallb_VCG2C24"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	format="exponential"
-	limits {
-	}
-}
 text {
 	object {
-		x=664
-		y=751
+		x=1258
+		y=530
 		width=106
 		height=20
 	}
@@ -5240,59 +5180,10 @@ text {
 	textix="SVT FEB"
 	align="horiz. centered"
 }
-composite {
+rectangle {
 	object {
 		x=523
 		y=153
-		width=211
-		height=38
-	}
-	"composite name"=""
-	children {
-		rectangle {
-			object {
-				x=523
-				y=153
-				width=211
-				height=37
-			}
-			"basic attribute" {
-				clr=10
-			}
-		}
-		"choice button" {
-			object {
-				x=651
-				y=160
-				width=75
-				height=23
-			}
-			control {
-				chan="SVT:lv:hyb:bot:all:switch"
-				clr=55
-				bclr=12
-			}
-			stacking="column"
-		}
-		text {
-			object {
-				x=571
-				y=166
-				width=37
-				height=25
-			}
-			"basic attribute" {
-				clr=0
-			}
-			textix="SVT BOT ALL ON/OFF"
-			align="horiz. centered"
-		}
-	}
-}
-rectangle {
-	object {
-		x=1012
-		y=168
 		width=211
 		height=37
 	}
@@ -5300,9 +5191,47 @@ rectangle {
 		clr=10
 	}
 }
+"choice button" {
+	object {
+		x=651
+		y=160
+		width=75
+		height=23
+	}
+	control {
+		chan="SVT:lv:hyb:bot:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
 text {
 	object {
-		x=1060
+		x=571
+		y=166
+		width=37
+		height=25
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="SVT BOT ALL ON/OFF"
+	align="horiz. centered"
+}
+rectangle {
+	object {
+		x=1012
+		y=168
+		width=211
+		height=80
+	}
+	"basic attribute" {
+		clr=10
+	}
+}
+text {
+	object {
+		x=1100
 		y=181
 		width=37
 		height=25
@@ -5311,5 +5240,296 @@ text {
 		clr=0
 	}
 	textix="SVT FEB ALL ON/OFF"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1236
+		y=631
+		width=140
+		height=25
+	}
+	"basic attribute" {
+		clr=30
+	}
+	textix="SVT DAQ Heartbeat"
+}
+oval {
+	object {
+		x=1390
+		y=631
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:hb_check"
+	}
+}
+oval {
+	object {
+		x=1385
+		y=631
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=61
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:hb_check"
+	}
+}
+text {
+	object {
+		x=1233
+		y=586
+		width=140
+		height=25
+	}
+	"basic attribute" {
+		clr=30
+	}
+	textix="SVT DAQ Status"
+}
+"text update" {
+	object {
+		x=1338
+		y=584
+		width=50
+		height=20
+	}
+	monitor {
+		chan="SVT:hb_check"
+		clr=30
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=1275
+		y=395
+		width=35
+		height=20
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Temp"
+}
+text {
+	object {
+		x=1258
+		y=449
+		width=106
+		height=20
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="SVT FEB Chiller"
+}
+text {
+	object {
+		x=1273
+		y=494
+		width=73
+		height=20
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Mass Flow"
+}
+text {
+	object {
+		x=1273
+		y=469
+		width=35
+		height=20
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="Temp"
+}
+composite {
+	object {
+		x=1365
+		y=395
+		width=54
+		height=155
+	}
+	"composite name"=""
+	children {
+		"text update" {
+			object {
+				x=1367
+				y=395
+				width=52
+				height=20
+			}
+			monitor {
+				chan="minit_t_v_LCW_OUT"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=1367
+				y=420
+				width=52
+				height=20
+			}
+			monitor {
+				chan="minit_t_v_LCW_CoilA"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=1365
+				y=530
+				width=52
+				height=20
+			}
+			monitor {
+				chan="hallb_VCG2C24"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			format="exponential"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=1365
+				y=469
+				width=52
+				height=20
+			}
+			monitor {
+				chan="minit_t_v_LCW_OUT"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=1365
+				y=494
+				width=52
+				height=20
+			}
+			monitor {
+				chan="minit_t_v_LCW_CoilA"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+			}
+		}
+	}
+}
+"choice button" {
+	object {
+		x=1018
+		y=222
+		width=41
+		height=20
+	}
+	control {
+		chan="SVT:lv:fe:digi:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=1101
+		y=219
+		width=41
+		height=20
+	}
+	control {
+		chan="SVT:lv:fe:anap:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=1174
+		y=219
+		width=41
+		height=20
+	}
+	control {
+		chan="SVT:lv:fe:anan:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+text {
+	object {
+		x=1012
+		y=200
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="DIG"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1100
+		y=200
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="ANAP"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1174
+		y=200
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="ANAN"
 	align="horiz. centered"
 }

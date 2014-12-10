@@ -5,7 +5,7 @@ file {
 }
 display {
 	object {
-		x=-73
+		x=10
 		y=76
 		width=1440
 		height=856
@@ -8791,21 +8791,94 @@ rectangle {
 }
 rectangle {
 	object {
-		x=1233
-		y=102
-		width=274
-		height=37
+		x=1150
+		y=90
+		width=280
+		height=200
 	}
 	"basic attribute" {
 		clr=10
 	}
 }
+"text entry" {
+	object {
+		x=1349
+		y=220
+		width=51
+		height=25
+	}
+	control {
+		chan="SVT:bias:top:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1349
+		y=250
+		width=51
+		height=25
+	}
+	control {
+		chan="SVT:bias:bot:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1349
+		y=190
+		width=51
+		height=25
+	}
+	control {
+		chan="SVT:bias:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
 "choice button" {
 	object {
-		x=1417
-		y=109
-		width=82
-		height=23
+		x=1334
+		y=100
+		width=80
+		height=25
+	}
+	control {
+		chan="SVT:bias:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=1334
+		y=130
+		width=80
+		height=25
+	}
+	control {
+		chan="SVT:bias:top:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=1334
+		y=160
+		width=80
+		height=25
 	}
 	control {
 		chan="SVT:bias:bot:switch"
@@ -8816,109 +8889,9 @@ rectangle {
 }
 text {
 	object {
-		x=1313
-		y=115
-		width=35
-		height=25
-	}
-	"basic attribute" {
-		clr=0
-	}
-	textix="SVT BIAS BOT ALL ON/OFF"
-	align="horiz. centered"
-}
-rectangle {
-	object {
-		x=1233
-		y=149
-		width=274
-		height=37
-	}
-	"basic attribute" {
-		clr=10
-	}
-}
-text {
-	object {
-		x=1313
-		y=162
-		width=35
-		height=25
-	}
-	"basic attribute" {
-		clr=0
-	}
-	textix="SVT BIAS ALL V_SET"
-	align="horiz. centered"
-}
-rectangle {
-	object {
-		x=1234
-		y=55
-		width=274
-		height=37
-	}
-	"basic attribute" {
-		clr=10
-	}
-}
-"choice button" {
-	object {
-		x=1418
-		y=62
-		width=82
-		height=23
-	}
-	control {
-		chan="SVT:bias:top:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-text {
-	object {
-		x=1314
-		y=68
-		width=35
-		height=25
-	}
-	"basic attribute" {
-		clr=0
-	}
-	textix="SVT BIAS TOP ALL ON/OFF"
-	align="horiz. centered"
-}
-rectangle {
-	object {
-		x=1233
-		y=8
-		width=274
-		height=37
-	}
-	"basic attribute" {
-		clr=10
-	}
-}
-"choice button" {
-	object {
-		x=1417
-		y=15
-		width=82
-		height=23
-	}
-	control {
-		chan="SVT:bias:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-text {
-	object {
-		x=1313
-		y=21
-		width=35
+		x=1130
+		y=100
+		width=200
 		height=25
 	}
 	"basic attribute" {
@@ -8927,37 +8900,50 @@ text {
 	textix="SVT BIAS ALL ON/OFF"
 	align="horiz. centered"
 }
-"text entry" {
+text {
 	object {
-		x=1389
-		y=157
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-rectangle {
-	object {
-		x=1156
-		y=226
-		width=274
-		height=37
+		x=1130
+		y=130
+		width=200
+		height=25
 	}
 	"basic attribute" {
-		clr=10
+		clr=0
 	}
+	textix="SVT BIAS TOP ALL ON/OFF"
+	align="horiz. centered"
 }
 text {
 	object {
-		x=1236
-		y=239
-		width=35
+		x=1130
+		y=160
+		width=200
+		height=25
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="SVT BIAS BOT ALL ON/OFF"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1130
+		y=190
+		width=200
+		height=25
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="SVT BIAS ALL V_SET"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1130
+		y=220
+		width=200
 		height=25
 	}
 	"basic attribute" {
@@ -8966,37 +8952,11 @@ text {
 	textix="SVT BIAS TOP V_SET"
 	align="horiz. centered"
 }
-"text entry" {
-	object {
-		x=1312
-		y=234
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-rectangle {
-	object {
-		x=1156
-		y=272
-		width=274
-		height=37
-	}
-	"basic attribute" {
-		clr=10
-	}
-}
 text {
 	object {
-		x=1236
-		y=285
-		width=35
+		x=1130
+		y=250
+		width=200
 		height=25
 	}
 	"basic attribute" {
@@ -9004,19 +8964,4 @@ text {
 	}
 	textix="SVT BIAS BOT V_SET"
 	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=1312
-		y=280
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:bot:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
 }

@@ -1,12 +1,12 @@
 
 file {
-	name="/home/tracker/pelle/epics/medm_hps/svtDaqSetup.adl"
+	name="/home/tracker/pelle/epics/svt-epics/svt-medm/svtDaqSocketSetup.adl"
 	version=030108
 }
 display {
 	object {
-		x=2256
-		y=156
+		x=801
+		y=49
 		width=496
 		height=113
 	}
@@ -138,12 +138,10 @@ text {
 	}
 	monitor {
 		chan="SVT:hb_check"
-		clr=0
-		bclr=12
+		clr=30
+		bclr=14
 	}
-	clrmod="alarm"
 	align="horiz. centered"
-	format="string"
 	limits {
 	}
 }

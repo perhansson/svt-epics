@@ -1,11 +1,5 @@
 #!/bin/tcsh
 
-echo "Setup environment"
-pushd ../svt-daq-epics
-#echo $PWD
-source setup_epics.csh
-popd
-
 echo "Start SVT DAQ Setup GUI"
 set cmd = ""
 if($#argv == 0) then
