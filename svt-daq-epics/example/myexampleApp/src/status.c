@@ -25,14 +25,20 @@ int compareXmlDump(xmlDoc* doc_cur,xmlDoc* doc_prev) {
          } else {
             if(DEBUG>1) printf("[compareXmlDump ] : [ WARNING ] : xml dump is the same as previous\n");                                                   
          }
-         free(buf_prev);
-         free(buf);
       } else {
          printf("[ compareXmlDump ] : [ ERROR ] : problem comparing buffers: cur %p prev %p \n",buf, buf_prev);                        
       }
    } else {
       printf("[ compareXmlDump ] : [ WARNING ] :  buffers have invalid lengths to compare? cur %d prev %d \n", len, len_prev);
    }
+   
+   // free
+   if(buf_prev!=NULL)
+      xmlFree(buf_prev);
+   if(buf!=NULL)
+      xmlFree(buf);
+
+
    return cmpRes;
    
    
@@ -45,6 +51,9 @@ int checkNonZeroNodes(xmlDoc* document) {
    xmlNodePtr node;
    xmlNodePtr children;
    int i;
+   int nnonzero;
+   int n;
+   nnonzero=0;
    result = getFebTemps(document, "FebTemp0");
    if(result!=NULL) {
       nodeset = result->nodesetval;
@@ -53,22 +62,25 @@ int checkNonZeroNodes(xmlDoc* document) {
          node = nodeset->nodeTab[i];
          if(node!=NULL) {
             children = node->xmlChildrenNode;
+            n++;
             if(children==NULL) {
                if(DEBUG>1) printf("[ checkNonZeroNodes ] : no children found for node %s.\n", node->name);
-               return 0;
             } else {
                if(DEBUG>1) printf("[ checkNonZeroNodes ] : found children for node %s.\n", node->name);               
+               nnonzero++;
             }
          } else {
             printf("[ checkNonZeroNodes ] : [ ERROR ] :  couldn't find node!\n");
-            return 0;
          }
       }
    } else {
       if(DEBUG>1) printf("[ checkNonZeroNodes ] : no results found.\n");
-      return 0;
    }
-   return 1;
+   if(DEBUG>1) printf("[ checkNonZeroNodes ] : %d/%d elements had no children\n", nnonzero,n);
+
+   // if a single element is not empty report a '1'
+   if(nnonzero>0) return 1;
+   else return 0;
 }
 
 
@@ -82,6 +94,7 @@ int compareNodeSets(xmlDoc* document, xmlDoc* document_prev) {
    xmlNodePtr node;
    xmlNodePtr node_prev;
    int i;
+   int ndiff;
    xmlChar* content;
    xmlChar* content_prev;
 
@@ -91,7 +104,7 @@ int compareNodeSets(xmlDoc* document, xmlDoc* document_prev) {
       nodeset = result->nodesetval;
       if(DEBUG>1) printf("[ compareNodeSets ] : found %d results \n", nodeset->nodeNr);      
    } else {
-      if(DEBUG>1) printf("[ compareNodeSets ] : no results found \n");      
+      if(DEBUG>1) printf("[ compareNodeSets ] : no results found. Cannot compare. \n");      
       return 0;
    }
    
@@ -101,14 +114,16 @@ int compareNodeSets(xmlDoc* document, xmlDoc* document_prev) {
       nodeset_prev = result_prev->nodesetval;
       if(DEBUG>1) printf("[ compareNodeSets ] : found %d results for prev \n", nodeset_prev->nodeNr);      
    } else {
-      if(DEBUG>1) printf("[ compareNodeSets ] : no results found \n");    
+      if(DEBUG>1) printf("[ compareNodeSets ] : no results_prev found. Cannot compare. \n");    
       return 0;
    }
    
    if(nodeset->nodeNr != nodeset_prev->nodeNr) {
-      if(DEBUG>1) printf("[ compareNodeSets ] : different number of results \n");      
+      if(DEBUG>1) printf("[ compareNodeSets ] : different number of results.  \n");      
       return 0;
    }
+
+   ndiff=0;
    
    for(i=0;i<nodeset->nodeNr;++i) {
       node = nodeset->nodeTab[i];
@@ -120,13 +135,14 @@ int compareNodeSets(xmlDoc* document, xmlDoc* document_prev) {
       if(DEBUG>1) printf("[ compareNodeSets ] : compare node_prev %s: %s\n", node_prev->name, (char*) content_prev);
       
       if(xmlStrEqual(content, content_prev)==0) {
-          if(DEBUG>1) printf("[ compareNodeSets ] : nodes are different\n");    
-         return 0;
+          if(DEBUG>1) printf("[ compareNodeSets ] : nodes are different\n");
+          ndiff++;
       } else {
-         if(DEBUG>1) printf("[ compareNodeSets ] : nodes are equal\n");    
+         if(DEBUG>1) printf("[ compareNodeSets ] : nodes are equal\n");             
       }
       
    }
-   if(DEBUG>1) printf("[ compareNodeSets ] : set of nodes are different\n");
-   return 1;
+   if(DEBUG>1) printf("[ compareNodeSets ] : %d/%d nodes were different\n",ndiff,nodeset->nodeNr);
+   if(ndiff>0) return 1;
+   else return 0;
 }

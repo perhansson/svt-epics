@@ -130,12 +130,21 @@ void getXmlDoc(int sockfd, int read_status, int read_config) {
     //  free(xml_string);
     //}
     if(DEBUG>2) printf("[ getXmlDoc ]: free xml string done %p\n",xml_string);
-    if(DEBUG>2) printf("[ getXmlDoc ]: free xml doc\n");
     if(doc!=NULL) {
-        xmlFreeDoc(doc);
-        xmlCleanupParser();
-        doc=NULL;
-        xml_root=NULL;
+       
+       if(doc_prev!=NULL) {
+          if(DEBUG>2) printf("[ getXmlDoc ]: free the prev xml doc\n");
+          xmlFreeDoc(doc_prev);
+          doc_prev=NULL;
+       }
+       if(DEBUG>2) printf("[ getXmlDoc ]: copy to prev xml doc\n");
+       doc_prev = xmlCopyDoc(doc,1);
+       
+       if(DEBUG>2) printf("[ getXmlDoc ]: free current xml doc\n");       
+       xmlFreeDoc(doc);
+       xmlCleanupParser();
+       doc=NULL;
+       xml_root=NULL;
     }
     if(DEBUG>2) printf("[ getXmlDoc ]: free xml doc done\n");
 
@@ -238,7 +247,8 @@ int getXmlPollStatus() {
             if(doc_prev!=NULL) {
                
                if(DEBUG>0) printf("[ getXmlPollStatus ] : compare xml doc to prev.\n");
-               cmpDump = compareXmlDump(doc, doc_prev);
+               //cmpDump = compareXmlDump(doc, doc_prev);
+               cmpDump = 1;
                if(cmpDump == 1) 
                   cmpDump = 0;
                else 
@@ -249,20 +259,11 @@ int getXmlPollStatus() {
                cmpNodes = compareNodeSets(doc, doc_prev);
                if(DEBUG>0) printf("[ getXmlPollStatus ] : cmpNodes = %d\n",cmpNodes);            
                
-               free(doc_prev);
-               
             } else {
                if(DEBUG>0) printf("[ getXmlPollStatus ] : no prev doc to compare to.\n");
                cmpDump = 1;
                cmpNodes = 1;
             }
-            
-            if(DEBUG>1) printf("[ getXmlPollStatus ] : copy cur to prev doc\n");
-            
-            doc_prev = xmlCopyDoc(doc,1);
-
-            if(DEBUG>1) printf("[ getXmlPollStatus ] : copy cur to prev doc DONE\n");
-            
             
          }
       }
@@ -281,7 +282,7 @@ int getXmlPollStatus() {
    }
 
    if(cmpNodes == 1) {
-      printf("[ getXmlPollStatus ] : element values checked  are different.\n");
+      printf("[ getXmlPollStatus ] : element values checked are different.\n");
    } else {
       printf("[ getXmlPollStatus ] : [ ERROR ] : value of elements checked are identical to previous xml!\n");
    }

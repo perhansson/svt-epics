@@ -24,9 +24,8 @@ record(longin, SVT:poll_xml_port) {
     field(VAL,"8090")
 }
 
-record(bi, SVT:hb_check) {
-  field(SCAN, "Passive") 
-  field(INP, "SVT:poll_stat CPP")
+record(ai, SVT:hb_check) {
+  field(INP, "SVT:poll_stat")
   field(DTYP,"Soft Channel")
   field(FLNK,"SVT:process")
 }

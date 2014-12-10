@@ -112,7 +112,7 @@ double getHybTValue(xmlDocPtr doc, const char* type, int index, int hyb) {
 
 xmlXPathObjectPtr getHybSwitches(xmlDocPtr doc, int hyb) {
    char tmp[256];
-   sprintf(tmp,"/system/config/ControlDpm/FebFpga/FebCore/Hybrid%dPwrEn",hyb);
+   sprintf(tmp,"/system/status/ControlDpm/FebFpga/FebCore/Hybrid%dPwrOn",hyb);
    if(DEBUG>1) printf("[ getHybSwitches ] : xpath \"%s\"\n",tmp);
    return getnodeset(doc, (xmlChar*) tmp);
 }

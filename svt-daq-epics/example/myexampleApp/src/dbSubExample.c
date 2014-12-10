@@ -332,8 +332,9 @@ static int setupSocket(subRecord *precord) {
      
      //try a set of ports if failing
      j=0;
+     int port_start = port;
      while(j<10 && sockfd<0) {
-        port = port+j;        
+        port = port_start+j;
         if (mySubDebug>0) printf("[ setupSocket ]: Trying %s:%d\n",hostName,port);        
         sockfd = open_socket(hostName,port);
         if(sockfd<0) {
