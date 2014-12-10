@@ -1,4 +1,17 @@
 
+record(bo, SVT:bias:switch) 
+{
+  field(OUT, "SVT:bias:switch_fanout PP")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+
+record(dfanout, SVT:bias:switch_fanout) 
+{
+  field(OUTA, "SVT:bias:top:switch.VAL PP")
+  field(OUTB, "SVT:bias:bot:switch.VAL PP")
+}
+
 record(bo, SVT:bias:top:switch) 
 {
   field(OUT, "SVT:bias:top:switch_fanout PP")
@@ -9,8 +22,8 @@ record(bo, SVT:bias:top:switch)
 record(dfanout, SVT:bias:top:switch_fanout) 
 {
   field(OUTA, "SVT:bias:top:switch_fanout1 PP")
-  field(OUTA, "SVT:bias:top:switch_fanout2 PP")
-  field(OUTA, "SVT:bias:top:switch_fanout3 PP")
+  field(OUTB, "SVT:bias:top:switch_fanout2 PP")
+  field(OUTC, "SVT:bias:top:switch_fanout3 PP")
 }
 
 record(dfanout, SVT:bias:top:switch_fanout1) 
@@ -53,8 +66,8 @@ record(bo, SVT:bias:bot:switch)
 record(dfanout, SVT:bias:bot:switch_fanout) 
 {
   field(OUTA, "SVT:bias:bot:switch_fanout1 PP")
-  field(OUTA, "SVT:bias:bot:switch_fanout2 PP")
-  field(OUTA, "SVT:bias:bot:switch_fanout3 PP")
+  field(OUTB, "SVT:bias:bot:switch_fanout2 PP")
+  field(OUTC, "SVT:bias:bot:switch_fanout3 PP")
 }
 
 record(dfanout, SVT:bias:bot:switch_fanout1) 

@@ -46,6 +46,7 @@ detDbLoadRecords
 dbLoadRecords "db/dbFlangeSwitch.db"
 dbLoadRecords "db/dbFebSwitch.db"
 dbLoadRecords "db/dbHVSwitch.db"
+dbLoadRecords "db/dbHVset.db"
 
 
 
