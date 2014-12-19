@@ -1,37 +1,37 @@
 
 
 record(longin, SVT:daq:map:bot:0) {
-    field(VAL,"5")
+    field(VAL,"6")
 }
 
     
 
 record(longin, SVT:daq:map:bot:1) {
-    field(VAL,"5")
+    field(VAL,"6")
 }
 
     
 
 record(longin, SVT:daq:map:bot:2) {
-    field(VAL,"6")
+    field(VAL,"5")
 }
 
     
 
 record(longin, SVT:daq:map:bot:3) {
-    field(VAL,"6")
+    field(VAL,"5")
 }
 
     
 
 record(longin, SVT:daq:map:bot:4) {
-    field(VAL,"6")
+    field(VAL,"5")
 }
 
     
 
 record(longin, SVT:daq:map:bot:5) {
-    field(VAL,"6")
+    field(VAL,"5")
 }
 
     

@@ -909,7 +909,7 @@ composite {
 			"basic attribute" {
 				clr=51
 			}
-			textix="FEB"
+			textix="DAQ FEB"
 			align="horiz. centered"
 		}
 		"text entry" {
@@ -1203,7 +1203,7 @@ composite {
 			"basic attribute" {
 				clr=51
 			}
-			textix="FEB"
+			textix="DAQ FEB"
 			align="horiz. centered"
 		}
 		"text update" {
@@ -1803,7 +1803,7 @@ composite {
 			"basic attribute" {
 				clr=51
 			}
-			textix="FEB CH"
+			textix="DAQ FEB CH"
 			align="horiz. centered"
 		}
 		"text update" {
@@ -2686,7 +2686,7 @@ composite {
 			"basic attribute" {
 				clr=51
 			}
-			textix="FEB"
+			textix="DAQ FEB"
 			align="horiz. centered"
 		}
 		"text entry" {
