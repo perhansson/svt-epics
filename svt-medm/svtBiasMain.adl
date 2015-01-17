@@ -1,14 +1,14 @@
 
 file {
-	name="/home/tracker/pelle/epics/svt-epics/svt-medm/svtBiasMain.adl"
+	name="/u1/epics/svt-epics/svt-medm/svtBiasMain.adl"
 	version=030108
 }
 display {
 	object {
 		x=10
-		y=76
+		y=49
 		width=1440
-		height=856
+		height=1050
 	}
 	clr=14
 	bclr=12
