@@ -5,9 +5,9 @@ file {
 }
 display {
 	object {
-		x=10
-		y=49
-		width=1440
+		x=1519
+		y=83
+		width=1500
 		height=1050
 	}
 	clr=14
@@ -89,2580 +89,6 @@ display {
 }
 text {
 	object {
-		x=10
-		y=23
-		width=121
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Name"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=146
-		y=23
-		width=51
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Slot"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=233
-		y=23
-		width=30
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Voltage"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=312
-		y=23
-		width=30
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Setpoint"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=387
-		y=23
-		width=30
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Setpoint"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=470
-		y=23
-		width=30
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="On/Off"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=544
-		y=23
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Status"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=624
-		y=23
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Current"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=702
-		y=23
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Current"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=778
-		y=23
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Current"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=863
-		y=23
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Rate"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=940
-		y=23
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Rate"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=1023
-		y=23
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Rate"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=1097
-		y=23
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Rate"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=17
-		y=57
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 0"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=57
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:0:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=57
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:0:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=57
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:0:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=57
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:0:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=56
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:0:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=56
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:0:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=56
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:0:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=83
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 1"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=83
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:1:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=83
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:1:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=83
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:1:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=83
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:1:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=82
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:1:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=82
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:1:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=82
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:1:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=109
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 2"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=109
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:2:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=109
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:2:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=109
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:2:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=109
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:2:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=108
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:2:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=108
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:2:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=108
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:2:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=135
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 3"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=135
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:3:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=135
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:3:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=135
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:3:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=135
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:3:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=134
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:3:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=134
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:3:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=134
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:3:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=161
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 4"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=161
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:4:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=161
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:4:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=161
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:4:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=161
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:4:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=160
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:4:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=160
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:4:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=160
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:4:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=187
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 5"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=187
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:5:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=187
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:5:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=187
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:5:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=187
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:5:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=186
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:5:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=186
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:5:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=186
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:5:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=213
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 6"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=213
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:6:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=213
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:6:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=213
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:6:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=213
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:6:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=212
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:6:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=212
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:6:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=212
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:6:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=239
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 7"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=239
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:7:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=239
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:7:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=239
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:7:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=239
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:7:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=238
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:7:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=238
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:7:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=238
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:7:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=265
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 8"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=265
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:8:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=265
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:8:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=265
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:8:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=265
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:8:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=264
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:8:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=264
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:8:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=264
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:8:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=291
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 9"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=291
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:9:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=291
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:9:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=291
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:9:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=291
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:9:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=290
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:9:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=290
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:9:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=290
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:9:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=317
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 10"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=317
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:10:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=317
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:10:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=317
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:10:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=317
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:10:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=316
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:10:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=316
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:10:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=316
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:10:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=343
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 11"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=343
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:11:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=343
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:11:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=343
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:11:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=343
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:11:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=342
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:11:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=342
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:11:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=342
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:11:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=369
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 12"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=369
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:12:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=369
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:12:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=369
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:12:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=369
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:12:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=368
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:12:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=368
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:12:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=368
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:12:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=395
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 13"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=395
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:13:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=395
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:13:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=395
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:13:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=395
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:13:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=394
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:13:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=394
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:13:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=394
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:13:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=421
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 14"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=421
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:14:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=421
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:14:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=421
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:14:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=421
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:14:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=420
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:14:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=420
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:14:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=420
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:14:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=450
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 15"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=450
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:15:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=450
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:15:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=450
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:15:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=450
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:15:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=449
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:15:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=449
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:15:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=449
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:15:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=476
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 16"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=476
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:16:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=476
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:16:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=476
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:16:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=476
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:16:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=475
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:16:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=475
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:16:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=475
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:16:stat"
-	}
-}
-text {
-	object {
-		x=17
-		y=502
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT TOP 17"
-	align="horiz. centered"
-}
-"text entry" {
-	object {
-		x=696
-		y=502
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:17:i_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=857
-		y=502
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:17:vrise"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1012
-		y=502
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:17:vfall"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=299
-		y=502
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:17:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=461
-		y=501
-		width=51
-		height=20
-	}
-	control {
-		chan="SVT:bias:top:17:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=554
-		y=501
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:bias:top:17:stat"
-	}
-}
-rectangle {
-	object {
-		x=553
-		y=501
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:17:stat"
-	}
-}
-text {
-	object {
-		x=147
-		y=39
-		width=51
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Channel"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=388
-		y=39
-		width=30
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Readback"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=703
-		y=39
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Setpoint"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=779
-		y=39
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Readback"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=864
-		y=39
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Setpoint"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=941
-		y=39
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Readback"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=1024
-		y=39
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Setpoint"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=1098
-		y=39
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Readback"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=11
-		y=8
-		width=121
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Channel"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=147
-		y=8
-		width=51
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Crate"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=234
-		y=8
-		width=30
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Measured"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=313
-		y=8
-		width=30
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Voltage"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=388
-		y=8
-		width=30
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Voltage"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=471
-		y=8
-		width=30
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="HV"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=545
-		y=8
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Channel"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=625
-		y=8
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Measured"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=703
-		y=8
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Trip"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=779
-		y=8
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Trip"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=864
-		y=8
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Ramp Up"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=941
-		y=8
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Ramp Up"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=1024
-		y=8
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Ramp Down"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=1098
-		y=8
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Ramp Down"
-	align="horiz. centered"
-}
-text {
-	object {
 		x=1
 		y=519
 		width=55
@@ -2687,22 +113,2802 @@ text {
 	textix="Top"
 	align="horiz. centered"
 }
+composite {
+	object {
+		x=0
+		y=57
+		width=70
+		height=945
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=0
+				y=57
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 0"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=83
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 1"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=109
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 2"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=135
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 3"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=161
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 4"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=187
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 5"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=213
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 6"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=239
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 7"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=265
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 8"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=291
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 9"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=317
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 10"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=343
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 11"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=369
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 12"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=395
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 13"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=421
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 14"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=450
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 15"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=476
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 16"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=502
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT TOP 17"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=539
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 0"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=565
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 1"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=591
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 2"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=617
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 3"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=643
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 4"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=669
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 5"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=695
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 6"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=721
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 7"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=747
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 8"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=774
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 9"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=800
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 10"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=826
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 11"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=852
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 12"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=878
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 13"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=904
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 14"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=930
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 15"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=956
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 16"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=0
+				y=982
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="SVT BOT 17"
+			align="horiz. centered"
+		}
+	}
+}
 text {
 	object {
-		x=17
-		y=539
-		width=110
-		height=20
+		x=202
+		y=23
+		width=51
+		height=18
 	}
 	"basic attribute" {
-		clr=31
+		clr=51
 	}
-	textix="SVT BOT 0"
+	textix="Slot"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=289
+		y=23
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Voltage"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=368
+		y=23
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Setpoint"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=443
+		y=23
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Setpoint"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=526
+		y=23
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="On/Off"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=600
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Status"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=680
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Current"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=758
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Current"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=834
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Current"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=919
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Rate"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=996
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Rate"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1079
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Rate"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1153
+		y=23
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Rate"
 	align="horiz. centered"
 }
 "text entry" {
 	object {
-		x=696
+		x=752
+		y=57
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:0:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=57
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:0:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=57
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:0:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=57
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:0:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=56
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:0:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=56
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=56
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:0:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=83
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:1:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=83
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:1:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=83
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:1:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=83
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:1:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=82
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:1:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=82
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=82
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:1:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=109
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:2:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=109
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:2:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=109
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:2:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=109
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:2:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=108
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:2:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=108
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=108
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:2:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=135
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:3:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=135
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:3:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=135
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:3:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=135
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:3:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=134
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:3:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=134
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=134
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:3:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=161
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:4:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=161
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:4:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=161
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:4:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=161
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:4:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=160
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:4:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=160
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:4:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=160
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:4:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=187
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:5:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=187
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:5:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=187
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:5:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=187
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:5:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=186
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:5:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=186
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:5:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=186
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:5:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=213
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:6:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=213
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:6:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=213
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:6:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=213
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:6:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=212
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:6:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=212
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:6:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=212
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:6:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=239
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:7:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=239
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:7:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=239
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:7:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=239
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:7:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=238
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:7:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=238
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:7:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=238
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:7:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=265
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:8:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=265
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:8:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=265
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:8:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=265
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:8:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=264
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:8:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=264
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:8:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=264
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:8:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=291
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:9:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=291
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:9:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=291
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:9:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=291
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:9:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=290
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:9:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=290
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:9:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=290
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:9:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=317
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:10:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=317
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:10:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=317
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:10:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=317
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:10:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=316
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:10:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=316
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:10:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=316
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:10:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=343
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:11:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=343
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:11:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=343
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:11:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=343
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:11:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=342
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:11:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=342
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:11:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=342
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:11:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=369
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:12:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=369
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:12:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=369
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:12:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=369
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:12:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=368
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:12:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=368
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:12:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=368
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:12:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=395
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:13:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=395
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:13:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=395
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:13:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=395
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:13:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=394
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:13:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=394
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:13:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=394
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:13:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=421
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:14:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=421
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:14:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=421
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:14:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=421
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:14:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=420
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:14:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=420
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:14:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=420
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:14:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=450
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:15:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=450
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:15:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=450
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:15:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=450
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:15:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=449
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:15:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=449
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:15:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=449
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:15:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=476
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:16:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=476
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:16:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=476
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:16:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=476
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:16:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=475
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:16:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=475
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:16:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=475
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:16:stat"
+	}
+}
+"text entry" {
+	object {
+		x=752
+		y=502
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:17:i_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=913
+		y=502
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:17:vrise"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=1068
+		y=502
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:17:vfall"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=355
+		y=502
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:17:v_set"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=517
+		y=501
+		width=51
+		height=20
+	}
+	control {
+		chan="SVT:bias:top:17:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=610
+		y=501
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="SVT:bias:top:17:stat"
+	}
+}
+rectangle {
+	object {
+		x=609
+		y=501
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:bias:top:17:stat"
+	}
+}
+text {
+	object {
+		x=203
+		y=39
+		width=51
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Channel"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=444
+		y=39
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Readback"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=759
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Setpoint"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=835
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Readback"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=920
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Setpoint"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=997
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Readback"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1080
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Setpoint"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1154
+		y=39
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Readback"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=203
+		y=8
+		width=51
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Crate"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=290
+		y=8
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Measured"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=369
+		y=8
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Voltage"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=444
+		y=8
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Voltage"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=527
+		y=8
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="HV"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=601
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Channel"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=681
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Measured"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=759
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Trip"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=835
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Trip"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=920
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Ramp Up"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=997
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Ramp Up"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1080
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Ramp Down"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1154
+		y=8
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Ramp Down"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=752
 		y=539
 		width=51
 		height=20
@@ -2717,7 +2923,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=539
 		width=51
 		height=20
@@ -2732,7 +2938,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=539
 		width=51
 		height=20
@@ -2747,7 +2953,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=539
 		width=51
 		height=20
@@ -2762,7 +2968,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=538
 		width=51
 		height=20
@@ -2776,7 +2982,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=538
 		width=20
 		height=20
@@ -2791,7 +2997,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=538
 		width=20
 		height=20
@@ -2804,22 +3010,9 @@ rectangle {
 		chan="SVT:bias:bot:20:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=565
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 1"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=565
 		width=51
 		height=20
@@ -2834,7 +3027,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=565
 		width=51
 		height=20
@@ -2849,7 +3042,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=565
 		width=51
 		height=20
@@ -2864,7 +3057,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=565
 		width=51
 		height=20
@@ -2879,7 +3072,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=564
 		width=51
 		height=20
@@ -2893,7 +3086,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=564
 		width=20
 		height=20
@@ -2908,7 +3101,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=564
 		width=20
 		height=20
@@ -2921,22 +3114,9 @@ rectangle {
 		chan="SVT:bias:bot:21:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=591
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 2"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=591
 		width=51
 		height=20
@@ -2951,7 +3131,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=591
 		width=51
 		height=20
@@ -2966,7 +3146,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=591
 		width=51
 		height=20
@@ -2981,7 +3161,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=591
 		width=51
 		height=20
@@ -2996,7 +3176,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=590
 		width=51
 		height=20
@@ -3010,7 +3190,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=590
 		width=20
 		height=20
@@ -3025,7 +3205,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=590
 		width=20
 		height=20
@@ -3038,22 +3218,9 @@ rectangle {
 		chan="SVT:bias:bot:22:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=617
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 3"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=617
 		width=51
 		height=20
@@ -3068,7 +3235,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=617
 		width=51
 		height=20
@@ -3083,7 +3250,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=617
 		width=51
 		height=20
@@ -3098,7 +3265,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=617
 		width=51
 		height=20
@@ -3113,7 +3280,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=616
 		width=51
 		height=20
@@ -3127,7 +3294,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=616
 		width=20
 		height=20
@@ -3142,7 +3309,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=616
 		width=20
 		height=20
@@ -3155,22 +3322,9 @@ rectangle {
 		chan="SVT:bias:bot:23:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=643
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 4"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=643
 		width=51
 		height=20
@@ -3185,7 +3339,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=643
 		width=51
 		height=20
@@ -3200,7 +3354,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=643
 		width=51
 		height=20
@@ -3215,7 +3369,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=643
 		width=51
 		height=20
@@ -3230,7 +3384,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=642
 		width=51
 		height=20
@@ -3244,7 +3398,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=642
 		width=20
 		height=20
@@ -3259,7 +3413,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=642
 		width=20
 		height=20
@@ -3272,22 +3426,9 @@ rectangle {
 		chan="SVT:bias:bot:24:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=669
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 5"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=669
 		width=51
 		height=20
@@ -3302,7 +3443,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=669
 		width=51
 		height=20
@@ -3317,7 +3458,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=669
 		width=51
 		height=20
@@ -3332,7 +3473,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=669
 		width=51
 		height=20
@@ -3347,7 +3488,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=668
 		width=51
 		height=20
@@ -3361,7 +3502,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=668
 		width=20
 		height=20
@@ -3376,7 +3517,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=668
 		width=20
 		height=20
@@ -3389,22 +3530,9 @@ rectangle {
 		chan="SVT:bias:bot:25:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=695
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 6"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=695
 		width=51
 		height=20
@@ -3419,7 +3547,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=695
 		width=51
 		height=20
@@ -3434,7 +3562,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=695
 		width=51
 		height=20
@@ -3449,7 +3577,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=695
 		width=51
 		height=20
@@ -3464,7 +3592,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=694
 		width=51
 		height=20
@@ -3478,7 +3606,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=694
 		width=20
 		height=20
@@ -3493,7 +3621,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=694
 		width=20
 		height=20
@@ -3506,22 +3634,9 @@ rectangle {
 		chan="SVT:bias:bot:26:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=721
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 7"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=721
 		width=51
 		height=20
@@ -3536,7 +3651,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=721
 		width=51
 		height=20
@@ -3551,7 +3666,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=721
 		width=51
 		height=20
@@ -3566,7 +3681,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=721
 		width=51
 		height=20
@@ -3581,7 +3696,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=720
 		width=51
 		height=20
@@ -3595,7 +3710,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=720
 		width=20
 		height=20
@@ -3610,7 +3725,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=720
 		width=20
 		height=20
@@ -3623,22 +3738,9 @@ rectangle {
 		chan="SVT:bias:bot:27:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=747
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 8"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=747
 		width=51
 		height=20
@@ -3653,7 +3755,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=747
 		width=51
 		height=20
@@ -3668,7 +3770,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=747
 		width=51
 		height=20
@@ -3683,7 +3785,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=747
 		width=51
 		height=20
@@ -3698,7 +3800,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=746
 		width=51
 		height=20
@@ -3712,7 +3814,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=746
 		width=20
 		height=20
@@ -3727,7 +3829,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=746
 		width=20
 		height=20
@@ -3740,22 +3842,9 @@ rectangle {
 		chan="SVT:bias:bot:28:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=774
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 9"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=774
 		width=51
 		height=20
@@ -3770,7 +3859,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=774
 		width=51
 		height=20
@@ -3785,7 +3874,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=774
 		width=51
 		height=20
@@ -3800,7 +3889,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=774
 		width=51
 		height=20
@@ -3815,7 +3904,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=773
 		width=51
 		height=20
@@ -3829,7 +3918,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=773
 		width=20
 		height=20
@@ -3844,7 +3933,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=773
 		width=20
 		height=20
@@ -3857,22 +3946,9 @@ rectangle {
 		chan="SVT:bias:bot:29:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=800
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 10"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=800
 		width=51
 		height=20
@@ -3887,7 +3963,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=800
 		width=51
 		height=20
@@ -3902,7 +3978,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=800
 		width=51
 		height=20
@@ -3917,7 +3993,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=800
 		width=51
 		height=20
@@ -3932,7 +4008,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=799
 		width=51
 		height=20
@@ -3946,7 +4022,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=799
 		width=20
 		height=20
@@ -3961,7 +4037,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=799
 		width=20
 		height=20
@@ -3974,22 +4050,9 @@ rectangle {
 		chan="SVT:bias:bot:30:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=826
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 11"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=826
 		width=51
 		height=20
@@ -4004,7 +4067,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=826
 		width=51
 		height=20
@@ -4019,7 +4082,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=826
 		width=51
 		height=20
@@ -4034,7 +4097,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=826
 		width=51
 		height=20
@@ -4049,7 +4112,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=825
 		width=51
 		height=20
@@ -4063,7 +4126,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=825
 		width=20
 		height=20
@@ -4078,7 +4141,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=825
 		width=20
 		height=20
@@ -4091,22 +4154,9 @@ rectangle {
 		chan="SVT:bias:bot:31:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=852
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 12"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=852
 		width=51
 		height=20
@@ -4121,7 +4171,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=852
 		width=51
 		height=20
@@ -4136,7 +4186,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=852
 		width=51
 		height=20
@@ -4151,7 +4201,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=852
 		width=51
 		height=20
@@ -4166,7 +4216,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=851
 		width=51
 		height=20
@@ -4180,7 +4230,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=851
 		width=20
 		height=20
@@ -4195,7 +4245,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=851
 		width=20
 		height=20
@@ -4208,22 +4258,9 @@ rectangle {
 		chan="SVT:bias:bot:32:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=878
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 13"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=878
 		width=51
 		height=20
@@ -4238,7 +4275,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=878
 		width=51
 		height=20
@@ -4253,7 +4290,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=878
 		width=51
 		height=20
@@ -4268,7 +4305,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=878
 		width=51
 		height=20
@@ -4283,7 +4320,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=877
 		width=51
 		height=20
@@ -4297,7 +4334,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=877
 		width=20
 		height=20
@@ -4312,7 +4349,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=877
 		width=20
 		height=20
@@ -4325,22 +4362,9 @@ rectangle {
 		chan="SVT:bias:bot:33:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=904
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 14"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=904
 		width=51
 		height=20
@@ -4355,7 +4379,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=904
 		width=51
 		height=20
@@ -4370,7 +4394,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=904
 		width=51
 		height=20
@@ -4385,7 +4409,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=904
 		width=51
 		height=20
@@ -4400,7 +4424,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=903
 		width=51
 		height=20
@@ -4414,7 +4438,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=903
 		width=20
 		height=20
@@ -4429,7 +4453,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=903
 		width=20
 		height=20
@@ -4442,22 +4466,9 @@ rectangle {
 		chan="SVT:bias:bot:34:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=930
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 15"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=930
 		width=51
 		height=20
@@ -4472,7 +4483,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=930
 		width=51
 		height=20
@@ -4487,7 +4498,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=930
 		width=51
 		height=20
@@ -4502,7 +4513,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=930
 		width=51
 		height=20
@@ -4517,7 +4528,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=929
 		width=51
 		height=20
@@ -4531,7 +4542,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=929
 		width=20
 		height=20
@@ -4546,7 +4557,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=929
 		width=20
 		height=20
@@ -4559,22 +4570,9 @@ rectangle {
 		chan="SVT:bias:bot:35:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=956
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 16"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=956
 		width=51
 		height=20
@@ -4589,7 +4587,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=956
 		width=51
 		height=20
@@ -4604,7 +4602,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=956
 		width=51
 		height=20
@@ -4619,7 +4617,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=956
 		width=51
 		height=20
@@ -4634,7 +4632,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=955
 		width=51
 		height=20
@@ -4648,7 +4646,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=955
 		width=20
 		height=20
@@ -4663,7 +4661,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=955
 		width=20
 		height=20
@@ -4676,22 +4674,9 @@ rectangle {
 		chan="SVT:bias:bot:36:stat"
 	}
 }
-text {
-	object {
-		x=17
-		y=982
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 17"
-	align="horiz. centered"
-}
 "text entry" {
 	object {
-		x=696
+		x=752
 		y=982
 		width=51
 		height=20
@@ -4706,7 +4691,7 @@ text {
 }
 "text entry" {
 	object {
-		x=857
+		x=913
 		y=982
 		width=51
 		height=20
@@ -4721,7 +4706,7 @@ text {
 }
 "text entry" {
 	object {
-		x=1012
+		x=1068
 		y=982
 		width=51
 		height=20
@@ -4736,7 +4721,7 @@ text {
 }
 "text entry" {
 	object {
-		x=299
+		x=355
 		y=982
 		width=51
 		height=20
@@ -4751,7 +4736,7 @@ text {
 }
 "choice button" {
 	object {
-		x=461
+		x=517
 		y=981
 		width=51
 		height=20
@@ -4765,7 +4750,7 @@ text {
 }
 rectangle {
 	object {
-		x=554
+		x=610
 		y=981
 		width=20
 		height=20
@@ -4780,7 +4765,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=553
+		x=609
 		y=981
 		width=20
 		height=20
@@ -4795,7 +4780,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=57
 		width=51
 		height=20
@@ -4811,7 +4796,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=83
 		width=51
 		height=20
@@ -4827,7 +4812,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=109
 		width=51
 		height=20
@@ -4843,7 +4828,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=135
 		width=51
 		height=20
@@ -4859,7 +4844,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=161
 		width=51
 		height=20
@@ -4875,7 +4860,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=187
 		width=51
 		height=20
@@ -4891,7 +4876,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=213
 		width=51
 		height=20
@@ -4907,7 +4892,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=239
 		width=51
 		height=20
@@ -4923,7 +4908,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=265
 		width=51
 		height=20
@@ -4939,7 +4924,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=291
 		width=51
 		height=20
@@ -4955,7 +4940,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=317
 		width=51
 		height=20
@@ -4971,7 +4956,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=343
 		width=51
 		height=20
@@ -4987,7 +4972,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=369
 		width=51
 		height=20
@@ -5003,7 +4988,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=395
 		width=51
 		height=20
@@ -5019,7 +5004,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=421
 		width=51
 		height=20
@@ -5035,7 +5020,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=450
 		width=51
 		height=20
@@ -5051,7 +5036,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=476
 		width=51
 		height=20
@@ -5067,7 +5052,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=502
 		width=51
 		height=20
@@ -5083,7 +5068,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=539
 		width=51
 		height=20
@@ -5099,7 +5084,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=565
 		width=51
 		height=20
@@ -5115,7 +5100,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=591
 		width=51
 		height=20
@@ -5131,7 +5116,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=617
 		width=51
 		height=20
@@ -5147,7 +5132,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=643
 		width=51
 		height=20
@@ -5163,7 +5148,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=669
 		width=51
 		height=20
@@ -5179,7 +5164,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=695
 		width=51
 		height=20
@@ -5195,7 +5180,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=721
 		width=51
 		height=20
@@ -5211,7 +5196,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=747
 		width=51
 		height=20
@@ -5227,7 +5212,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=774
 		width=51
 		height=20
@@ -5243,7 +5228,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=800
 		width=51
 		height=20
@@ -5259,7 +5244,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=826
 		width=51
 		height=20
@@ -5275,7 +5260,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=852
 		width=51
 		height=20
@@ -5291,7 +5276,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=878
 		width=51
 		height=20
@@ -5307,7 +5292,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=904
 		width=51
 		height=20
@@ -5323,7 +5308,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=930
 		width=51
 		height=20
@@ -5339,7 +5324,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=956
 		width=51
 		height=20
@@ -5355,7 +5340,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=223
+		x=279
 		y=982
 		width=51
 		height=20
@@ -5371,7 +5356,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=57
 		width=51
 		height=20
@@ -5387,7 +5372,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=83
 		width=51
 		height=20
@@ -5403,7 +5388,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=109
 		width=51
 		height=20
@@ -5419,7 +5404,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=135
 		width=51
 		height=20
@@ -5435,7 +5420,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=161
 		width=51
 		height=20
@@ -5451,7 +5436,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=187
 		width=51
 		height=20
@@ -5467,7 +5452,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=213
 		width=51
 		height=20
@@ -5483,7 +5468,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=239
 		width=51
 		height=20
@@ -5499,7 +5484,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=265
 		width=51
 		height=20
@@ -5515,7 +5500,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=291
 		width=51
 		height=20
@@ -5531,7 +5516,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=317
 		width=51
 		height=20
@@ -5547,7 +5532,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=343
 		width=51
 		height=20
@@ -5563,7 +5548,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=369
 		width=51
 		height=20
@@ -5579,7 +5564,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=395
 		width=51
 		height=20
@@ -5595,7 +5580,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=421
 		width=51
 		height=20
@@ -5611,7 +5596,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=450
 		width=51
 		height=20
@@ -5627,7 +5612,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=476
 		width=51
 		height=20
@@ -5643,7 +5628,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=502
 		width=51
 		height=20
@@ -5659,7 +5644,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=539
 		width=51
 		height=20
@@ -5675,7 +5660,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=565
 		width=51
 		height=20
@@ -5691,7 +5676,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=591
 		width=51
 		height=20
@@ -5707,7 +5692,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=617
 		width=51
 		height=20
@@ -5723,7 +5708,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=643
 		width=51
 		height=20
@@ -5739,7 +5724,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=669
 		width=51
 		height=20
@@ -5755,7 +5740,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=695
 		width=51
 		height=20
@@ -5771,7 +5756,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=721
 		width=51
 		height=20
@@ -5787,7 +5772,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=747
 		width=51
 		height=20
@@ -5803,7 +5788,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=774
 		width=51
 		height=20
@@ -5819,7 +5804,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=800
 		width=51
 		height=20
@@ -5835,7 +5820,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=826
 		width=51
 		height=20
@@ -5851,7 +5836,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=852
 		width=51
 		height=20
@@ -5867,7 +5852,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=878
 		width=51
 		height=20
@@ -5883,7 +5868,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=904
 		width=51
 		height=20
@@ -5899,7 +5884,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=930
 		width=51
 		height=20
@@ -5915,7 +5900,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=956
 		width=51
 		height=20
@@ -5931,7 +5916,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=376
+		x=432
 		y=982
 		width=51
 		height=20
@@ -5947,7 +5932,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=57
 		width=51
 		height=20
@@ -5963,7 +5948,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=83
 		width=51
 		height=20
@@ -5979,7 +5964,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=109
 		width=51
 		height=20
@@ -5995,7 +5980,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=135
 		width=51
 		height=20
@@ -6011,7 +5996,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=161
 		width=51
 		height=20
@@ -6027,7 +6012,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=187
 		width=51
 		height=20
@@ -6043,7 +6028,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=213
 		width=51
 		height=20
@@ -6059,7 +6044,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=239
 		width=51
 		height=20
@@ -6075,7 +6060,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=265
 		width=51
 		height=20
@@ -6091,7 +6076,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=291
 		width=51
 		height=20
@@ -6107,7 +6092,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=317
 		width=51
 		height=20
@@ -6123,7 +6108,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=343
 		width=51
 		height=20
@@ -6139,7 +6124,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=369
 		width=51
 		height=20
@@ -6155,7 +6140,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=395
 		width=51
 		height=20
@@ -6171,7 +6156,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=421
 		width=51
 		height=20
@@ -6187,7 +6172,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=450
 		width=51
 		height=20
@@ -6203,7 +6188,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=476
 		width=51
 		height=20
@@ -6219,7 +6204,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=502
 		width=51
 		height=20
@@ -6235,7 +6220,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=539
 		width=51
 		height=20
@@ -6251,7 +6236,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=565
 		width=51
 		height=20
@@ -6267,7 +6252,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=591
 		width=51
 		height=20
@@ -6283,7 +6268,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=617
 		width=51
 		height=20
@@ -6299,7 +6284,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=643
 		width=51
 		height=20
@@ -6315,7 +6300,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=669
 		width=51
 		height=20
@@ -6331,7 +6316,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=695
 		width=51
 		height=20
@@ -6347,7 +6332,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=721
 		width=51
 		height=20
@@ -6363,7 +6348,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=747
 		width=51
 		height=20
@@ -6379,7 +6364,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=774
 		width=51
 		height=20
@@ -6395,7 +6380,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=800
 		width=51
 		height=20
@@ -6411,7 +6396,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=826
 		width=51
 		height=20
@@ -6427,7 +6412,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=852
 		width=51
 		height=20
@@ -6443,7 +6428,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=878
 		width=51
 		height=20
@@ -6459,7 +6444,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=904
 		width=51
 		height=20
@@ -6475,7 +6460,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=930
 		width=51
 		height=20
@@ -6491,7 +6476,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=956
 		width=51
 		height=20
@@ -6507,7 +6492,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=617
+		x=673
 		y=982
 		width=51
 		height=20
@@ -6523,7 +6508,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=57
 		width=51
 		height=20
@@ -6539,7 +6524,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=83
 		width=51
 		height=20
@@ -6555,7 +6540,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=109
 		width=51
 		height=20
@@ -6571,7 +6556,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=135
 		width=51
 		height=20
@@ -6587,7 +6572,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=161
 		width=51
 		height=20
@@ -6603,7 +6588,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=187
 		width=51
 		height=20
@@ -6619,7 +6604,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=213
 		width=51
 		height=20
@@ -6635,7 +6620,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=239
 		width=51
 		height=20
@@ -6651,7 +6636,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=265
 		width=51
 		height=20
@@ -6667,7 +6652,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=291
 		width=51
 		height=20
@@ -6683,7 +6668,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=317
 		width=51
 		height=20
@@ -6699,7 +6684,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=343
 		width=51
 		height=20
@@ -6715,7 +6700,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=369
 		width=51
 		height=20
@@ -6731,7 +6716,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=395
 		width=51
 		height=20
@@ -6747,7 +6732,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=421
 		width=51
 		height=20
@@ -6763,7 +6748,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=450
 		width=51
 		height=20
@@ -6779,7 +6764,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=476
 		width=51
 		height=20
@@ -6795,7 +6780,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=502
 		width=51
 		height=20
@@ -6811,7 +6796,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=539
 		width=51
 		height=20
@@ -6827,7 +6812,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=565
 		width=51
 		height=20
@@ -6843,7 +6828,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=591
 		width=51
 		height=20
@@ -6859,7 +6844,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=617
 		width=51
 		height=20
@@ -6875,7 +6860,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=643
 		width=51
 		height=20
@@ -6891,7 +6876,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=669
 		width=51
 		height=20
@@ -6907,7 +6892,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=695
 		width=51
 		height=20
@@ -6923,7 +6908,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=721
 		width=51
 		height=20
@@ -6939,7 +6924,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=747
 		width=51
 		height=20
@@ -6955,7 +6940,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=774
 		width=51
 		height=20
@@ -6971,7 +6956,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=800
 		width=51
 		height=20
@@ -6987,7 +6972,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=826
 		width=51
 		height=20
@@ -7003,7 +6988,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=852
 		width=51
 		height=20
@@ -7019,7 +7004,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=878
 		width=51
 		height=20
@@ -7035,7 +7020,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=904
 		width=51
 		height=20
@@ -7051,7 +7036,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=930
 		width=51
 		height=20
@@ -7067,7 +7052,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=956
 		width=51
 		height=20
@@ -7083,7 +7068,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=772
+		x=828
 		y=982
 		width=51
 		height=20
@@ -7099,7 +7084,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=57
 		width=51
 		height=20
@@ -7115,7 +7100,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=83
 		width=51
 		height=20
@@ -7131,7 +7116,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=109
 		width=51
 		height=20
@@ -7147,7 +7132,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=135
 		width=51
 		height=20
@@ -7163,7 +7148,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=161
 		width=51
 		height=20
@@ -7179,7 +7164,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=187
 		width=51
 		height=20
@@ -7195,7 +7180,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=213
 		width=51
 		height=20
@@ -7211,7 +7196,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=239
 		width=51
 		height=20
@@ -7227,7 +7212,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=265
 		width=51
 		height=20
@@ -7243,7 +7228,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=291
 		width=51
 		height=20
@@ -7259,7 +7244,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=317
 		width=51
 		height=20
@@ -7275,7 +7260,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=343
 		width=51
 		height=20
@@ -7291,7 +7276,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=369
 		width=51
 		height=20
@@ -7307,7 +7292,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=395
 		width=51
 		height=20
@@ -7323,7 +7308,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=421
 		width=51
 		height=20
@@ -7339,7 +7324,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=450
 		width=51
 		height=20
@@ -7355,7 +7340,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=476
 		width=51
 		height=20
@@ -7371,7 +7356,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=502
 		width=51
 		height=20
@@ -7387,7 +7372,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=539
 		width=51
 		height=20
@@ -7403,7 +7388,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=565
 		width=51
 		height=20
@@ -7419,7 +7404,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=591
 		width=51
 		height=20
@@ -7435,7 +7420,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=617
 		width=51
 		height=20
@@ -7451,7 +7436,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=643
 		width=51
 		height=20
@@ -7467,7 +7452,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=669
 		width=51
 		height=20
@@ -7483,7 +7468,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=695
 		width=51
 		height=20
@@ -7499,7 +7484,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=721
 		width=51
 		height=20
@@ -7515,7 +7500,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=747
 		width=51
 		height=20
@@ -7531,7 +7516,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=774
 		width=51
 		height=20
@@ -7547,7 +7532,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=800
 		width=51
 		height=20
@@ -7563,7 +7548,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=826
 		width=51
 		height=20
@@ -7579,7 +7564,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=852
 		width=51
 		height=20
@@ -7595,7 +7580,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=878
 		width=51
 		height=20
@@ -7611,7 +7596,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=904
 		width=51
 		height=20
@@ -7627,7 +7612,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=930
 		width=51
 		height=20
@@ -7643,7 +7628,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=956
 		width=51
 		height=20
@@ -7659,7 +7644,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=933
+		x=989
 		y=982
 		width=51
 		height=20
@@ -7675,7 +7660,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=57
 		width=40
 		height=20
@@ -7691,7 +7676,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=83
 		width=40
 		height=20
@@ -7707,7 +7692,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=109
 		width=40
 		height=20
@@ -7723,7 +7708,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=135
 		width=40
 		height=20
@@ -7739,7 +7724,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=161
 		width=40
 		height=20
@@ -7755,7 +7740,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=187
 		width=40
 		height=20
@@ -7771,7 +7756,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=213
 		width=40
 		height=20
@@ -7787,7 +7772,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=239
 		width=40
 		height=20
@@ -7803,7 +7788,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=265
 		width=40
 		height=20
@@ -7819,7 +7804,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=291
 		width=40
 		height=20
@@ -7835,7 +7820,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=317
 		width=40
 		height=20
@@ -7851,7 +7836,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=343
 		width=40
 		height=20
@@ -7867,7 +7852,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=369
 		width=40
 		height=20
@@ -7883,7 +7868,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=395
 		width=40
 		height=20
@@ -7899,7 +7884,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=421
 		width=40
 		height=20
@@ -7915,7 +7900,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=450
 		width=40
 		height=20
@@ -7931,7 +7916,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=476
 		width=40
 		height=20
@@ -7947,7 +7932,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=502
 		width=40
 		height=20
@@ -7963,7 +7948,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=539
 		width=40
 		height=20
@@ -7979,7 +7964,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=565
 		width=40
 		height=20
@@ -7995,7 +7980,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=591
 		width=40
 		height=20
@@ -8011,7 +7996,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=617
 		width=40
 		height=20
@@ -8027,7 +8012,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=643
 		width=40
 		height=20
@@ -8043,7 +8028,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=669
 		width=40
 		height=20
@@ -8059,7 +8044,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=695
 		width=40
 		height=20
@@ -8075,7 +8060,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=721
 		width=40
 		height=20
@@ -8091,7 +8076,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=747
 		width=40
 		height=20
@@ -8107,7 +8092,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=774
 		width=40
 		height=20
@@ -8123,7 +8108,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=800
 		width=40
 		height=20
@@ -8139,7 +8124,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=826
 		width=40
 		height=20
@@ -8155,7 +8140,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=852
 		width=40
 		height=20
@@ -8171,7 +8156,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=878
 		width=40
 		height=20
@@ -8187,7 +8172,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=904
 		width=40
 		height=20
@@ -8203,7 +8188,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=930
 		width=40
 		height=20
@@ -8219,7 +8204,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=956
 		width=40
 		height=20
@@ -8235,7 +8220,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=1091
+		x=1147
 		y=982
 		width=40
 		height=20
@@ -8251,7 +8236,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=56
 		width=51
 		height=20
@@ -8266,7 +8251,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=82
 		width=51
 		height=20
@@ -8281,7 +8266,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=108
 		width=51
 		height=20
@@ -8296,7 +8281,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=134
 		width=51
 		height=20
@@ -8311,7 +8296,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=160
 		width=51
 		height=20
@@ -8326,7 +8311,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=186
 		width=51
 		height=20
@@ -8341,7 +8326,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=212
 		width=51
 		height=20
@@ -8356,7 +8341,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=238
 		width=51
 		height=20
@@ -8371,7 +8356,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=264
 		width=51
 		height=20
@@ -8386,7 +8371,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=290
 		width=51
 		height=20
@@ -8401,7 +8386,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=316
 		width=51
 		height=20
@@ -8416,7 +8401,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=342
 		width=51
 		height=20
@@ -8431,7 +8416,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=368
 		width=51
 		height=20
@@ -8446,7 +8431,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=394
 		width=51
 		height=20
@@ -8461,7 +8446,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=420
 		width=51
 		height=20
@@ -8476,7 +8461,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=449
 		width=51
 		height=20
@@ -8491,7 +8476,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=475
 		width=51
 		height=20
@@ -8506,7 +8491,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=501
 		width=51
 		height=20
@@ -8521,7 +8506,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=538
 		width=51
 		height=20
@@ -8536,7 +8521,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=564
 		width=51
 		height=20
@@ -8551,7 +8536,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=590
 		width=51
 		height=20
@@ -8566,7 +8551,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=616
 		width=51
 		height=20
@@ -8581,7 +8566,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=642
 		width=51
 		height=20
@@ -8596,7 +8581,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=668
 		width=51
 		height=20
@@ -8611,7 +8596,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=694
 		width=51
 		height=20
@@ -8626,7 +8611,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=720
 		width=51
 		height=20
@@ -8641,7 +8626,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=746
 		width=51
 		height=20
@@ -8656,7 +8641,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=773
 		width=51
 		height=20
@@ -8671,7 +8656,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=799
 		width=51
 		height=20
@@ -8686,7 +8671,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=825
 		width=51
 		height=20
@@ -8701,7 +8686,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=851
 		width=51
 		height=20
@@ -8716,7 +8701,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=877
 		width=51
 		height=20
@@ -8731,7 +8716,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=903
 		width=51
 		height=20
@@ -8746,7 +8731,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=929
 		width=51
 		height=20
@@ -8761,7 +8746,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=955
 		width=51
 		height=20
@@ -8776,7 +8761,7 @@ rectangle {
 }
 "text update" {
 	object {
-		x=144
+		x=200
 		y=981
 		width=51
 		height=20
@@ -8791,7 +8776,7 @@ rectangle {
 }
 rectangle {
 	object {
-		x=1150
+		x=1206
 		y=90
 		width=280
 		height=200
@@ -8802,7 +8787,7 @@ rectangle {
 }
 "text entry" {
 	object {
-		x=1349
+		x=1405
 		y=220
 		width=51
 		height=25
@@ -8817,7 +8802,7 @@ rectangle {
 }
 "text entry" {
 	object {
-		x=1349
+		x=1405
 		y=250
 		width=51
 		height=25
@@ -8832,7 +8817,7 @@ rectangle {
 }
 "text entry" {
 	object {
-		x=1349
+		x=1405
 		y=190
 		width=51
 		height=25
@@ -8847,7 +8832,7 @@ rectangle {
 }
 "choice button" {
 	object {
-		x=1334
+		x=1390
 		y=100
 		width=80
 		height=25
@@ -8861,7 +8846,7 @@ rectangle {
 }
 "choice button" {
 	object {
-		x=1334
+		x=1390
 		y=130
 		width=80
 		height=25
@@ -8875,7 +8860,7 @@ rectangle {
 }
 "choice button" {
 	object {
-		x=1334
+		x=1390
 		y=160
 		width=80
 		height=25
@@ -8889,7 +8874,7 @@ rectangle {
 }
 text {
 	object {
-		x=1130
+		x=1186
 		y=100
 		width=200
 		height=25
@@ -8902,7 +8887,7 @@ text {
 }
 text {
 	object {
-		x=1130
+		x=1186
 		y=130
 		width=200
 		height=25
@@ -8915,7 +8900,7 @@ text {
 }
 text {
 	object {
-		x=1130
+		x=1186
 		y=160
 		width=200
 		height=25
@@ -8928,7 +8913,7 @@ text {
 }
 text {
 	object {
-		x=1130
+		x=1186
 		y=190
 		width=200
 		height=25
@@ -8941,7 +8926,7 @@ text {
 }
 text {
 	object {
-		x=1130
+		x=1186
 		y=220
 		width=200
 		height=25
@@ -8954,7 +8939,7 @@ text {
 }
 text {
 	object {
-		x=1130
+		x=1186
 		y=250
 		width=200
 		height=25
@@ -8964,4 +8949,650 @@ text {
 	}
 	textix="SVT BIAS BOT V_SET"
 	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=539
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=565
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=591
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 2"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=617
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 3"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=643
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 4"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=669
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 5"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=695
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 6"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=721
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 7"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=747
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 8"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=774
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 9"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=800
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 10"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=826
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 11"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=852
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 12"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=878
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 13"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=904
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 14"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=930
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 15"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=956
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 16"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=101
+		y=982
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 17"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=56
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=82
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=108
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=134
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=160
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="2"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=186
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="3"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=212
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=238
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=264
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="2"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=290
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="3"
+	align="horiz. centered"
+}
+composite {
+	object {
+		x=166
+		y=316
+		width=20
+		height=98
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=166
+				y=316
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="0"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=166
+				y=342
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="1"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=166
+				y=368
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="2"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=166
+				y=394
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="3"
+			align="horiz. centered"
+		}
+	}
+}
+text {
+	object {
+		x=100
+		y=56
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L1t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=100
+		y=131
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=100
+		y=81
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L1t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=100
+		y=106
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=100
+		y=156
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=100
+		y=181
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1
+		y=8
+		width=79
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Channel"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=23
+		width=79
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Name"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=83
+		y=8
+		width=79
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="FEB"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=82
+		y=23
+		width=79
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Name"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=134
+		y=8
+		width=79
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Hybrid"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=133
+		y=23
+		width=79
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="Channel"
+	align="horiz. centered"
+}
+composite {
+	object {
+		x=166
+		y=420
+		width=20
+		height=98
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=166
+				y=420
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="0"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=166
+				y=446
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="1"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=166
+				y=472
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="2"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=166
+				y=498
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=31
+			}
+			textix="3"
+			align="horiz. centered"
+		}
+	}
 }

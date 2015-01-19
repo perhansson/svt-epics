@@ -5,10 +5,10 @@ file {
 }
 display {
 	object {
-		x=1506
-		y=61
+		x=0
+		y=22
 		width=1235
-		height=1060
+		height=856
 	}
 	clr=14
 	bclr=12
@@ -10255,160 +10255,6 @@ text {
 	}
 	stacking="column"
 }
-composite {
-	object {
-		x=75
-		y=193
-		width=45
-		height=812
-	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=76
-				y=193
-				width=41
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="L1t"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=76
-				y=283
-				width=41
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="L2-3t"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=75
-				y=370
-				width=41
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="L5t"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=77
-				y=458
-				width=41
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="L6t"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=75
-				y=546
-				width=41
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="L4t"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=78
-				y=634
-				width=41
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="L4b"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=77
-				y=721
-				width=41
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="L5b"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=79
-				y=807
-				width=41
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="L6b"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=77
-				y=897
-				width=41
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="L1b"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=78
-				y=985
-				width=41
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="L2-3b"
-			align="horiz. centered"
-		}
-	}
-}
-text {
-	object {
-		x=75
-		y=152
-		width=41
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="FEB"
-	align="horiz. centered"
-}
 text {
 	object {
 		x=122
@@ -10836,305 +10682,6 @@ composite {
 }
 text {
 	object {
-		x=75
-		y=134
-		width=41
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="Phys"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=193
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="0"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=283
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="1"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=370
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="2"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=458
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="3"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=546
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="4"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=634
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="5"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=721
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="6"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=807
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="7"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=897
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="8"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=985
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="9"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=134
-		width=41
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="MPOD"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=10
-		y=152
-		width=41
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="FEB"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=193
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="0"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=283
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="1"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=370
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="2"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=458
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="3"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=546
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="4"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=634
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="8"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=721
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="9"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=807
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="5"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=897
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="6"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=985
-		width=41
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="7"
-	align="horiz. centered"
-}
-text {
-	object {
 		x=40
 		y=134
 		width=41
@@ -11158,4 +10705,342 @@ text {
 	}
 	textix="FEB"
 	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=41
+		y=193
+		width=41
+		height=20
+	}
+	monitor {
+		chan="SVT:daqmap:l1t:febid"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+composite {
+	object {
+		x=81
+		y=134
+		width=45
+		height=871
+	}
+	"composite name"=""
+	children {
+		composite {
+			object {
+				x=81
+				y=193
+				width=45
+				height=812
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=82
+						y=193
+						width=41
+						height=20
+					}
+					"basic attribute" {
+						clr=31
+					}
+					textix="L1t"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=82
+						y=283
+						width=41
+						height=20
+					}
+					"basic attribute" {
+						clr=31
+					}
+					textix="L2-3t"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=81
+						y=370
+						width=41
+						height=20
+					}
+					"basic attribute" {
+						clr=31
+					}
+					textix="L5t"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=83
+						y=458
+						width=41
+						height=20
+					}
+					"basic attribute" {
+						clr=31
+					}
+					textix="L6t"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=81
+						y=546
+						width=41
+						height=20
+					}
+					"basic attribute" {
+						clr=31
+					}
+					textix="L4t"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=84
+						y=634
+						width=41
+						height=20
+					}
+					"basic attribute" {
+						clr=31
+					}
+					textix="L4b"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=83
+						y=721
+						width=41
+						height=20
+					}
+					"basic attribute" {
+						clr=31
+					}
+					textix="L5b"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=85
+						y=807
+						width=41
+						height=20
+					}
+					"basic attribute" {
+						clr=31
+					}
+					textix="L6b"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=83
+						y=897
+						width=41
+						height=20
+					}
+					"basic attribute" {
+						clr=31
+					}
+					textix="L1b"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=84
+						y=985
+						width=41
+						height=20
+					}
+					"basic attribute" {
+						clr=31
+					}
+					textix="L2-3b"
+					align="horiz. centered"
+				}
+			}
+		}
+		text {
+			object {
+				x=81
+				y=152
+				width=41
+				height=18
+			}
+			"basic attribute" {
+				clr=51
+			}
+			textix="FEB"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=81
+				y=134
+				width=41
+				height=18
+			}
+			"basic attribute" {
+				clr=51
+			}
+			textix="Phys"
+			align="horiz. centered"
+		}
+	}
+}
+"text update" {
+	object {
+		x=41
+		y=281
+		width=41
+		height=20
+	}
+	monitor {
+		chan="SVT:daqmap:l2-3t:febid"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=41
+		y=454
+		width=41
+		height=20
+	}
+	monitor {
+		chan="SVT:daqmap:l6t:febid"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=41
+		y=366
+		width=41
+		height=20
+	}
+	monitor {
+		chan="SVT:daqmap:l5t:febid"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=41
+		y=632
+		width=41
+		height=20
+	}
+	monitor {
+		chan="SVT:daqmap:l4b:febid"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=41
+		y=544
+		width=41
+		height=20
+	}
+	monitor {
+		chan="SVT:daqmap:l4t:febid"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=41
+		y=806
+		width=41
+		height=20
+	}
+	monitor {
+		chan="SVT:daqmap:l6b:febid"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=41
+		y=718
+		width=41
+		height=20
+	}
+	monitor {
+		chan="SVT:daqmap:l5b:febid"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=41
+		y=984
+		width=41
+		height=20
+	}
+	monitor {
+		chan="SVT:daqmap:l2-3b:febid"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=41
+		y=896
+		width=41
+		height=20
+	}
+	monitor {
+		chan="SVT:daqmap:l1b:febid"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
 }
