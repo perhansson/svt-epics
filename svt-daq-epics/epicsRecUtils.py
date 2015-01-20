@@ -109,98 +109,48 @@ def buildHybLV():
     s = """
 
 
-record(sub,SVT:lv:hyb:HALF:HYBID:dvdd:i_rd_sub)
+record(sub,SVT:lv:FEBID:HYBID:dvdd:i_rd_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:avdd:i_rd")
+    field(FLNK,"SVT:lv:FEBID:HYBID:avdd:i_rd")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:dvdd:i_rd)
+record(ai, SVT:lv:FEBID:HYBID:dvdd:i_rd)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:dvdd:i_rd_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:dvdd:i_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:HALF:HYBID:avdd:i_rd_sub)
+record(sub,SVT:lv:FEBID:HYBID:avdd:i_rd_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:v125:i_rd")
+    field(FLNK,"SVT:lv:FEBID:HYBID:v125:i_rd")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:avdd:i_rd)
+record(ai, SVT:lv:FEBID:HYBID:avdd:i_rd)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:avdd:i_rd_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:avdd:i_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:HALF:HYBID:v125:i_rd_sub)
+record(sub,SVT:lv:FEBID:HYBID:v125:i_rd_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:dvdd:vn")
+    field(FLNK,"SVT:lv:FEBID:HYBID:dvdd:vn")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:v125:i_rd)
+record(ai, SVT:lv:FEBID:HYBID:v125:i_rd)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:v125:i_rd_sub PP")
-  field(DTYP,"Soft Channel")
-}
-
-
-
-
-
-
-record(sub,SVT:lv:hyb:HALF:HYBID:dvdd:vn_sub)
-{
-    field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:avdd:vn")
-}
-
-record(ai, SVT:lv:hyb:HALF:HYBID:dvdd:vn)
-{
-  field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:dvdd:vn_sub PP")
-  field(DTYP,"Soft Channel")
-}
-
-record(sub,SVT:lv:hyb:HALF:HYBID:avdd:vn_sub)
-{
-    field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:v125:vn")
-}
-
-record(ai, SVT:lv:hyb:HALF:HYBID:avdd:vn)
-{
-  field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:avdd:vn_sub PP")
-  field(DTYP,"Soft Channel")
-}
-
-record(sub,SVT:lv:hyb:HALF:HYBID:v125:vn_sub)
-{
-    field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:dvdd:vf")
-}
-
-record(ai, SVT:lv:hyb:HALF:HYBID:v125:vn)
-{
-  field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:v125:vn_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:v125:i_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -209,47 +159,48 @@ record(ai, SVT:lv:hyb:HALF:HYBID:v125:vn)
 
 
 
-record(sub,SVT:lv:hyb:HALF:HYBID:dvdd:vf_sub)
+record(sub,SVT:lv:FEBID:HYBID:dvdd:vn_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:avdd:vf")
+    field(FLNK,"SVT:lv:FEBID:HYBID:avdd:vn")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:dvdd:vf)
+record(ai, SVT:lv:FEBID:HYBID:dvdd:vn)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:dvdd:vf_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:dvdd:vn_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:HALF:HYBID:avdd:vf_sub)
+record(sub,SVT:lv:FEBID:HYBID:avdd:vn_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:v125:vf")
+    field(FLNK,"SVT:lv:FEBID:HYBID:v125:vn")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:avdd:vf)
+record(ai, SVT:lv:FEBID:HYBID:avdd:vn)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:avdd:vf_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:avdd:vn_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:HALF:HYBID:v125:vf_sub)
+record(sub,SVT:lv:FEBID:HYBID:v125:vn_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:dvdd:v_set_rd")
+    field(FLNK,"SVT:lv:FEBID:HYBID:dvdd:vf")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:v125:vf) {
+record(ai, SVT:lv:FEBID:HYBID:v125:vn)
+{
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:v125:vf_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:v125:vn_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -258,37 +209,86 @@ record(ai, SVT:lv:hyb:HALF:HYBID:v125:vf) {
 
 
 
-record(sub,SVT:lv:hyb:HALF:HYBID:dvdd:v_set_rd_sub)
+record(sub,SVT:lv:FEBID:HYBID:dvdd:vf_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:avdd:v_set_rd")
+    field(FLNK,"SVT:lv:FEBID:HYBID:avdd:vf")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:dvdd:v_set_rd)
+record(ai, SVT:lv:FEBID:HYBID:dvdd:vf)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:dvdd:v_set_rd_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:dvdd:vf_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:HALF:HYBID:avdd:v_set_rd_sub)
+record(sub,SVT:lv:FEBID:HYBID:avdd:vf_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:v125:v_set_rd")
+    field(FLNK,"SVT:lv:FEBID:HYBID:v125:vf")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:avdd:v_set_rd)
+record(ai, SVT:lv:FEBID:HYBID:avdd:vf)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:avdd:v_set_rd_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:avdd:vf_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:HALF:HYBID:v125:v_set_rd_sub)
+record(sub,SVT:lv:FEBID:HYBID:v125:vf_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(FLNK,"SVT:lv:FEBID:HYBID:dvdd:v_set_rd")
+}
+
+record(ai, SVT:lv:FEBID:HYBID:v125:vf) {
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:FEBID:HYBID:v125:vf_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+
+
+
+
+record(sub,SVT:lv:FEBID:HYBID:dvdd:v_set_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(FLNK,"SVT:lv:FEBID:HYBID:avdd:v_set_rd")
+}
+
+record(ai, SVT:lv:FEBID:HYBID:dvdd:v_set_rd)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:FEBID:HYBID:dvdd:v_set_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:FEBID:HYBID:avdd:v_set_rd_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(FLNK,"SVT:lv:FEBID:HYBID:v125:v_set_rd")
+}
+
+record(ai, SVT:lv:FEBID:HYBID:avdd:v_set_rd)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:FEBID:HYBID:avdd:v_set_rd_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:FEBID:HYBID:v125:v_set_rd_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
@@ -296,10 +296,10 @@ record(sub,SVT:lv:hyb:HALF:HYBID:v125:v_set_rd_sub)
     field(FLNK,"FLNKNEXTHYB")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:v125:v_set_rd)
+record(ai, SVT:lv:FEBID:HYBID:v125:v_set_rd)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:v125:v_set_rd_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:v125:v_set_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -308,39 +308,39 @@ record(ai, SVT:lv:hyb:HALF:HYBID:v125:v_set_rd)
 
 
 
-record(sub,SVT:lv:hyb:HALF:HYBID:dvdd:v_set_sub)
+record(sub,SVT:lv:FEBID:HYBID:dvdd:v_set_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ao, SVT:lv:hyb:HALF:HYBID:dvdd:v_set) {
-  field(OUT, "SVT:lv:hyb:HALF:HYBID:dvdd:v_set_sub PP")
+record(ao, SVT:lv:FEBID:HYBID:dvdd:v_set) {
+  field(OUT, "SVT:lv:FEBID:HYBID:dvdd:v_set_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:HALF:HYBID:avdd:v_set_sub)
+record(sub,SVT:lv:FEBID:HYBID:avdd:v_set_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ao, SVT:lv:hyb:HALF:HYBID:avdd:v_set) {
-  field(OUT, "SVT:lv:hyb:HALF:HYBID:avdd:v_set_sub PP")
+record(ao, SVT:lv:FEBID:HYBID:avdd:v_set) {
+  field(OUT, "SVT:lv:FEBID:HYBID:avdd:v_set_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:HALF:HYBID:v125:v_set_sub)
+record(sub,SVT:lv:FEBID:HYBID:v125:v_set_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ao, SVT:lv:hyb:HALF:HYBID:v125:v_set) {
-  field(OUT, "SVT:lv:hyb:HALF:HYBID:v125:v_set_sub PP")
+record(ao, SVT:lv:FEBID:HYBID:v125:v_set) {
+  field(OUT, "SVT:lv:FEBID:HYBID:v125:v_set_sub PP")
   field(DTYP,"Soft Channel")
 }
 
@@ -348,23 +348,24 @@ record(ao, SVT:lv:hyb:HALF:HYBID:v125:v_set) {
 
 
 """
-    s_flnk = "SVT:lv:hyb:HALF:NEXTHYB:dvdd:i_rd"
+    s_flnk = "SVT:lv:NEXTFEBID:NEXTHYBID:dvdd:i_rd"
     records = []
-    for half in ["bot","top"]:
-        for hyb in range(0,18):
+    for feb in range(0,10):
+        for hyb in range(0,4):
             rec = s
-            if hyb==17:
-                if half is "bot":
-                    ss_flnk = s_flnk.replace("HALF","top")
-                    rec = rec.replace("FLNKNEXTHYB",ss_flnk)
-                    rec = rec.replace("NEXTHYB",str(0))
+            if hyb==3:
+                if feb < 9:
+                    rec = rec.replace("FLNKNEXTHYB",s_flnk)
+                    rec = rec.replace("NEXTHYBID",str(0))
+                    rec = rec.replace("NEXTFEBID",str(feb+1))					
                 else:
                     rec = rec.replace("FLNKNEXTHYB","")                    
             else:
                 rec = rec.replace("FLNKNEXTHYB",s_flnk)
-                rec = rec.replace("NEXTHYB",str(hyb+1))
+                rec = rec.replace("NEXTFEBID",str(feb))
+                rec = rec.replace("NEXTHYBID",str(hyb+1))
             rec = rec.replace("HYBID",str(hyb))
-            rec = rec.replace("HALF",half)
+            rec = rec.replace("FEBID",str(feb))
             records.append(rec)
     
     return records
@@ -382,56 +383,56 @@ def buildHybLVStat():
     s = """
 
 
-record(sub,SVT:lv:hyb:HALF:HYBID:dvdd:stat_sub)
+record(sub,SVT:lv:FEBID:HYBID:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:dvdd:stat)
+record(ai, SVT:lv:FEBID:HYBID:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:HALF:HYBID:avdd:stat_sub)
+record(sub,SVT:lv:FEBID:HYBID:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:avdd:stat)
+record(ai, SVT:lv:FEBID:HYBID:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:avdd:stat_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:HALF:HYBID:v125:stat_sub)
+record(sub,SVT:lv:FEBID:HYBID:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:HALF:HYBID:v125:stat)
+record(ai, SVT:lv:FEBID:HYBID:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:HALF:HYBID:v125:stat_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:HALF:HYBID:stat)
+record(calc, SVT:lv:FEBID:HYBID:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:HALF:HYBID:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:HALF:HYBID:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:HALF:HYBID:v125:stat.VAL PP")
+  field(INPA, "SVT:lv:FEBID:HYBID:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:FEBID:HYBID:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:FEBID:HYBID:v125:stat.VAL PP")
   field(FLNK,"FLNKNEXTHYB")
   
 }
@@ -439,28 +440,32 @@ record(calc, SVT:lv:hyb:HALF:HYBID:stat)
 
 
 """
-    s_flnk = "SVT:lv:hyb:HALF:NEXTHYB:stat"
 
+
+    s_flnk = "SVT:lv:NEXTFEBID:NEXTHYBID:stat"
     records = []
-    for half in ["bot","top"]:
-        for hyb in range(0,18):
+    for feb in range(0,10):
+        for hyb in range(0,4):
             rec = s
-            if hyb==17:
-                if half is "bot":
-                    ss_flnk = s_flnk.replace("HALF","top")
-                    rec = rec.replace("FLNKNEXTHYB",ss_flnk)
-                    rec = rec.replace("NEXTHYB",str(0))
+            if hyb==3:
+                if feb < 9:
+                    rec = rec.replace("FLNKNEXTHYB",s_flnk)
+                    rec = rec.replace("NEXTHYBID",str(0))
+                    rec = rec.replace("NEXTFEBID",str(feb+1))					
                 else:
                     rec = rec.replace("FLNKNEXTHYB","")                    
             else:
                 rec = rec.replace("FLNKNEXTHYB",s_flnk)
-                rec = rec.replace("NEXTHYB",str(hyb+1))
+                rec = rec.replace("NEXTFEBID",str(feb))
+                rec = rec.replace("NEXTHYBID",str(hyb+1))
             rec = rec.replace("HYBID",str(hyb))
-            rec = rec.replace("HALF",half)
+            rec = rec.replace("FEBID",str(feb))
             records.append(rec)
     
     return records
 
+
+  
 
 
 
@@ -475,52 +480,52 @@ def buildHybLVSwitch():
 
 
 
-record(sub,SVT:lv:hyb:HALF:HYBID:all:switch_sub)
+record(sub,SVT:lv:FEBID:HYBID:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:HALF:HYBID:all:switch_fanout")
+    field(FLNK,"SVT:lv:FEBID:HYBID:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:HALF:HYBID:all:switch)
+record(bo, SVT:lv:FEBID:HYBID:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:HALF:HYBID:all:switch_sub PP")
+    field(OUT, "SVT:lv:FEBID:HYBID:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:HALF:HYBID:all:switch_fanout)
+record(fanout,SVT:lv:FEBID:HYBID:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:HALF:HYBID:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:HALF:HYBID:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:HALF:HYBID:v125:switch")
+    field(LNK1,"SVT:lv:FEBID:HYBID:dvdd:switch")
+    field(LNK2,"SVT:lv:FEBID:HYBID:avdd:switch")
+    field(LNK3,"SVT:lv:FEBID:HYBID:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:HALF:HYBID:dvdd:switch)
+record(bo, SVT:lv:FEBID:HYBID:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:HALF:HYBID:all:switch PP")
+    field(DOL, "SVT:lv:FEBID:HYBID:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:HALF:HYBID:avdd:switch)
+record(bo, SVT:lv:FEBID:HYBID:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:HALF:HYBID:all:switch PP")
+    field(DOL, "SVT:lv:FEBID:HYBID:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:HALF:HYBID:v125:switch)
+record(bo, SVT:lv:FEBID:HYBID:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:HALF:HYBID:all:switch PP")
+    field(DOL, "SVT:lv:FEBID:HYBID:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -532,55 +537,26 @@ record(bo, SVT:lv:hyb:HALF:HYBID:v125:switch)
 """
     
     records = []
-    for half in ["bot","top"]:
-        for hyb in range(0,18):
+    for feb in range(0,10):
+        for hyb in range(0,4):
             rec = s.replace("HYBID",str(hyb))
-            rec = rec.replace("HALF",half)
+            rec = rec.replace("FEBID",str(feb))
             records.append(rec)
     
 
 
     s = """
-record(dfanout,SVT:lv:hyb:HALF:all:switch_fanout1)
+record(dfanout,SVT:lv:hyb:FEBID:all:switch_fanout)
 {
-    field(OUTA,"SVT:lv:hyb:HALF:0:all:switch.VAL PP")
-    field(OUTB,"SVT:lv:hyb:HALF:1:all:switch.VAL PP")
-    field(OUTC,"SVT:lv:hyb:HALF:2:all:switch.VAL PP")
-    field(OUTD,"SVT:lv:hyb:HALF:3:all:switch.VAL PP")
-    field(OUTE,"SVT:lv:hyb:HALF:4:all:switch.VAL PP")
-    field(OUTF,"SVT:lv:hyb:HALF:5:all:switch.VAL PP")
+    field(OUTA,"SVT:lv:hyb:FEBID:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:FEBID:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:FEBID:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:FEBID:3:all:switch.VAL PP")
 }
 
-record(dfanout,SVT:lv:hyb:HALF:all:switch_fanout2)
+record(bo, SVT:lv:hyb:FEBID:all:switch) 
 {
-    field(OUTA,"SVT:lv:hyb:HALF:6:all:switch.VAL PP")
-    field(OUTB,"SVT:lv:hyb:HALF:7:all:switch.VAL PP")
-    field(OUTC,"SVT:lv:hyb:HALF:8:all:switch.VAL PP")
-    field(OUTD,"SVT:lv:hyb:HALF:9:all:switch.VAL PP")
-    field(OUTE,"SVT:lv:hyb:HALF:10:all:switch.VAL PP")
-    field(OUTF,"SVT:lv:hyb:HALF:11:all:switch.VAL PP")
-}
-
-record(dfanout,SVT:lv:hyb:HALF:all:switch_fanout3)
-{
-    field(OUTA,"SVT:lv:hyb:HALF:12:all:switch.VAL PP")
-    field(OUTB,"SVT:lv:hyb:HALF:13:all:switch.VAL PP")
-    field(OUTC,"SVT:lv:hyb:HALF:14:all:switch.VAL PP")
-    field(OUTD,"SVT:lv:hyb:HALF:15:all:switch.VAL PP")
-    field(OUTE,"SVT:lv:hyb:HALF:16:all:switch.VAL PP")
-    field(OUTF,"SVT:lv:hyb:HALF:17:all:switch.VAL PP")
-}
-
-record(dfanout,SVT:lv:hyb:HALF:all:switch_fanout)
-{
-    field(OUTA,"SVT:lv:hyb:HALF:all:switch_fanout1 PP")
-    field(OUTB,"SVT:lv:hyb:HALF:all:switch_fanout2 PP")
-    field(OUTC,"SVT:lv:hyb:HALF:all:switch_fanout3 PP")
-}
-
-record(bo, SVT:lv:hyb:HALF:all:switch) 
-{
-  field(OUT, "SVT:lv:hyb:HALF:all:switch_fanout PP")
+  field(OUT, "SVT:lv:hyb:FEBID:all:switch_fanout PP")
   field(ZNAM, "Off")
   field(ONAM, "On")
 }
@@ -589,30 +565,16 @@ record(bo, SVT:lv:hyb:HALF:all:switch)
     
   
     
-    for half in ["bot","top"]:
-        rec = s.replace("HALF",half)
+    for feb in range(0,10):
+        rec = s.replace("FEBID",str(feb))
         records.append(rec)
     
     
-    s = """
-
-record(bo, SVT:lv:hyb:all:switch) 
-{
-  field(OUT, "SVT:lv:hyb:all:switch_fanout PP")
-  field(ZNAM, "Off")
-  field(ONAM, "On")
-}
-
-record(dfanout,SVT:lv:hyb:all:switch_fanout)
-{
-    field(OUTA,"SVT:lv:hyb:top:all:switch_fanout PP")
-    field(OUTB,"SVT:lv:hyb:bot:all:switch_fanout PP")
-}
-
-"""
-    records.append(s)
     
     return records
+
+
+
 
 
 
@@ -622,22 +584,22 @@ def buildHybTemp():
     
 
     s = """
-record(sub,SVT:temp:hyb:HALF:HYBID:temp0:t_rd_sub)
+record(sub,SVT:temp:hyb:FEBID:HYBID:temp0:t_rd_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subTempInit")
     field(SNAM,"subTempProcess")
-    field(FLNK,"SVT:temp:hyb:HALF:HYBID:temp1:t_rd")
+    field(FLNK,"SVT:temp:hyb:FEBID:HYBID:temp1:t_rd")
 }
 
-record(ai, SVT:temp:hyb:HALF:HYBID:temp0:t_rd) {
+record(ai, SVT:temp:hyb:FEBID:HYBID:temp0:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(INP, "SVT:temp:hyb:HALF:HYBID:temp0:t_rd_sub PP")
+  field(INP, "SVT:temp:hyb:FEBID:HYBID:temp0:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:temp:hyb:HALF:HYBID:temp1:t_rd_sub)
+record(sub,SVT:temp:hyb:FEBID:HYBID:temp1:t_rd_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subTempInit")
@@ -645,30 +607,31 @@ record(sub,SVT:temp:hyb:HALF:HYBID:temp1:t_rd_sub)
     field(FLNK,"FLNKNEXTHYB")
 }
 
-record(ai, SVT:temp:hyb:HALF:HYBID:temp1:t_rd) {
+record(ai, SVT:temp:hyb:FEBID:HYBID:temp1:t_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(INP, "SVT:temp:hyb:HALF:HYBID:temp1:t_rd_sub PP")
+  field(INP, "SVT:temp:hyb:FEBID:HYBID:temp1:t_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 """
 
-    s_flnk = "SVT:temp:hyb:HALF:NEXTHYB:temp0:t_rd"
+    s_flnk = "SVT:temp:hyb:NEXTFEBID:NEXTHYBID:temp0:t_rd"
     records = []
-    for half in ["bot","top"]:
-        for hyb in range(0,18):
+    for feb in range(0,10):
+        for hyb in range(0,4):
             rec = s
-            if hyb==17:
-                if half is "bot":
-                    ss_flnk = s_flnk.replace("HALF","top")
-                    rec = rec.replace("FLNKNEXTHYB",ss_flnk)
-                    rec = rec.replace("NEXTHYB",str(0))
+            if hyb==3:
+                if feb < 9:
+                    rec = rec.replace("FLNKNEXTHYB",s_flnk)
+                    rec = rec.replace("NEXTHYBID",str(0))
+                    rec = rec.replace("NEXTFEBID",str(feb+1))
                 else:
                     rec = rec.replace("FLNKNEXTHYB","")                    
             else:
                 rec = rec.replace("FLNKNEXTHYB",s_flnk)
-                rec = rec.replace("NEXTHYB",str(hyb+1))
+                rec = rec.replace("NEXTHYBID",str(hyb+1))
+                rec = rec.replace("NEXTFEBID",str(feb))
             rec = rec.replace("HYBID",str(hyb))
-            rec = rec.replace("HALF",half)
+            rec = rec.replace("FEBID",str(feb))
             records.append(rec)
     
     return records

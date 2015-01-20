@@ -1,57 +1,57 @@
 
 
 
-record(sub,SVT:lv:hyb:bot:0:dvdd:stat_sub)
+record(sub,SVT:lv:0:0:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:0:dvdd:stat)
+record(ai, SVT:lv:0:0:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:0:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:0:0:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:0:avdd:stat_sub)
+record(sub,SVT:lv:0:0:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:0:avdd:stat)
+record(ai, SVT:lv:0:0:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:0:avdd:stat_sub PP")
+  field(INP, "SVT:lv:0:0:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:0:v125:stat_sub)
+record(sub,SVT:lv:0:0:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:0:v125:stat)
+record(ai, SVT:lv:0:0:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:0:v125:stat_sub PP")
+  field(INP, "SVT:lv:0:0:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:0:stat)
+record(calc, SVT:lv:0:0:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:0:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:0:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:0:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:1:stat")
+  field(INPA, "SVT:lv:0:0:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:0:0:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:0:0:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:0:1:stat")
   
 }
 
@@ -60,57 +60,57 @@ record(calc, SVT:lv:hyb:bot:0:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:1:dvdd:stat_sub)
+record(sub,SVT:lv:0:1:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:1:dvdd:stat)
+record(ai, SVT:lv:0:1:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:1:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:0:1:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:1:avdd:stat_sub)
+record(sub,SVT:lv:0:1:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:1:avdd:stat)
+record(ai, SVT:lv:0:1:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:1:avdd:stat_sub PP")
+  field(INP, "SVT:lv:0:1:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:1:v125:stat_sub)
+record(sub,SVT:lv:0:1:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:1:v125:stat)
+record(ai, SVT:lv:0:1:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:1:v125:stat_sub PP")
+  field(INP, "SVT:lv:0:1:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:1:stat)
+record(calc, SVT:lv:0:1:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:1:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:1:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:1:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:2:stat")
+  field(INPA, "SVT:lv:0:1:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:0:1:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:0:1:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:0:2:stat")
   
 }
 
@@ -119,57 +119,57 @@ record(calc, SVT:lv:hyb:bot:1:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:2:dvdd:stat_sub)
+record(sub,SVT:lv:0:2:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:2:dvdd:stat)
+record(ai, SVT:lv:0:2:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:2:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:0:2:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:2:avdd:stat_sub)
+record(sub,SVT:lv:0:2:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:2:avdd:stat)
+record(ai, SVT:lv:0:2:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:2:avdd:stat_sub PP")
+  field(INP, "SVT:lv:0:2:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:2:v125:stat_sub)
+record(sub,SVT:lv:0:2:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:2:v125:stat)
+record(ai, SVT:lv:0:2:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:2:v125:stat_sub PP")
+  field(INP, "SVT:lv:0:2:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:2:stat)
+record(calc, SVT:lv:0:2:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:2:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:2:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:2:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:3:stat")
+  field(INPA, "SVT:lv:0:2:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:0:2:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:0:2:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:0:3:stat")
   
 }
 
@@ -178,57 +178,57 @@ record(calc, SVT:lv:hyb:bot:2:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:3:dvdd:stat_sub)
+record(sub,SVT:lv:0:3:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:3:dvdd:stat)
+record(ai, SVT:lv:0:3:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:3:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:0:3:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:3:avdd:stat_sub)
+record(sub,SVT:lv:0:3:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:3:avdd:stat)
+record(ai, SVT:lv:0:3:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:3:avdd:stat_sub PP")
+  field(INP, "SVT:lv:0:3:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:3:v125:stat_sub)
+record(sub,SVT:lv:0:3:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:3:v125:stat)
+record(ai, SVT:lv:0:3:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:3:v125:stat_sub PP")
+  field(INP, "SVT:lv:0:3:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:3:stat)
+record(calc, SVT:lv:0:3:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:3:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:3:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:3:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:4:stat")
+  field(INPA, "SVT:lv:0:3:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:0:3:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:0:3:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:1:0:stat")
   
 }
 
@@ -237,57 +237,57 @@ record(calc, SVT:lv:hyb:bot:3:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:4:dvdd:stat_sub)
+record(sub,SVT:lv:1:0:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:4:dvdd:stat)
+record(ai, SVT:lv:1:0:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:4:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:1:0:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:4:avdd:stat_sub)
+record(sub,SVT:lv:1:0:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:4:avdd:stat)
+record(ai, SVT:lv:1:0:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:4:avdd:stat_sub PP")
+  field(INP, "SVT:lv:1:0:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:4:v125:stat_sub)
+record(sub,SVT:lv:1:0:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:4:v125:stat)
+record(ai, SVT:lv:1:0:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:4:v125:stat_sub PP")
+  field(INP, "SVT:lv:1:0:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:4:stat)
+record(calc, SVT:lv:1:0:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:4:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:4:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:4:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:5:stat")
+  field(INPA, "SVT:lv:1:0:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:1:0:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:1:0:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:1:1:stat")
   
 }
 
@@ -296,57 +296,57 @@ record(calc, SVT:lv:hyb:bot:4:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:5:dvdd:stat_sub)
+record(sub,SVT:lv:1:1:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:5:dvdd:stat)
+record(ai, SVT:lv:1:1:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:5:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:1:1:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:5:avdd:stat_sub)
+record(sub,SVT:lv:1:1:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:5:avdd:stat)
+record(ai, SVT:lv:1:1:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:5:avdd:stat_sub PP")
+  field(INP, "SVT:lv:1:1:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:5:v125:stat_sub)
+record(sub,SVT:lv:1:1:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:5:v125:stat)
+record(ai, SVT:lv:1:1:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:5:v125:stat_sub PP")
+  field(INP, "SVT:lv:1:1:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:5:stat)
+record(calc, SVT:lv:1:1:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:5:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:5:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:5:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:6:stat")
+  field(INPA, "SVT:lv:1:1:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:1:1:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:1:1:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:1:2:stat")
   
 }
 
@@ -355,57 +355,57 @@ record(calc, SVT:lv:hyb:bot:5:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:6:dvdd:stat_sub)
+record(sub,SVT:lv:1:2:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:6:dvdd:stat)
+record(ai, SVT:lv:1:2:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:6:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:1:2:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:6:avdd:stat_sub)
+record(sub,SVT:lv:1:2:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:6:avdd:stat)
+record(ai, SVT:lv:1:2:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:6:avdd:stat_sub PP")
+  field(INP, "SVT:lv:1:2:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:6:v125:stat_sub)
+record(sub,SVT:lv:1:2:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:6:v125:stat)
+record(ai, SVT:lv:1:2:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:6:v125:stat_sub PP")
+  field(INP, "SVT:lv:1:2:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:6:stat)
+record(calc, SVT:lv:1:2:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:6:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:6:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:6:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:7:stat")
+  field(INPA, "SVT:lv:1:2:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:1:2:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:1:2:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:1:3:stat")
   
 }
 
@@ -414,57 +414,57 @@ record(calc, SVT:lv:hyb:bot:6:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:7:dvdd:stat_sub)
+record(sub,SVT:lv:1:3:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:7:dvdd:stat)
+record(ai, SVT:lv:1:3:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:7:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:1:3:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:7:avdd:stat_sub)
+record(sub,SVT:lv:1:3:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:7:avdd:stat)
+record(ai, SVT:lv:1:3:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:7:avdd:stat_sub PP")
+  field(INP, "SVT:lv:1:3:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:7:v125:stat_sub)
+record(sub,SVT:lv:1:3:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:7:v125:stat)
+record(ai, SVT:lv:1:3:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:7:v125:stat_sub PP")
+  field(INP, "SVT:lv:1:3:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:7:stat)
+record(calc, SVT:lv:1:3:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:7:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:7:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:7:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:8:stat")
+  field(INPA, "SVT:lv:1:3:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:1:3:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:1:3:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:2:0:stat")
   
 }
 
@@ -473,57 +473,57 @@ record(calc, SVT:lv:hyb:bot:7:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:8:dvdd:stat_sub)
+record(sub,SVT:lv:2:0:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:8:dvdd:stat)
+record(ai, SVT:lv:2:0:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:8:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:2:0:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:8:avdd:stat_sub)
+record(sub,SVT:lv:2:0:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:8:avdd:stat)
+record(ai, SVT:lv:2:0:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:8:avdd:stat_sub PP")
+  field(INP, "SVT:lv:2:0:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:8:v125:stat_sub)
+record(sub,SVT:lv:2:0:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:8:v125:stat)
+record(ai, SVT:lv:2:0:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:8:v125:stat_sub PP")
+  field(INP, "SVT:lv:2:0:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:8:stat)
+record(calc, SVT:lv:2:0:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:8:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:8:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:8:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:9:stat")
+  field(INPA, "SVT:lv:2:0:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:2:0:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:2:0:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:2:1:stat")
   
 }
 
@@ -532,57 +532,57 @@ record(calc, SVT:lv:hyb:bot:8:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:9:dvdd:stat_sub)
+record(sub,SVT:lv:2:1:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:9:dvdd:stat)
+record(ai, SVT:lv:2:1:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:9:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:2:1:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:9:avdd:stat_sub)
+record(sub,SVT:lv:2:1:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:9:avdd:stat)
+record(ai, SVT:lv:2:1:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:9:avdd:stat_sub PP")
+  field(INP, "SVT:lv:2:1:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:9:v125:stat_sub)
+record(sub,SVT:lv:2:1:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:9:v125:stat)
+record(ai, SVT:lv:2:1:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:9:v125:stat_sub PP")
+  field(INP, "SVT:lv:2:1:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:9:stat)
+record(calc, SVT:lv:2:1:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:9:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:9:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:9:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:10:stat")
+  field(INPA, "SVT:lv:2:1:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:2:1:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:2:1:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:2:2:stat")
   
 }
 
@@ -591,57 +591,57 @@ record(calc, SVT:lv:hyb:bot:9:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:10:dvdd:stat_sub)
+record(sub,SVT:lv:2:2:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:10:dvdd:stat)
+record(ai, SVT:lv:2:2:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:10:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:2:2:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:10:avdd:stat_sub)
+record(sub,SVT:lv:2:2:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:10:avdd:stat)
+record(ai, SVT:lv:2:2:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:10:avdd:stat_sub PP")
+  field(INP, "SVT:lv:2:2:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:10:v125:stat_sub)
+record(sub,SVT:lv:2:2:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:10:v125:stat)
+record(ai, SVT:lv:2:2:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:10:v125:stat_sub PP")
+  field(INP, "SVT:lv:2:2:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:10:stat)
+record(calc, SVT:lv:2:2:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:10:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:10:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:10:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:11:stat")
+  field(INPA, "SVT:lv:2:2:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:2:2:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:2:2:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:2:3:stat")
   
 }
 
@@ -650,57 +650,57 @@ record(calc, SVT:lv:hyb:bot:10:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:11:dvdd:stat_sub)
+record(sub,SVT:lv:2:3:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:11:dvdd:stat)
+record(ai, SVT:lv:2:3:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:11:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:2:3:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:11:avdd:stat_sub)
+record(sub,SVT:lv:2:3:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:11:avdd:stat)
+record(ai, SVT:lv:2:3:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:11:avdd:stat_sub PP")
+  field(INP, "SVT:lv:2:3:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:11:v125:stat_sub)
+record(sub,SVT:lv:2:3:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:11:v125:stat)
+record(ai, SVT:lv:2:3:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:11:v125:stat_sub PP")
+  field(INP, "SVT:lv:2:3:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:11:stat)
+record(calc, SVT:lv:2:3:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:11:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:11:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:11:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:12:stat")
+  field(INPA, "SVT:lv:2:3:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:2:3:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:2:3:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:3:0:stat")
   
 }
 
@@ -709,57 +709,57 @@ record(calc, SVT:lv:hyb:bot:11:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:12:dvdd:stat_sub)
+record(sub,SVT:lv:3:0:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:12:dvdd:stat)
+record(ai, SVT:lv:3:0:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:12:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:3:0:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:12:avdd:stat_sub)
+record(sub,SVT:lv:3:0:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:12:avdd:stat)
+record(ai, SVT:lv:3:0:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:12:avdd:stat_sub PP")
+  field(INP, "SVT:lv:3:0:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:12:v125:stat_sub)
+record(sub,SVT:lv:3:0:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:12:v125:stat)
+record(ai, SVT:lv:3:0:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:12:v125:stat_sub PP")
+  field(INP, "SVT:lv:3:0:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:12:stat)
+record(calc, SVT:lv:3:0:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:12:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:12:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:12:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:13:stat")
+  field(INPA, "SVT:lv:3:0:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:3:0:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:3:0:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:3:1:stat")
   
 }
 
@@ -768,57 +768,57 @@ record(calc, SVT:lv:hyb:bot:12:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:13:dvdd:stat_sub)
+record(sub,SVT:lv:3:1:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:13:dvdd:stat)
+record(ai, SVT:lv:3:1:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:13:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:3:1:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:13:avdd:stat_sub)
+record(sub,SVT:lv:3:1:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:13:avdd:stat)
+record(ai, SVT:lv:3:1:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:13:avdd:stat_sub PP")
+  field(INP, "SVT:lv:3:1:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:13:v125:stat_sub)
+record(sub,SVT:lv:3:1:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:13:v125:stat)
+record(ai, SVT:lv:3:1:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:13:v125:stat_sub PP")
+  field(INP, "SVT:lv:3:1:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:13:stat)
+record(calc, SVT:lv:3:1:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:13:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:13:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:13:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:14:stat")
+  field(INPA, "SVT:lv:3:1:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:3:1:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:3:1:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:3:2:stat")
   
 }
 
@@ -827,57 +827,57 @@ record(calc, SVT:lv:hyb:bot:13:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:14:dvdd:stat_sub)
+record(sub,SVT:lv:3:2:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:14:dvdd:stat)
+record(ai, SVT:lv:3:2:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:14:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:3:2:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:14:avdd:stat_sub)
+record(sub,SVT:lv:3:2:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:14:avdd:stat)
+record(ai, SVT:lv:3:2:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:14:avdd:stat_sub PP")
+  field(INP, "SVT:lv:3:2:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:14:v125:stat_sub)
+record(sub,SVT:lv:3:2:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:14:v125:stat)
+record(ai, SVT:lv:3:2:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:14:v125:stat_sub PP")
+  field(INP, "SVT:lv:3:2:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:14:stat)
+record(calc, SVT:lv:3:2:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:14:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:14:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:14:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:15:stat")
+  field(INPA, "SVT:lv:3:2:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:3:2:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:3:2:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:3:3:stat")
   
 }
 
@@ -886,57 +886,57 @@ record(calc, SVT:lv:hyb:bot:14:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:15:dvdd:stat_sub)
+record(sub,SVT:lv:3:3:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:15:dvdd:stat)
+record(ai, SVT:lv:3:3:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:15:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:3:3:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:15:avdd:stat_sub)
+record(sub,SVT:lv:3:3:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:15:avdd:stat)
+record(ai, SVT:lv:3:3:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:15:avdd:stat_sub PP")
+  field(INP, "SVT:lv:3:3:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:15:v125:stat_sub)
+record(sub,SVT:lv:3:3:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:15:v125:stat)
+record(ai, SVT:lv:3:3:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:15:v125:stat_sub PP")
+  field(INP, "SVT:lv:3:3:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:15:stat)
+record(calc, SVT:lv:3:3:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:15:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:15:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:15:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:16:stat")
+  field(INPA, "SVT:lv:3:3:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:3:3:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:3:3:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:4:0:stat")
   
 }
 
@@ -945,57 +945,57 @@ record(calc, SVT:lv:hyb:bot:15:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:16:dvdd:stat_sub)
+record(sub,SVT:lv:4:0:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:16:dvdd:stat)
+record(ai, SVT:lv:4:0:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:16:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:4:0:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:16:avdd:stat_sub)
+record(sub,SVT:lv:4:0:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:16:avdd:stat)
+record(ai, SVT:lv:4:0:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:16:avdd:stat_sub PP")
+  field(INP, "SVT:lv:4:0:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:16:v125:stat_sub)
+record(sub,SVT:lv:4:0:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:16:v125:stat)
+record(ai, SVT:lv:4:0:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:16:v125:stat_sub PP")
+  field(INP, "SVT:lv:4:0:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:16:stat)
+record(calc, SVT:lv:4:0:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:16:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:16:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:16:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:bot:17:stat")
+  field(INPA, "SVT:lv:4:0:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:4:0:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:4:0:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:4:1:stat")
   
 }
 
@@ -1004,57 +1004,57 @@ record(calc, SVT:lv:hyb:bot:16:stat)
 
 
 
-record(sub,SVT:lv:hyb:bot:17:dvdd:stat_sub)
+record(sub,SVT:lv:4:1:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:17:dvdd:stat)
+record(ai, SVT:lv:4:1:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:17:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:4:1:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:bot:17:avdd:stat_sub)
+record(sub,SVT:lv:4:1:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:17:avdd:stat)
+record(ai, SVT:lv:4:1:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:17:avdd:stat_sub PP")
+  field(INP, "SVT:lv:4:1:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:bot:17:v125:stat_sub)
+record(sub,SVT:lv:4:1:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:bot:17:v125:stat)
+record(ai, SVT:lv:4:1:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:bot:17:v125:stat_sub PP")
+  field(INP, "SVT:lv:4:1:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:bot:17:stat)
+record(calc, SVT:lv:4:1:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:bot:17:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:bot:17:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:bot:17:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:0:stat")
+  field(INPA, "SVT:lv:4:1:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:4:1:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:4:1:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:4:2:stat")
   
 }
 
@@ -1063,57 +1063,57 @@ record(calc, SVT:lv:hyb:bot:17:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:0:dvdd:stat_sub)
+record(sub,SVT:lv:4:2:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:0:dvdd:stat)
+record(ai, SVT:lv:4:2:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:0:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:4:2:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:0:avdd:stat_sub)
+record(sub,SVT:lv:4:2:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:0:avdd:stat)
+record(ai, SVT:lv:4:2:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:0:avdd:stat_sub PP")
+  field(INP, "SVT:lv:4:2:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:0:v125:stat_sub)
+record(sub,SVT:lv:4:2:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:0:v125:stat)
+record(ai, SVT:lv:4:2:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:0:v125:stat_sub PP")
+  field(INP, "SVT:lv:4:2:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:0:stat)
+record(calc, SVT:lv:4:2:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:0:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:0:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:0:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:1:stat")
+  field(INPA, "SVT:lv:4:2:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:4:2:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:4:2:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:4:3:stat")
   
 }
 
@@ -1122,57 +1122,57 @@ record(calc, SVT:lv:hyb:top:0:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:1:dvdd:stat_sub)
+record(sub,SVT:lv:4:3:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:1:dvdd:stat)
+record(ai, SVT:lv:4:3:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:1:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:4:3:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:1:avdd:stat_sub)
+record(sub,SVT:lv:4:3:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:1:avdd:stat)
+record(ai, SVT:lv:4:3:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:1:avdd:stat_sub PP")
+  field(INP, "SVT:lv:4:3:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:1:v125:stat_sub)
+record(sub,SVT:lv:4:3:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:1:v125:stat)
+record(ai, SVT:lv:4:3:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:1:v125:stat_sub PP")
+  field(INP, "SVT:lv:4:3:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:1:stat)
+record(calc, SVT:lv:4:3:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:1:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:1:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:1:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:2:stat")
+  field(INPA, "SVT:lv:4:3:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:4:3:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:4:3:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:5:0:stat")
   
 }
 
@@ -1181,57 +1181,57 @@ record(calc, SVT:lv:hyb:top:1:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:2:dvdd:stat_sub)
+record(sub,SVT:lv:5:0:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:2:dvdd:stat)
+record(ai, SVT:lv:5:0:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:2:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:5:0:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:2:avdd:stat_sub)
+record(sub,SVT:lv:5:0:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:2:avdd:stat)
+record(ai, SVT:lv:5:0:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:2:avdd:stat_sub PP")
+  field(INP, "SVT:lv:5:0:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:2:v125:stat_sub)
+record(sub,SVT:lv:5:0:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:2:v125:stat)
+record(ai, SVT:lv:5:0:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:2:v125:stat_sub PP")
+  field(INP, "SVT:lv:5:0:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:2:stat)
+record(calc, SVT:lv:5:0:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:2:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:2:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:2:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:3:stat")
+  field(INPA, "SVT:lv:5:0:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:5:0:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:5:0:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:5:1:stat")
   
 }
 
@@ -1240,57 +1240,57 @@ record(calc, SVT:lv:hyb:top:2:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:3:dvdd:stat_sub)
+record(sub,SVT:lv:5:1:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:3:dvdd:stat)
+record(ai, SVT:lv:5:1:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:3:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:5:1:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:3:avdd:stat_sub)
+record(sub,SVT:lv:5:1:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:3:avdd:stat)
+record(ai, SVT:lv:5:1:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:3:avdd:stat_sub PP")
+  field(INP, "SVT:lv:5:1:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:3:v125:stat_sub)
+record(sub,SVT:lv:5:1:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:3:v125:stat)
+record(ai, SVT:lv:5:1:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:3:v125:stat_sub PP")
+  field(INP, "SVT:lv:5:1:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:3:stat)
+record(calc, SVT:lv:5:1:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:3:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:3:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:3:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:4:stat")
+  field(INPA, "SVT:lv:5:1:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:5:1:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:5:1:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:5:2:stat")
   
 }
 
@@ -1299,57 +1299,57 @@ record(calc, SVT:lv:hyb:top:3:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:4:dvdd:stat_sub)
+record(sub,SVT:lv:5:2:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:4:dvdd:stat)
+record(ai, SVT:lv:5:2:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:4:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:5:2:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:4:avdd:stat_sub)
+record(sub,SVT:lv:5:2:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:4:avdd:stat)
+record(ai, SVT:lv:5:2:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:4:avdd:stat_sub PP")
+  field(INP, "SVT:lv:5:2:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:4:v125:stat_sub)
+record(sub,SVT:lv:5:2:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:4:v125:stat)
+record(ai, SVT:lv:5:2:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:4:v125:stat_sub PP")
+  field(INP, "SVT:lv:5:2:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:4:stat)
+record(calc, SVT:lv:5:2:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:4:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:4:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:4:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:5:stat")
+  field(INPA, "SVT:lv:5:2:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:5:2:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:5:2:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:5:3:stat")
   
 }
 
@@ -1358,57 +1358,57 @@ record(calc, SVT:lv:hyb:top:4:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:5:dvdd:stat_sub)
+record(sub,SVT:lv:5:3:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:5:dvdd:stat)
+record(ai, SVT:lv:5:3:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:5:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:5:3:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:5:avdd:stat_sub)
+record(sub,SVT:lv:5:3:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:5:avdd:stat)
+record(ai, SVT:lv:5:3:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:5:avdd:stat_sub PP")
+  field(INP, "SVT:lv:5:3:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:5:v125:stat_sub)
+record(sub,SVT:lv:5:3:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:5:v125:stat)
+record(ai, SVT:lv:5:3:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:5:v125:stat_sub PP")
+  field(INP, "SVT:lv:5:3:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:5:stat)
+record(calc, SVT:lv:5:3:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:5:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:5:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:5:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:6:stat")
+  field(INPA, "SVT:lv:5:3:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:5:3:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:5:3:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:6:0:stat")
   
 }
 
@@ -1417,57 +1417,57 @@ record(calc, SVT:lv:hyb:top:5:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:6:dvdd:stat_sub)
+record(sub,SVT:lv:6:0:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:6:dvdd:stat)
+record(ai, SVT:lv:6:0:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:6:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:6:0:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:6:avdd:stat_sub)
+record(sub,SVT:lv:6:0:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:6:avdd:stat)
+record(ai, SVT:lv:6:0:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:6:avdd:stat_sub PP")
+  field(INP, "SVT:lv:6:0:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:6:v125:stat_sub)
+record(sub,SVT:lv:6:0:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:6:v125:stat)
+record(ai, SVT:lv:6:0:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:6:v125:stat_sub PP")
+  field(INP, "SVT:lv:6:0:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:6:stat)
+record(calc, SVT:lv:6:0:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:6:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:6:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:6:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:7:stat")
+  field(INPA, "SVT:lv:6:0:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:6:0:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:6:0:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:6:1:stat")
   
 }
 
@@ -1476,57 +1476,57 @@ record(calc, SVT:lv:hyb:top:6:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:7:dvdd:stat_sub)
+record(sub,SVT:lv:6:1:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:7:dvdd:stat)
+record(ai, SVT:lv:6:1:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:7:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:6:1:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:7:avdd:stat_sub)
+record(sub,SVT:lv:6:1:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:7:avdd:stat)
+record(ai, SVT:lv:6:1:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:7:avdd:stat_sub PP")
+  field(INP, "SVT:lv:6:1:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:7:v125:stat_sub)
+record(sub,SVT:lv:6:1:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:7:v125:stat)
+record(ai, SVT:lv:6:1:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:7:v125:stat_sub PP")
+  field(INP, "SVT:lv:6:1:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:7:stat)
+record(calc, SVT:lv:6:1:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:7:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:7:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:7:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:8:stat")
+  field(INPA, "SVT:lv:6:1:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:6:1:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:6:1:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:6:2:stat")
   
 }
 
@@ -1535,57 +1535,57 @@ record(calc, SVT:lv:hyb:top:7:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:8:dvdd:stat_sub)
+record(sub,SVT:lv:6:2:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:8:dvdd:stat)
+record(ai, SVT:lv:6:2:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:8:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:6:2:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:8:avdd:stat_sub)
+record(sub,SVT:lv:6:2:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:8:avdd:stat)
+record(ai, SVT:lv:6:2:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:8:avdd:stat_sub PP")
+  field(INP, "SVT:lv:6:2:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:8:v125:stat_sub)
+record(sub,SVT:lv:6:2:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:8:v125:stat)
+record(ai, SVT:lv:6:2:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:8:v125:stat_sub PP")
+  field(INP, "SVT:lv:6:2:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:8:stat)
+record(calc, SVT:lv:6:2:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:8:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:8:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:8:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:9:stat")
+  field(INPA, "SVT:lv:6:2:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:6:2:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:6:2:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:6:3:stat")
   
 }
 
@@ -1594,57 +1594,57 @@ record(calc, SVT:lv:hyb:top:8:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:9:dvdd:stat_sub)
+record(sub,SVT:lv:6:3:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:9:dvdd:stat)
+record(ai, SVT:lv:6:3:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:9:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:6:3:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:9:avdd:stat_sub)
+record(sub,SVT:lv:6:3:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:9:avdd:stat)
+record(ai, SVT:lv:6:3:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:9:avdd:stat_sub PP")
+  field(INP, "SVT:lv:6:3:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:9:v125:stat_sub)
+record(sub,SVT:lv:6:3:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:9:v125:stat)
+record(ai, SVT:lv:6:3:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:9:v125:stat_sub PP")
+  field(INP, "SVT:lv:6:3:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:9:stat)
+record(calc, SVT:lv:6:3:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:9:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:9:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:9:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:10:stat")
+  field(INPA, "SVT:lv:6:3:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:6:3:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:6:3:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:7:0:stat")
   
 }
 
@@ -1653,57 +1653,57 @@ record(calc, SVT:lv:hyb:top:9:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:10:dvdd:stat_sub)
+record(sub,SVT:lv:7:0:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:10:dvdd:stat)
+record(ai, SVT:lv:7:0:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:10:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:7:0:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:10:avdd:stat_sub)
+record(sub,SVT:lv:7:0:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:10:avdd:stat)
+record(ai, SVT:lv:7:0:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:10:avdd:stat_sub PP")
+  field(INP, "SVT:lv:7:0:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:10:v125:stat_sub)
+record(sub,SVT:lv:7:0:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:10:v125:stat)
+record(ai, SVT:lv:7:0:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:10:v125:stat_sub PP")
+  field(INP, "SVT:lv:7:0:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:10:stat)
+record(calc, SVT:lv:7:0:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:10:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:10:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:10:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:11:stat")
+  field(INPA, "SVT:lv:7:0:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:7:0:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:7:0:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:7:1:stat")
   
 }
 
@@ -1712,57 +1712,57 @@ record(calc, SVT:lv:hyb:top:10:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:11:dvdd:stat_sub)
+record(sub,SVT:lv:7:1:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:11:dvdd:stat)
+record(ai, SVT:lv:7:1:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:11:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:7:1:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:11:avdd:stat_sub)
+record(sub,SVT:lv:7:1:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:11:avdd:stat)
+record(ai, SVT:lv:7:1:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:11:avdd:stat_sub PP")
+  field(INP, "SVT:lv:7:1:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:11:v125:stat_sub)
+record(sub,SVT:lv:7:1:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:11:v125:stat)
+record(ai, SVT:lv:7:1:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:11:v125:stat_sub PP")
+  field(INP, "SVT:lv:7:1:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:11:stat)
+record(calc, SVT:lv:7:1:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:11:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:11:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:11:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:12:stat")
+  field(INPA, "SVT:lv:7:1:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:7:1:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:7:1:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:7:2:stat")
   
 }
 
@@ -1771,57 +1771,57 @@ record(calc, SVT:lv:hyb:top:11:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:12:dvdd:stat_sub)
+record(sub,SVT:lv:7:2:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:12:dvdd:stat)
+record(ai, SVT:lv:7:2:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:12:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:7:2:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:12:avdd:stat_sub)
+record(sub,SVT:lv:7:2:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:12:avdd:stat)
+record(ai, SVT:lv:7:2:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:12:avdd:stat_sub PP")
+  field(INP, "SVT:lv:7:2:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:12:v125:stat_sub)
+record(sub,SVT:lv:7:2:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:12:v125:stat)
+record(ai, SVT:lv:7:2:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:12:v125:stat_sub PP")
+  field(INP, "SVT:lv:7:2:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:12:stat)
+record(calc, SVT:lv:7:2:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:12:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:12:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:12:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:13:stat")
+  field(INPA, "SVT:lv:7:2:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:7:2:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:7:2:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:7:3:stat")
   
 }
 
@@ -1830,57 +1830,57 @@ record(calc, SVT:lv:hyb:top:12:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:13:dvdd:stat_sub)
+record(sub,SVT:lv:7:3:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:13:dvdd:stat)
+record(ai, SVT:lv:7:3:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:13:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:7:3:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:13:avdd:stat_sub)
+record(sub,SVT:lv:7:3:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:13:avdd:stat)
+record(ai, SVT:lv:7:3:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:13:avdd:stat_sub PP")
+  field(INP, "SVT:lv:7:3:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:13:v125:stat_sub)
+record(sub,SVT:lv:7:3:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:13:v125:stat)
+record(ai, SVT:lv:7:3:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:13:v125:stat_sub PP")
+  field(INP, "SVT:lv:7:3:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:13:stat)
+record(calc, SVT:lv:7:3:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:13:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:13:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:13:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:14:stat")
+  field(INPA, "SVT:lv:7:3:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:7:3:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:7:3:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:8:0:stat")
   
 }
 
@@ -1889,57 +1889,57 @@ record(calc, SVT:lv:hyb:top:13:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:14:dvdd:stat_sub)
+record(sub,SVT:lv:8:0:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:14:dvdd:stat)
+record(ai, SVT:lv:8:0:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:14:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:8:0:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:14:avdd:stat_sub)
+record(sub,SVT:lv:8:0:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:14:avdd:stat)
+record(ai, SVT:lv:8:0:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:14:avdd:stat_sub PP")
+  field(INP, "SVT:lv:8:0:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:14:v125:stat_sub)
+record(sub,SVT:lv:8:0:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:14:v125:stat)
+record(ai, SVT:lv:8:0:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:14:v125:stat_sub PP")
+  field(INP, "SVT:lv:8:0:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:14:stat)
+record(calc, SVT:lv:8:0:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:14:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:14:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:14:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:15:stat")
+  field(INPA, "SVT:lv:8:0:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:8:0:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:8:0:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:8:1:stat")
   
 }
 
@@ -1948,57 +1948,57 @@ record(calc, SVT:lv:hyb:top:14:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:15:dvdd:stat_sub)
+record(sub,SVT:lv:8:1:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:15:dvdd:stat)
+record(ai, SVT:lv:8:1:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:15:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:8:1:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:15:avdd:stat_sub)
+record(sub,SVT:lv:8:1:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:15:avdd:stat)
+record(ai, SVT:lv:8:1:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:15:avdd:stat_sub PP")
+  field(INP, "SVT:lv:8:1:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:15:v125:stat_sub)
+record(sub,SVT:lv:8:1:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:15:v125:stat)
+record(ai, SVT:lv:8:1:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:15:v125:stat_sub PP")
+  field(INP, "SVT:lv:8:1:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:15:stat)
+record(calc, SVT:lv:8:1:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:15:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:15:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:15:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:16:stat")
+  field(INPA, "SVT:lv:8:1:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:8:1:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:8:1:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:8:2:stat")
   
 }
 
@@ -2007,57 +2007,57 @@ record(calc, SVT:lv:hyb:top:15:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:16:dvdd:stat_sub)
+record(sub,SVT:lv:8:2:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:16:dvdd:stat)
+record(ai, SVT:lv:8:2:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:16:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:8:2:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:16:avdd:stat_sub)
+record(sub,SVT:lv:8:2:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:16:avdd:stat)
+record(ai, SVT:lv:8:2:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:16:avdd:stat_sub PP")
+  field(INP, "SVT:lv:8:2:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:16:v125:stat_sub)
+record(sub,SVT:lv:8:2:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:16:v125:stat)
+record(ai, SVT:lv:8:2:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:16:v125:stat_sub PP")
+  field(INP, "SVT:lv:8:2:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:16:stat)
+record(calc, SVT:lv:8:2:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:16:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:16:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:16:v125:stat.VAL PP")
-  field(FLNK,"SVT:lv:hyb:top:17:stat")
+  field(INPA, "SVT:lv:8:2:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:8:2:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:8:2:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:8:3:stat")
   
 }
 
@@ -2066,56 +2066,292 @@ record(calc, SVT:lv:hyb:top:16:stat)
 
 
 
-record(sub,SVT:lv:hyb:top:17:dvdd:stat_sub)
+record(sub,SVT:lv:8:3:dvdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:17:dvdd:stat)
+record(ai, SVT:lv:8:3:dvdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:17:dvdd:stat_sub PP")
+  field(INP, "SVT:lv:8:3:dvdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
-record(sub,SVT:lv:hyb:top:17:avdd:stat_sub)
+record(sub,SVT:lv:8:3:avdd:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:17:avdd:stat)
+record(ai, SVT:lv:8:3:avdd:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:17:avdd:stat_sub PP")
+  field(INP, "SVT:lv:8:3:avdd:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:hyb:top:17:v125:stat_sub)
+record(sub,SVT:lv:8:3:v125:stat_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
 }
 
-record(ai, SVT:lv:hyb:top:17:v125:stat)
+record(ai, SVT:lv:8:3:v125:stat)
 {
   field(SCAN, "Passive") field(PREC, "3")
-  field(INP, "SVT:lv:hyb:top:17:v125:stat_sub PP")
+  field(INP, "SVT:lv:8:3:v125:stat_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(calc, SVT:lv:hyb:top:17:stat)
+record(calc, SVT:lv:8:3:stat)
 {
   field(SCAN, "Passive")
   field(CALC, "A&&B&&C")
-  field(INPA, "SVT:lv:hyb:top:17:dvdd:stat.VAL PP")
-  field(INPB, "SVT:lv:hyb:top:17:avdd:stat.VAL PP")
-  field(INPC, "SVT:lv:hyb:top:17:v125:stat.VAL PP")
+  field(INPA, "SVT:lv:8:3:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:8:3:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:8:3:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:9:0:stat")
+  
+}
+
+
+
+
+
+
+record(sub,SVT:lv:9:0:dvdd:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:0:dvdd:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:0:dvdd:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:lv:9:0:avdd:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:0:avdd:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:0:avdd:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:9:0:v125:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:0:v125:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:0:v125:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(calc, SVT:lv:9:0:stat)
+{
+  field(SCAN, "Passive")
+  field(CALC, "A&&B&&C")
+  field(INPA, "SVT:lv:9:0:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:9:0:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:9:0:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:9:1:stat")
+  
+}
+
+
+
+
+
+
+record(sub,SVT:lv:9:1:dvdd:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:1:dvdd:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:1:dvdd:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:lv:9:1:avdd:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:1:avdd:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:1:avdd:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:9:1:v125:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:1:v125:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:1:v125:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(calc, SVT:lv:9:1:stat)
+{
+  field(SCAN, "Passive")
+  field(CALC, "A&&B&&C")
+  field(INPA, "SVT:lv:9:1:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:9:1:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:9:1:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:9:2:stat")
+  
+}
+
+
+
+
+
+
+record(sub,SVT:lv:9:2:dvdd:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:2:dvdd:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:2:dvdd:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:lv:9:2:avdd:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:2:avdd:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:2:avdd:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:9:2:v125:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:2:v125:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:2:v125:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(calc, SVT:lv:9:2:stat)
+{
+  field(SCAN, "Passive")
+  field(CALC, "A&&B&&C")
+  field(INPA, "SVT:lv:9:2:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:9:2:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:9:2:v125:stat.VAL PP")
+  field(FLNK,"SVT:lv:9:3:stat")
+  
+}
+
+
+
+
+
+
+record(sub,SVT:lv:9:3:dvdd:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:3:dvdd:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:3:dvdd:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+record(sub,SVT:lv:9:3:avdd:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:3:avdd:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:3:avdd:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:9:3:v125:stat_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+}
+
+record(ai, SVT:lv:9:3:v125:stat)
+{
+  field(SCAN, "Passive") field(PREC, "3")
+  field(INP, "SVT:lv:9:3:v125:stat_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(calc, SVT:lv:9:3:stat)
+{
+  field(SCAN, "Passive")
+  field(CALC, "A&&B&&C")
+  field(INPA, "SVT:lv:9:3:dvdd:stat.VAL PP")
+  field(INPB, "SVT:lv:9:3:avdd:stat.VAL PP")
+  field(INPC, "SVT:lv:9:3:v125:stat.VAL PP")
   field(FLNK,"")
   
 }
