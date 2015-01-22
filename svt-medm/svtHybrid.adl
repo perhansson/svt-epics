@@ -1,12 +1,12 @@
 
 file {
-	name="/u1/epics/svt-epics/svt-medm/svtHybrid.adl"
+	name="/u1/epics/dev/svt-epics/svt-medm/svtHybrid.adl"
 	version=030108
 }
 display {
 	object {
-		x=7
-		y=24
+		x=1465
+		y=72
 		width=1426
 		height=805
 	}
@@ -1015,7 +1015,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:daqmap:l1t:febid"
+		chan="SVT:daq:map:0:physfebid"
 		clr=30
 		bclr=14
 	}
