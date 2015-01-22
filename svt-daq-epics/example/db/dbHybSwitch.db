@@ -2,52 +2,52 @@
 
 
 
-record(sub,SVT:lv:hyb:bot:0:all:switch_sub)
+record(sub,SVT:lv:0:0:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:0:all:switch_fanout")
+    field(FLNK,"SVT:lv:0:0:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:0:all:switch)
+record(bo, SVT:lv:0:0:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:0:all:switch_sub PP")
+    field(OUT, "SVT:lv:0:0:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:0:all:switch_fanout)
+record(fanout,SVT:lv:0:0:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:0:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:0:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:0:v125:switch")
+    field(LNK1,"SVT:lv:0:0:dvdd:switch")
+    field(LNK2,"SVT:lv:0:0:avdd:switch")
+    field(LNK3,"SVT:lv:0:0:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:0:dvdd:switch)
+record(bo, SVT:lv:0:0:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:0:all:switch PP")
+    field(DOL, "SVT:lv:0:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:0:avdd:switch)
+record(bo, SVT:lv:0:0:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:0:all:switch PP")
+    field(DOL, "SVT:lv:0:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:0:v125:switch)
+record(bo, SVT:lv:0:0:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:0:all:switch PP")
+    field(DOL, "SVT:lv:0:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -60,52 +60,52 @@ record(bo, SVT:lv:hyb:bot:0:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:1:all:switch_sub)
+record(sub,SVT:lv:0:1:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:1:all:switch_fanout")
+    field(FLNK,"SVT:lv:0:1:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:1:all:switch)
+record(bo, SVT:lv:0:1:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:1:all:switch_sub PP")
+    field(OUT, "SVT:lv:0:1:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:1:all:switch_fanout)
+record(fanout,SVT:lv:0:1:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:1:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:1:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:1:v125:switch")
+    field(LNK1,"SVT:lv:0:1:dvdd:switch")
+    field(LNK2,"SVT:lv:0:1:avdd:switch")
+    field(LNK3,"SVT:lv:0:1:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:1:dvdd:switch)
+record(bo, SVT:lv:0:1:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:1:all:switch PP")
+    field(DOL, "SVT:lv:0:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:1:avdd:switch)
+record(bo, SVT:lv:0:1:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:1:all:switch PP")
+    field(DOL, "SVT:lv:0:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:1:v125:switch)
+record(bo, SVT:lv:0:1:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:1:all:switch PP")
+    field(DOL, "SVT:lv:0:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -118,52 +118,52 @@ record(bo, SVT:lv:hyb:bot:1:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:2:all:switch_sub)
+record(sub,SVT:lv:0:2:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:2:all:switch_fanout")
+    field(FLNK,"SVT:lv:0:2:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:2:all:switch)
+record(bo, SVT:lv:0:2:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:2:all:switch_sub PP")
+    field(OUT, "SVT:lv:0:2:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:2:all:switch_fanout)
+record(fanout,SVT:lv:0:2:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:2:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:2:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:2:v125:switch")
+    field(LNK1,"SVT:lv:0:2:dvdd:switch")
+    field(LNK2,"SVT:lv:0:2:avdd:switch")
+    field(LNK3,"SVT:lv:0:2:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:2:dvdd:switch)
+record(bo, SVT:lv:0:2:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:2:all:switch PP")
+    field(DOL, "SVT:lv:0:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:2:avdd:switch)
+record(bo, SVT:lv:0:2:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:2:all:switch PP")
+    field(DOL, "SVT:lv:0:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:2:v125:switch)
+record(bo, SVT:lv:0:2:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:2:all:switch PP")
+    field(DOL, "SVT:lv:0:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -176,52 +176,52 @@ record(bo, SVT:lv:hyb:bot:2:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:3:all:switch_sub)
+record(sub,SVT:lv:0:3:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:3:all:switch_fanout")
+    field(FLNK,"SVT:lv:0:3:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:3:all:switch)
+record(bo, SVT:lv:0:3:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:3:all:switch_sub PP")
+    field(OUT, "SVT:lv:0:3:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:3:all:switch_fanout)
+record(fanout,SVT:lv:0:3:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:3:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:3:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:3:v125:switch")
+    field(LNK1,"SVT:lv:0:3:dvdd:switch")
+    field(LNK2,"SVT:lv:0:3:avdd:switch")
+    field(LNK3,"SVT:lv:0:3:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:3:dvdd:switch)
+record(bo, SVT:lv:0:3:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:3:all:switch PP")
+    field(DOL, "SVT:lv:0:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:3:avdd:switch)
+record(bo, SVT:lv:0:3:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:3:all:switch PP")
+    field(DOL, "SVT:lv:0:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:3:v125:switch)
+record(bo, SVT:lv:0:3:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:3:all:switch PP")
+    field(DOL, "SVT:lv:0:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -234,52 +234,52 @@ record(bo, SVT:lv:hyb:bot:3:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:4:all:switch_sub)
+record(sub,SVT:lv:1:0:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:4:all:switch_fanout")
+    field(FLNK,"SVT:lv:1:0:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:4:all:switch)
+record(bo, SVT:lv:1:0:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:4:all:switch_sub PP")
+    field(OUT, "SVT:lv:1:0:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:4:all:switch_fanout)
+record(fanout,SVT:lv:1:0:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:4:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:4:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:4:v125:switch")
+    field(LNK1,"SVT:lv:1:0:dvdd:switch")
+    field(LNK2,"SVT:lv:1:0:avdd:switch")
+    field(LNK3,"SVT:lv:1:0:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:4:dvdd:switch)
+record(bo, SVT:lv:1:0:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:4:all:switch PP")
+    field(DOL, "SVT:lv:1:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:4:avdd:switch)
+record(bo, SVT:lv:1:0:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:4:all:switch PP")
+    field(DOL, "SVT:lv:1:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:4:v125:switch)
+record(bo, SVT:lv:1:0:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:4:all:switch PP")
+    field(DOL, "SVT:lv:1:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -292,52 +292,52 @@ record(bo, SVT:lv:hyb:bot:4:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:5:all:switch_sub)
+record(sub,SVT:lv:1:1:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:5:all:switch_fanout")
+    field(FLNK,"SVT:lv:1:1:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:5:all:switch)
+record(bo, SVT:lv:1:1:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:5:all:switch_sub PP")
+    field(OUT, "SVT:lv:1:1:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:5:all:switch_fanout)
+record(fanout,SVT:lv:1:1:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:5:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:5:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:5:v125:switch")
+    field(LNK1,"SVT:lv:1:1:dvdd:switch")
+    field(LNK2,"SVT:lv:1:1:avdd:switch")
+    field(LNK3,"SVT:lv:1:1:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:5:dvdd:switch)
+record(bo, SVT:lv:1:1:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:5:all:switch PP")
+    field(DOL, "SVT:lv:1:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:5:avdd:switch)
+record(bo, SVT:lv:1:1:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:5:all:switch PP")
+    field(DOL, "SVT:lv:1:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:5:v125:switch)
+record(bo, SVT:lv:1:1:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:5:all:switch PP")
+    field(DOL, "SVT:lv:1:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -350,52 +350,52 @@ record(bo, SVT:lv:hyb:bot:5:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:6:all:switch_sub)
+record(sub,SVT:lv:1:2:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:6:all:switch_fanout")
+    field(FLNK,"SVT:lv:1:2:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:6:all:switch)
+record(bo, SVT:lv:1:2:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:6:all:switch_sub PP")
+    field(OUT, "SVT:lv:1:2:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:6:all:switch_fanout)
+record(fanout,SVT:lv:1:2:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:6:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:6:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:6:v125:switch")
+    field(LNK1,"SVT:lv:1:2:dvdd:switch")
+    field(LNK2,"SVT:lv:1:2:avdd:switch")
+    field(LNK3,"SVT:lv:1:2:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:6:dvdd:switch)
+record(bo, SVT:lv:1:2:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:6:all:switch PP")
+    field(DOL, "SVT:lv:1:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:6:avdd:switch)
+record(bo, SVT:lv:1:2:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:6:all:switch PP")
+    field(DOL, "SVT:lv:1:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:6:v125:switch)
+record(bo, SVT:lv:1:2:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:6:all:switch PP")
+    field(DOL, "SVT:lv:1:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -408,52 +408,52 @@ record(bo, SVT:lv:hyb:bot:6:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:7:all:switch_sub)
+record(sub,SVT:lv:1:3:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:7:all:switch_fanout")
+    field(FLNK,"SVT:lv:1:3:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:7:all:switch)
+record(bo, SVT:lv:1:3:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:7:all:switch_sub PP")
+    field(OUT, "SVT:lv:1:3:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:7:all:switch_fanout)
+record(fanout,SVT:lv:1:3:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:7:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:7:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:7:v125:switch")
+    field(LNK1,"SVT:lv:1:3:dvdd:switch")
+    field(LNK2,"SVT:lv:1:3:avdd:switch")
+    field(LNK3,"SVT:lv:1:3:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:7:dvdd:switch)
+record(bo, SVT:lv:1:3:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:7:all:switch PP")
+    field(DOL, "SVT:lv:1:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:7:avdd:switch)
+record(bo, SVT:lv:1:3:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:7:all:switch PP")
+    field(DOL, "SVT:lv:1:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:7:v125:switch)
+record(bo, SVT:lv:1:3:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:7:all:switch PP")
+    field(DOL, "SVT:lv:1:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -466,52 +466,52 @@ record(bo, SVT:lv:hyb:bot:7:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:8:all:switch_sub)
+record(sub,SVT:lv:2:0:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:8:all:switch_fanout")
+    field(FLNK,"SVT:lv:2:0:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:8:all:switch)
+record(bo, SVT:lv:2:0:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:8:all:switch_sub PP")
+    field(OUT, "SVT:lv:2:0:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:8:all:switch_fanout)
+record(fanout,SVT:lv:2:0:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:8:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:8:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:8:v125:switch")
+    field(LNK1,"SVT:lv:2:0:dvdd:switch")
+    field(LNK2,"SVT:lv:2:0:avdd:switch")
+    field(LNK3,"SVT:lv:2:0:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:8:dvdd:switch)
+record(bo, SVT:lv:2:0:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:8:all:switch PP")
+    field(DOL, "SVT:lv:2:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:8:avdd:switch)
+record(bo, SVT:lv:2:0:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:8:all:switch PP")
+    field(DOL, "SVT:lv:2:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:8:v125:switch)
+record(bo, SVT:lv:2:0:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:8:all:switch PP")
+    field(DOL, "SVT:lv:2:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -524,52 +524,52 @@ record(bo, SVT:lv:hyb:bot:8:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:9:all:switch_sub)
+record(sub,SVT:lv:2:1:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:9:all:switch_fanout")
+    field(FLNK,"SVT:lv:2:1:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:9:all:switch)
+record(bo, SVT:lv:2:1:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:9:all:switch_sub PP")
+    field(OUT, "SVT:lv:2:1:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:9:all:switch_fanout)
+record(fanout,SVT:lv:2:1:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:9:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:9:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:9:v125:switch")
+    field(LNK1,"SVT:lv:2:1:dvdd:switch")
+    field(LNK2,"SVT:lv:2:1:avdd:switch")
+    field(LNK3,"SVT:lv:2:1:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:9:dvdd:switch)
+record(bo, SVT:lv:2:1:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:9:all:switch PP")
+    field(DOL, "SVT:lv:2:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:9:avdd:switch)
+record(bo, SVT:lv:2:1:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:9:all:switch PP")
+    field(DOL, "SVT:lv:2:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:9:v125:switch)
+record(bo, SVT:lv:2:1:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:9:all:switch PP")
+    field(DOL, "SVT:lv:2:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -582,52 +582,52 @@ record(bo, SVT:lv:hyb:bot:9:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:10:all:switch_sub)
+record(sub,SVT:lv:2:2:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:10:all:switch_fanout")
+    field(FLNK,"SVT:lv:2:2:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:10:all:switch)
+record(bo, SVT:lv:2:2:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:10:all:switch_sub PP")
+    field(OUT, "SVT:lv:2:2:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:10:all:switch_fanout)
+record(fanout,SVT:lv:2:2:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:10:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:10:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:10:v125:switch")
+    field(LNK1,"SVT:lv:2:2:dvdd:switch")
+    field(LNK2,"SVT:lv:2:2:avdd:switch")
+    field(LNK3,"SVT:lv:2:2:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:10:dvdd:switch)
+record(bo, SVT:lv:2:2:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:10:all:switch PP")
+    field(DOL, "SVT:lv:2:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:10:avdd:switch)
+record(bo, SVT:lv:2:2:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:10:all:switch PP")
+    field(DOL, "SVT:lv:2:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:10:v125:switch)
+record(bo, SVT:lv:2:2:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:10:all:switch PP")
+    field(DOL, "SVT:lv:2:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -640,52 +640,52 @@ record(bo, SVT:lv:hyb:bot:10:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:11:all:switch_sub)
+record(sub,SVT:lv:2:3:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:11:all:switch_fanout")
+    field(FLNK,"SVT:lv:2:3:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:11:all:switch)
+record(bo, SVT:lv:2:3:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:11:all:switch_sub PP")
+    field(OUT, "SVT:lv:2:3:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:11:all:switch_fanout)
+record(fanout,SVT:lv:2:3:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:11:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:11:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:11:v125:switch")
+    field(LNK1,"SVT:lv:2:3:dvdd:switch")
+    field(LNK2,"SVT:lv:2:3:avdd:switch")
+    field(LNK3,"SVT:lv:2:3:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:11:dvdd:switch)
+record(bo, SVT:lv:2:3:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:11:all:switch PP")
+    field(DOL, "SVT:lv:2:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:11:avdd:switch)
+record(bo, SVT:lv:2:3:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:11:all:switch PP")
+    field(DOL, "SVT:lv:2:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:11:v125:switch)
+record(bo, SVT:lv:2:3:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:11:all:switch PP")
+    field(DOL, "SVT:lv:2:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -698,52 +698,52 @@ record(bo, SVT:lv:hyb:bot:11:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:12:all:switch_sub)
+record(sub,SVT:lv:3:0:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:12:all:switch_fanout")
+    field(FLNK,"SVT:lv:3:0:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:12:all:switch)
+record(bo, SVT:lv:3:0:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:12:all:switch_sub PP")
+    field(OUT, "SVT:lv:3:0:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:12:all:switch_fanout)
+record(fanout,SVT:lv:3:0:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:12:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:12:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:12:v125:switch")
+    field(LNK1,"SVT:lv:3:0:dvdd:switch")
+    field(LNK2,"SVT:lv:3:0:avdd:switch")
+    field(LNK3,"SVT:lv:3:0:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:12:dvdd:switch)
+record(bo, SVT:lv:3:0:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:12:all:switch PP")
+    field(DOL, "SVT:lv:3:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:12:avdd:switch)
+record(bo, SVT:lv:3:0:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:12:all:switch PP")
+    field(DOL, "SVT:lv:3:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:12:v125:switch)
+record(bo, SVT:lv:3:0:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:12:all:switch PP")
+    field(DOL, "SVT:lv:3:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -756,52 +756,52 @@ record(bo, SVT:lv:hyb:bot:12:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:13:all:switch_sub)
+record(sub,SVT:lv:3:1:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:13:all:switch_fanout")
+    field(FLNK,"SVT:lv:3:1:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:13:all:switch)
+record(bo, SVT:lv:3:1:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:13:all:switch_sub PP")
+    field(OUT, "SVT:lv:3:1:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:13:all:switch_fanout)
+record(fanout,SVT:lv:3:1:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:13:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:13:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:13:v125:switch")
+    field(LNK1,"SVT:lv:3:1:dvdd:switch")
+    field(LNK2,"SVT:lv:3:1:avdd:switch")
+    field(LNK3,"SVT:lv:3:1:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:13:dvdd:switch)
+record(bo, SVT:lv:3:1:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:13:all:switch PP")
+    field(DOL, "SVT:lv:3:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:13:avdd:switch)
+record(bo, SVT:lv:3:1:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:13:all:switch PP")
+    field(DOL, "SVT:lv:3:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:13:v125:switch)
+record(bo, SVT:lv:3:1:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:13:all:switch PP")
+    field(DOL, "SVT:lv:3:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -814,52 +814,52 @@ record(bo, SVT:lv:hyb:bot:13:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:14:all:switch_sub)
+record(sub,SVT:lv:3:2:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:14:all:switch_fanout")
+    field(FLNK,"SVT:lv:3:2:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:14:all:switch)
+record(bo, SVT:lv:3:2:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:14:all:switch_sub PP")
+    field(OUT, "SVT:lv:3:2:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:14:all:switch_fanout)
+record(fanout,SVT:lv:3:2:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:14:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:14:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:14:v125:switch")
+    field(LNK1,"SVT:lv:3:2:dvdd:switch")
+    field(LNK2,"SVT:lv:3:2:avdd:switch")
+    field(LNK3,"SVT:lv:3:2:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:14:dvdd:switch)
+record(bo, SVT:lv:3:2:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:14:all:switch PP")
+    field(DOL, "SVT:lv:3:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:14:avdd:switch)
+record(bo, SVT:lv:3:2:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:14:all:switch PP")
+    field(DOL, "SVT:lv:3:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:14:v125:switch)
+record(bo, SVT:lv:3:2:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:14:all:switch PP")
+    field(DOL, "SVT:lv:3:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -872,52 +872,52 @@ record(bo, SVT:lv:hyb:bot:14:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:15:all:switch_sub)
+record(sub,SVT:lv:3:3:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:15:all:switch_fanout")
+    field(FLNK,"SVT:lv:3:3:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:15:all:switch)
+record(bo, SVT:lv:3:3:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:15:all:switch_sub PP")
+    field(OUT, "SVT:lv:3:3:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:15:all:switch_fanout)
+record(fanout,SVT:lv:3:3:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:15:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:15:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:15:v125:switch")
+    field(LNK1,"SVT:lv:3:3:dvdd:switch")
+    field(LNK2,"SVT:lv:3:3:avdd:switch")
+    field(LNK3,"SVT:lv:3:3:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:15:dvdd:switch)
+record(bo, SVT:lv:3:3:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:15:all:switch PP")
+    field(DOL, "SVT:lv:3:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:15:avdd:switch)
+record(bo, SVT:lv:3:3:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:15:all:switch PP")
+    field(DOL, "SVT:lv:3:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:15:v125:switch)
+record(bo, SVT:lv:3:3:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:15:all:switch PP")
+    field(DOL, "SVT:lv:3:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -930,52 +930,52 @@ record(bo, SVT:lv:hyb:bot:15:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:16:all:switch_sub)
+record(sub,SVT:lv:4:0:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:16:all:switch_fanout")
+    field(FLNK,"SVT:lv:4:0:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:16:all:switch)
+record(bo, SVT:lv:4:0:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:16:all:switch_sub PP")
+    field(OUT, "SVT:lv:4:0:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:16:all:switch_fanout)
+record(fanout,SVT:lv:4:0:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:16:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:16:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:16:v125:switch")
+    field(LNK1,"SVT:lv:4:0:dvdd:switch")
+    field(LNK2,"SVT:lv:4:0:avdd:switch")
+    field(LNK3,"SVT:lv:4:0:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:16:dvdd:switch)
+record(bo, SVT:lv:4:0:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:16:all:switch PP")
+    field(DOL, "SVT:lv:4:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:16:avdd:switch)
+record(bo, SVT:lv:4:0:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:16:all:switch PP")
+    field(DOL, "SVT:lv:4:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:16:v125:switch)
+record(bo, SVT:lv:4:0:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:16:all:switch PP")
+    field(DOL, "SVT:lv:4:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -988,52 +988,52 @@ record(bo, SVT:lv:hyb:bot:16:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:bot:17:all:switch_sub)
+record(sub,SVT:lv:4:1:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:bot:17:all:switch_fanout")
+    field(FLNK,"SVT:lv:4:1:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:bot:17:all:switch)
+record(bo, SVT:lv:4:1:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:bot:17:all:switch_sub PP")
+    field(OUT, "SVT:lv:4:1:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:bot:17:all:switch_fanout)
+record(fanout,SVT:lv:4:1:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:bot:17:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:bot:17:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:bot:17:v125:switch")
+    field(LNK1,"SVT:lv:4:1:dvdd:switch")
+    field(LNK2,"SVT:lv:4:1:avdd:switch")
+    field(LNK3,"SVT:lv:4:1:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:bot:17:dvdd:switch)
+record(bo, SVT:lv:4:1:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:17:all:switch PP")
+    field(DOL, "SVT:lv:4:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:17:avdd:switch)
+record(bo, SVT:lv:4:1:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:17:all:switch PP")
+    field(DOL, "SVT:lv:4:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:17:v125:switch)
+record(bo, SVT:lv:4:1:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:bot:17:all:switch PP")
+    field(DOL, "SVT:lv:4:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1046,52 +1046,52 @@ record(bo, SVT:lv:hyb:bot:17:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:0:all:switch_sub)
+record(sub,SVT:lv:4:2:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:0:all:switch_fanout")
+    field(FLNK,"SVT:lv:4:2:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:0:all:switch)
+record(bo, SVT:lv:4:2:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:0:all:switch_sub PP")
+    field(OUT, "SVT:lv:4:2:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:0:all:switch_fanout)
+record(fanout,SVT:lv:4:2:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:0:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:0:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:0:v125:switch")
+    field(LNK1,"SVT:lv:4:2:dvdd:switch")
+    field(LNK2,"SVT:lv:4:2:avdd:switch")
+    field(LNK3,"SVT:lv:4:2:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:0:dvdd:switch)
+record(bo, SVT:lv:4:2:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:0:all:switch PP")
+    field(DOL, "SVT:lv:4:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:0:avdd:switch)
+record(bo, SVT:lv:4:2:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:0:all:switch PP")
+    field(DOL, "SVT:lv:4:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:0:v125:switch)
+record(bo, SVT:lv:4:2:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:0:all:switch PP")
+    field(DOL, "SVT:lv:4:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1104,52 +1104,52 @@ record(bo, SVT:lv:hyb:top:0:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:1:all:switch_sub)
+record(sub,SVT:lv:4:3:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:1:all:switch_fanout")
+    field(FLNK,"SVT:lv:4:3:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:1:all:switch)
+record(bo, SVT:lv:4:3:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:1:all:switch_sub PP")
+    field(OUT, "SVT:lv:4:3:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:1:all:switch_fanout)
+record(fanout,SVT:lv:4:3:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:1:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:1:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:1:v125:switch")
+    field(LNK1,"SVT:lv:4:3:dvdd:switch")
+    field(LNK2,"SVT:lv:4:3:avdd:switch")
+    field(LNK3,"SVT:lv:4:3:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:1:dvdd:switch)
+record(bo, SVT:lv:4:3:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:1:all:switch PP")
+    field(DOL, "SVT:lv:4:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:1:avdd:switch)
+record(bo, SVT:lv:4:3:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:1:all:switch PP")
+    field(DOL, "SVT:lv:4:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:1:v125:switch)
+record(bo, SVT:lv:4:3:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:1:all:switch PP")
+    field(DOL, "SVT:lv:4:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1162,52 +1162,52 @@ record(bo, SVT:lv:hyb:top:1:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:2:all:switch_sub)
+record(sub,SVT:lv:5:0:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:2:all:switch_fanout")
+    field(FLNK,"SVT:lv:5:0:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:2:all:switch)
+record(bo, SVT:lv:5:0:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:2:all:switch_sub PP")
+    field(OUT, "SVT:lv:5:0:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:2:all:switch_fanout)
+record(fanout,SVT:lv:5:0:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:2:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:2:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:2:v125:switch")
+    field(LNK1,"SVT:lv:5:0:dvdd:switch")
+    field(LNK2,"SVT:lv:5:0:avdd:switch")
+    field(LNK3,"SVT:lv:5:0:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:2:dvdd:switch)
+record(bo, SVT:lv:5:0:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:2:all:switch PP")
+    field(DOL, "SVT:lv:5:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:2:avdd:switch)
+record(bo, SVT:lv:5:0:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:2:all:switch PP")
+    field(DOL, "SVT:lv:5:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:2:v125:switch)
+record(bo, SVT:lv:5:0:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:2:all:switch PP")
+    field(DOL, "SVT:lv:5:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1220,52 +1220,52 @@ record(bo, SVT:lv:hyb:top:2:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:3:all:switch_sub)
+record(sub,SVT:lv:5:1:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:3:all:switch_fanout")
+    field(FLNK,"SVT:lv:5:1:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:3:all:switch)
+record(bo, SVT:lv:5:1:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:3:all:switch_sub PP")
+    field(OUT, "SVT:lv:5:1:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:3:all:switch_fanout)
+record(fanout,SVT:lv:5:1:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:3:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:3:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:3:v125:switch")
+    field(LNK1,"SVT:lv:5:1:dvdd:switch")
+    field(LNK2,"SVT:lv:5:1:avdd:switch")
+    field(LNK3,"SVT:lv:5:1:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:3:dvdd:switch)
+record(bo, SVT:lv:5:1:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:3:all:switch PP")
+    field(DOL, "SVT:lv:5:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:3:avdd:switch)
+record(bo, SVT:lv:5:1:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:3:all:switch PP")
+    field(DOL, "SVT:lv:5:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:3:v125:switch)
+record(bo, SVT:lv:5:1:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:3:all:switch PP")
+    field(DOL, "SVT:lv:5:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1278,52 +1278,52 @@ record(bo, SVT:lv:hyb:top:3:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:4:all:switch_sub)
+record(sub,SVT:lv:5:2:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:4:all:switch_fanout")
+    field(FLNK,"SVT:lv:5:2:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:4:all:switch)
+record(bo, SVT:lv:5:2:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:4:all:switch_sub PP")
+    field(OUT, "SVT:lv:5:2:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:4:all:switch_fanout)
+record(fanout,SVT:lv:5:2:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:4:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:4:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:4:v125:switch")
+    field(LNK1,"SVT:lv:5:2:dvdd:switch")
+    field(LNK2,"SVT:lv:5:2:avdd:switch")
+    field(LNK3,"SVT:lv:5:2:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:4:dvdd:switch)
+record(bo, SVT:lv:5:2:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:4:all:switch PP")
+    field(DOL, "SVT:lv:5:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:4:avdd:switch)
+record(bo, SVT:lv:5:2:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:4:all:switch PP")
+    field(DOL, "SVT:lv:5:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:4:v125:switch)
+record(bo, SVT:lv:5:2:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:4:all:switch PP")
+    field(DOL, "SVT:lv:5:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1336,52 +1336,52 @@ record(bo, SVT:lv:hyb:top:4:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:5:all:switch_sub)
+record(sub,SVT:lv:5:3:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:5:all:switch_fanout")
+    field(FLNK,"SVT:lv:5:3:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:5:all:switch)
+record(bo, SVT:lv:5:3:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:5:all:switch_sub PP")
+    field(OUT, "SVT:lv:5:3:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:5:all:switch_fanout)
+record(fanout,SVT:lv:5:3:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:5:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:5:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:5:v125:switch")
+    field(LNK1,"SVT:lv:5:3:dvdd:switch")
+    field(LNK2,"SVT:lv:5:3:avdd:switch")
+    field(LNK3,"SVT:lv:5:3:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:5:dvdd:switch)
+record(bo, SVT:lv:5:3:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:5:all:switch PP")
+    field(DOL, "SVT:lv:5:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:5:avdd:switch)
+record(bo, SVT:lv:5:3:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:5:all:switch PP")
+    field(DOL, "SVT:lv:5:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:5:v125:switch)
+record(bo, SVT:lv:5:3:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:5:all:switch PP")
+    field(DOL, "SVT:lv:5:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1394,52 +1394,52 @@ record(bo, SVT:lv:hyb:top:5:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:6:all:switch_sub)
+record(sub,SVT:lv:6:0:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:6:all:switch_fanout")
+    field(FLNK,"SVT:lv:6:0:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:6:all:switch)
+record(bo, SVT:lv:6:0:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:6:all:switch_sub PP")
+    field(OUT, "SVT:lv:6:0:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:6:all:switch_fanout)
+record(fanout,SVT:lv:6:0:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:6:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:6:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:6:v125:switch")
+    field(LNK1,"SVT:lv:6:0:dvdd:switch")
+    field(LNK2,"SVT:lv:6:0:avdd:switch")
+    field(LNK3,"SVT:lv:6:0:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:6:dvdd:switch)
+record(bo, SVT:lv:6:0:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:6:all:switch PP")
+    field(DOL, "SVT:lv:6:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:6:avdd:switch)
+record(bo, SVT:lv:6:0:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:6:all:switch PP")
+    field(DOL, "SVT:lv:6:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:6:v125:switch)
+record(bo, SVT:lv:6:0:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:6:all:switch PP")
+    field(DOL, "SVT:lv:6:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1452,52 +1452,52 @@ record(bo, SVT:lv:hyb:top:6:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:7:all:switch_sub)
+record(sub,SVT:lv:6:1:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:7:all:switch_fanout")
+    field(FLNK,"SVT:lv:6:1:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:7:all:switch)
+record(bo, SVT:lv:6:1:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:7:all:switch_sub PP")
+    field(OUT, "SVT:lv:6:1:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:7:all:switch_fanout)
+record(fanout,SVT:lv:6:1:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:7:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:7:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:7:v125:switch")
+    field(LNK1,"SVT:lv:6:1:dvdd:switch")
+    field(LNK2,"SVT:lv:6:1:avdd:switch")
+    field(LNK3,"SVT:lv:6:1:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:7:dvdd:switch)
+record(bo, SVT:lv:6:1:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:7:all:switch PP")
+    field(DOL, "SVT:lv:6:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:7:avdd:switch)
+record(bo, SVT:lv:6:1:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:7:all:switch PP")
+    field(DOL, "SVT:lv:6:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:7:v125:switch)
+record(bo, SVT:lv:6:1:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:7:all:switch PP")
+    field(DOL, "SVT:lv:6:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1510,52 +1510,52 @@ record(bo, SVT:lv:hyb:top:7:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:8:all:switch_sub)
+record(sub,SVT:lv:6:2:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:8:all:switch_fanout")
+    field(FLNK,"SVT:lv:6:2:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:8:all:switch)
+record(bo, SVT:lv:6:2:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:8:all:switch_sub PP")
+    field(OUT, "SVT:lv:6:2:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:8:all:switch_fanout)
+record(fanout,SVT:lv:6:2:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:8:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:8:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:8:v125:switch")
+    field(LNK1,"SVT:lv:6:2:dvdd:switch")
+    field(LNK2,"SVT:lv:6:2:avdd:switch")
+    field(LNK3,"SVT:lv:6:2:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:8:dvdd:switch)
+record(bo, SVT:lv:6:2:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:8:all:switch PP")
+    field(DOL, "SVT:lv:6:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:8:avdd:switch)
+record(bo, SVT:lv:6:2:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:8:all:switch PP")
+    field(DOL, "SVT:lv:6:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:8:v125:switch)
+record(bo, SVT:lv:6:2:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:8:all:switch PP")
+    field(DOL, "SVT:lv:6:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1568,52 +1568,52 @@ record(bo, SVT:lv:hyb:top:8:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:9:all:switch_sub)
+record(sub,SVT:lv:6:3:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:9:all:switch_fanout")
+    field(FLNK,"SVT:lv:6:3:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:9:all:switch)
+record(bo, SVT:lv:6:3:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:9:all:switch_sub PP")
+    field(OUT, "SVT:lv:6:3:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:9:all:switch_fanout)
+record(fanout,SVT:lv:6:3:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:9:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:9:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:9:v125:switch")
+    field(LNK1,"SVT:lv:6:3:dvdd:switch")
+    field(LNK2,"SVT:lv:6:3:avdd:switch")
+    field(LNK3,"SVT:lv:6:3:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:9:dvdd:switch)
+record(bo, SVT:lv:6:3:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:9:all:switch PP")
+    field(DOL, "SVT:lv:6:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:9:avdd:switch)
+record(bo, SVT:lv:6:3:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:9:all:switch PP")
+    field(DOL, "SVT:lv:6:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:9:v125:switch)
+record(bo, SVT:lv:6:3:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:9:all:switch PP")
+    field(DOL, "SVT:lv:6:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1626,52 +1626,52 @@ record(bo, SVT:lv:hyb:top:9:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:10:all:switch_sub)
+record(sub,SVT:lv:7:0:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:10:all:switch_fanout")
+    field(FLNK,"SVT:lv:7:0:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:10:all:switch)
+record(bo, SVT:lv:7:0:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:10:all:switch_sub PP")
+    field(OUT, "SVT:lv:7:0:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:10:all:switch_fanout)
+record(fanout,SVT:lv:7:0:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:10:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:10:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:10:v125:switch")
+    field(LNK1,"SVT:lv:7:0:dvdd:switch")
+    field(LNK2,"SVT:lv:7:0:avdd:switch")
+    field(LNK3,"SVT:lv:7:0:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:10:dvdd:switch)
+record(bo, SVT:lv:7:0:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:10:all:switch PP")
+    field(DOL, "SVT:lv:7:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:10:avdd:switch)
+record(bo, SVT:lv:7:0:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:10:all:switch PP")
+    field(DOL, "SVT:lv:7:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:10:v125:switch)
+record(bo, SVT:lv:7:0:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:10:all:switch PP")
+    field(DOL, "SVT:lv:7:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1684,52 +1684,52 @@ record(bo, SVT:lv:hyb:top:10:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:11:all:switch_sub)
+record(sub,SVT:lv:7:1:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:11:all:switch_fanout")
+    field(FLNK,"SVT:lv:7:1:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:11:all:switch)
+record(bo, SVT:lv:7:1:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:11:all:switch_sub PP")
+    field(OUT, "SVT:lv:7:1:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:11:all:switch_fanout)
+record(fanout,SVT:lv:7:1:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:11:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:11:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:11:v125:switch")
+    field(LNK1,"SVT:lv:7:1:dvdd:switch")
+    field(LNK2,"SVT:lv:7:1:avdd:switch")
+    field(LNK3,"SVT:lv:7:1:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:11:dvdd:switch)
+record(bo, SVT:lv:7:1:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:11:all:switch PP")
+    field(DOL, "SVT:lv:7:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:11:avdd:switch)
+record(bo, SVT:lv:7:1:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:11:all:switch PP")
+    field(DOL, "SVT:lv:7:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:11:v125:switch)
+record(bo, SVT:lv:7:1:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:11:all:switch PP")
+    field(DOL, "SVT:lv:7:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1742,52 +1742,52 @@ record(bo, SVT:lv:hyb:top:11:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:12:all:switch_sub)
+record(sub,SVT:lv:7:2:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:12:all:switch_fanout")
+    field(FLNK,"SVT:lv:7:2:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:12:all:switch)
+record(bo, SVT:lv:7:2:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:12:all:switch_sub PP")
+    field(OUT, "SVT:lv:7:2:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:12:all:switch_fanout)
+record(fanout,SVT:lv:7:2:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:12:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:12:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:12:v125:switch")
+    field(LNK1,"SVT:lv:7:2:dvdd:switch")
+    field(LNK2,"SVT:lv:7:2:avdd:switch")
+    field(LNK3,"SVT:lv:7:2:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:12:dvdd:switch)
+record(bo, SVT:lv:7:2:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:12:all:switch PP")
+    field(DOL, "SVT:lv:7:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:12:avdd:switch)
+record(bo, SVT:lv:7:2:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:12:all:switch PP")
+    field(DOL, "SVT:lv:7:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:12:v125:switch)
+record(bo, SVT:lv:7:2:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:12:all:switch PP")
+    field(DOL, "SVT:lv:7:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1800,52 +1800,52 @@ record(bo, SVT:lv:hyb:top:12:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:13:all:switch_sub)
+record(sub,SVT:lv:7:3:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:13:all:switch_fanout")
+    field(FLNK,"SVT:lv:7:3:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:13:all:switch)
+record(bo, SVT:lv:7:3:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:13:all:switch_sub PP")
+    field(OUT, "SVT:lv:7:3:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:13:all:switch_fanout)
+record(fanout,SVT:lv:7:3:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:13:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:13:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:13:v125:switch")
+    field(LNK1,"SVT:lv:7:3:dvdd:switch")
+    field(LNK2,"SVT:lv:7:3:avdd:switch")
+    field(LNK3,"SVT:lv:7:3:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:13:dvdd:switch)
+record(bo, SVT:lv:7:3:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:13:all:switch PP")
+    field(DOL, "SVT:lv:7:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:13:avdd:switch)
+record(bo, SVT:lv:7:3:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:13:all:switch PP")
+    field(DOL, "SVT:lv:7:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:13:v125:switch)
+record(bo, SVT:lv:7:3:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:13:all:switch PP")
+    field(DOL, "SVT:lv:7:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1858,52 +1858,52 @@ record(bo, SVT:lv:hyb:top:13:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:14:all:switch_sub)
+record(sub,SVT:lv:8:0:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:14:all:switch_fanout")
+    field(FLNK,"SVT:lv:8:0:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:14:all:switch)
+record(bo, SVT:lv:8:0:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:14:all:switch_sub PP")
+    field(OUT, "SVT:lv:8:0:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:14:all:switch_fanout)
+record(fanout,SVT:lv:8:0:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:14:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:14:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:14:v125:switch")
+    field(LNK1,"SVT:lv:8:0:dvdd:switch")
+    field(LNK2,"SVT:lv:8:0:avdd:switch")
+    field(LNK3,"SVT:lv:8:0:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:14:dvdd:switch)
+record(bo, SVT:lv:8:0:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:14:all:switch PP")
+    field(DOL, "SVT:lv:8:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:14:avdd:switch)
+record(bo, SVT:lv:8:0:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:14:all:switch PP")
+    field(DOL, "SVT:lv:8:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:14:v125:switch)
+record(bo, SVT:lv:8:0:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:14:all:switch PP")
+    field(DOL, "SVT:lv:8:0:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1916,52 +1916,52 @@ record(bo, SVT:lv:hyb:top:14:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:15:all:switch_sub)
+record(sub,SVT:lv:8:1:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:15:all:switch_fanout")
+    field(FLNK,"SVT:lv:8:1:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:15:all:switch)
+record(bo, SVT:lv:8:1:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:15:all:switch_sub PP")
+    field(OUT, "SVT:lv:8:1:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:15:all:switch_fanout)
+record(fanout,SVT:lv:8:1:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:15:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:15:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:15:v125:switch")
+    field(LNK1,"SVT:lv:8:1:dvdd:switch")
+    field(LNK2,"SVT:lv:8:1:avdd:switch")
+    field(LNK3,"SVT:lv:8:1:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:15:dvdd:switch)
+record(bo, SVT:lv:8:1:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:15:all:switch PP")
+    field(DOL, "SVT:lv:8:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:15:avdd:switch)
+record(bo, SVT:lv:8:1:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:15:all:switch PP")
+    field(DOL, "SVT:lv:8:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:15:v125:switch)
+record(bo, SVT:lv:8:1:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:15:all:switch PP")
+    field(DOL, "SVT:lv:8:1:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -1974,52 +1974,52 @@ record(bo, SVT:lv:hyb:top:15:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:16:all:switch_sub)
+record(sub,SVT:lv:8:2:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:16:all:switch_fanout")
+    field(FLNK,"SVT:lv:8:2:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:16:all:switch)
+record(bo, SVT:lv:8:2:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:16:all:switch_sub PP")
+    field(OUT, "SVT:lv:8:2:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:16:all:switch_fanout)
+record(fanout,SVT:lv:8:2:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:16:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:16:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:16:v125:switch")
+    field(LNK1,"SVT:lv:8:2:dvdd:switch")
+    field(LNK2,"SVT:lv:8:2:avdd:switch")
+    field(LNK3,"SVT:lv:8:2:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:16:dvdd:switch)
+record(bo, SVT:lv:8:2:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:16:all:switch PP")
+    field(DOL, "SVT:lv:8:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:16:avdd:switch)
+record(bo, SVT:lv:8:2:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:16:all:switch PP")
+    field(DOL, "SVT:lv:8:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:16:v125:switch)
+record(bo, SVT:lv:8:2:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:16:all:switch PP")
+    field(DOL, "SVT:lv:8:2:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -2032,52 +2032,52 @@ record(bo, SVT:lv:hyb:top:16:v125:switch)
 
 
 
-record(sub,SVT:lv:hyb:top:17:all:switch_sub)
+record(sub,SVT:lv:8:3:all:switch_sub)
 {
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
     field(SCAN,"Passive")
-    field(FLNK,"SVT:lv:hyb:top:17:all:switch_fanout")
+    field(FLNK,"SVT:lv:8:3:all:switch_fanout")
 }
 
-record(bo, SVT:lv:hyb:top:17:all:switch)
+record(bo, SVT:lv:8:3:all:switch)
 {
-    field(OUT, "SVT:lv:hyb:top:17:all:switch_sub PP")
+    field(OUT, "SVT:lv:8:3:all:switch_sub PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "supervisory")
 }
 
-record(fanout,SVT:lv:hyb:top:17:all:switch_fanout)
+record(fanout,SVT:lv:8:3:all:switch_fanout)
 {
-    field(LNK1,"SVT:lv:hyb:top:17:dvdd:switch")
-    field(LNK2,"SVT:lv:hyb:top:17:avdd:switch")
-    field(LNK3,"SVT:lv:hyb:top:17:v125:switch")
+    field(LNK1,"SVT:lv:8:3:dvdd:switch")
+    field(LNK2,"SVT:lv:8:3:avdd:switch")
+    field(LNK3,"SVT:lv:8:3:v125:switch")
 }
 
 
-record(bo, SVT:lv:hyb:top:17:dvdd:switch)
+record(bo, SVT:lv:8:3:dvdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:17:all:switch PP")
+    field(DOL, "SVT:lv:8:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:17:avdd:switch)
+record(bo, SVT:lv:8:3:avdd:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:17:all:switch PP")
+    field(DOL, "SVT:lv:8:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:top:17:v125:switch)
+record(bo, SVT:lv:8:3:v125:switch)
 {
-    field(DOL, "SVT:lv:hyb:top:17:all:switch PP")
+    field(DOL, "SVT:lv:8:3:all:switch PP")
     field(DTYP,"Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
@@ -2087,107 +2087,394 @@ record(bo, SVT:lv:hyb:top:17:v125:switch)
 
 
 
-record(dfanout,SVT:lv:hyb:bot:all:switch_fanout1)
+
+
+
+record(sub,SVT:lv:9:0:all:switch_sub)
 {
-    field(OUTA,"SVT:lv:hyb:bot:0:all:switch.VAL PP")
-    field(OUTB,"SVT:lv:hyb:bot:1:all:switch.VAL PP")
-    field(OUTC,"SVT:lv:hyb:bot:2:all:switch.VAL PP")
-    field(OUTD,"SVT:lv:hyb:bot:3:all:switch.VAL PP")
-    field(OUTE,"SVT:lv:hyb:bot:4:all:switch.VAL PP")
-    field(OUTF,"SVT:lv:hyb:bot:5:all:switch.VAL PP")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:9:0:all:switch_fanout")
 }
 
-record(dfanout,SVT:lv:hyb:bot:all:switch_fanout2)
+record(bo, SVT:lv:9:0:all:switch)
 {
-    field(OUTA,"SVT:lv:hyb:bot:6:all:switch.VAL PP")
-    field(OUTB,"SVT:lv:hyb:bot:7:all:switch.VAL PP")
-    field(OUTC,"SVT:lv:hyb:bot:8:all:switch.VAL PP")
-    field(OUTD,"SVT:lv:hyb:bot:9:all:switch.VAL PP")
-    field(OUTE,"SVT:lv:hyb:bot:10:all:switch.VAL PP")
-    field(OUTF,"SVT:lv:hyb:bot:11:all:switch.VAL PP")
+    field(OUT, "SVT:lv:9:0:all:switch_sub PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "supervisory")
 }
 
-record(dfanout,SVT:lv:hyb:bot:all:switch_fanout3)
+record(fanout,SVT:lv:9:0:all:switch_fanout)
 {
-    field(OUTA,"SVT:lv:hyb:bot:12:all:switch.VAL PP")
-    field(OUTB,"SVT:lv:hyb:bot:13:all:switch.VAL PP")
-    field(OUTC,"SVT:lv:hyb:bot:14:all:switch.VAL PP")
-    field(OUTD,"SVT:lv:hyb:bot:15:all:switch.VAL PP")
-    field(OUTE,"SVT:lv:hyb:bot:16:all:switch.VAL PP")
-    field(OUTF,"SVT:lv:hyb:bot:17:all:switch.VAL PP")
+    field(LNK1,"SVT:lv:9:0:dvdd:switch")
+    field(LNK2,"SVT:lv:9:0:avdd:switch")
+    field(LNK3,"SVT:lv:9:0:v125:switch")
 }
 
-record(dfanout,SVT:lv:hyb:bot:all:switch_fanout)
+
+record(bo, SVT:lv:9:0:dvdd:switch)
 {
-    field(OUTA,"SVT:lv:hyb:bot:all:switch_fanout1 PP")
-    field(OUTB,"SVT:lv:hyb:bot:all:switch_fanout2 PP")
-    field(OUTC,"SVT:lv:hyb:bot:all:switch_fanout3 PP")
+    field(DOL, "SVT:lv:9:0:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
 }
 
-record(bo, SVT:lv:hyb:bot:all:switch) 
+record(bo, SVT:lv:9:0:avdd:switch)
 {
-  field(OUT, "SVT:lv:hyb:bot:all:switch_fanout PP")
+    field(DOL, "SVT:lv:9:0:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(bo, SVT:lv:9:0:v125:switch)
+{
+    field(DOL, "SVT:lv:9:0:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+
+
+
+
+
+
+record(sub,SVT:lv:9:1:all:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:9:1:all:switch_fanout")
+}
+
+record(bo, SVT:lv:9:1:all:switch)
+{
+    field(OUT, "SVT:lv:9:1:all:switch_sub PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "supervisory")
+}
+
+record(fanout,SVT:lv:9:1:all:switch_fanout)
+{
+    field(LNK1,"SVT:lv:9:1:dvdd:switch")
+    field(LNK2,"SVT:lv:9:1:avdd:switch")
+    field(LNK3,"SVT:lv:9:1:v125:switch")
+}
+
+
+record(bo, SVT:lv:9:1:dvdd:switch)
+{
+    field(DOL, "SVT:lv:9:1:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(bo, SVT:lv:9:1:avdd:switch)
+{
+    field(DOL, "SVT:lv:9:1:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(bo, SVT:lv:9:1:v125:switch)
+{
+    field(DOL, "SVT:lv:9:1:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+
+
+
+
+
+
+record(sub,SVT:lv:9:2:all:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:9:2:all:switch_fanout")
+}
+
+record(bo, SVT:lv:9:2:all:switch)
+{
+    field(OUT, "SVT:lv:9:2:all:switch_sub PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "supervisory")
+}
+
+record(fanout,SVT:lv:9:2:all:switch_fanout)
+{
+    field(LNK1,"SVT:lv:9:2:dvdd:switch")
+    field(LNK2,"SVT:lv:9:2:avdd:switch")
+    field(LNK3,"SVT:lv:9:2:v125:switch")
+}
+
+
+record(bo, SVT:lv:9:2:dvdd:switch)
+{
+    field(DOL, "SVT:lv:9:2:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(bo, SVT:lv:9:2:avdd:switch)
+{
+    field(DOL, "SVT:lv:9:2:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(bo, SVT:lv:9:2:v125:switch)
+{
+    field(DOL, "SVT:lv:9:2:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+
+
+
+
+
+
+record(sub,SVT:lv:9:3:all:switch_sub)
+{
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(SCAN,"Passive")
+    field(FLNK,"SVT:lv:9:3:all:switch_fanout")
+}
+
+record(bo, SVT:lv:9:3:all:switch)
+{
+    field(OUT, "SVT:lv:9:3:all:switch_sub PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "supervisory")
+}
+
+record(fanout,SVT:lv:9:3:all:switch_fanout)
+{
+    field(LNK1,"SVT:lv:9:3:dvdd:switch")
+    field(LNK2,"SVT:lv:9:3:avdd:switch")
+    field(LNK3,"SVT:lv:9:3:v125:switch")
+}
+
+
+record(bo, SVT:lv:9:3:dvdd:switch)
+{
+    field(DOL, "SVT:lv:9:3:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(bo, SVT:lv:9:3:avdd:switch)
+{
+    field(DOL, "SVT:lv:9:3:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+record(bo, SVT:lv:9:3:v125:switch)
+{
+    field(DOL, "SVT:lv:9:3:all:switch PP")
+    field(DTYP,"Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(OMSL, "closed_loop")
+}
+
+
+
+
+record(dfanout,SVT:lv:hyb:0:all:switch_fanout)
+{
+    field(OUTA,"SVT:lv:hyb:0:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:0:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:0:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:0:3:all:switch.VAL PP")
+}
+
+record(bo, SVT:lv:hyb:0:all:switch) 
+{
+  field(OUT, "SVT:lv:hyb:0:all:switch_fanout PP")
   field(ZNAM, "Off")
   field(ONAM, "On")
 }
 
 
-record(dfanout,SVT:lv:hyb:top:all:switch_fanout1)
+record(dfanout,SVT:lv:hyb:1:all:switch_fanout)
 {
-    field(OUTA,"SVT:lv:hyb:top:0:all:switch.VAL PP")
-    field(OUTB,"SVT:lv:hyb:top:1:all:switch.VAL PP")
-    field(OUTC,"SVT:lv:hyb:top:2:all:switch.VAL PP")
-    field(OUTD,"SVT:lv:hyb:top:3:all:switch.VAL PP")
-    field(OUTE,"SVT:lv:hyb:top:4:all:switch.VAL PP")
-    field(OUTF,"SVT:lv:hyb:top:5:all:switch.VAL PP")
+    field(OUTA,"SVT:lv:hyb:1:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:1:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:1:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:1:3:all:switch.VAL PP")
 }
 
-record(dfanout,SVT:lv:hyb:top:all:switch_fanout2)
+record(bo, SVT:lv:hyb:1:all:switch) 
 {
-    field(OUTA,"SVT:lv:hyb:top:6:all:switch.VAL PP")
-    field(OUTB,"SVT:lv:hyb:top:7:all:switch.VAL PP")
-    field(OUTC,"SVT:lv:hyb:top:8:all:switch.VAL PP")
-    field(OUTD,"SVT:lv:hyb:top:9:all:switch.VAL PP")
-    field(OUTE,"SVT:lv:hyb:top:10:all:switch.VAL PP")
-    field(OUTF,"SVT:lv:hyb:top:11:all:switch.VAL PP")
-}
-
-record(dfanout,SVT:lv:hyb:top:all:switch_fanout3)
-{
-    field(OUTA,"SVT:lv:hyb:top:12:all:switch.VAL PP")
-    field(OUTB,"SVT:lv:hyb:top:13:all:switch.VAL PP")
-    field(OUTC,"SVT:lv:hyb:top:14:all:switch.VAL PP")
-    field(OUTD,"SVT:lv:hyb:top:15:all:switch.VAL PP")
-    field(OUTE,"SVT:lv:hyb:top:16:all:switch.VAL PP")
-    field(OUTF,"SVT:lv:hyb:top:17:all:switch.VAL PP")
-}
-
-record(dfanout,SVT:lv:hyb:top:all:switch_fanout)
-{
-    field(OUTA,"SVT:lv:hyb:top:all:switch_fanout1 PP")
-    field(OUTB,"SVT:lv:hyb:top:all:switch_fanout2 PP")
-    field(OUTC,"SVT:lv:hyb:top:all:switch_fanout3 PP")
-}
-
-record(bo, SVT:lv:hyb:top:all:switch) 
-{
-  field(OUT, "SVT:lv:hyb:top:all:switch_fanout PP")
+  field(OUT, "SVT:lv:hyb:1:all:switch_fanout PP")
   field(ZNAM, "Off")
   field(ONAM, "On")
 }
 
 
-
-record(bo, SVT:lv:hyb:all:switch) 
+record(dfanout,SVT:lv:hyb:2:all:switch_fanout)
 {
-  field(OUT, "SVT:lv:hyb:all:switch_fanout PP")
+    field(OUTA,"SVT:lv:hyb:2:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:2:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:2:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:2:3:all:switch.VAL PP")
+}
+
+record(bo, SVT:lv:hyb:2:all:switch) 
+{
+  field(OUT, "SVT:lv:hyb:2:all:switch_fanout PP")
   field(ZNAM, "Off")
   field(ONAM, "On")
 }
 
-record(dfanout,SVT:lv:hyb:all:switch_fanout)
+
+record(dfanout,SVT:lv:hyb:3:all:switch_fanout)
 {
-    field(OUTA,"SVT:lv:hyb:top:all:switch_fanout PP")
-    field(OUTB,"SVT:lv:hyb:bot:all:switch_fanout PP")
+    field(OUTA,"SVT:lv:hyb:3:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:3:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:3:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:3:3:all:switch.VAL PP")
+}
+
+record(bo, SVT:lv:hyb:3:all:switch) 
+{
+  field(OUT, "SVT:lv:hyb:3:all:switch_fanout PP")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+
+
+record(dfanout,SVT:lv:hyb:4:all:switch_fanout)
+{
+    field(OUTA,"SVT:lv:hyb:4:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:4:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:4:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:4:3:all:switch.VAL PP")
+}
+
+record(bo, SVT:lv:hyb:4:all:switch) 
+{
+  field(OUT, "SVT:lv:hyb:4:all:switch_fanout PP")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+
+
+record(dfanout,SVT:lv:hyb:5:all:switch_fanout)
+{
+    field(OUTA,"SVT:lv:hyb:5:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:5:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:5:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:5:3:all:switch.VAL PP")
+}
+
+record(bo, SVT:lv:hyb:5:all:switch) 
+{
+  field(OUT, "SVT:lv:hyb:5:all:switch_fanout PP")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+
+
+record(dfanout,SVT:lv:hyb:6:all:switch_fanout)
+{
+    field(OUTA,"SVT:lv:hyb:6:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:6:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:6:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:6:3:all:switch.VAL PP")
+}
+
+record(bo, SVT:lv:hyb:6:all:switch) 
+{
+  field(OUT, "SVT:lv:hyb:6:all:switch_fanout PP")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+
+
+record(dfanout,SVT:lv:hyb:7:all:switch_fanout)
+{
+    field(OUTA,"SVT:lv:hyb:7:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:7:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:7:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:7:3:all:switch.VAL PP")
+}
+
+record(bo, SVT:lv:hyb:7:all:switch) 
+{
+  field(OUT, "SVT:lv:hyb:7:all:switch_fanout PP")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+
+
+record(dfanout,SVT:lv:hyb:8:all:switch_fanout)
+{
+    field(OUTA,"SVT:lv:hyb:8:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:8:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:8:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:8:3:all:switch.VAL PP")
+}
+
+record(bo, SVT:lv:hyb:8:all:switch) 
+{
+  field(OUT, "SVT:lv:hyb:8:all:switch_fanout PP")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+
+
+record(dfanout,SVT:lv:hyb:9:all:switch_fanout)
+{
+    field(OUTA,"SVT:lv:hyb:9:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:hyb:9:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:hyb:9:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:hyb:9:3:all:switch.VAL PP")
+}
+
+record(bo, SVT:lv:hyb:9:all:switch) 
+{
+  field(OUT, "SVT:lv:hyb:9:all:switch_fanout PP")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
 }
 

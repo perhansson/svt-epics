@@ -134,7 +134,7 @@ static int getLonginRecord(char* inpb_val) {
       if (mySubDebug>1) printf("[ getLonginRecord ]: recA name %s val %d\n",recA->name,recA->val);
       return recA->val;
     } else {
-      printf("[ getLonginRecord ]: [ WARNING ]: cannot get port record from inpb_val %s \n",inpb_val);
+      printf("[ getLonginRecord ]: [ WARNING ]: cannot get recA record from inpb_val %s \n",inpb_val);
     }
   } else {
       printf("[ getLonginRecord ]: [ WARNING ]: INPB string has zero length \n");    
@@ -573,27 +573,32 @@ static long subPollStatInit(subRecord *precord) {
   
   if(strcmp(action,"i_rd_sub")==0) {
      val = getHybridI(feb_id, id, ch_name);
+     precord->val = val*constant;
   } 
   else if(strcmp(action,"t_rd_sub")==0) {
      val = getHybridT(feb_id, id, ch_name);
+     precord->val = val*constant;
   } 
   else if(strcmp(action,"vn_sub")==0) {
      val = getHybridV(feb_id, id, ch_name, "Near");
+     precord->val = val*constant;
   } 
   else if(strcmp(action,"vf_sub")==0) {
      val = getHybridV(feb_id, id, ch_name, "Sense");
+     precord->val = val*constant;
   } 
   else if(strcmp(action,"v_set_rd_sub")==0) {
      val = getHybridTrim(feb_id, id, ch_name);
+     precord->val = val*constant;
   } 
   else if(strcmp(action,"stat_sub")==0) {
      val = getHybridSwitch(feb_id, id);
+     precord->val = val*constant;
   } 
   else {
-    printf("[ readHybrid ]: [ ERROR]: wrong action for readHybrid \"%s\"\n",action);
-    return;
+     printf("[ readHybrid ]: [ ERROR]: wrong action for readHybrid \"%s\"\n",action);
+     return;
   }
-  precord->val = val*constant;
   if (mySubDebug) {
      printf("[ readHybrid ]: precord-val is now %f \n",precord->val);
   }
@@ -607,24 +612,21 @@ static void readFeb(subRecord* precord,char action[], int feb_id, char ch_name[]
    if(mySubDebug) printf("[ readFeb ]: Record %s called readFeb %s feb_id=%d ch_name=%s\n",precord->name,action,feb_id,ch_name);
    
    double v;
-   
-   
-   v = 0.0;   
    if(strcmp(action,"t_rd_sub")==0) {
       v = getFebT(feb_id, ch_name);
       if (mySubDebug) {
          printf("[ readFeb ]: Got value=%f\n",v);
       }
+      precord->val = v;      
    } 
    else {
       printf("[ readFeb ]: [ ERROR ]: No such action %s implemented for readFeb!\n",action);
    } 
-   precord->val = v;
-
+   
    if (mySubDebug) {
       printf("[ readFeb ]: precord-val is now %f \n",precord->val);
    }
-
+   
 }
 
 
@@ -641,88 +643,72 @@ static long subLVProcess(subRecord *precord) {
   }
   //SVT:lv:hyb:bot:0:dvdd:vn_sub
   //SVT:lv:hyb:bot:0:dvdd:v_set_sub
+
+
+  //SVT:lv:0:0:dvdd:i_rd_sub
+
   int feb_id;
   int feb_ch;
   char type[BUF_SIZE];
-  char board_type[BUF_SIZE];
-  char half[BUF_SIZE];
-  char id[BUF_SIZE];
+  memset(type,0,BUF_SIZE);
   char ch_name[BUF_SIZE];
   char action[BUF_SIZE];
-  getType(precord->name,type,BUF_SIZE);
-  getBoardType(precord->name,board_type,BUF_SIZE);
-  getHalf(precord->name,half,BUF_SIZE);
-  getId(precord->name,id,BUF_SIZE);
-  getChName(precord->name,ch_name,BUF_SIZE);
-  getAction(precord->name,action,BUF_SIZE);
-
+  
+  getStringFromEpicsName(precord->name,type,1);
+  feb_id = getIntFromEpicsName(precord->name,2);    
+  feb_ch = getIntFromEpicsName(precord->name,3);    
+  getStringFromEpicsName(precord->name,ch_name,4);
+  getStringFromEpicsName(precord->name,action,5);
+  
+  if(feb_id<0) {
+     printf("[ subTempProcess ]: [ ERROR ]: getting feb id\n");
+     return 0;
+  } 
+  
   if (mySubDebug) {
-    printf("[ subLVProcess ]: Record %s has type %s board type \"%s\"\n", precord->name, type,board_type);
+     printf("[ subLVProcess ]: Record %s has type %s\"\n", precord->name, type);
   }
-
+  
   if(strcmp(type,"lv")!=0) {
-    printf("[ subLVProcess ]: [ ERROR ]: this type is not valid \"%s\"\n",type);
-    return 0;
+     printf("[ subLVProcess ]: [ ERROR ]: this type is not valid \"%s\"\n",type);
+     return 0;
   }
-  
-  char* p_end = id;
-  long int li_id = strtol(id,&p_end,0);
-  if(p_end!=id) {
-     if(li_id<0 && li_id>17) {     
-        printf("[ subLVProcess ]: [ ERROR ]: this hybrid id %ld is not valid\n",li_id);
-        return 0;
-     }
-  } else {
-     printf("[ subLVProcess ]: [ ERROR ]: converting this hybrid id %s is not valid\n",id);
-     return 0;      
-  }
-  
-  feb_id = getFebInfoFromDaqMap((int)li_id,half,hybToFeb);
   
   if(feb_id<0) {
      printf("[ subLVProcess ]: [ ERROR ]: getting feb id\n");
      return 0;
   } 
   
-  feb_ch = getFebInfoFromDaqMap((int)li_id,half,hybToFebCh);
-  
   if(feb_ch<0) {
      printf("[ subLVProcess ]: [ ERROR ]: getting feb ch\n");
      return 0;
   } 
-
+  
   if ( mySubDebug) {
-     printf("[ subLVProcess ]: %s hyb %ld -> feb_id %d febch %d \n", half, li_id, feb_id, feb_ch);
+     printf("[ subLVProcess ]: feb_id %d febch %d \n",feb_id, feb_ch);
   }
   
-  if(strcmp(board_type,"hyb")==0) {
-   
-    if(strcmp(action,"vn_sub")==0 || strcmp(action,"vf_sub")==0 || strcmp(action,"i_rd_sub")==0 || strcmp(action,"v_set_rd_sub")==0 || strcmp(action,"stat_sub")==0) {
-
-      if(strcmp(ch_name,"dvdd")!=0 && strcmp(ch_name,"avdd")!=0 && strcmp(ch_name,"v125")!=0) {
-	printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
-	return 0;
-      }
-      readHybrid(precord,action,feb_ch,feb_id,ch_name);  
-      
-    } else if(strcmp(action,"v_set_sub")==0 || strcmp(action,"switch_sub")==0) { 
-
-      if(strcmp(ch_name,"dvdd")!=0 && strcmp(ch_name,"avdd")!=0 && strcmp(ch_name,"v125")!=0 && strcmp(ch_name,"all")!=0) {
-	printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
-	return 0;
-      }
-
-      writeHybrid(precord,action,feb_ch,feb_id,ch_name);  
-
-    } else {
-      printf("[ subLVProcess ]: [ ERROR ]: this hybrid action type is not valid \"%s\"\n",action);
-      return 0;
-    }    
-  }
-  else {
-    printf("[ subLVProcess ]: [ ERROR ]: this board type is not valid \"%s\" for LV\n",board_type);
-    return 0;
-  }
+  if(strcmp(action,"vn_sub")==0 || strcmp(action,"vf_sub")==0 || strcmp(action,"i_rd_sub")==0 || strcmp(action,"v_set_rd_sub")==0 || strcmp(action,"stat_sub")==0) {
+     
+     if(strcmp(ch_name,"dvdd")!=0 && strcmp(ch_name,"avdd")!=0 && strcmp(ch_name,"v125")!=0) {
+        printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
+        return 0;
+     }
+     readHybrid(precord,action,feb_ch,feb_id,ch_name);  
+     
+  } else if(strcmp(action,"v_set_sub")==0 || strcmp(action,"switch_sub")==0) { 
+     
+     if(strcmp(ch_name,"dvdd")!=0 && strcmp(ch_name,"avdd")!=0 && strcmp(ch_name,"v125")!=0 && strcmp(ch_name,"all")!=0) {
+        printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
+        return 0;
+     }
+     
+     writeHybrid(precord,action,feb_ch,feb_id,ch_name);  
+     
+  } else {
+     printf("[ subLVProcess ]: [ ERROR ]: this hybrid action type is not valid \"%s\"\n",action);
+     return 0;
+  }    
   
   
   
@@ -740,94 +726,80 @@ static long subTempProcess(subRecord *precord) {
   //SVT:temp:hyb:bot:0:temp1:t_rd_sub
   //SVT:temp:hyb:bot:0:temp2:t_rd_sub
   //SVT:temp:fe:0:axixadc:t_rd_sub)
+  //SVT:temp:hyb:0:0:temp0:t_rd_sub
+
   int feb_id;
   int feb_ch;
   char type[BUF_SIZE];
   memset(type,0,BUF_SIZE);
   char board_type[BUF_SIZE];
-  char half[BUF_SIZE];
-  char id[BUF_SIZE];
   char ch_name[BUF_SIZE];
   char action[BUF_SIZE];
 
-  getType(precord->name,type,BUF_SIZE);
-  getBoardType(precord->name,board_type,BUF_SIZE);
+  getStringFromEpicsName(precord->name,type,1);
+  getStringFromEpicsName(precord->name,board_type,2);
+  feb_id = getIntFromEpicsName(precord->name,3);    
 
-
+  if(feb_id<0) {
+     printf("[ subTempProcess ]: [ ERROR ]: getting feb id\n");
+     return 0;
+  } 
+  
+  
   if (mySubDebug) {
-    printf("[ subTempProcess ]:Record %s has type %s board type \"%s\"\n", precord->name, type,board_type);
+     printf("[ subTempProcess ]:Record %s has type %s board type \"%s\"\n", precord->name, type,board_type);
   }
-
+  
   //  char tmp[BUF_SIZE];
   int type_cmp;
   if((type_cmp=strcmp(type,"temp"))!=0) {
-    printf("[ subTempProcess ]: [ ERROR ]: this type is not valid \"%s\" cmp %d\n",type,type_cmp);
-    return 0;
+     printf("[ subTempProcess ]: [ ERROR ]: this type is not valid \"%s\" cmp %d\n",type,type_cmp);
+     return 0;
   }
-
+  
   if(strcmp(board_type,"hyb")==0) {  
-    getHalf(precord->name,half,BUF_SIZE);
-    getId(precord->name,id,BUF_SIZE);
-    getChName(precord->name,ch_name,BUF_SIZE);
-    getAction(precord->name,action,BUF_SIZE);
-
-    if(strcmp(ch_name,"temp0")!=0 && strcmp(ch_name,"temp1")!=0) {
-      printf("[ subTempProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
-      return 0;
-    }
-
-    char* p_end = id;
-    long int li_id = strtol(id,&p_end,0);
-    if(p_end!=id) {
-      if(li_id<0 && li_id>17) {     
-	printf("[ subTempProcess ]: [ ERROR ]: this hybrid id %ld is not valid\n",li_id);
-	return 0;
-      }
-    } else {
-      printf("[ subTempProcess ]: [ ERROR ]: converting this hybrid id %s is not valid\n",id);
-      return 0;      
-    }
-    
-    feb_id = getFebInfoFromDaqMap((int)li_id,half,hybToFeb);
-
-    if(feb_id<0) {
-      printf("[ subTempProcess ]: [ ERROR ]: getting feb id\n");
-      return 0;
-    } 
-
-    feb_ch = getFebInfoFromDaqMap((int)li_id,half,hybToFebCh);
-
-    if(feb_ch<0) {
-      printf("[ subTempProcess ]: [ ERROR ]: getting feb ch\n");
-      return 0;
-    } 
-
-
-    if ( mySubDebug) {
-       printf("[ subLVProcess ]: %s hyb %ld -> feb_id %d febch %d \n", half, li_id, feb_id, feb_ch);
-    }
-
-   
-    readHybrid(precord,action,feb_ch,feb_id,ch_name);  
-
-
+     // find feb ch
+     feb_ch = getIntFromEpicsName(precord->name,4);    
+     // find the channel
+     getStringFromEpicsName(precord->name,ch_name,5);
+     // find out what to do
+     getStringFromEpicsName(precord->name,action,6);
+     
+     // x-checks
+     
+     if(strcmp(ch_name,"temp0")!=0 && strcmp(ch_name,"temp1")!=0) {
+        printf("[ subTempProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
+        return 0;
+     }
+     
+     if(feb_ch<0) {
+        printf("[ subTempProcess ]: [ ERROR ]: getting feb ch\n");
+        return 0;
+     }      
+     
+     if ( mySubDebug) {
+        printf("[ subLVProcess ]: feb_id %d feb_ch %d action %s\n", feb_id, feb_ch, action);
+     }     
+     
+     readHybrid(precord,action,feb_ch,feb_id,ch_name);       
+     
   } 
   else if(strcmp(board_type,"fe")==0) {  
-    sprintf(half,"%s","bot");
-    getFebId(precord->name,id,BUF_SIZE);
-    getFebChName(precord->name,ch_name,BUF_SIZE);
-    getFebAction(precord->name,action,BUF_SIZE);  
-    feb_id = atoi(id);
-    if(strcmp(action,"t_rd_sub")!=0) {
-      printf("[ subTempProcess ]: [ ERROR ]: this feb action type is not valid \"%s\"\n",action);
-      return 0;
-    }  
-    if(strcmp(ch_name,"axixadc") !=0 && strcmp(ch_name,"FebTemp0") !=0 && strcmp(ch_name,"FebTemp1") !=0 ) {
-      printf("[ subTempProcess ]: [ ERROR ]: This ch name is not implemented for for readFeb: \"%s\" !\n",ch_name);
-      return 0;      
-    }
-    
-    readFeb(precord,action,feb_id,ch_name);  
+     // find the channel
+     getStringFromEpicsName(precord->name,ch_name,4);
+     // find out what to do
+     getStringFromEpicsName(precord->name,action,5);
+     
+     if(strcmp(action,"t_rd_sub")!=0) {
+        printf("[ subTempProcess ]: [ ERROR ]: this feb action type is not valid \"%s\"\n",action);
+        return 0;
+     }  
+     if(strcmp(ch_name,"axixadc") !=0 && strcmp(ch_name,"FebTemp0") !=0 && strcmp(ch_name,"FebTemp1") !=0 ) {
+        printf("[ subTempProcess ]: [ ERROR ]: This ch name is not implemented for for readFeb: \"%s\" !\n",ch_name);
+        return 0;      
+     }
+     
+     readFeb(precord,action,feb_id,ch_name);  
     
 
   } 

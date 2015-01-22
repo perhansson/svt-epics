@@ -299,7 +299,7 @@ text {
 		height=20
 	}
 	control {
-		chan="SVT:lv:hyb:top:0:all:switch"
+		chan="SVT:lv:0:0:all:switch"
 		clr=55
 		bclr=12
 	}
@@ -313,7 +313,7 @@ text {
 		height=20
 	}
 	control {
-		chan="SVT:lv:hyb:top:1:all:switch"
+		chan="SVT:lv:0:1:all:switch"
 		clr=55
 		bclr=12
 	}
@@ -327,7 +327,7 @@ text {
 		height=20
 	}
 	control {
-		chan="SVT:lv:hyb:top:2:all:switch"
+		chan="SVT:lv:0:2:all:switch"
 		clr=55
 		bclr=12
 	}
@@ -341,7 +341,7 @@ text {
 		height=20
 	}
 	control {
-		chan="SVT:lv:hyb:top:3:all:switch"
+		chan="SVT:lv:0:3:all:switch"
 		clr=55
 		bclr=12
 	}
@@ -372,7 +372,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="if not zero"
-		chan="SVT:lv:hyb:top:0:stat"
+		chan="SVT:lv:0:0:stat"
 	}
 }
 rectangle {
@@ -387,7 +387,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="if not zero"
-		chan="SVT:lv:hyb:top:1:stat"
+		chan="SVT:lv:0:1:stat"
 	}
 }
 rectangle {
@@ -402,7 +402,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="if not zero"
-		chan="SVT:lv:hyb:top:2:stat"
+		chan="SVT:lv:0:2:stat"
 	}
 }
 rectangle {
@@ -417,7 +417,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="if not zero"
-		chan="SVT:lv:hyb:top:3:stat"
+		chan="SVT:lv:0:3:stat"
 	}
 }
 rectangle {
@@ -433,7 +433,7 @@ rectangle {
 	"dynamic attribute" {
 		vis="if zero"
 		calc="A"
-		chan="SVT:lv:hyb:top:0:stat"
+		chan="SVT:lv:0:0:stat"
 	}
 }
 rectangle {
@@ -449,7 +449,7 @@ rectangle {
 	"dynamic attribute" {
 		vis="if zero"
 		calc="A"
-		chan="SVT:lv:hyb:top:1:stat"
+		chan="SVT:lv:0:1:stat"
 	}
 }
 rectangle {
@@ -465,7 +465,7 @@ rectangle {
 	"dynamic attribute" {
 		vis="if zero"
 		calc="A"
-		chan="SVT:lv:hyb:top:2:stat"
+		chan="SVT:lv:0:2:stat"
 	}
 }
 rectangle {
@@ -481,7 +481,7 @@ rectangle {
 	"dynamic attribute" {
 		vis="if zero"
 		calc="A"
-		chan="SVT:lv:hyb:top:3:stat"
+		chan="SVT:lv:0:3:stat"
 	}
 }
 text {
@@ -544,7 +544,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:0:dvdd:i_rd"
+		chan="SVT:lv:0:0:dvdd:i_rd"
 		clr=30
 		bclr=14
 	}
@@ -559,7 +559,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:0:avdd:i_rd"
+		chan="SVT:lv:0:0:avdd:i_rd"
 		clr=30
 		bclr=14
 	}
@@ -574,7 +574,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:0:v125:i_rd"
+		chan="SVT:lv:0:0:v125:i_rd"
 		clr=30
 		bclr=14
 	}
@@ -589,7 +589,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:1:dvdd:i_rd"
+		chan="SVT:lv:0:1:dvdd:i_rd"
 		clr=30
 		bclr=14
 	}
@@ -604,7 +604,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:1:avdd:i_rd"
+		chan="SVT:lv:0:1:avdd:i_rd"
 		clr=30
 		bclr=14
 	}
@@ -619,7 +619,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:1:v125:i_rd"
+		chan="SVT:lv:0:1:v125:i_rd"
 		clr=30
 		bclr=14
 	}
@@ -634,7 +634,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:2:dvdd:i_rd"
+		chan="SVT:lv:0:2:dvdd:i_rd"
 		clr=30
 		bclr=14
 	}
@@ -649,7 +649,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:2:avdd:i_rd"
+		chan="SVT:lv:0:2:avdd:i_rd"
 		clr=30
 		bclr=14
 	}
@@ -664,7 +664,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:2:v125:i_rd"
+		chan="SVT:lv:0:2:v125:i_rd"
 		clr=30
 		bclr=14
 	}
@@ -679,7 +679,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:3:dvdd:i_rd"
+		chan="SVT:lv:0:3:dvdd:i_rd"
 		clr=30
 		bclr=14
 	}
@@ -694,7 +694,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:3:avdd:i_rd"
+		chan="SVT:lv:0:3:avdd:i_rd"
 		clr=30
 		bclr=14
 	}
@@ -709,7 +709,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:hyb:top:3:v125:i_rd"
+		chan="SVT:lv:0:3:v125:i_rd"
 		clr=30
 		bclr=14
 	}

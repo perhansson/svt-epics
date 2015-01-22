@@ -13,15 +13,9 @@
 char* strToUpper( char* s );
 double extractTempValFromString(char value[]);
 void getSubStrFromName(char name[],const int i, char board_type[], const int MAX);
-void getType(char name[], char board_type[], const int MAX);
-void getBoardType(char name[], char board_type[], const int MAX);
-void getHalf(char name[], char board_type[], const int MAX);
-void getId(char name[], char board_type[], const int MAX);
-void getChName(char name[], char board_type[], const int MAX);
-void getAction(char name[], char board_type[], const int MAX);
-void getFebId(char name[], char board_type[], const int MAX);
-void getFebChName(char name[], char board_type[], const int MAX);
-void getFebAction(char name[], char board_type[], const int MAX);
+void getStringFromEpicsName(char name[], char str[], int idx);
+int getIntFromEpicsName(char name[], int idx);
+
 void getHalfFromDaqMapRecordName(char name[], char board_type[], const int MAX);
 void getHybridFromDaqMapRecordName(char name[], char board_type[], const int MAX);
 void error(const char *msg);
@@ -34,7 +28,7 @@ xmlNode* retrieveElement(xmlDoc* doc, xmlNode* node, char* tag);
 void retrieveValue(xmlDoc* doc, xmlNode* node, char* tags, char value[], const unsigned int MAX);
 void getXmlDoc(int sockfd, int read_status, int read_config);
 void getXmlDocStrFormat(char** xml_str, int * xml_str_len);
-int getXMLPollStatus();
+int getXmlPollStatus();
 
 
 

@@ -72,33 +72,7 @@ void getSubStrFromName(char name[],const int i, char board_type[], const int MAX
     return;
 }
 
-void getType(char name[], char board_type[], const int MAX) {
-    return getSubStrFromName(name,1,board_type,MAX);
-}
-void getBoardType(char name[], char board_type[], const int MAX) {
-    return getSubStrFromName(name,2,board_type,MAX);
-}
-void getHalf(char name[], char board_type[], const int MAX) {
-    return getSubStrFromName(name,3,board_type,MAX);
-}
-void getId(char name[], char board_type[], const int MAX) {
-    return getSubStrFromName(name,4,board_type,MAX);
-}
-void getChName(char name[], char board_type[], const int MAX) {
-    return getSubStrFromName(name,5,board_type,MAX);
-}
-void getAction(char name[], char board_type[], const int MAX) {
-    return getSubStrFromName(name,6,board_type,MAX);
-}
-void getFebId(char name[], char board_type[], const int MAX) {
-    return getSubStrFromName(name,3,board_type,MAX);
-}
-void getFebChName(char name[], char board_type[], const int MAX) {
-    return getSubStrFromName(name,4,board_type,MAX);
-}
-void getFebAction(char name[], char board_type[], const int MAX) {
-    return getSubStrFromName(name,5,board_type,MAX);
-}
+
 void getHalfFromDaqMapRecordName(char name[], char board_type[], const int MAX) {
     return getSubStrFromName(name,3,board_type,MAX);
 }
@@ -106,6 +80,20 @@ void getHybridFromDaqMapRecordName(char name[], char board_type[], const int MAX
     return getSubStrFromName(name,4,board_type,MAX);
 }
 
+void getStringFromEpicsName(char name[], char str[], int idx) {   
+   getSubStrFromName(name,idx,str,256);
+}
+int getIntFromEpicsName(char name[], int idx) {   
+   char str[256];
+   getSubStrFromName(name,idx,str,256);
+   char* p_end = str;
+   int id = (int) strtol(str,&p_end,0);
+   if(p_end==str) {
+      printf("[ getFebId ]: [ ERROR ]: invalid convertion of this feb id %s\n",str);
+      return -1;      
+   }
+   return id;
+}
 
 
 
