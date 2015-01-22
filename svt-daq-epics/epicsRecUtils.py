@@ -699,3 +699,184 @@ record(ai, SVT:temp:fe:FEBID:FebTemp1:t_rd) {
         records.append(rec)
     
     return records
+
+
+def buildHybSync():
+
+    
+
+    s = """
+record(sub,SVT:lv:hyb:FEBID:HYBID:sync_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(FLNK,"FLNKNEXTHYB")
+}
+
+record(ai, SVT:lv:hyb:FEBID:HYBID:sync) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:;v:hyb:FEBID:HYBID:sync_sub PP")
+  field(DTYP,"Soft Channel")
+}
+"""
+
+    s_flnk = "SVT:lv:hyb:NEXTFEBID:NEXTHYBID:sync"
+    records = []
+    for feb in range(0,10):
+        for hyb in range(0,4):
+            rec = s
+            if hyb==3:
+                if feb < 9:
+                    rec = rec.replace("FLNKNEXTHYB",s_flnk)
+                    rec = rec.replace("NEXTHYBID",str(0))
+                    rec = rec.replace("NEXTFEBID",str(feb+1))
+                else:
+                    rec = rec.replace("FLNKNEXTHYB","")                    
+            else:
+                rec = rec.replace("FLNKNEXTHYB",s_flnk)
+                rec = rec.replace("NEXTHYBID",str(hyb+1))
+                rec = rec.replace("NEXTFEBID",str(feb))
+            rec = rec.replace("HYBID",str(hyb))
+            rec = rec.replace("FEBID",str(feb))
+            records.append(rec)
+    
+    return records
+
+
+def buildHybSync():
+
+    
+
+    s = """
+record(sub,SVT:lv:FEBID:HYBID:sync_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(FLNK,"FLNKNEXTHYB")
+}
+
+record(ai, SVT:lv:FEBID:HYBID:sync) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:lv:FEBID:HYBID:sync_sub PP")
+  field(DTYP,"Soft Channel")
+}
+"""
+
+    s_flnk = "SVT:lv:NEXTFEBID:NEXTHYBID:sync"
+    records = []
+    for feb in range(0,10):
+        for hyb in range(0,4):
+            rec = s
+            if hyb==3:
+                if feb < 9:
+                    rec = rec.replace("FLNKNEXTHYB",s_flnk)
+                    rec = rec.replace("NEXTHYBID",str(0))
+                    rec = rec.replace("NEXTFEBID",str(feb+1))
+                else:
+                    rec = rec.replace("FLNKNEXTHYB","")                    
+            else:
+                rec = rec.replace("FLNKNEXTHYB",s_flnk)
+                rec = rec.replace("NEXTHYBID",str(hyb+1))
+                rec = rec.replace("NEXTFEBID",str(feb))
+            rec = rec.replace("HYBID",str(hyb))
+            rec = rec.replace("FEBID",str(feb))
+            records.append(rec)
+    
+    return records
+
+
+def buildDpmMap():
+
+    
+
+    s = """
+record(sub,SVT:lv:FEBID:HYBID:dpm_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(FLNK,"SVT:lv:FEBID:HYBID:datapath")
+}
+
+record(ai, SVT:lv:FEBID:HYBID:dpm) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:lv:FEBID:HYBID:dpm_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+record(sub,SVT:lv:FEBID:HYBID:datapath_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subLVInit")
+    field(SNAM,"subLVProcess")
+    field(FLNK,"FLNKNEXTHYB")
+}
+
+record(ai, SVT:lv:FEBID:HYBID:datapath) {
+  field(SCAN, "Passive") field(PREC, "1")
+  field(INP, "SVT:lv:FEBID:HYBID:datapath_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+"""
+
+    s_flnk = "SVT:lv:NEXTFEBID:NEXTHYBID:dpm"
+    records = []
+    for feb in range(0,10):
+        for hyb in range(0,4):
+            rec = s
+            if hyb==3:
+                if feb < 9:
+                    rec = rec.replace("FLNKNEXTHYB",s_flnk)
+                    rec = rec.replace("NEXTHYBID",str(0))
+                    rec = rec.replace("NEXTFEBID",str(feb+1))
+                else:
+                    rec = rec.replace("FLNKNEXTHYB","")                    
+            else:
+                rec = rec.replace("FLNKNEXTHYB",s_flnk)
+                rec = rec.replace("NEXTHYBID",str(hyb+1))
+                rec = rec.replace("NEXTFEBID",str(feb))
+            rec = rec.replace("HYBID",str(hyb))
+            rec = rec.replace("FEBID",str(feb))
+            records.append(rec)
+    
+    return records
+
+
+
+def buildFebPhysMap():
+	
+    s = """
+record(sub,SVT:daq:map:LAYER:febid_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
+    field(FLNK,"FLNKNEXTHYB")
+}
+
+record(ai, SVT:daq:map:LAYER:febid) {
+  field(SCAN, "Passive") field(PREC, "0")
+  field(INP, "SVT:daq:map:LAYER:febid_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+"""	
+    s_flnk = "SVT:daq:map:NEXTLAYER:febid"
+    records = []
+    layers = ['l1t','l1b','l23t','l23b','l4t','l4b','l5t','l5b','l6t','l6b']
+    for feb in range(0,len(layers)):
+        rec = s
+        if feb <9:
+			rec = rec.replace("FLNKNEXTHYB",s_flnk)
+			rec = rec.replace("NEXTLAYER",layers[feb+1])
+        else:
+			rec = rec.replace("FLNKNEXTHYB","")			
+        rec = rec.replace("LAYER",layers[feb])
+        records.append(rec)
+        
+    return records
+
