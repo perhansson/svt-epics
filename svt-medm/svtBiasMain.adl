@@ -5,10 +5,10 @@ file {
 }
 display {
 	object {
-		x=4
-		y=22
-		width=1440
-		height=856
+		x=-165
+		y=23
+		width=1484
+		height=858
 	}
 	clr=14
 	bclr=12
@@ -8301,36 +8301,6 @@ rectangle {
 "text entry" {
 	object {
 		x=1405
-		y=220
-		width=51
-		height=25
-	}
-	control {
-		chan="SVT:bias:top:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1405
-		y=250
-		width=51
-		height=25
-	}
-	control {
-		chan="SVT:bias:bot:v_set"
-		clr=14
-		bclr=0
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=1405
 		y=190
 		width=51
 		height=25
@@ -8352,34 +8322,6 @@ rectangle {
 	}
 	control {
 		chan="SVT:bias:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=1390
-		y=130
-		width=80
-		height=25
-	}
-	control {
-		chan="SVT:bias:top:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=1390
-		y=160
-		width=80
-		height=25
-	}
-	control {
-		chan="SVT:bias:bot:switch"
 		clr=55
 		bclr=12
 	}
@@ -9870,4 +9812,56 @@ composite {
 			}
 		}
 	}
+}
+text {
+	object {
+		x=1355
+		y=250
+		width=120
+		height=25
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Not implemented yet"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1355
+		y=220
+		width=120
+		height=25
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Not implemented yet"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1361
+		y=129
+		width=120
+		height=25
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Not implemented yet"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1361
+		y=159
+		width=120
+		height=25
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Not implemented yet"
+	align="horiz. centered"
 }
