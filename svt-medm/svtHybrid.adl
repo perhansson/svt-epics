@@ -5,8 +5,8 @@ file {
 }
 display {
 	object {
-		x=1465
-		y=72
+		x=1558
+		y=169
 		width=1426
 		height=805
 	}
@@ -267,517 +267,6 @@ text {
 }
 text {
 	object {
-		x=542
-		y=33
-		width=37
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="ON/OFF"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=784
-		y=12
-		width=57
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="V READBACK"
-	align="horiz. centered"
-}
-"choice button" {
-	object {
-		x=505
-		y=54
-		width=52
-		height=20
-	}
-	control {
-		chan="SVT:lv:0:0:all:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=505
-		y=79
-		width=52
-		height=20
-	}
-	control {
-		chan="SVT:lv:0:1:all:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=505
-		y=104
-		width=52
-		height=20
-	}
-	control {
-		chan="SVT:lv:0:2:all:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=505
-		y=129
-		width=52
-		height=20
-	}
-	control {
-		chan="SVT:lv:0:3:all:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-text {
-	object {
-		x=784
-		y=33
-		width=37
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="BIAS"
-	align="horiz. centered"
-}
-rectangle {
-	object {
-		x=565
-		y=54
-		width=21
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:lv:0:0:stat"
-	}
-}
-rectangle {
-	object {
-		x=565
-		y=79
-		width=21
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:lv:0:1:stat"
-	}
-}
-rectangle {
-	object {
-		x=565
-		y=104
-		width=21
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:lv:0:2:stat"
-	}
-}
-rectangle {
-	object {
-		x=565
-		y=129
-		width=21
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:lv:0:3:stat"
-	}
-}
-rectangle {
-	object {
-		x=565
-		y=54
-		width=21
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		calc="A"
-		chan="SVT:lv:0:0:stat"
-	}
-}
-rectangle {
-	object {
-		x=565
-		y=79
-		width=21
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		calc="A"
-		chan="SVT:lv:0:1:stat"
-	}
-}
-rectangle {
-	object {
-		x=565
-		y=104
-		width=21
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		calc="A"
-		chan="SVT:lv:0:2:stat"
-	}
-}
-rectangle {
-	object {
-		x=565
-		y=129
-		width=21
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		calc="A"
-		chan="SVT:lv:0:3:stat"
-	}
-}
-text {
-	object {
-		x=603
-		y=31
-		width=37
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="DVDD"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=655
-		y=31
-		width=37
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="AVDD"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=706
-		y=31
-		width=37
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="V125"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=627
-		y=10
-		width=106
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="MEASURED CURRENTS"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=598
-		y=54
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:0:dvdd:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=650
-		y=54
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:0:avdd:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=701
-		y=54
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:0:v125:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=598
-		y=79
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:1:dvdd:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=650
-		y=79
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:1:avdd:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=701
-		y=79
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:1:v125:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=598
-		y=104
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:2:dvdd:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=650
-		y=104
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:2:avdd:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=701
-		y=104
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:2:v125:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=598
-		y=129
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:3:dvdd:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=650
-		y=129
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:3:avdd:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=701
-		y=129
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:0:3:v125:i_rd"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=784
-		y=54
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:bias:top:0:v_sens"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=784
-		y=79
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:bias:top:1:v_sens"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=784
-		y=104
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:bias:top:2:v_sens"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=784
-		y=129
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:bias:top:3:v_sens"
-		clr=30
-		bclr=14
-	}
-	limits {
-	}
-}
-text {
-	object {
 		x=1236
 		y=631
 		width=140
@@ -817,32 +306,6 @@ oval {
 		vis="if not zero"
 		chan="SVT:hb_check"
 	}
-}
-text {
-	object {
-		x=392
-		y=10
-		width=106
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=393
-		y=33
-		width=106
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Channel"
-	align="horiz. centered"
 }
 composite {
 	object {
@@ -884,20 +347,1799 @@ composite {
 }
 text {
 	object {
-		x=11
-		y=33
-		width=50
+		x=93
+		y=198
+		width=20
 		height=20
 	}
 	"basic attribute" {
-		clr=50
+		clr=0
 	}
-	textix="FEB"
+	textix="1"
 	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=20
+		y=198
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:layer"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=253
+		y=161
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:1:0:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=186
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:1:1:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=211
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:1:2:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=236
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:1:3:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=313
+		y=161
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:1:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=186
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:1:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=211
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:1:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=236
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:1:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=161
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:1:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=186
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:1:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=211
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:1:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=236
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:1:3:stat"
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=161
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:0:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=161
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:0:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=161
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:0:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=186
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:1:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=186
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:1:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=186
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:1:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=211
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:2:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=211
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:2:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=211
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:2:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=236
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:3:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=236
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:3:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=236
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:1:3:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=148
+		y=161
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_0.adl"
+	}
+	clr=0
+	bclr=24
+	label="0"
+}
+"related display" {
+	object {
+		x=148
+		y=186
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_1.adl"
+	}
+	clr=0
+	bclr=24
+	label="1"
+}
+"related display" {
+	object {
+		x=148
+		y=211
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_2.adl"
+	}
+	clr=0
+	bclr=24
+	label="2"
+}
+"related display" {
+	object {
+		x=148
+		y=236
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_3.adl"
+	}
+	clr=0
+	bclr=24
+	label="3"
 }
 text {
 	object {
-		x=26
+		x=93
+		y=307
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="2"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=20
+		y=307
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:layer"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=253
+		y=270
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:2:0:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=295
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:2:1:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=320
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:2:2:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=345
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:2:3:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=313
+		y=270
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:2:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=295
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:2:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=320
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:2:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=345
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:2:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=270
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:2:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=295
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:2:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=320
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:2:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=345
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:2:3:stat"
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=270
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:0:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=270
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:0:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=270
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:0:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=295
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:1:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=295
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:1:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=295
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:1:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=320
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:2:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=320
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:2:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=320
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:2:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=345
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:3:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=345
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:3:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=345
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:2:3:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=148
+		y=270
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_0.adl"
+	}
+	clr=0
+	bclr=24
+	label="0"
+}
+"related display" {
+	object {
+		x=148
+		y=295
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_1.adl"
+	}
+	clr=0
+	bclr=24
+	label="1"
+}
+"related display" {
+	object {
+		x=148
+		y=320
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_2.adl"
+	}
+	clr=0
+	bclr=24
+	label="2"
+}
+"related display" {
+	object {
+		x=148
+		y=345
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_3.adl"
+	}
+	clr=0
+	bclr=24
+	label="3"
+}
+text {
+	object {
+		x=93
+		y=414
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="3"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=20
+		y=414
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:layer"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=253
+		y=377
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:3:0:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=402
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:3:1:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=427
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:3:2:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=452
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:3:3:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=313
+		y=377
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:3:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=402
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:3:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=427
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:3:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=452
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:3:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=377
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:3:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=402
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:3:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=427
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:3:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=452
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:3:3:stat"
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=377
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:0:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=377
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:0:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=377
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:0:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=402
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:1:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=402
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:1:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=402
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:1:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=427
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:2:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=427
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:2:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=427
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:2:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=452
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:3:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=452
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:3:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=452
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:3:3:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=148
+		y=377
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_0.adl"
+	}
+	clr=0
+	bclr=24
+	label="0"
+}
+"related display" {
+	object {
+		x=148
+		y=402
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_1.adl"
+	}
+	clr=0
+	bclr=24
+	label="1"
+}
+"related display" {
+	object {
+		x=148
+		y=427
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_2.adl"
+	}
+	clr=0
+	bclr=24
+	label="2"
+}
+"related display" {
+	object {
+		x=148
+		y=452
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_3.adl"
+	}
+	clr=0
+	bclr=24
+	label="3"
+}
+text {
+	object {
+		x=93
+		y=523
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="4"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=20
+		y=523
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:layer"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=253
+		y=486
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:4:0:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=511
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:4:1:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=536
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:4:2:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=561
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:4:3:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=313
+		y=486
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:4:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=511
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:4:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=536
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:4:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=561
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:4:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=486
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:4:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=511
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:4:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=536
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:4:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=561
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:4:3:stat"
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=486
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:0:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=486
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:0:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=486
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:0:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=511
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:1:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=511
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:1:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=511
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:1:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=536
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:2:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=536
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:2:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=536
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:2:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=561
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:3:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=561
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:3:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=561
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:4:3:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=148
+		y=486
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_0.adl"
+	}
+	clr=0
+	bclr=24
+	label="0"
+}
+"related display" {
+	object {
+		x=148
+		y=511
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_1.adl"
+	}
+	clr=0
+	bclr=24
+	label="1"
+}
+"related display" {
+	object {
+		x=148
+		y=536
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_2.adl"
+	}
+	clr=0
+	bclr=24
+	label="2"
+}
+"related display" {
+	object {
+		x=148
+		y=561
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_3.adl"
+	}
+	clr=0
+	bclr=24
+	label="3"
+}
+text {
+	object {
+		x=693
 		y=91
 		width=20
 		height=20
@@ -905,12 +2147,387 @@ text {
 	"basic attribute" {
 		clr=0
 	}
-	textix="L1t"
+	textix="5"
 	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=620
+		y=91
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:layer"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=853
+		y=54
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:5:0:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=853
+		y=79
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:5:1:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=853
+		y=104
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:5:2:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=853
+		y=129
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:5:3:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=913
+		y=54
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:5:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=79
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:5:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=104
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:5:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=129
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:5:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=54
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:5:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=79
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:5:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=104
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:5:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=129
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:5:3:stat"
+	}
+}
+"text update" {
+	object {
+		x=946
+		y=54
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:0:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=998
+		y=54
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:0:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1049
+		y=54
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:0:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=946
+		y=79
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:1:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=998
+		y=79
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:1:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1049
+		y=79
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:1:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=946
+		y=104
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:2:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=998
+		y=104
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:2:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1049
+		y=104
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:2:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=946
+		y=129
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:3:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=998
+		y=129
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:3:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1049
+		y=129
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:5:3:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
 }
 "related display" {
 	object {
-		x=400
+		x=748
 		y=54
 		width=83
 		height=20
@@ -925,7 +2542,7 @@ text {
 }
 "related display" {
 	object {
-		x=400
+		x=748
 		y=79
 		width=83
 		height=20
@@ -940,7 +2557,7 @@ text {
 }
 "related display" {
 	object {
-		x=400
+		x=748
 		y=104
 		width=83
 		height=20
@@ -955,7 +2572,7 @@ text {
 }
 "related display" {
 	object {
-		x=400
+		x=748
 		y=129
 		width=83
 		height=20
@@ -970,93 +2587,540 @@ text {
 }
 text {
 	object {
-		x=202
-		y=33
-		width=106
+		x=693
+		y=198
+		width=20
 		height=20
 	}
 	"basic attribute" {
-		clr=50
+		clr=0
 	}
-	textix="FEB Power"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=10
-		width=106
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEB"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=40
-		y=33
-		width=106
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Channel"
+	textix="6"
 	align="horiz. centered"
 }
 "text update" {
 	object {
-		x=70
+		x=620
+		y=198
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:layer"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=853
+		y=161
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:6:0:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=853
+		y=186
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:6:1:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=853
+		y=211
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:6:2:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=853
+		y=236
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:6:3:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=913
+		y=161
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:6:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=186
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:6:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=211
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:6:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=236
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:6:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=161
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:6:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=186
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:6:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=211
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:6:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=913
+		y=236
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:6:3:stat"
+	}
+}
+"text update" {
+	object {
+		x=946
+		y=161
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:0:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=998
+		y=161
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:0:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1049
+		y=161
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:0:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=946
+		y=186
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:1:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=998
+		y=186
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:1:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1049
+		y=186
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:1:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=946
+		y=211
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:2:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=998
+		y=211
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:2:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1049
+		y=211
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:2:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=946
+		y=236
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:3:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=998
+		y=236
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:3:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1049
+		y=236
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:6:3:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=748
+		y=161
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_0.adl"
+	}
+	clr=0
+	bclr=24
+	label="0"
+}
+"related display" {
+	object {
+		x=748
+		y=186
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_1.adl"
+	}
+	clr=0
+	bclr=24
+	label="1"
+}
+"related display" {
+	object {
+		x=748
+		y=211
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_2.adl"
+	}
+	clr=0
+	bclr=24
+	label="2"
+}
+"related display" {
+	object {
+		x=748
+		y=236
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_3.adl"
+	}
+	clr=0
+	bclr=24
+	label="3"
+}
+text {
+	object {
+		x=93
+		y=91
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="0"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=20
 		y=91
 		width=47
 		height=20
 	}
 	monitor {
-		chan="SVT:daq:map:0:physfebid"
+		chan="SVT:lv:0:layer"
 		clr=30
 		bclr=14
 	}
 	limits {
 	}
 }
-"text update" {
+"choice button" {
 	object {
-		x=329
-		y=72
-		width=47
+		x=253
+		y=54
+		width=52
 		height=20
 	}
-	monitor {
-		chan="SVT:lv:fe:0:dvdd:i_rd"
-		clr=30
-		bclr=14
+	control {
+		chan="SVT:lv:0:0:all:switch"
+		clr=55
+		bclr=12
 	}
-	align="horiz. centered"
-	limits {
-	}
+	stacking="column"
 }
-"text update" {
+"choice button" {
 	object {
-		x=269
-		y=72
-		width=47
+		x=253
+		y=79
+		width=52
 		height=20
 	}
-	monitor {
-		chan="SVT:lv:fe:0:dvdd:v_sens"
-		clr=30
-		bclr=14
+	control {
+		chan="SVT:lv:0:1:all:switch"
+		clr=55
+		bclr=12
 	}
-	limits {
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=104
+		width=52
+		height=20
 	}
+	control {
+		chan="SVT:lv:0:2:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=253
+		y=129
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:0:3:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
 }
 rectangle {
 	object {
-		x=239
-		y=72
+		x=313
+		y=54
 		width=21
 		height=20
 	}
@@ -1065,86 +3129,13 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="if not zero"
-		chan="SVT:lv:fe:0:digi:stat"
-	}
-}
-"choice button" {
-	object {
-		x=195
-		y=72
-		width=41
-		height=20
-	}
-	control {
-		chan="SVT:lv:fe:0:digi:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=241
-		y=72
-		width=21
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:lv:fe:0:digi:stat"
-	}
-}
-text {
-	object {
-		x=155
-		y=72
-		width=40
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="DIG"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=329
-		y=96
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:fe:0:anap:i_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=269
-		y=96
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:fe:0:anap:v_sens"
-		clr=30
-		bclr=14
-	}
-	limits {
+		chan="SVT:lv:0:0:stat"
 	}
 }
 rectangle {
 	object {
-		x=239
-		y=96
+		x=313
+		y=79
 		width=21
 		height=20
 	}
@@ -1153,86 +3144,13 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="if not zero"
-		chan="SVT:lv:fe:0:anap:stat"
-	}
-}
-"choice button" {
-	object {
-		x=195
-		y=96
-		width=41
-		height=20
-	}
-	control {
-		chan="SVT:lv:fe:0:anap:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
-}
-rectangle {
-	object {
-		x=241
-		y=96
-		width=21
-		height=20
-	}
-	"basic attribute" {
-		clr=20
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="SVT:lv:fe:0:anap:stat"
-	}
-}
-text {
-	object {
-		x=155
-		y=96
-		width=40
-		height=20
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="ANAP"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=329
-		y=118
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:fe:0:anan:i_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=269
-		y=118
-		width=47
-		height=20
-	}
-	monitor {
-		chan="SVT:lv:fe:0:anan:v_sens"
-		clr=30
-		bclr=14
-	}
-	limits {
+		chan="SVT:lv:0:1:stat"
 	}
 }
 rectangle {
 	object {
-		x=239
-		y=118
+		x=313
+		y=104
 		width=21
 		height=20
 	}
@@ -1241,27 +3159,28 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="if not zero"
-		chan="SVT:lv:fe:0:anan:stat"
+		chan="SVT:lv:0:2:stat"
 	}
-}
-"choice button" {
-	object {
-		x=195
-		y=118
-		width=41
-		height=20
-	}
-	control {
-		chan="SVT:lv:fe:0:anan:switch"
-		clr=55
-		bclr=12
-	}
-	stacking="column"
 }
 rectangle {
 	object {
-		x=241
-		y=118
+		x=313
+		y=129
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:0:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=54
 		width=21
 		height=20
 	}
@@ -1270,19 +3189,1921 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="if zero"
-		chan="SVT:lv:fe:0:anan:stat"
+		calc="A"
+		chan="SVT:lv:0:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=79
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:0:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=104
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:0:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=313
+		y=129
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:0:3:stat"
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=54
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:0:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=54
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:0:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=54
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:0:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=79
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:1:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=79
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:1:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=79
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:1:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=104
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:2:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=104
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:2:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=104
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:2:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=346
+		y=129
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:3:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=398
+		y=129
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:3:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=449
+		y=129
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:0:3:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=148
+		y=54
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_0.adl"
+	}
+	clr=0
+	bclr=24
+	label="0"
+}
+"related display" {
+	object {
+		x=148
+		y=79
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_1.adl"
+	}
+	clr=0
+	bclr=24
+	label="1"
+}
+"related display" {
+	object {
+		x=148
+		y=104
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_2.adl"
+	}
+	clr=0
+	bclr=24
+	label="2"
+}
+"related display" {
+	object {
+		x=148
+		y=129
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_3.adl"
+	}
+	clr=0
+	bclr=24
+	label="3"
+}
+composite {
+	object {
+		x=20
+		y=10
+		width=471
+		height=43
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=20
+				y=33
+				width=50
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=50
+				y=10
+				width=106
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=50
+				y=33
+				width=106
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="Channel"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=290
+				y=33
+				width=37
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="ON/OFF"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=351
+				y=31
+				width=37
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="DVDD"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=403
+				y=31
+				width=37
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="AVDD"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=454
+				y=31
+				width=37
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="V125"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=375
+				y=10
+				width=106
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="MEASURED CURRENTS"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=140
+				y=10
+				width=106
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="Hybrid"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=141
+				y=33
+				width=106
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="Channel"
+			align="horiz. centered"
+		}
+	}
+}
+composite {
+	object {
+		x=617
+		y=9
+		width=471
+		height=43
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=617
+				y=32
+				width=50
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=647
+				y=9
+				width=106
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=647
+				y=32
+				width=106
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="Channel"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=887
+				y=32
+				width=37
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="ON/OFF"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=948
+				y=30
+				width=37
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="DVDD"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=1000
+				y=30
+				width=37
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="AVDD"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=1051
+				y=30
+				width=37
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="V125"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=972
+				y=9
+				width=106
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="MEASURED CURRENTS"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=737
+				y=9
+				width=106
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="Hybrid"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=738
+				y=32
+				width=106
+				height=20
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="Channel"
+			align="horiz. centered"
+		}
 	}
 }
 text {
 	object {
-		x=155
-		y=118
-		width=40
+		x=695
+		y=307
+		width=20
 		height=20
 	}
 	"basic attribute" {
-		clr=50
+		clr=0
 	}
-	textix="ANAN"
+	textix="7"
 	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=622
+		y=307
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:layer"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=855
+		y=270
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:7:0:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=855
+		y=295
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:7:1:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=855
+		y=320
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:7:2:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=855
+		y=345
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:7:3:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=915
+		y=270
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:7:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=915
+		y=295
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:7:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=915
+		y=320
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:7:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=915
+		y=345
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:7:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=915
+		y=270
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:7:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=915
+		y=295
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:7:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=915
+		y=320
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:7:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=915
+		y=345
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:7:3:stat"
+	}
+}
+"text update" {
+	object {
+		x=948
+		y=270
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:0:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1000
+		y=270
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:0:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1051
+		y=270
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:0:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=948
+		y=295
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:1:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1000
+		y=295
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:1:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1051
+		y=295
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:1:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=948
+		y=320
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:2:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1000
+		y=320
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:2:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1051
+		y=320
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:2:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=948
+		y=345
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:3:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1000
+		y=345
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:3:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1051
+		y=345
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:7:3:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=750
+		y=270
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_0.adl"
+	}
+	clr=0
+	bclr=24
+	label="0"
+}
+"related display" {
+	object {
+		x=750
+		y=295
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_1.adl"
+	}
+	clr=0
+	bclr=24
+	label="1"
+}
+"related display" {
+	object {
+		x=750
+		y=320
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_2.adl"
+	}
+	clr=0
+	bclr=24
+	label="2"
+}
+"related display" {
+	object {
+		x=750
+		y=345
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_3.adl"
+	}
+	clr=0
+	bclr=24
+	label="3"
+}
+text {
+	object {
+		x=697
+		y=416
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="8"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=624
+		y=416
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:layer"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=857
+		y=379
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:8:0:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=857
+		y=404
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:8:1:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=857
+		y=429
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:8:2:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=857
+		y=454
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:8:3:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=917
+		y=379
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:8:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=917
+		y=404
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:8:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=917
+		y=429
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:8:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=917
+		y=454
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:8:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=917
+		y=379
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:8:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=917
+		y=404
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:8:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=917
+		y=429
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:8:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=917
+		y=454
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:8:3:stat"
+	}
+}
+"text update" {
+	object {
+		x=950
+		y=379
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:0:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1002
+		y=379
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:0:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1053
+		y=379
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:0:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=950
+		y=404
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:1:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1002
+		y=404
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:1:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1053
+		y=404
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:1:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=950
+		y=429
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:2:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1002
+		y=429
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:2:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1053
+		y=429
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:2:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=950
+		y=454
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:3:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1002
+		y=454
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:3:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1053
+		y=454
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:8:3:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=752
+		y=379
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_0.adl"
+	}
+	clr=0
+	bclr=24
+	label="0"
+}
+"related display" {
+	object {
+		x=752
+		y=404
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_1.adl"
+	}
+	clr=0
+	bclr=24
+	label="1"
+}
+"related display" {
+	object {
+		x=752
+		y=429
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_2.adl"
+	}
+	clr=0
+	bclr=24
+	label="2"
+}
+"related display" {
+	object {
+		x=752
+		y=454
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_3.adl"
+	}
+	clr=0
+	bclr=24
+	label="3"
+}
+text {
+	object {
+		x=698
+		y=523
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="9"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=625
+		y=523
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:layer"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=858
+		y=486
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:9:0:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=858
+		y=511
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:9:1:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=858
+		y=536
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:9:2:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=858
+		y=561
+		width=52
+		height=20
+	}
+	control {
+		chan="SVT:lv:9:3:all:switch"
+		clr=55
+		bclr=12
+	}
+	stacking="column"
+}
+rectangle {
+	object {
+		x=918
+		y=486
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:9:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=918
+		y=511
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:9:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=918
+		y=536
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:9:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=918
+		y=561
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="SVT:lv:9:3:stat"
+	}
+}
+rectangle {
+	object {
+		x=918
+		y=486
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:9:0:stat"
+	}
+}
+rectangle {
+	object {
+		x=918
+		y=511
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:9:1:stat"
+	}
+}
+rectangle {
+	object {
+		x=918
+		y=536
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:9:2:stat"
+	}
+}
+rectangle {
+	object {
+		x=918
+		y=561
+		width=21
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		calc="A"
+		chan="SVT:lv:9:3:stat"
+	}
+}
+"text update" {
+	object {
+		x=951
+		y=486
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:0:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1003
+		y=486
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:0:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1054
+		y=486
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:0:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=951
+		y=511
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:1:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1003
+		y=511
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:1:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1054
+		y=511
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:1:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=951
+		y=536
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:2:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1003
+		y=536
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:2:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1054
+		y=536
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:2:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=951
+		y=561
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:3:dvdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1003
+		y=561
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:3:avdd:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1054
+		y=561
+		width=47
+		height=20
+	}
+	monitor {
+		chan="SVT:lv:9:3:v125:i_rd"
+		clr=30
+		bclr=14
+	}
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=753
+		y=486
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_0.adl"
+	}
+	clr=0
+	bclr=24
+	label="0"
+}
+"related display" {
+	object {
+		x=753
+		y=511
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_1.adl"
+	}
+	clr=0
+	bclr=24
+	label="1"
+}
+"related display" {
+	object {
+		x=753
+		y=536
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_2.adl"
+	}
+	clr=0
+	bclr=24
+	label="2"
+}
+"related display" {
+	object {
+		x=753
+		y=561
+		width=83
+		height=20
+	}
+	display[0] {
+		label="GGG"
+		name="hps_svt_hybrid_LV_top_3.adl"
+	}
+	clr=0
+	bclr=24
+	label="3"
 }

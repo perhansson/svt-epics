@@ -1,6 +1,6 @@
 
 file {
-	name="/u1/epics/svt-epics/svt-medm/svtFebMain.adl"
+	name="/u1/epics/dev/svt-epics/svt-medm/svtFebMain.adl"
 	version=030108
 }
 display {

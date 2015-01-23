@@ -46,8 +46,6 @@ record(fanout, SVT:daqmap:fanout)
   field(LNK1,"SVT:lv:hyb::0:0:sync")
   field(LNK2,"SVT:lv:hyb:0:0:dpm")
   field(LNK3,"SVT:daq:map:l1t:febid")
-  #field(LNK1,"SVT:daqmap:febid:fanout")
-  #field(LNK2,"SVT:daqmap:febch:fanout")
 }
 
 
