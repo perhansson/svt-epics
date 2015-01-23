@@ -394,7 +394,7 @@ static void setupDaqMap(subRecord *precord) {
     printf("[ setupDaqMap ]: %d Record %s called setupDaqMap(%p)\n", process_order, precord->name, (void*) precord);
   }
 
-  if (mySubDebug>1) printf("[ setupDaqMap ]: initialize daq map\n");
+  if (mySubDebug>0) printf("[ setupDaqMap ]: initialize daq map\n");
  
   
   // only setup socket from DB if it's the correct record...
@@ -407,7 +407,7 @@ static void setupDaqMap(subRecord *precord) {
         setFebFromRecord(precord,hybToFeb);
      }
   } else {
-     if (mySubDebug>1) printf("[ setupDaqMap ]: do not setup daqmap for this record\n");
+     if (mySubDebug>0) printf("[ setupDaqMap ]: do not setup daqmap for this record\n");
   }
   if (mySubDebug>1) {
      printf("[ setupDaqMap ]: Resulting daq map in mem:\n");
