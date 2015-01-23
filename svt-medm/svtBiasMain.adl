@@ -5,16 +5,16 @@ file {
 }
 display {
 	object {
-		x=1519
-		y=83
-		width=1500
-		height=1050
+		x=4
+		y=22
+		width=1440
+		height=856
 	}
 	clr=14
 	bclr=12
 	cmap=""
 	gridSpacing=5
-	gridOn=0
+	gridOn=1
 	snapToGrid=0
 }
 "color map" {
@@ -89,508 +89,471 @@ display {
 }
 text {
 	object {
-		x=1
-		y=519
-		width=55
-		height=18
+		x=0
+		y=57
+		width=70
+		height=20
 	}
 	"basic attribute" {
-		clr=15
+		clr=31
 	}
-	textix="Bottom"
+	textix="SVT TOP 0"
 	align="horiz. centered"
 }
 text {
 	object {
-		x=1
-		y=38
-		width=55
-		height=18
+		x=0
+		y=82
+		width=70
+		height=20
 	}
 	"basic attribute" {
-		clr=15
+		clr=31
 	}
-	textix="Top"
+	textix="SVT TOP 1"
 	align="horiz. centered"
 }
-composite {
+text {
 	object {
 		x=0
-		y=57
+		y=107
 		width=70
-		height=945
+		height=20
 	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=0
-				y=57
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 0"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=83
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 1"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=109
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 2"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=135
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 3"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=161
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 4"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=187
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 5"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=213
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 6"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=239
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 7"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=265
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 8"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=291
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 9"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=317
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 10"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=343
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 11"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=369
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 12"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=395
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 13"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=421
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 14"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=450
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 15"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=476
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 16"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=502
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT TOP 17"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=539
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 0"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=565
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 1"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=591
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 2"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=617
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 3"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=643
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 4"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=669
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 5"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=695
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 6"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=721
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 7"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=747
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 8"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=774
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 9"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=800
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 10"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=826
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 11"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=852
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 12"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=878
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 13"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=904
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 14"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=930
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 15"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=956
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 16"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=0
-				y=982
-				width=70
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="SVT BOT 17"
-			align="horiz. centered"
-		}
+	"basic attribute" {
+		clr=31
 	}
+	textix="SVT TOP 2"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=132
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 3"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=157
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 4"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=182
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 5"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=207
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 6"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=232
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 7"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=257
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 8"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=282
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 9"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=307
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 10"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=332
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 11"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=357
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 12"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=382
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 13"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=407
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 14"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=432
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 15"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=457
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 16"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=482
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT TOP 17"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=539
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=564
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=589
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 2"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=614
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 3"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=639
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 4"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=664
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 5"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=689
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 6"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=714
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 7"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=739
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 8"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=764
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 9"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=789
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 10"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=814
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 11"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=852
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 12"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=878
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 13"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=904
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 14"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=930
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 15"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=956
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 16"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=982
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="SVT BOT 17"
+	align="horiz. centered"
 }
 text {
 	object {
@@ -850,25 +813,10 @@ rectangle {
 		chan="SVT:bias:top:0:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=56
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:0:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=83
+		y=82
 		width=51
 		height=20
 	}
@@ -883,7 +831,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=83
+		y=82
 		width=51
 		height=20
 	}
@@ -898,7 +846,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=83
+		y=82
 		width=51
 		height=20
 	}
@@ -913,7 +861,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=83
+		y=82
 		width=51
 		height=20
 	}
@@ -928,7 +876,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=82
+		y=81
 		width=51
 		height=20
 	}
@@ -942,7 +890,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=82
+		y=81
 		width=20
 		height=20
 	}
@@ -954,25 +902,10 @@ rectangle {
 		chan="SVT:bias:top:1:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=82
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:1:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=109
+		y=107
 		width=51
 		height=20
 	}
@@ -987,7 +920,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=109
+		y=107
 		width=51
 		height=20
 	}
@@ -1002,7 +935,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=109
+		y=107
 		width=51
 		height=20
 	}
@@ -1017,7 +950,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=109
+		y=107
 		width=51
 		height=20
 	}
@@ -1032,7 +965,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=108
+		y=106
 		width=51
 		height=20
 	}
@@ -1046,7 +979,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=108
+		y=106
 		width=20
 		height=20
 	}
@@ -1058,25 +991,10 @@ rectangle {
 		chan="SVT:bias:top:2:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=108
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:2:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=135
+		y=132
 		width=51
 		height=20
 	}
@@ -1091,7 +1009,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=135
+		y=132
 		width=51
 		height=20
 	}
@@ -1106,7 +1024,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=135
+		y=132
 		width=51
 		height=20
 	}
@@ -1121,7 +1039,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=135
+		y=132
 		width=51
 		height=20
 	}
@@ -1136,7 +1054,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=134
+		y=131
 		width=51
 		height=20
 	}
@@ -1150,7 +1068,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=134
+		y=131
 		width=20
 		height=20
 	}
@@ -1162,25 +1080,10 @@ rectangle {
 		chan="SVT:bias:top:3:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=134
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:3:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=161
+		y=157
 		width=51
 		height=20
 	}
@@ -1195,7 +1098,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=161
+		y=157
 		width=51
 		height=20
 	}
@@ -1210,7 +1113,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=161
+		y=157
 		width=51
 		height=20
 	}
@@ -1225,7 +1128,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=161
+		y=157
 		width=51
 		height=20
 	}
@@ -1240,7 +1143,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=160
+		y=156
 		width=51
 		height=20
 	}
@@ -1254,7 +1157,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=160
+		y=156
 		width=20
 		height=20
 	}
@@ -1266,25 +1169,10 @@ rectangle {
 		chan="SVT:bias:top:4:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=160
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:4:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=187
+		y=182
 		width=51
 		height=20
 	}
@@ -1299,7 +1187,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=187
+		y=182
 		width=51
 		height=20
 	}
@@ -1314,7 +1202,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=187
+		y=182
 		width=51
 		height=20
 	}
@@ -1329,7 +1217,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=187
+		y=182
 		width=51
 		height=20
 	}
@@ -1344,7 +1232,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=186
+		y=181
 		width=51
 		height=20
 	}
@@ -1358,7 +1246,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=186
+		y=181
 		width=20
 		height=20
 	}
@@ -1370,25 +1258,10 @@ rectangle {
 		chan="SVT:bias:top:5:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=186
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:5:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=213
+		y=207
 		width=51
 		height=20
 	}
@@ -1403,7 +1276,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=213
+		y=207
 		width=51
 		height=20
 	}
@@ -1418,7 +1291,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=213
+		y=207
 		width=51
 		height=20
 	}
@@ -1433,7 +1306,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=213
+		y=207
 		width=51
 		height=20
 	}
@@ -1448,7 +1321,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=212
+		y=206
 		width=51
 		height=20
 	}
@@ -1462,7 +1335,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=212
+		y=206
 		width=20
 		height=20
 	}
@@ -1474,25 +1347,10 @@ rectangle {
 		chan="SVT:bias:top:6:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=212
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:6:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=239
+		y=232
 		width=51
 		height=20
 	}
@@ -1507,7 +1365,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=239
+		y=232
 		width=51
 		height=20
 	}
@@ -1522,7 +1380,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=239
+		y=232
 		width=51
 		height=20
 	}
@@ -1537,7 +1395,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=239
+		y=232
 		width=51
 		height=20
 	}
@@ -1552,7 +1410,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=238
+		y=231
 		width=51
 		height=20
 	}
@@ -1566,7 +1424,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=238
+		y=231
 		width=20
 		height=20
 	}
@@ -1578,25 +1436,10 @@ rectangle {
 		chan="SVT:bias:top:7:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=238
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:7:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=265
+		y=257
 		width=51
 		height=20
 	}
@@ -1611,7 +1454,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=265
+		y=257
 		width=51
 		height=20
 	}
@@ -1626,7 +1469,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=265
+		y=257
 		width=51
 		height=20
 	}
@@ -1641,7 +1484,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=265
+		y=257
 		width=51
 		height=20
 	}
@@ -1656,7 +1499,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=264
+		y=256
 		width=51
 		height=20
 	}
@@ -1670,7 +1513,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=264
+		y=256
 		width=20
 		height=20
 	}
@@ -1682,25 +1525,10 @@ rectangle {
 		chan="SVT:bias:top:8:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=264
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:8:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=291
+		y=282
 		width=51
 		height=20
 	}
@@ -1715,7 +1543,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=291
+		y=282
 		width=51
 		height=20
 	}
@@ -1730,7 +1558,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=291
+		y=282
 		width=51
 		height=20
 	}
@@ -1745,7 +1573,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=291
+		y=282
 		width=51
 		height=20
 	}
@@ -1760,7 +1588,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=290
+		y=281
 		width=51
 		height=20
 	}
@@ -1774,7 +1602,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=290
+		y=281
 		width=20
 		height=20
 	}
@@ -1786,25 +1614,10 @@ rectangle {
 		chan="SVT:bias:top:9:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=290
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:9:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=317
+		y=307
 		width=51
 		height=20
 	}
@@ -1819,7 +1632,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=317
+		y=307
 		width=51
 		height=20
 	}
@@ -1834,7 +1647,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=317
+		y=307
 		width=51
 		height=20
 	}
@@ -1849,7 +1662,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=317
+		y=307
 		width=51
 		height=20
 	}
@@ -1864,7 +1677,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=316
+		y=306
 		width=51
 		height=20
 	}
@@ -1878,7 +1691,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=316
+		y=306
 		width=20
 		height=20
 	}
@@ -1890,25 +1703,10 @@ rectangle {
 		chan="SVT:bias:top:10:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=316
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:10:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=343
+		y=332
 		width=51
 		height=20
 	}
@@ -1923,7 +1721,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=343
+		y=332
 		width=51
 		height=20
 	}
@@ -1938,7 +1736,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=343
+		y=332
 		width=51
 		height=20
 	}
@@ -1953,7 +1751,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=343
+		y=332
 		width=51
 		height=20
 	}
@@ -1968,7 +1766,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=342
+		y=331
 		width=51
 		height=20
 	}
@@ -1982,7 +1780,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=342
+		y=331
 		width=20
 		height=20
 	}
@@ -1994,25 +1792,10 @@ rectangle {
 		chan="SVT:bias:top:11:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=342
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:11:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=369
+		y=357
 		width=51
 		height=20
 	}
@@ -2027,7 +1810,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=369
+		y=357
 		width=51
 		height=20
 	}
@@ -2042,7 +1825,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=369
+		y=357
 		width=51
 		height=20
 	}
@@ -2057,7 +1840,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=369
+		y=357
 		width=51
 		height=20
 	}
@@ -2072,7 +1855,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=368
+		y=356
 		width=51
 		height=20
 	}
@@ -2086,7 +1869,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=368
+		y=356
 		width=20
 		height=20
 	}
@@ -2098,25 +1881,10 @@ rectangle {
 		chan="SVT:bias:top:12:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=368
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:12:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=395
+		y=382
 		width=51
 		height=20
 	}
@@ -2131,7 +1899,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=395
+		y=382
 		width=51
 		height=20
 	}
@@ -2146,7 +1914,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=395
+		y=382
 		width=51
 		height=20
 	}
@@ -2161,7 +1929,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=395
+		y=382
 		width=51
 		height=20
 	}
@@ -2176,7 +1944,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=394
+		y=381
 		width=51
 		height=20
 	}
@@ -2190,7 +1958,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=394
+		y=381
 		width=20
 		height=20
 	}
@@ -2202,25 +1970,10 @@ rectangle {
 		chan="SVT:bias:top:13:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=394
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:13:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=421
+		y=407
 		width=51
 		height=20
 	}
@@ -2235,7 +1988,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=421
+		y=407
 		width=51
 		height=20
 	}
@@ -2250,7 +2003,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=421
+		y=407
 		width=51
 		height=20
 	}
@@ -2265,7 +2018,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=421
+		y=407
 		width=51
 		height=20
 	}
@@ -2280,7 +2033,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=420
+		y=406
 		width=51
 		height=20
 	}
@@ -2294,7 +2047,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=420
+		y=406
 		width=20
 		height=20
 	}
@@ -2306,25 +2059,10 @@ rectangle {
 		chan="SVT:bias:top:14:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=420
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:14:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=450
+		y=432
 		width=51
 		height=20
 	}
@@ -2339,7 +2077,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=450
+		y=432
 		width=51
 		height=20
 	}
@@ -2354,7 +2092,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=450
+		y=432
 		width=51
 		height=20
 	}
@@ -2369,7 +2107,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=450
+		y=432
 		width=51
 		height=20
 	}
@@ -2384,7 +2122,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=449
+		y=431
 		width=51
 		height=20
 	}
@@ -2398,7 +2136,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=449
+		y=431
 		width=20
 		height=20
 	}
@@ -2410,25 +2148,10 @@ rectangle {
 		chan="SVT:bias:top:15:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=449
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:15:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=476
+		y=457
 		width=51
 		height=20
 	}
@@ -2443,7 +2166,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=476
+		y=457
 		width=51
 		height=20
 	}
@@ -2458,7 +2181,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=476
+		y=457
 		width=51
 		height=20
 	}
@@ -2473,7 +2196,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=476
+		y=457
 		width=51
 		height=20
 	}
@@ -2488,7 +2211,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=475
+		y=456
 		width=51
 		height=20
 	}
@@ -2502,7 +2225,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=475
+		y=456
 		width=20
 		height=20
 	}
@@ -2514,25 +2237,10 @@ rectangle {
 		chan="SVT:bias:top:16:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=475
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:top:16:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=502
+		y=482
 		width=51
 		height=20
 	}
@@ -2547,7 +2255,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=502
+		y=482
 		width=51
 		height=20
 	}
@@ -2562,7 +2270,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=502
+		y=482
 		width=51
 		height=20
 	}
@@ -2577,7 +2285,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=502
+		y=482
 		width=51
 		height=20
 	}
@@ -2592,7 +2300,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=501
+		y=481
 		width=51
 		height=20
 	}
@@ -2606,7 +2314,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=501
+		y=481
 		width=20
 		height=20
 	}
@@ -2615,21 +2323,6 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="if zero"
-		chan="SVT:bias:top:17:stat"
-	}
-}
-rectangle {
-	object {
-		x=609
-		y=501
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
 		chan="SVT:bias:top:17:stat"
 	}
 }
@@ -2995,25 +2688,10 @@ rectangle {
 		chan="SVT:bias:bot:20:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=538
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:bot:20:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=565
+		y=564
 		width=51
 		height=20
 	}
@@ -3028,7 +2706,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=565
+		y=564
 		width=51
 		height=20
 	}
@@ -3043,7 +2721,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=565
+		y=564
 		width=51
 		height=20
 	}
@@ -3058,7 +2736,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=565
+		y=564
 		width=51
 		height=20
 	}
@@ -3073,7 +2751,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=564
+		y=563
 		width=51
 		height=20
 	}
@@ -3087,7 +2765,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=564
+		y=563
 		width=20
 		height=20
 	}
@@ -3099,25 +2777,10 @@ rectangle {
 		chan="SVT:bias:bot:21:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=564
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:bot:21:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=591
+		y=589
 		width=51
 		height=20
 	}
@@ -3132,7 +2795,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=591
+		y=589
 		width=51
 		height=20
 	}
@@ -3147,7 +2810,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=591
+		y=589
 		width=51
 		height=20
 	}
@@ -3162,7 +2825,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=591
+		y=589
 		width=51
 		height=20
 	}
@@ -3177,7 +2840,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=590
+		y=588
 		width=51
 		height=20
 	}
@@ -3191,7 +2854,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=590
+		y=588
 		width=20
 		height=20
 	}
@@ -3203,25 +2866,10 @@ rectangle {
 		chan="SVT:bias:bot:22:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=590
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:bot:22:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=617
+		y=614
 		width=51
 		height=20
 	}
@@ -3236,7 +2884,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=617
+		y=614
 		width=51
 		height=20
 	}
@@ -3251,7 +2899,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=617
+		y=614
 		width=51
 		height=20
 	}
@@ -3266,7 +2914,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=617
+		y=614
 		width=51
 		height=20
 	}
@@ -3281,7 +2929,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=616
+		y=613
 		width=51
 		height=20
 	}
@@ -3295,7 +2943,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=616
+		y=613
 		width=20
 		height=20
 	}
@@ -3307,25 +2955,10 @@ rectangle {
 		chan="SVT:bias:bot:23:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=616
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:bot:23:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=643
+		y=639
 		width=51
 		height=20
 	}
@@ -3340,7 +2973,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=643
+		y=639
 		width=51
 		height=20
 	}
@@ -3355,7 +2988,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=643
+		y=639
 		width=51
 		height=20
 	}
@@ -3370,7 +3003,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=643
+		y=639
 		width=51
 		height=20
 	}
@@ -3385,7 +3018,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=642
+		y=638
 		width=51
 		height=20
 	}
@@ -3399,7 +3032,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=642
+		y=638
 		width=20
 		height=20
 	}
@@ -3411,25 +3044,10 @@ rectangle {
 		chan="SVT:bias:bot:24:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=642
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:bot:24:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=669
+		y=664
 		width=51
 		height=20
 	}
@@ -3444,7 +3062,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=669
+		y=664
 		width=51
 		height=20
 	}
@@ -3459,7 +3077,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=669
+		y=664
 		width=51
 		height=20
 	}
@@ -3474,7 +3092,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=669
+		y=664
 		width=51
 		height=20
 	}
@@ -3489,7 +3107,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=668
+		y=663
 		width=51
 		height=20
 	}
@@ -3503,7 +3121,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=668
+		y=663
 		width=20
 		height=20
 	}
@@ -3515,25 +3133,10 @@ rectangle {
 		chan="SVT:bias:bot:25:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=668
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:bot:25:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=695
+		y=689
 		width=51
 		height=20
 	}
@@ -3548,7 +3151,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=695
+		y=689
 		width=51
 		height=20
 	}
@@ -3563,7 +3166,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=695
+		y=689
 		width=51
 		height=20
 	}
@@ -3578,7 +3181,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=695
+		y=689
 		width=51
 		height=20
 	}
@@ -3593,7 +3196,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=694
+		y=688
 		width=51
 		height=20
 	}
@@ -3607,7 +3210,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=694
+		y=688
 		width=20
 		height=20
 	}
@@ -3619,25 +3222,10 @@ rectangle {
 		chan="SVT:bias:bot:26:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=694
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:bot:26:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=721
+		y=714
 		width=51
 		height=20
 	}
@@ -3652,7 +3240,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=721
+		y=714
 		width=51
 		height=20
 	}
@@ -3667,7 +3255,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=721
+		y=714
 		width=51
 		height=20
 	}
@@ -3682,7 +3270,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=721
+		y=714
 		width=51
 		height=20
 	}
@@ -3697,7 +3285,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=720
+		y=713
 		width=51
 		height=20
 	}
@@ -3711,7 +3299,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=720
+		y=713
 		width=20
 		height=20
 	}
@@ -3723,25 +3311,10 @@ rectangle {
 		chan="SVT:bias:bot:27:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=720
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:bot:27:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=747
+		y=739
 		width=51
 		height=20
 	}
@@ -3756,7 +3329,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=747
+		y=739
 		width=51
 		height=20
 	}
@@ -3771,7 +3344,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=747
+		y=739
 		width=51
 		height=20
 	}
@@ -3786,7 +3359,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=747
+		y=739
 		width=51
 		height=20
 	}
@@ -3801,7 +3374,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=746
+		y=738
 		width=51
 		height=20
 	}
@@ -3815,7 +3388,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=746
+		y=738
 		width=20
 		height=20
 	}
@@ -3827,25 +3400,10 @@ rectangle {
 		chan="SVT:bias:bot:28:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=746
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:bot:28:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=774
+		y=764
 		width=51
 		height=20
 	}
@@ -3860,7 +3418,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=774
+		y=764
 		width=51
 		height=20
 	}
@@ -3875,7 +3433,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=774
+		y=764
 		width=51
 		height=20
 	}
@@ -3890,7 +3448,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=774
+		y=764
 		width=51
 		height=20
 	}
@@ -3905,7 +3463,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=773
+		y=763
 		width=51
 		height=20
 	}
@@ -3919,7 +3477,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=773
+		y=763
 		width=20
 		height=20
 	}
@@ -3931,25 +3489,10 @@ rectangle {
 		chan="SVT:bias:bot:29:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=773
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:bot:29:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=800
+		y=789
 		width=51
 		height=20
 	}
@@ -3964,7 +3507,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=800
+		y=789
 		width=51
 		height=20
 	}
@@ -3979,7 +3522,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=800
+		y=789
 		width=51
 		height=20
 	}
@@ -3994,7 +3537,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=800
+		y=789
 		width=51
 		height=20
 	}
@@ -4009,7 +3552,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=799
+		y=788
 		width=51
 		height=20
 	}
@@ -4023,7 +3566,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=799
+		y=788
 		width=20
 		height=20
 	}
@@ -4035,25 +3578,10 @@ rectangle {
 		chan="SVT:bias:bot:30:stat"
 	}
 }
-rectangle {
-	object {
-		x=609
-		y=799
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="SVT:bias:bot:30:stat"
-	}
-}
 "text entry" {
 	object {
 		x=752
-		y=826
+		y=814
 		width=51
 		height=20
 	}
@@ -4068,7 +3596,7 @@ rectangle {
 "text entry" {
 	object {
 		x=913
-		y=826
+		y=814
 		width=51
 		height=20
 	}
@@ -4083,7 +3611,7 @@ rectangle {
 "text entry" {
 	object {
 		x=1068
-		y=826
+		y=814
 		width=51
 		height=20
 	}
@@ -4098,7 +3626,7 @@ rectangle {
 "text entry" {
 	object {
 		x=355
-		y=826
+		y=814
 		width=51
 		height=20
 	}
@@ -4113,7 +3641,7 @@ rectangle {
 "choice button" {
 	object {
 		x=517
-		y=825
+		y=813
 		width=51
 		height=20
 	}
@@ -4127,7 +3655,7 @@ rectangle {
 rectangle {
 	object {
 		x=610
-		y=825
+		y=813
 		width=20
 		height=20
 	}
@@ -4136,21 +3664,6 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="if zero"
-		chan="SVT:bias:bot:31:stat"
-	}
-}
-rectangle {
-	object {
-		x=609
-		y=825
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=15
-	}
-	"dynamic attribute" {
-		vis="if not zero"
 		chan="SVT:bias:bot:31:stat"
 	}
 }
@@ -4797,7 +4310,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=83
+		y=82
 		width=51
 		height=20
 	}
@@ -4813,7 +4326,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=109
+		y=107
 		width=51
 		height=20
 	}
@@ -4829,7 +4342,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=135
+		y=132
 		width=51
 		height=20
 	}
@@ -4845,7 +4358,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=161
+		y=157
 		width=51
 		height=20
 	}
@@ -4861,7 +4374,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=187
+		y=182
 		width=51
 		height=20
 	}
@@ -4877,7 +4390,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=213
+		y=207
 		width=51
 		height=20
 	}
@@ -4893,7 +4406,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=239
+		y=232
 		width=51
 		height=20
 	}
@@ -4909,7 +4422,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=265
+		y=257
 		width=51
 		height=20
 	}
@@ -4925,7 +4438,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=291
+		y=282
 		width=51
 		height=20
 	}
@@ -4941,7 +4454,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=317
+		y=307
 		width=51
 		height=20
 	}
@@ -4957,7 +4470,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=343
+		y=332
 		width=51
 		height=20
 	}
@@ -4973,7 +4486,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=369
+		y=357
 		width=51
 		height=20
 	}
@@ -4989,7 +4502,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=395
+		y=382
 		width=51
 		height=20
 	}
@@ -5005,7 +4518,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=421
+		y=407
 		width=51
 		height=20
 	}
@@ -5021,7 +4534,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=450
+		y=432
 		width=51
 		height=20
 	}
@@ -5037,7 +4550,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=476
+		y=457
 		width=51
 		height=20
 	}
@@ -5053,7 +4566,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=502
+		y=482
 		width=51
 		height=20
 	}
@@ -5085,7 +4598,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=565
+		y=564
 		width=51
 		height=20
 	}
@@ -5101,7 +4614,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=591
+		y=589
 		width=51
 		height=20
 	}
@@ -5117,7 +4630,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=617
+		y=614
 		width=51
 		height=20
 	}
@@ -5133,7 +4646,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=643
+		y=639
 		width=51
 		height=20
 	}
@@ -5149,7 +4662,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=669
+		y=664
 		width=51
 		height=20
 	}
@@ -5165,7 +4678,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=695
+		y=689
 		width=51
 		height=20
 	}
@@ -5181,7 +4694,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=721
+		y=714
 		width=51
 		height=20
 	}
@@ -5197,7 +4710,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=747
+		y=739
 		width=51
 		height=20
 	}
@@ -5213,7 +4726,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=774
+		y=764
 		width=51
 		height=20
 	}
@@ -5229,7 +4742,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=800
+		y=789
 		width=51
 		height=20
 	}
@@ -5245,7 +4758,7 @@ rectangle {
 "text update" {
 	object {
 		x=279
-		y=826
+		y=814
 		width=51
 		height=20
 	}
@@ -5373,7 +4886,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=83
+		y=82
 		width=51
 		height=20
 	}
@@ -5389,7 +4902,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=109
+		y=107
 		width=51
 		height=20
 	}
@@ -5405,7 +4918,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=135
+		y=132
 		width=51
 		height=20
 	}
@@ -5421,7 +4934,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=161
+		y=157
 		width=51
 		height=20
 	}
@@ -5437,7 +4950,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=187
+		y=182
 		width=51
 		height=20
 	}
@@ -5453,7 +4966,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=213
+		y=207
 		width=51
 		height=20
 	}
@@ -5469,7 +4982,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=239
+		y=232
 		width=51
 		height=20
 	}
@@ -5485,7 +4998,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=265
+		y=257
 		width=51
 		height=20
 	}
@@ -5501,7 +5014,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=291
+		y=282
 		width=51
 		height=20
 	}
@@ -5517,7 +5030,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=317
+		y=307
 		width=51
 		height=20
 	}
@@ -5533,7 +5046,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=343
+		y=332
 		width=51
 		height=20
 	}
@@ -5549,7 +5062,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=369
+		y=357
 		width=51
 		height=20
 	}
@@ -5565,7 +5078,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=395
+		y=382
 		width=51
 		height=20
 	}
@@ -5581,7 +5094,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=421
+		y=407
 		width=51
 		height=20
 	}
@@ -5597,7 +5110,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=450
+		y=432
 		width=51
 		height=20
 	}
@@ -5613,7 +5126,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=476
+		y=457
 		width=51
 		height=20
 	}
@@ -5629,7 +5142,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=502
+		y=482
 		width=51
 		height=20
 	}
@@ -5661,7 +5174,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=565
+		y=564
 		width=51
 		height=20
 	}
@@ -5677,7 +5190,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=591
+		y=589
 		width=51
 		height=20
 	}
@@ -5693,7 +5206,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=617
+		y=614
 		width=51
 		height=20
 	}
@@ -5709,7 +5222,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=643
+		y=639
 		width=51
 		height=20
 	}
@@ -5725,7 +5238,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=669
+		y=664
 		width=51
 		height=20
 	}
@@ -5741,7 +5254,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=695
+		y=689
 		width=51
 		height=20
 	}
@@ -5757,7 +5270,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=721
+		y=714
 		width=51
 		height=20
 	}
@@ -5773,7 +5286,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=747
+		y=739
 		width=51
 		height=20
 	}
@@ -5789,7 +5302,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=774
+		y=764
 		width=51
 		height=20
 	}
@@ -5805,7 +5318,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=800
+		y=789
 		width=51
 		height=20
 	}
@@ -5821,7 +5334,7 @@ rectangle {
 "text update" {
 	object {
 		x=432
-		y=826
+		y=814
 		width=51
 		height=20
 	}
@@ -5949,7 +5462,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=83
+		y=82
 		width=51
 		height=20
 	}
@@ -5965,7 +5478,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=109
+		y=107
 		width=51
 		height=20
 	}
@@ -5981,7 +5494,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=135
+		y=132
 		width=51
 		height=20
 	}
@@ -5997,7 +5510,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=161
+		y=157
 		width=51
 		height=20
 	}
@@ -6013,7 +5526,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=187
+		y=182
 		width=51
 		height=20
 	}
@@ -6029,7 +5542,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=213
+		y=207
 		width=51
 		height=20
 	}
@@ -6045,7 +5558,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=239
+		y=232
 		width=51
 		height=20
 	}
@@ -6061,7 +5574,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=265
+		y=257
 		width=51
 		height=20
 	}
@@ -6077,7 +5590,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=291
+		y=282
 		width=51
 		height=20
 	}
@@ -6093,7 +5606,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=317
+		y=307
 		width=51
 		height=20
 	}
@@ -6109,7 +5622,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=343
+		y=332
 		width=51
 		height=20
 	}
@@ -6125,7 +5638,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=369
+		y=357
 		width=51
 		height=20
 	}
@@ -6141,7 +5654,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=395
+		y=382
 		width=51
 		height=20
 	}
@@ -6157,7 +5670,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=421
+		y=407
 		width=51
 		height=20
 	}
@@ -6173,7 +5686,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=450
+		y=432
 		width=51
 		height=20
 	}
@@ -6189,7 +5702,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=476
+		y=457
 		width=51
 		height=20
 	}
@@ -6205,7 +5718,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=502
+		y=482
 		width=51
 		height=20
 	}
@@ -6237,7 +5750,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=565
+		y=564
 		width=51
 		height=20
 	}
@@ -6253,7 +5766,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=591
+		y=589
 		width=51
 		height=20
 	}
@@ -6269,7 +5782,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=617
+		y=614
 		width=51
 		height=20
 	}
@@ -6285,7 +5798,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=643
+		y=639
 		width=51
 		height=20
 	}
@@ -6301,7 +5814,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=669
+		y=664
 		width=51
 		height=20
 	}
@@ -6317,7 +5830,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=695
+		y=689
 		width=51
 		height=20
 	}
@@ -6333,7 +5846,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=721
+		y=714
 		width=51
 		height=20
 	}
@@ -6349,7 +5862,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=747
+		y=739
 		width=51
 		height=20
 	}
@@ -6365,7 +5878,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=774
+		y=764
 		width=51
 		height=20
 	}
@@ -6381,7 +5894,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=800
+		y=789
 		width=51
 		height=20
 	}
@@ -6397,7 +5910,7 @@ rectangle {
 "text update" {
 	object {
 		x=673
-		y=826
+		y=814
 		width=51
 		height=20
 	}
@@ -6525,7 +6038,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=83
+		y=82
 		width=51
 		height=20
 	}
@@ -6541,7 +6054,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=109
+		y=107
 		width=51
 		height=20
 	}
@@ -6557,7 +6070,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=135
+		y=132
 		width=51
 		height=20
 	}
@@ -6573,7 +6086,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=161
+		y=157
 		width=51
 		height=20
 	}
@@ -6589,7 +6102,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=187
+		y=182
 		width=51
 		height=20
 	}
@@ -6605,7 +6118,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=213
+		y=207
 		width=51
 		height=20
 	}
@@ -6621,7 +6134,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=239
+		y=232
 		width=51
 		height=20
 	}
@@ -6637,7 +6150,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=265
+		y=257
 		width=51
 		height=20
 	}
@@ -6653,7 +6166,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=291
+		y=282
 		width=51
 		height=20
 	}
@@ -6669,7 +6182,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=317
+		y=307
 		width=51
 		height=20
 	}
@@ -6685,7 +6198,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=343
+		y=332
 		width=51
 		height=20
 	}
@@ -6701,7 +6214,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=369
+		y=357
 		width=51
 		height=20
 	}
@@ -6717,7 +6230,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=395
+		y=382
 		width=51
 		height=20
 	}
@@ -6733,7 +6246,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=421
+		y=407
 		width=51
 		height=20
 	}
@@ -6749,7 +6262,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=450
+		y=432
 		width=51
 		height=20
 	}
@@ -6765,7 +6278,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=476
+		y=457
 		width=51
 		height=20
 	}
@@ -6781,7 +6294,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=502
+		y=482
 		width=51
 		height=20
 	}
@@ -6813,7 +6326,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=565
+		y=564
 		width=51
 		height=20
 	}
@@ -6829,7 +6342,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=591
+		y=589
 		width=51
 		height=20
 	}
@@ -6845,7 +6358,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=617
+		y=614
 		width=51
 		height=20
 	}
@@ -6861,7 +6374,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=643
+		y=639
 		width=51
 		height=20
 	}
@@ -6877,7 +6390,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=669
+		y=664
 		width=51
 		height=20
 	}
@@ -6893,7 +6406,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=695
+		y=689
 		width=51
 		height=20
 	}
@@ -6909,7 +6422,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=721
+		y=714
 		width=51
 		height=20
 	}
@@ -6925,7 +6438,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=747
+		y=739
 		width=51
 		height=20
 	}
@@ -6941,7 +6454,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=774
+		y=764
 		width=51
 		height=20
 	}
@@ -6957,7 +6470,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=800
+		y=789
 		width=51
 		height=20
 	}
@@ -6973,7 +6486,7 @@ rectangle {
 "text update" {
 	object {
 		x=828
-		y=826
+		y=814
 		width=51
 		height=20
 	}
@@ -7101,7 +6614,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=83
+		y=82
 		width=51
 		height=20
 	}
@@ -7117,7 +6630,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=109
+		y=107
 		width=51
 		height=20
 	}
@@ -7133,7 +6646,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=135
+		y=132
 		width=51
 		height=20
 	}
@@ -7149,7 +6662,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=161
+		y=157
 		width=51
 		height=20
 	}
@@ -7165,7 +6678,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=187
+		y=182
 		width=51
 		height=20
 	}
@@ -7181,7 +6694,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=213
+		y=207
 		width=51
 		height=20
 	}
@@ -7197,7 +6710,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=239
+		y=232
 		width=51
 		height=20
 	}
@@ -7213,7 +6726,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=265
+		y=257
 		width=51
 		height=20
 	}
@@ -7229,7 +6742,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=291
+		y=282
 		width=51
 		height=20
 	}
@@ -7245,7 +6758,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=317
+		y=307
 		width=51
 		height=20
 	}
@@ -7261,7 +6774,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=343
+		y=332
 		width=51
 		height=20
 	}
@@ -7277,7 +6790,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=369
+		y=357
 		width=51
 		height=20
 	}
@@ -7293,7 +6806,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=395
+		y=382
 		width=51
 		height=20
 	}
@@ -7309,7 +6822,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=421
+		y=407
 		width=51
 		height=20
 	}
@@ -7325,7 +6838,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=450
+		y=432
 		width=51
 		height=20
 	}
@@ -7341,7 +6854,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=476
+		y=457
 		width=51
 		height=20
 	}
@@ -7357,7 +6870,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=502
+		y=482
 		width=51
 		height=20
 	}
@@ -7389,7 +6902,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=565
+		y=564
 		width=51
 		height=20
 	}
@@ -7405,7 +6918,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=591
+		y=589
 		width=51
 		height=20
 	}
@@ -7421,7 +6934,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=617
+		y=614
 		width=51
 		height=20
 	}
@@ -7437,7 +6950,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=643
+		y=639
 		width=51
 		height=20
 	}
@@ -7453,7 +6966,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=669
+		y=664
 		width=51
 		height=20
 	}
@@ -7469,7 +6982,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=695
+		y=689
 		width=51
 		height=20
 	}
@@ -7485,7 +6998,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=721
+		y=714
 		width=51
 		height=20
 	}
@@ -7501,7 +7014,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=747
+		y=739
 		width=51
 		height=20
 	}
@@ -7517,7 +7030,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=774
+		y=764
 		width=51
 		height=20
 	}
@@ -7533,7 +7046,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=800
+		y=789
 		width=51
 		height=20
 	}
@@ -7549,7 +7062,7 @@ rectangle {
 "text update" {
 	object {
 		x=989
-		y=826
+		y=814
 		width=51
 		height=20
 	}
@@ -7677,7 +7190,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=83
+		y=82
 		width=40
 		height=20
 	}
@@ -7693,7 +7206,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=109
+		y=107
 		width=40
 		height=20
 	}
@@ -7709,7 +7222,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=135
+		y=132
 		width=40
 		height=20
 	}
@@ -7725,7 +7238,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=161
+		y=157
 		width=40
 		height=20
 	}
@@ -7741,7 +7254,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=187
+		y=182
 		width=40
 		height=20
 	}
@@ -7757,7 +7270,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=213
+		y=207
 		width=40
 		height=20
 	}
@@ -7773,7 +7286,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=239
+		y=232
 		width=40
 		height=20
 	}
@@ -7789,7 +7302,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=265
+		y=257
 		width=40
 		height=20
 	}
@@ -7805,7 +7318,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=291
+		y=282
 		width=40
 		height=20
 	}
@@ -7821,7 +7334,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=317
+		y=307
 		width=40
 		height=20
 	}
@@ -7837,7 +7350,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=343
+		y=332
 		width=40
 		height=20
 	}
@@ -7853,7 +7366,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=369
+		y=357
 		width=40
 		height=20
 	}
@@ -7869,7 +7382,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=395
+		y=382
 		width=40
 		height=20
 	}
@@ -7885,7 +7398,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=421
+		y=407
 		width=40
 		height=20
 	}
@@ -7901,7 +7414,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=450
+		y=432
 		width=40
 		height=20
 	}
@@ -7917,7 +7430,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=476
+		y=457
 		width=40
 		height=20
 	}
@@ -7933,7 +7446,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=502
+		y=482
 		width=40
 		height=20
 	}
@@ -7965,7 +7478,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=565
+		y=564
 		width=40
 		height=20
 	}
@@ -7981,7 +7494,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=591
+		y=589
 		width=40
 		height=20
 	}
@@ -7997,7 +7510,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=617
+		y=614
 		width=40
 		height=20
 	}
@@ -8013,7 +7526,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=643
+		y=639
 		width=40
 		height=20
 	}
@@ -8029,7 +7542,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=669
+		y=664
 		width=40
 		height=20
 	}
@@ -8045,7 +7558,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=695
+		y=689
 		width=40
 		height=20
 	}
@@ -8061,7 +7574,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=721
+		y=714
 		width=40
 		height=20
 	}
@@ -8077,7 +7590,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=747
+		y=739
 		width=40
 		height=20
 	}
@@ -8093,7 +7606,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=774
+		y=764
 		width=40
 		height=20
 	}
@@ -8109,7 +7622,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=800
+		y=789
 		width=40
 		height=20
 	}
@@ -8125,7 +7638,7 @@ rectangle {
 "text update" {
 	object {
 		x=1147
-		y=826
+		y=814
 		width=40
 		height=20
 	}
@@ -8252,7 +7765,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=82
+		y=81
 		width=51
 		height=20
 	}
@@ -8267,7 +7780,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=108
+		y=106
 		width=51
 		height=20
 	}
@@ -8282,7 +7795,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=134
+		y=131
 		width=51
 		height=20
 	}
@@ -8297,7 +7810,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=160
+		y=156
 		width=51
 		height=20
 	}
@@ -8312,7 +7825,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=186
+		y=181
 		width=51
 		height=20
 	}
@@ -8327,7 +7840,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=212
+		y=206
 		width=51
 		height=20
 	}
@@ -8342,7 +7855,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=238
+		y=231
 		width=51
 		height=20
 	}
@@ -8357,7 +7870,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=264
+		y=256
 		width=51
 		height=20
 	}
@@ -8372,7 +7885,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=290
+		y=281
 		width=51
 		height=20
 	}
@@ -8387,7 +7900,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=316
+		y=306
 		width=51
 		height=20
 	}
@@ -8402,7 +7915,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=342
+		y=331
 		width=51
 		height=20
 	}
@@ -8417,7 +7930,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=368
+		y=356
 		width=51
 		height=20
 	}
@@ -8432,7 +7945,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=394
+		y=381
 		width=51
 		height=20
 	}
@@ -8447,7 +7960,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=420
+		y=406
 		width=51
 		height=20
 	}
@@ -8462,7 +7975,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=449
+		y=431
 		width=51
 		height=20
 	}
@@ -8477,7 +7990,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=475
+		y=456
 		width=51
 		height=20
 	}
@@ -8492,7 +8005,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=501
+		y=481
 		width=51
 		height=20
 	}
@@ -8522,7 +8035,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=564
+		y=563
 		width=51
 		height=20
 	}
@@ -8537,7 +8050,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=590
+		y=588
 		width=51
 		height=20
 	}
@@ -8552,7 +8065,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=616
+		y=613
 		width=51
 		height=20
 	}
@@ -8567,7 +8080,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=642
+		y=638
 		width=51
 		height=20
 	}
@@ -8582,7 +8095,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=668
+		y=663
 		width=51
 		height=20
 	}
@@ -8597,7 +8110,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=694
+		y=688
 		width=51
 		height=20
 	}
@@ -8612,7 +8125,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=720
+		y=713
 		width=51
 		height=20
 	}
@@ -8627,7 +8140,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=746
+		y=738
 		width=51
 		height=20
 	}
@@ -8642,7 +8155,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=773
+		y=763
 		width=51
 		height=20
 	}
@@ -8657,7 +8170,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=799
+		y=788
 		width=51
 		height=20
 	}
@@ -8672,7 +8185,7 @@ rectangle {
 "text update" {
 	object {
 		x=200
-		y=825
+		y=813
 		width=51
 		height=20
 	}
@@ -8953,162 +8466,6 @@ text {
 text {
 	object {
 		x=101
-		y=539
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 0"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
-		y=565
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 1"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
-		y=591
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 2"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
-		y=617
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 3"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
-		y=643
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 4"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
-		y=669
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 5"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
-		y=695
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 6"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
-		y=721
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 7"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
-		y=747
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 8"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
-		y=774
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 9"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
-		y=800
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 10"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
-		y=826
-		width=110
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="SVT BOT 11"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=101
 		y=852
 		width=110
 		height=20
@@ -9200,259 +8557,170 @@ text {
 text {
 	object {
 		x=166
-		y=82
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="1"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=166
-		y=108
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="0"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=166
-		y=134
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="1"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=166
-		y=160
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="2"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=166
-		y=186
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="3"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=166
-		y=212
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="0"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=166
-		y=238
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="1"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=166
-		y=264
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="2"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=166
-		y=290
-		width=20
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="3"
-	align="horiz. centered"
-}
-composite {
-	object {
-		x=166
-		y=316
-		width=20
-		height=98
-	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=166
-				y=316
-				width=20
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="0"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=166
-				y=342
-				width=20
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="1"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=166
-				y=368
-				width=20
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="2"
-			align="horiz. centered"
-		}
-		text {
-			object {
-				x=166
-				y=394
-				width=20
-				height=20
-			}
-			"basic attribute" {
-				clr=31
-			}
-			textix="3"
-			align="horiz. centered"
-		}
-	}
-}
-text {
-	object {
-		x=100
-		y=56
-		width=50
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="L1t"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=100
-		y=131
-		width=50
-		height=20
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="L2-3t"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=100
 		y=81
-		width=50
+		width=20
 		height=20
 	}
 	"basic attribute" {
 		clr=31
 	}
-	textix="L1t"
+	textix="1"
 	align="horiz. centered"
 }
 text {
 	object {
-		x=100
+		x=166
 		y=106
-		width=50
+		width=20
 		height=20
 	}
 	"basic attribute" {
 		clr=31
 	}
-	textix="L2-3t"
+	textix="0"
 	align="horiz. centered"
 }
 text {
 	object {
-		x=100
+		x=166
+		y=131
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
 		y=156
-		width=50
+		width=20
 		height=20
 	}
 	"basic attribute" {
 		clr=31
 	}
-	textix="L2-3t"
+	textix="2"
 	align="horiz. centered"
 }
 text {
 	object {
-		x=100
+		x=166
 		y=181
-		width=50
+		width=20
 		height=20
 	}
 	"basic attribute" {
 		clr=31
 	}
-	textix="L2-3t"
+	textix="3"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=206
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="2"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=231
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="3"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=256
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=281
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=306
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="2"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=331
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="3"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=356
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=381
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="1"
 	align="horiz. centered"
 }
 text {
@@ -9533,66 +8801,1073 @@ text {
 	textix="Channel"
 	align="horiz. centered"
 }
-composite {
+text {
 	object {
 		x=166
-		y=420
+		y=406
 		width=20
-		height=98
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=431
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=456
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="2"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=166
+		y=481
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="3"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=96
+		y=56
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L1t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=96
+		y=131
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=96
+		y=81
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L1t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=96
+		y=106
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=96
+		y=156
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=96
+		y=181
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=96
+		y=206
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L5t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=96
+		y=231
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L5t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=96
+		y=256
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L6t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=96
+		y=281
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L6t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=306
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L6t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=331
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L6t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=94
+		y=356
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L1b"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=94
+		y=381
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L1b"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=94
+		y=431
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3b"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=94
+		y=456
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3b"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=94
+		y=481
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3b"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=94
+		y=406
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L2-3b"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=539
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=564
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=589
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="2"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=614
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="3"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=639
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=664
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=689
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=714
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=739
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="2"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=764
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="3"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=789
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=165
+		y=814
+		width=20
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=539
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L4t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=614
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L4t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=564
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L4t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=589
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L4t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=639
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L5t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=664
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L5t"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=689
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L4b"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=714
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L4b"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=739
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L4b"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=95
+		y=764
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L4b"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=94
+		y=789
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L5b"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=94
+		y=814
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="L5b"
+	align="horiz. centered"
+}
+composite {
+	object {
+		x=609
+		y=56
+		width=20
+		height=445
 	}
 	"composite name"=""
 	children {
-		text {
+		rectangle {
 			object {
-				x=166
-				y=420
+				x=609
+				y=56
 				width=20
 				height=20
 			}
 			"basic attribute" {
-				clr=31
+				clr=15
 			}
-			textix="0"
-			align="horiz. centered"
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:0:stat"
+			}
 		}
-		text {
+		rectangle {
 			object {
-				x=166
-				y=446
+				x=609
+				y=81
 				width=20
 				height=20
 			}
 			"basic attribute" {
-				clr=31
+				clr=15
 			}
-			textix="1"
-			align="horiz. centered"
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:1:stat"
+			}
 		}
-		text {
+		rectangle {
 			object {
-				x=166
-				y=472
+				x=609
+				y=106
 				width=20
 				height=20
 			}
 			"basic attribute" {
-				clr=31
+				clr=15
 			}
-			textix="2"
-			align="horiz. centered"
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:2:stat"
+			}
 		}
-		text {
+		rectangle {
 			object {
-				x=166
-				y=498
+				x=609
+				y=131
 				width=20
 				height=20
 			}
 			"basic attribute" {
-				clr=31
+				clr=15
 			}
-			textix="3"
-			align="horiz. centered"
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:3:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=156
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:4:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=181
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:5:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=206
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:6:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=231
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:7:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=256
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:8:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=281
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:9:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=306
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:10:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=331
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:11:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=356
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:12:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=381
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:13:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=406
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:14:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=431
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:15:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=456
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:16:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=481
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:top:17:stat"
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=609
+		y=538
+		width=20
+		height=295
+	}
+	"composite name"=""
+	children {
+		rectangle {
+			object {
+				x=609
+				y=538
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:20:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=563
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:21:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=588
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:22:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=613
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:23:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=638
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:24:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=663
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:25:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=688
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:26:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=713
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:27:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=738
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:28:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=763
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:29:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=788
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:30:stat"
+			}
+		}
+		rectangle {
+			object {
+				x=609
+				y=813
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="SVT:bias:bot:31:stat"
+			}
 		}
 	}
 }
