@@ -18,7 +18,7 @@ else
     medm $cmd svtDaqMap.adl &
     medm $cmd svtDaqSocketSetup.adl &
     medm $cmd svtTemp.adl &
-    medm $cmd svtHybridMain.adl &    
+    medm $cmd svtHybrid.adl &    
     medm $cmd svtFebMain.adl &
     medm $cmd svtFlangeMain.adl &
     medm $cmd svtBiasMain.adl &
