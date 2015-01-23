@@ -1,3 +1,4 @@
+#include "string.h"
 #include "febxml.h"
 #include "constants.h"
 
@@ -27,4 +28,47 @@ double getFebTempValue(xmlDocPtr doc, const char* type, int index) {
    if(DEBUG>1) printf("[ getFebTempValue ] : got t %f\n",t);
    return t;
 }
+
+
+
+
+
+
+
+
+xmlXPathObjectPtr getFebDna(xmlDocPtr doc) {
+   char tmp[256];
+   //sprintf(tmp,"/system/status/ControlDpm/FebFpga/AxiVersion/DeviceDna");
+   strcpy(tmp,"/system/status/ControlDpm/FebFpga/AxiVersion/DeviceDna");
+   if(DEBUG>2) printf("[ getFebDna ] : xpath \"%s\"\n",tmp);
+   return getnodeset(doc, (xmlChar*) tmp);
+}
+
+xmlNodePtr getFebDnaNode(xmlDocPtr doc, int index) {
+   xmlXPathObjectPtr result;
+   xmlNodePtr node;
+   result = getFebDna(doc);
+   if(DEBUG>2) {
+      if(result!=NULL)
+         printf("[ getFebDnaNode ] : got %d nodes\n", result->nodesetval->nodeNr);
+      else
+      printf("[ getFebDnaNode ] : no nodes found\n");
+   }
+   node = getFebNode(doc, result, index, 2);
+   return node;
+}
+
+long int getFebDnaValue(xmlDocPtr doc,int index) {
+   long int number;
+   xmlNodePtr node;
+   xmlChar hexvalue[256];
+   node = getFebDnaNode(doc,index);
+   getStrValue(doc, node, hexvalue);   
+   number = strtol((char*)hexvalue, NULL, 0);
+   //if(DEBUG>0) {
+      printf("[ getFebDnaValue ] : str value %s -> int value %ld\n", (char*)hexvalue,number);
+      //}
+   return number;
+}
+
 

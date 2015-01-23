@@ -879,23 +879,23 @@ record(ai, SVT:daq:map:LAYER:febid) {
         records.append(rec)
 	
     s = """
-record(sub,SVT:lv:FEBID:layer_sub)
+record(sub,SVT:daq:map:FEBID:layer_sub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
     field(FLNK,"FLNKNEXTHYB")
 }
 
-record(stringin, SVT:lv:FEBID:layer) {
-  field(SCAN, "Passive")
-  field(INP, "SVT:lv:FEBID:layer_sub PP")
+record(longin, SVT:daq:map:FEBID:layer) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:daq:map:FEBID:layer_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
 """	
-    s_flnk = "SVT:lv:NEXTFEBID:layer"
+    s_flnk = "SVT:daq:map:NEXTFEBID:layer"
     for feb in range(0,10):
         rec = s
         if feb <9:

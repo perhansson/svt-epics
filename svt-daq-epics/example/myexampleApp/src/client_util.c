@@ -89,7 +89,7 @@ int getIntFromEpicsName(char name[], int idx) {
    char* p_end = str;
    int id = (int) strtol(str,&p_end,0);
    if(p_end==str) {
-      printf("[ getFebId ]: [ ERROR ]: invalid convertion of this feb id %s\n",str);
+      printf("[ getIntFromEpicsName ]: [ ERROR ]: invalid convertion of this feb id %s\n",str);
       return -1;      
    }
    return id;
@@ -277,10 +277,10 @@ int getXmlPollStatus() {
    
    
    if(nonZero == 1 && cmpDump == 1 && cmpNodes == 1 ) {
-      printf("[ getXmlPollStatus ] : XML document seems to be ok.\n");
+      printf("[ getXmlPollStatus ] : XML document OK.\n");
       return 1;
    } else {
-      printf("[ getXmlPollStatus ] : [ ERROR ] : XML document is not ok.\n");
+      printf("[ getXmlPollStatus ] : [ ERROR ] : XML document NOT OK.\n");
       return 0;
    }
 }
@@ -452,6 +452,46 @@ int findSystemStr(char* buf, const int MAX, char** start) {
     return -1;
 }
 
+
+
+void flushSocket(int socketfd) {
+   int read_total = 0;
+   int read_n;
+   char buf_loop[1024];
+   if(DEBUG>0) printf("[ flushSocket ]: Try to read from socket)\n");
+      
+      // check that something is available on the socket.
+   read_n = 0;
+   ioctl(socketfd, FIONREAD, &read_n);
+   
+   if(DEBUG>0) {
+      printf("[ flushSocket ]: %d chars available on socket\n",read_n);
+   }
+   
+   
+   while(read_n>0) {      
+      
+      if(DEBUG>0) printf("[ flushSocket ]: Try to read %d from socket\n",read_n);
+      
+      // Read from socket
+      read_n = read(socketfd,buf_loop,1024);
+      if(DEBUG>0) printf("[ flushSocket ]: Flushed %d chars from socket\n",read_n);
+      
+      if (read_n < 0) {
+         printf("[ flushSocket ]: [ ERROR ]: read %d from socket\n",read_n);
+         exit(1);
+      }         
+
+      read_total += read_n;      
+      
+   }
+   
+   if(DEBUG>0) printf("[ flushSocket ]: Done flushing socket; flushed %d in total.\n",read_total);
+
+   return;
+
+
+}
 
 
 
@@ -748,6 +788,13 @@ void getXmlDocStrFormat(char** xml_str, int * xml_str_len) {
     }
 }
 
+int getFebDeviceDna(int feb_id) {
+   int t = -1;
+   if(getXmlDocStatus()==0) {
+      t = getFebDnaValue(doc, feb_id);
+   }
+   return t;
+}
 
 
 double getFebT(int feb_id, char* ch_name) {

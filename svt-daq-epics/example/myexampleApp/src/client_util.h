@@ -23,6 +23,8 @@ void writeReadConfig(int sockfd);
 void writeReadStatus(int sockfd);
 
 
+void flushSocket(int socketfd);
+
 void pollXmlString(int socketfd);
 xmlNode* retrieveElement(xmlDoc* doc, xmlNode* node, char* tag);
 void retrieveValue(xmlDoc* doc, xmlNode* node, char* tags, char value[], const unsigned int MAX);
@@ -33,6 +35,7 @@ int getXmlPollStatus();
 
 
 double getFebT(int feb_id, char* ch_name);
+int getFebDeviceDna(int feb_id);
 double getHybridT(int index, int hyb, const char* type);
 double getHybridI(int index, int hyb, const char* type);
 double getHybridV(int feb_id, int hyb_id,char ch_name[], char ch_pos[]);

@@ -159,161 +159,161 @@ record(ai, SVT:daq:map:l6b:febid) {
 
 
 
-record(sub,SVT:lv:0:layer_sub)
+record(sub,SVT:daq:map:0:layer_sub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:1:layer")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
+    field(FLNK,"SVT:daq:map:1:layer")
 }
 
-record(stringin, SVT:lv:0:layer) {
-  field(SCAN, "Passive")
-  field(INP, "SVT:lv:0:layer_sub PP")
+record(longin, SVT:daq:map:0:layer) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:daq:map:0:layer_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
 
-record(sub,SVT:lv:1:layer_sub)
+record(sub,SVT:daq:map:1:layer_sub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:2:layer")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
+    field(FLNK,"SVT:daq:map:2:layer")
 }
 
-record(stringin, SVT:lv:1:layer) {
-  field(SCAN, "Passive")
-  field(INP, "SVT:lv:1:layer_sub PP")
+record(longin, SVT:daq:map:1:layer) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:daq:map:1:layer_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
 
-record(sub,SVT:lv:2:layer_sub)
+record(sub,SVT:daq:map:2:layer_sub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:3:layer")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
+    field(FLNK,"SVT:daq:map:3:layer")
 }
 
-record(stringin, SVT:lv:2:layer) {
-  field(SCAN, "Passive")
-  field(INP, "SVT:lv:2:layer_sub PP")
+record(longin, SVT:daq:map:2:layer) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:daq:map:2:layer_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
 
-record(sub,SVT:lv:3:layer_sub)
+record(sub,SVT:daq:map:3:layer_sub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:4:layer")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
+    field(FLNK,"SVT:daq:map:4:layer")
 }
 
-record(stringin, SVT:lv:3:layer) {
-  field(SCAN, "Passive")
-  field(INP, "SVT:lv:3:layer_sub PP")
+record(longin, SVT:daq:map:3:layer) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:daq:map:3:layer_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
 
-record(sub,SVT:lv:4:layer_sub)
+record(sub,SVT:daq:map:4:layer_sub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:5:layer")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
+    field(FLNK,"SVT:daq:map:5:layer")
 }
 
-record(stringin, SVT:lv:4:layer) {
-  field(SCAN, "Passive")
-  field(INP, "SVT:lv:4:layer_sub PP")
+record(longin, SVT:daq:map:4:layer) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:daq:map:4:layer_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
 
-record(sub,SVT:lv:5:layer_sub)
+record(sub,SVT:daq:map:5:layer_sub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:6:layer")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
+    field(FLNK,"SVT:daq:map:6:layer")
 }
 
-record(stringin, SVT:lv:5:layer) {
-  field(SCAN, "Passive")
-  field(INP, "SVT:lv:5:layer_sub PP")
+record(longin, SVT:daq:map:5:layer) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:daq:map:5:layer_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
 
-record(sub,SVT:lv:6:layer_sub)
+record(sub,SVT:daq:map:6:layer_sub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:7:layer")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
+    field(FLNK,"SVT:daq:map:7:layer")
 }
 
-record(stringin, SVT:lv:6:layer) {
-  field(SCAN, "Passive")
-  field(INP, "SVT:lv:6:layer_sub PP")
+record(longin, SVT:daq:map:6:layer) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:daq:map:6:layer_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
 
-record(sub,SVT:lv:7:layer_sub)
+record(sub,SVT:daq:map:7:layer_sub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:8:layer")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
+    field(FLNK,"SVT:daq:map:8:layer")
 }
 
-record(stringin, SVT:lv:7:layer) {
-  field(SCAN, "Passive")
-  field(INP, "SVT:lv:7:layer_sub PP")
+record(longin, SVT:daq:map:7:layer) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:daq:map:7:layer_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
 
-record(sub,SVT:lv:8:layer_sub)
+record(sub,SVT:daq:map:8:layer_sub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:9:layer")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
+    field(FLNK,"SVT:daq:map:9:layer")
 }
 
-record(stringin, SVT:lv:8:layer) {
-  field(SCAN, "Passive")
-  field(INP, "SVT:lv:8:layer_sub PP")
+record(longin, SVT:daq:map:8:layer) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:daq:map:8:layer_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 
 
-record(sub,SVT:lv:9:layer_sub)
+record(sub,SVT:daq:map:9:layer_sub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
+    field(INAM,"subPollDaqMapInit")
+    field(SNAM,"subPollDaqMapProcess")
     field(FLNK,"")
 }
 
-record(stringin, SVT:lv:9:layer) {
-  field(SCAN, "Passive")
-  field(INP, "SVT:lv:9:layer_sub PP")
+record(longin, SVT:daq:map:9:layer) {
+  field(SCAN, "Passive") 
+  field(INP, "SVT:daq:map:9:layer_sub PP")
   field(DTYP,"Soft Channel")
 }
 

@@ -23,7 +23,7 @@ int portDef = 8090;
 int port;
 static int hybToFeb[N_HALVES][N_HYBRIDS];
 static int hybToFebCh[N_HALVES][N_HYBRIDS];
-int sockfd = 0;
+//int sockfd = 0;
 int counter = 0;
 int status_poll_flag=0;
 int status_flag=0;
@@ -297,6 +297,65 @@ static int setupSocket(subRecord *precord) {
   // If there is no info then use a default hostname and port
   // If not found step through a couple of ports
   // repeat after waiting
+  int socketfd = -1;
+  int dt = 0;
+  int j=0;
+  
+  // get a valid socket
+  while(socketfd<=0 && dt<5) {
+     if (mySubDebug>0) printf("[ setupSocket ]: try to setup socket (%ds)\n",dt);
+     
+     printf("[ setupSocket ]: Use defaults\n");        
+     strcpy(hostName,hostNameDef);
+     port = portDef;
+     
+     
+     //try a set of ports if failing
+     j=0;
+     int port_start = port;
+     while(j<10 && socketfd<0) {
+        port = port_start+j;
+        if (mySubDebug>0) printf("[ setupSocket ]: Trying %s:%d\n",hostName,port);        
+        socketfd = open_socket(hostName,port);
+        if(socketfd<0) {
+           printf("[ setupSocket ]: %s:%d failed\n",hostName,port);                
+           sleep(0.5);
+        } else {
+           printf("[ setupSocket ]: %s:%d open at %d\n",hostName,port, socketfd);                
+        }
+        j++;
+     }
+     
+     if(socketfd<=0) {
+        if (mySubDebug>0) printf("[ subPollProcess ]: couldn't get socket, sleep 1s before retrying\n");	
+        sleep(1);
+        // reset
+        strcpy(hostName,"");
+        port = -1;
+     }
+     
+     dt++;
+  }
+  
+  
+  if (mySubDebug>1) printf("[ setupSocket ]: Returning with socket %d\n",socketfd);
+  
+  return socketfd;
+  
+}
+
+
+/*
+static int setupSocket(subRecord *precord) {
+  process_order++;
+  if (mySubDebug>1) {
+    printf("[ setupSocket ]: %d Record %s called setupSocket(%p)\n", process_order, precord->name, (void*) precord);
+  }
+  
+  // Setup a socket based on EPICS DB info
+  // If there is no info then use a default hostname and port
+  // If not found step through a couple of ports
+  // repeat after waiting
   char host[40];
   int p;
   
@@ -363,6 +422,11 @@ static int setupSocket(subRecord *precord) {
   return sockfd;
   
 }
+*/
+
+
+
+
 
 static void printDaqMap() {
   printf("FEB DAQ MAP:\n");
@@ -397,8 +461,6 @@ static void setupDaqMap(subRecord *precord) {
   if (mySubDebug>0) printf("[ setupDaqMap ]: initialize daq map\n");
  
   
-  // only setup socket from DB if it's the correct record...
-  if(strstr(precord->name,"SVT:daqmap_sub:")!=NULL) {    
      if(strstr(precord->name,":febch")!=NULL) {    
         if (mySubDebug>1) printf("[ setupDaqMap ]: look for febch in DB\n");
         setFebFromRecord(precord, hybToFebCh);
@@ -406,9 +468,6 @@ static void setupDaqMap(subRecord *precord) {
         if (mySubDebug>1) printf("[ setupDaqMap ]: look for feb in DB\n");
         setFebFromRecord(precord,hybToFeb);
      }
-  } else {
-     if (mySubDebug>0) printf("[ setupDaqMap ]: do not setup daqmap for this record\n");
-  }
   if (mySubDebug>1) {
      printf("[ setupDaqMap ]: Resulting daq map in mem:\n");
      printDaqMap();
@@ -461,7 +520,103 @@ static long subPollStatInit(subRecord *precord) {
 }
 
 
+
   static void writeHybrid(subRecord* precord,char action[], int id, int feb_id, char ch_name[])
+{
+  if(mySubDebug) printf("[ writeHybrid ]: Record %s called writeHybrid %s with val %f for feb_id= %d  id=%d ch_name=%s\n", precord->name,action,precord->val,feb_id,id,ch_name);
+  
+  int socketfd;
+
+  
+  if (mySubDebug) printf("[ writeHybrid ]: Opening socket\n");    
+
+  socketfd = setupSocket(precord);
+  
+  if (mySubDebug) printf("[ writeHybrid ]: Opened socket : %d\n",socketfd);            
+  
+  
+  if(socketfd<=0) {
+     printf("[ writeHybrid ]: [ ERROR ]: Failed to open socket in writeHybrid (host %s:%d) \n",hostName,port);        
+     return;
+  }
+  
+  if (mySubDebug) printf("[ writeHybrid ] : Flush socket.\n");
+  
+  flushSocket(socketfd);
+  
+  if (mySubDebug) printf("[ writeHybrid ] : Done flushing socket.\n");
+  
+  
+
+  if(strcmp(action,"v_set_sub")==0) {    
+     if(precord->val<255 && precord->val>0) {
+        
+        if (mySubDebug) printf("[ writeHybrid ]: write %s trim %d to feb %d hyb %d\n",ch_name,(int)precord->val, feb_id, id);
+        
+        writeHybridVTrim(socketfd,(int)precord->val, feb_id, id, ch_name);    
+        
+        if (mySubDebug) printf("[ writeHybrid ] : Flush socket after write.\n");
+        
+        flushSocket(socketfd);
+        
+        if (mySubDebug) printf("[ writeHybrid ] : Done flushing socket after write.\n");
+        
+     } else {
+        printf("[ writeHybrid ]: [ ERROR]: voltage trim %f is not allowed!\n",precord->val);
+        exit(1);
+     }
+     
+  } 
+  else if(strcmp(action,"switch_sub")==0) {    
+     
+     if(strcmp(ch_name,"all")==0) {
+        
+        int val = (int)precord->val;
+        if(val==0 || val==1) {
+           
+           if (mySubDebug) printf("[ writeHybrid ]: write %d switch to feb %d hyb %d\n",(int)precord->val, feb_id, id);
+           
+           writeHybridVSwitch(socketfd, val, feb_id, id);    
+           
+           if (mySubDebug) printf("[ writeHybrid ] : Flush socket after write.\n");
+           
+           flushSocket(socketfd);
+           
+           if (mySubDebug) printf("[ writeHybrid ] : Done flushing socket write.\n");
+           
+        } else {
+           printf("[ writeHybrid ]: [ ERROR ]: voltage switch %d is not allowed!\n",val);
+           exit(1);
+        }
+        
+     } else {
+        printf("[ writeHybrid ]: [ ERROR ]: this ch_name %s for action %s is not defined yet\n",ch_name,action);
+     }    
+  }
+  else {
+     printf("[ writeHybrid ]: [ ERROR ]: this action \"%s\" for writeHybrid is not defined!\n",action);
+     exit(1);
+  }
+  
+  if (mySubDebug) {
+     printf("[ writeHybrid ]: Closing socket\n");
+  }
+  
+  if(socketfd>0) {     
+     socketfd = close_socket(socketfd);
+  }
+
+  if (mySubDebug) {
+     printf("[ writeHybrid ]:  after closing socket is %d\n",socketfd);
+  }
+  
+}
+
+
+
+/*
+
+ static void writeHybrid(subRecord* precord,char action[], int id, int feb_id, char ch_name[])
 {
   if(mySubDebug) printf("[ writeHybrid ]: Record %s called writeHybrid %s with val %f for feb_id= %d  id=%d ch_name=%s\n", precord->name,action,precord->val,feb_id,id,ch_name);
   
@@ -559,6 +714,11 @@ static long subPollStatInit(subRecord *precord) {
 }
 
 
+*/
+
+
+
+
 
 
   static void readHybrid(subRecord* precord,char action[], int id, int feb_id, char ch_name[])
@@ -630,6 +790,15 @@ static void readFeb(subRecord* precord,char action[], int feb_id, char ch_name[]
          printf("[ readFeb ]: Got value=%f\n",v);
       }
       precord->val = v;      
+   
+   } else if(strcmp(action,"layer_sub")==0) {
+      v = (double)getFebDeviceDna(feb_id);
+      if (mySubDebug) {
+         printf("[ readFeb ]: Got value=%f\n",v);
+      }
+      //sprintf(dna,"%f",v);
+      //strcpy(precord->val,dna);      
+      precord->val = v;
    } 
    else {
       printf("[ readFeb ]: [ ERROR ]: No such action %s implemented for readFeb!\n",action);
@@ -870,6 +1039,70 @@ static void updatePollStatusFlag() {
 
 
 static long subPollProcess(subRecord *precord) {
+  int socketfd;
+
+  process_order++;
+  if (mySubDebug>0) {
+    printf("[ subPollProcess ]: %d Record %s called subPollProcess(%p)\n",process_order, precord->name, (void*) precord);
+  }
+ 
+  
+  socketfd = setupSocket(precord);
+  
+  if(socketfd<=0) {
+     printf("[ subPollProcess ]: [ WARNING ]: couldn't open a socket.\n");
+     return 0;
+  }
+
+  if (mySubDebug) printf("[ subPollProcess] : Flush socket.\n");
+
+  flushSocket(socketfd);
+
+
+  if (mySubDebug) printf("[ subPollProcess] : Done flushing socket.\n");
+
+  // poll the xml string
+  
+  if (mySubDebug) printf("[ subPollProcess] : Poll xml string\n");
+  
+  getXmlDoc(socketfd,0,0);
+  
+  if (mySubDebug) printf("[ subPollProcess ]: Poll XML done. Close socket\n");
+
+  if(socketfd>0) {
+    socketfd = close_socket(socketfd);
+  } else {
+      printf("[ subPollProcess ]: [ ERROR ]: the socket should be open here!? Exit.\n");
+      exit(1);
+  }
+  
+  if(mySubDebug>1) {
+    char * s = NULL;
+    int len;
+    getXmlDocStrFormat(&s, &len);
+    printf("[ subPollProcess ]: got XML with len %d\n", len);
+    if(len>0) printf("\n%s\n",s);
+    if(s!=NULL) {
+      printf("[ subPollProcess ]: free string at %p\n",s);      
+      free(s);
+      printf("[ subPollProcess ]: done free string at %p\n",s);      
+    }
+  }
+
+  if (mySubDebug) printf("[ subPollProcess ]: before update status_poll_flag = %d\n", status_poll_flag);
+  
+  updatePollStatusFlag();
+  
+  if (mySubDebug) printf("[ subPollProcess ]: after update status_poll_flag = %d\n", status_poll_flag);
+
+
+  return 0;
+}
+
+
+
+/*
+static long subPollProcess(subRecord *precord) {
   time_t cur_time;
   int dt;
   time_t timer;
@@ -943,6 +1176,7 @@ static long subPollProcess(subRecord *precord) {
 
   return 0;
 }
+*/
 
 
 
@@ -952,16 +1186,54 @@ static long subPollDaqMapProcess(subRecord *precord) {
     printf("[ subPollDaqMapProcess] %d Record %s called subPollDaqMapProcess(%p)\n", process_order, precord->name, (void*) precord);
   }
 
-  if (mySubDebug) {
-    printf("[ subPollDaqMapProcess] setup daq map\n");
+  // only setup daq map if it's the correct record...
+  if(strstr(precord->name,"SVT:daqmap_sub:")!=NULL) {    
+     
+     if (mySubDebug) {
+        printf("[ subPollDaqMapProcess] setup daq map\n");
+     }
+     
+     setupDaqMap(precord);
+     
+     if (mySubDebug) {
+        printf("[ subPollDaqMapProcess] done setup daq map\n");
+     }
+     
+  } else {
+     if (mySubDebug>0) printf("[ setupDaqMap ]: do not setup daqmap for this record\n");
   }
 
-  setupDaqMap(precord);
+  // setup FEB phys map
+  int feb_id;
+  char str1[BUF_SIZE];
+  char str2[BUF_SIZE];
+  char action[BUF_SIZE];
 
-  if (mySubDebug) {
-    printf("[ subPollDaqMapProcess] done setup daq map\n");
+  getStringFromEpicsName(precord->name,str1,1);
+  getStringFromEpicsName(precord->name,str2,2);
+
+  if(strcmp(str1,"daq")==0 && strcmp(str2,"map")==0) {
+     
+     getStringFromEpicsName(precord->name,action,4);
+     
+     if(strcmp(action,"layer_sub")==0) {
+        
+        feb_id = getIntFromEpicsName(precord->name,3);    
+        
+        if(feb_id<0) {
+           printf("[ subPollDaqMapProcess ]: [ ERROR ]: getting feb id for action %s\n",action);
+           return 0;
+        } 
+        
+        readFeb(precord,action,feb_id,"");
+     } else {
+        //if (mySubDebug>0)  printf("[ subPollDaqMapProcess ]: [ ERROR ]: wrong action \"%s\"!\n",action);
+     }     
+     
   }
+  
 
+  
 
   return 0;
 }
