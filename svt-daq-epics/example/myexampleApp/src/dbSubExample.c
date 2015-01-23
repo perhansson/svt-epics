@@ -595,6 +595,18 @@ static long subPollStatInit(subRecord *precord) {
      val = getHybridSwitch(feb_id, id);
      precord->val = val*constant;
   } 
+  else if(strcmp(action,"dpm_rd_sub")==0) {
+     val = getDpm(feb_id, id);
+     precord->val = val*constant;
+  } 
+  else if(strcmp(action,"datapath_rd_sub")==0) {
+     val = getDatapath(feb_id, id);
+     precord->val = val*constant;
+  } 
+  else if(strcmp(action,"sync_rd_sub")==0) {
+     val = getHybridSync(feb_id, id);
+     precord->val = val*constant;
+  } 
   else {
      printf("[ readHybrid ]: [ ERROR]: wrong action for readHybrid \"%s\"\n",action);
      return;
@@ -664,6 +676,11 @@ static long subLVProcess(subRecord *precord) {
      printf("[ subTempProcess ]: [ ERROR ]: getting feb id\n");
      return 0;
   } 
+
+  if(feb_ch<0) {
+     printf("[ subLVProcess ]: [ ERROR ]: getting feb ch\n");
+     return 0;
+  } 
   
   if (mySubDebug) {
      printf("[ subLVProcess ]: Record %s has type %s\"\n", precord->name, type);
@@ -672,17 +689,8 @@ static long subLVProcess(subRecord *precord) {
   if(strcmp(type,"lv")!=0) {
      printf("[ subLVProcess ]: [ ERROR ]: this type is not valid \"%s\"\n",type);
      return 0;
-  }
+  }  
   
-  if(feb_id<0) {
-     printf("[ subLVProcess ]: [ ERROR ]: getting feb id\n");
-     return 0;
-  } 
-  
-  if(feb_ch<0) {
-     printf("[ subLVProcess ]: [ ERROR ]: getting feb ch\n");
-     return 0;
-  } 
   
   if ( mySubDebug) {
      printf("[ subLVProcess ]: feb_id %d febch %d \n",feb_id, feb_ch);
@@ -691,6 +699,30 @@ static long subLVProcess(subRecord *precord) {
   if(strcmp(action,"vn_sub")==0 || strcmp(action,"vf_sub")==0 || strcmp(action,"i_rd_sub")==0 || strcmp(action,"v_set_rd_sub")==0 || strcmp(action,"stat_sub")==0) {
      
      if(strcmp(ch_name,"dvdd")!=0 && strcmp(ch_name,"avdd")!=0 && strcmp(ch_name,"v125")!=0) {
+        printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
+        return 0;
+     }
+     readHybrid(precord,action,feb_ch,feb_id,ch_name);  
+     
+  } else if(strcmp(action,"sync_rd_sub")==0) {
+     
+     if(strcmp(ch_name,"sync")!=0) {
+        printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
+        return 0;
+     }
+     readHybrid(precord,action,feb_ch,feb_id,ch_name);  
+
+  } else if(strcmp(action,"dpm_rd_sub")==0) {
+     
+     if(strcmp(ch_name,"dpm")!=0) {
+        printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
+        return 0;
+     }
+     readHybrid(precord,action,feb_ch,feb_id,ch_name);  
+     
+  } else if(strcmp(action,"datapath_rd_sub")==0) {
+     
+     if(strcmp(ch_name,"datapath")!=0) {
         printf("[ subLVProcess ]: [ ERROR ]: wrong option for hybrid ch: %s\n",ch_name);
         return 0;
      }

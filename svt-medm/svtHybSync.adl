@@ -277,7 +277,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:sync"
+		chan="SVT:lv:0:2:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -331,7 +331,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:0:sync"
+		chan="SVT:lv:0:0:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -346,7 +346,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:sync"
+		chan="SVT:lv:0:1:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -361,7 +361,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:sync"
+		chan="SVT:lv:0:3:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -376,7 +376,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:sync"
+		chan="SVT:lv:0:2:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -391,7 +391,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:1:0:sync"
+		chan="SVT:lv:1:0:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -406,7 +406,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:sync"
+		chan="SVT:lv:0:1:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -421,7 +421,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:sync"
+		chan="SVT:lv:0:3:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -436,7 +436,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:sync"
+		chan="SVT:lv:0:2:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -451,7 +451,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:2:0:sync"
+		chan="SVT:lv:2:0:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -466,7 +466,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:sync"
+		chan="SVT:lv:0:1:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -481,7 +481,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:sync"
+		chan="SVT:lv:0:3:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -496,7 +496,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:sync"
+		chan="SVT:lv:0:2:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -511,7 +511,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:3:0:sync"
+		chan="SVT:lv:3:0:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -526,7 +526,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:sync"
+		chan="SVT:lv:0:1:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -541,7 +541,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:sync"
+		chan="SVT:lv:0:3:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -556,7 +556,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:sync"
+		chan="SVT:lv:0:2:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -571,7 +571,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:4:0:sync"
+		chan="SVT:lv:4:0:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -586,7 +586,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:sync"
+		chan="SVT:lv:0:1:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -601,7 +601,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:sync"
+		chan="SVT:lv:0:3:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -616,7 +616,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:sync"
+		chan="SVT:lv:0:2:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -631,7 +631,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:5:0:sync"
+		chan="SVT:lv:5:0:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -646,7 +646,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:sync"
+		chan="SVT:lv:0:1:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -661,7 +661,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:sync"
+		chan="SVT:lv:0:3:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -676,7 +676,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:sync"
+		chan="SVT:lv:0:2:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -691,7 +691,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:6:0:sync"
+		chan="SVT:lv:6:0:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -706,7 +706,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:sync"
+		chan="SVT:lv:0:1:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -721,7 +721,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:sync"
+		chan="SVT:lv:0:3:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -736,7 +736,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:sync"
+		chan="SVT:lv:0:2:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -751,7 +751,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:7:0:sync"
+		chan="SVT:lv:7:0:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -766,7 +766,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:sync"
+		chan="SVT:lv:0:1:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -781,7 +781,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:sync"
+		chan="SVT:lv:0:3:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -796,7 +796,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:sync"
+		chan="SVT:lv:0:2:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -811,7 +811,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:8:0:sync"
+		chan="SVT:lv:8:0:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -826,7 +826,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:sync"
+		chan="SVT:lv:0:1:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -841,7 +841,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:sync"
+		chan="SVT:lv:0:3:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -856,7 +856,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:sync"
+		chan="SVT:lv:0:2:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -871,7 +871,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:9:0:sync"
+		chan="SVT:lv:9:0:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -886,7 +886,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:sync"
+		chan="SVT:lv:0:1:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -901,7 +901,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:sync"
+		chan="SVT:lv:0:3:sync:sync_rd"
 		clr=31
 		bclr=14
 	}
@@ -929,7 +929,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:dpm"
+		chan="SVT:lv:0:2:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -983,7 +983,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:0:dpm"
+		chan="SVT:lv:0:0:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -998,7 +998,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:dpm"
+		chan="SVT:lv:0:1:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1013,7 +1013,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:dpm"
+		chan="SVT:lv:0:3:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1028,7 +1028,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:dpm"
+		chan="SVT:lv:0:2:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1043,7 +1043,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:1:0:dpm"
+		chan="SVT:lv:1:0:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1058,7 +1058,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:dpm"
+		chan="SVT:lv:0:1:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1073,7 +1073,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:dpm"
+		chan="SVT:lv:0:3:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1088,7 +1088,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:dpm"
+		chan="SVT:lv:0:2:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1103,7 +1103,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:2:0:dpm"
+		chan="SVT:lv:2:0:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1118,7 +1118,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:dpm"
+		chan="SVT:lv:0:1:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1133,7 +1133,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:dpm"
+		chan="SVT:lv:0:3:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1148,7 +1148,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:dpm"
+		chan="SVT:lv:0:2:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1163,7 +1163,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:3:0:dpm"
+		chan="SVT:lv:3:0:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1178,7 +1178,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:dpm"
+		chan="SVT:lv:0:1:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1193,7 +1193,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:dpm"
+		chan="SVT:lv:0:3:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1208,7 +1208,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:dpm"
+		chan="SVT:lv:0:2:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1223,7 +1223,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:4:0:dpm"
+		chan="SVT:lv:4:0:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1238,7 +1238,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:dpm"
+		chan="SVT:lv:0:1:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1253,7 +1253,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:dpm"
+		chan="SVT:lv:0:3:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1268,7 +1268,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:dpm"
+		chan="SVT:lv:0:2:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1283,7 +1283,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:5:0:dpm"
+		chan="SVT:lv:5:0:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1298,7 +1298,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:dpm"
+		chan="SVT:lv:0:1:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1313,7 +1313,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:dpm"
+		chan="SVT:lv:0:3:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1328,7 +1328,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:dpm"
+		chan="SVT:lv:0:2:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1343,7 +1343,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:6:0:dpm"
+		chan="SVT:lv:6:0:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1358,7 +1358,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:dpm"
+		chan="SVT:lv:0:1:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1373,7 +1373,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:dpm"
+		chan="SVT:lv:0:3:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1388,7 +1388,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:dpm"
+		chan="SVT:lv:0:2:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1403,7 +1403,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:7:0:dpm"
+		chan="SVT:lv:7:0:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1418,7 +1418,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:dpm"
+		chan="SVT:lv:0:1:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1433,7 +1433,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:dpm"
+		chan="SVT:lv:0:3:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1448,7 +1448,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:dpm"
+		chan="SVT:lv:0:2:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1463,7 +1463,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:8:0:dpm"
+		chan="SVT:lv:8:0:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1478,7 +1478,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:dpm"
+		chan="SVT:lv:0:1:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1493,7 +1493,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:dpm"
+		chan="SVT:lv:0:3:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1508,7 +1508,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:dpm"
+		chan="SVT:lv:0:2:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1523,7 +1523,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:9:0:dpm"
+		chan="SVT:lv:9:0:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1538,7 +1538,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:dpm"
+		chan="SVT:lv:0:1:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1553,7 +1553,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:dpm"
+		chan="SVT:lv:0:3:dpm:dpm_rd"
 		clr=31
 		bclr=14
 	}
@@ -1594,7 +1594,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:datapath"
+		chan="SVT:lv:0:2:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1648,7 +1648,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:0:datapath"
+		chan="SVT:lv:0:0:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1663,7 +1663,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:datapath"
+		chan="SVT:lv:0:1:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1678,7 +1678,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:datapath"
+		chan="SVT:lv:0:3:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1693,7 +1693,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:datapath"
+		chan="SVT:lv:0:2:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1708,7 +1708,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:1:0:datapath"
+		chan="SVT:lv:1:0:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1723,7 +1723,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:datapath"
+		chan="SVT:lv:0:1:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1738,7 +1738,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:datapath"
+		chan="SVT:lv:0:3:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1753,7 +1753,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:datapath"
+		chan="SVT:lv:0:2:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1768,7 +1768,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:2:0:datapath"
+		chan="SVT:lv:2:0:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1783,7 +1783,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:datapath"
+		chan="SVT:lv:0:1:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1798,7 +1798,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:datapath"
+		chan="SVT:lv:0:3:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1813,7 +1813,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:datapath"
+		chan="SVT:lv:0:2:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1828,7 +1828,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:3:0:datapath"
+		chan="SVT:lv:3:0:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1843,7 +1843,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:datapath"
+		chan="SVT:lv:0:1:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1858,7 +1858,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:datapath"
+		chan="SVT:lv:0:3:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1873,7 +1873,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:datapath"
+		chan="SVT:lv:0:2:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1888,7 +1888,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:4:0:datapath"
+		chan="SVT:lv:4:0:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1903,7 +1903,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:datapath"
+		chan="SVT:lv:0:1:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1918,7 +1918,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:datapath"
+		chan="SVT:lv:0:3:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1933,7 +1933,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:datapath"
+		chan="SVT:lv:0:2:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1948,7 +1948,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:5:0:datapath"
+		chan="SVT:lv:5:0:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1963,7 +1963,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:datapath"
+		chan="SVT:lv:0:1:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1978,7 +1978,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:datapath"
+		chan="SVT:lv:0:3:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -1993,7 +1993,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:datapath"
+		chan="SVT:lv:0:2:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2008,7 +2008,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:6:0:datapath"
+		chan="SVT:lv:6:0:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2023,7 +2023,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:datapath"
+		chan="SVT:lv:0:1:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2038,7 +2038,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:datapath"
+		chan="SVT:lv:0:3:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2053,7 +2053,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:datapath"
+		chan="SVT:lv:0:2:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2068,7 +2068,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:7:0:datapath"
+		chan="SVT:lv:7:0:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2083,7 +2083,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:datapath"
+		chan="SVT:lv:0:1:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2098,7 +2098,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:datapath"
+		chan="SVT:lv:0:3:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2113,7 +2113,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:datapath"
+		chan="SVT:lv:0:2:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2128,7 +2128,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:8:0:datapath"
+		chan="SVT:lv:8:0:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2143,7 +2143,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:datapath"
+		chan="SVT:lv:0:1:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2158,7 +2158,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:datapath"
+		chan="SVT:lv:0:3:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2173,7 +2173,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:2:datapath"
+		chan="SVT:lv:0:2:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2188,7 +2188,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:9:0:datapath"
+		chan="SVT:lv:9:0:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2203,7 +2203,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:1:datapath"
+		chan="SVT:lv:0:1:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}
@@ -2218,7 +2218,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="SVT:lv:0:3:datapath"
+		chan="SVT:lv:0:3:datapath:datapath_rd"
 		clr=31
 		bclr=14
 	}

@@ -816,6 +816,16 @@ double getHybridSwitch(int index, int hyb) {
    return val; 
 }
 
+double getHybridSync(int index, int hyb) {
+   return (double) index; 
+}
+double getDpm(int index, int hyb) {
+   return (double) -1.0; 
+}
+double getDatapath(int index, int hyb) {
+   return (double) -2.0; 
+}
+
 
 double getHybridTrim(int index, int hyb, char* type) {
    double val = 0.0;

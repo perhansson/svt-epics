@@ -706,7 +706,7 @@ def buildHybSync():
     
 
     s = """
-record(sub,SVT:lv:hyb:FEBID:HYBID:sync_sub)
+record(sub,SVT:lv:hyb:FEBID:HYBID:sync:sync_rd_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
@@ -714,14 +714,14 @@ record(sub,SVT:lv:hyb:FEBID:HYBID:sync_sub)
     field(FLNK,"FLNKNEXTHYB")
 }
 
-record(ai, SVT:lv:hyb:FEBID:HYBID:sync) {
+record(ai, SVT:lv:hyb:FEBID:HYBID:sync:sync_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(INP, "SVT:;v:hyb:FEBID:HYBID:sync_sub PP")
+  field(INP, "SVT:;v:hyb:FEBID:HYBID:sync:sync_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 """
 
-    s_flnk = "SVT:lv:hyb:NEXTFEBID:NEXTHYBID:sync"
+    s_flnk = "SVT:lv:hyb:NEXTFEBID:NEXTHYBID:sync:sync_rd"
     records = []
     for feb in range(0,10):
         for hyb in range(0,4):
@@ -749,7 +749,7 @@ def buildHybSync():
     
 
     s = """
-record(sub,SVT:lv:FEBID:HYBID:sync_sub)
+record(sub,SVT:lv:FEBID:HYBID:sync:sync_rd_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
@@ -757,14 +757,14 @@ record(sub,SVT:lv:FEBID:HYBID:sync_sub)
     field(FLNK,"FLNKNEXTHYB")
 }
 
-record(ai, SVT:lv:FEBID:HYBID:sync) {
+record(ai, SVT:lv:FEBID:HYBID:sync:sync_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(INP, "SVT:lv:FEBID:HYBID:sync_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:sync:sync_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 """
 
-    s_flnk = "SVT:lv:NEXTFEBID:NEXTHYBID:sync"
+    s_flnk = "SVT:lv:NEXTFEBID:NEXTHYBID:sync:sync_rd"
     records = []
     for feb in range(0,10):
         for hyb in range(0,4):
@@ -792,21 +792,21 @@ def buildDpmMap():
     
 
     s = """
-record(sub,SVT:lv:FEBID:HYBID:dpm_sub)
+record(sub,SVT:lv:FEBID:HYBID:dpm:dpm_rd_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
     field(SNAM,"subLVProcess")
-    field(FLNK,"SVT:lv:FEBID:HYBID:datapath")
+	field(FLNK,"SVT:lv:FEBID:HYBID:datapath:datapath_rd")
 }
 
-record(ai, SVT:lv:FEBID:HYBID:dpm) {
+record(ai, SVT:lv:FEBID:HYBID:dpm:dpm_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(INP, "SVT:lv:FEBID:HYBID:dpm_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:dpm:dpm_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
-record(sub,SVT:lv:FEBID:HYBID:datapath_sub)
+record(sub,SVT:lv:FEBID:HYBID:datapath:datapath_rd_sub)
 {
     field(SCAN,"Passive")
     field(INAM,"subLVInit")
@@ -814,15 +814,15 @@ record(sub,SVT:lv:FEBID:HYBID:datapath_sub)
     field(FLNK,"FLNKNEXTHYB")
 }
 
-record(ai, SVT:lv:FEBID:HYBID:datapath) {
+record(ai, SVT:lv:FEBID:HYBID:datapath:datapath_rd) {
   field(SCAN, "Passive") field(PREC, "1")
-  field(INP, "SVT:lv:FEBID:HYBID:datapath_sub PP")
+  field(INP, "SVT:lv:FEBID:HYBID:datapath:datapath_rd_sub PP")
   field(DTYP,"Soft Channel")
 }
 
 """
 
-    s_flnk = "SVT:lv:NEXTFEBID:NEXTHYBID:dpm"
+    s_flnk = "SVT:lv:NEXTFEBID:NEXTHYBID:dpm:dpm_rd"
     records = []
     for feb in range(0,10):
         for hyb in range(0,4):

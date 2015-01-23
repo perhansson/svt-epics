@@ -40,5 +40,9 @@ double getHybridSwitch(int index, int hyb);
 void writeHybridVSwitch(int sockid, int value, int feb_id, int hyb_id);
 double getHybridTrim(int index, int hyb, char* type);
 void writeHybridVTrim(int sockid, int value, int feb_id, int hyb_id, char *ch_name);
+double getHybridSync(int index, int hyb);
+double getDpm(int index, int hyb);
+double getDatapath(int index, int hyb);
+
 
 #endif
