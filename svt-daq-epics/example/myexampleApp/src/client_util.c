@@ -458,24 +458,24 @@ void flushSocket(int socketfd) {
    int read_total = 0;
    int read_n;
    char buf_loop[1024];
-   if(DEBUG>0) printf("[ flushSocket ]: Try to read from socket)\n");
+   if(DEBUG>-1) printf("[ flushSocket ]: Try to read from socket)\n");
       
       // check that something is available on the socket.
    read_n = 0;
    ioctl(socketfd, FIONREAD, &read_n);
    
-   if(DEBUG>0) {
+   if(DEBUG>-1) {
       printf("[ flushSocket ]: %d chars available on socket\n",read_n);
    }
    
    
-   while(read_n>0) {      
+   while(read_n>-1) {      
       
-      if(DEBUG>0) printf("[ flushSocket ]: Try to read %d from socket\n",read_n);
+      if(DEBUG>-1) printf("[ flushSocket ]: Try to read %d from socket\n",read_n);
       
       // Read from socket
       read_n = read(socketfd,buf_loop,1024);
-      if(DEBUG>0) printf("[ flushSocket ]: Flushed %d chars from socket\n",read_n);
+      if(DEBUG>-1) printf("[ flushSocket ]: Flushed %d chars from socket\n",read_n);
       
       if (read_n < 0) {
          printf("[ flushSocket ]: [ ERROR ]: read %d from socket\n",read_n);
@@ -486,7 +486,7 @@ void flushSocket(int socketfd) {
       
    }
    
-   if(DEBUG>0) printf("[ flushSocket ]: Done flushing socket; flushed %d in total.\n",read_total);
+   if(DEBUG>-1) printf("[ flushSocket ]: Done flushing socket; flushed %d in total.\n",read_total);
 
    return;
 
