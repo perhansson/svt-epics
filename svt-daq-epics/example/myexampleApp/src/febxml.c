@@ -65,9 +65,9 @@ long int getFebDnaValue(xmlDocPtr doc,int index) {
    node = getFebDnaNode(doc,index);
    getStrValue(doc, node, hexvalue);   
    number = strtol((char*)hexvalue, NULL, 0);
-   //if(DEBUG>0) {
+   if(DEBUG>1) {
       printf("[ getFebDnaValue ] : str value %s -> int value %ld\n", (char*)hexvalue,number);
-      //}
+      }
    return number;
 }
 
