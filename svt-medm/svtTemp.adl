@@ -1,14 +1,14 @@
 
 file {
-	name="/home/tracker/pelle/epics/svt-epics/svt-medm/svtTemp.adl"
+	name="/u1/epics/dev/svt-epics/svt-medm/svtTemp.adl"
 	version=030108
 }
 display {
 	object {
-		x=412
-		y=201
-		width=691
-		height=767
+		x=1696
+		y=140
+		width=370
+		height=570
 	}
 	clr=14
 	bclr=12
@@ -89,1630 +89,741 @@ display {
 }
 text {
 	object {
-		x=213
+		x=10
 		y=15
-		width=250
+		width=240
 		height=35
 	}
 	"basic attribute" {
 		clr=15
 	}
-	textix="SVT TEMPERATURES"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=143
-		y=35
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrids"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=500
-		y=35
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEBs"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=103
-		y=65
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Bottom"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=183
-		y=65
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Top"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=440
-		y=65
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FPGA"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=500
-		y=65
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FebTemp0"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=560
-		y=65
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FebTemp1"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=370
-		y=88
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEB 0"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=440
-		y=86
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:0:axixadc:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=500
-		y=86
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:0:FebTemp0:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=560
-		y=86
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:0:FebTemp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=370
-		y=118
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEB 1"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=440
-		y=116
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:1:axixadc:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=500
-		y=116
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:1:FebTemp0:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=560
-		y=116
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:1:FebTemp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=370
-		y=148
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEB 2"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=440
-		y=146
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:2:axixadc:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=500
-		y=146
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:2:FebTemp0:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=560
-		y=146
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:2:FebTemp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=370
-		y=178
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEB 3"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=440
-		y=176
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:3:axixadc:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=500
-		y=176
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:3:FebTemp0:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=560
-		y=176
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:3:FebTemp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=370
-		y=208
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEB 4"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=440
-		y=206
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:4:axixadc:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=500
-		y=206
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:4:FebTemp0:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=560
-		y=206
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:4:FebTemp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=370
-		y=238
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEB 5"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=440
-		y=236
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:5:axixadc:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=500
-		y=236
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:5:FebTemp0:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=560
-		y=236
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:5:FebTemp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=370
-		y=268
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEB 6"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=440
-		y=266
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:6:axixadc:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=500
-		y=266
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:6:FebTemp0:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=560
-		y=266
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:6:FebTemp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=370
-		y=298
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEB 7"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=440
-		y=296
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:7:axixadc:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=500
-		y=296
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:7:FebTemp0:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=560
-		y=296
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:7:FebTemp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=370
-		y=328
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEB 8"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=440
-		y=326
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:8:axixadc:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=500
-		y=326
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:8:FebTemp0:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=560
-		y=326
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:8:FebTemp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=370
-		y=358
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="FEB 9"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=440
-		y=356
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:9:axixadc:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=500
-		y=356
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:9:FebTemp0:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=560
-		y=356
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:fe:9:FebTemp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=88
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 0"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=86
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:0:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=86
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:0:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=118
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 1"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=116
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:1:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=116
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:1:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=148
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 2"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=146
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:2:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=146
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:2:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=178
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 3"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=176
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:3:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=176
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:3:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=208
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 4"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=206
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:4:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=206
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:4:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=238
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 5"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=236
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:5:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=236
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:5:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=268
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 6"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=266
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:6:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=266
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:6:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=298
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 7"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=296
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:7:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=296
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:7:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=328
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 8"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=326
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:8:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=326
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:8:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=358
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 9"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=356
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:9:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=356
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:9:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=388
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 10"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=386
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:10:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=386
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:10:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=418
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 11"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=416
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:11:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=416
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:11:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=448
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 12"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=446
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:12:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=446
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:12:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=478
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 13"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=476
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:13:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=476
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:13:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=508
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 14"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=506
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:14:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=506
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:14:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=538
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 15"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=536
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:15:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=536
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:15:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=568
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 16"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=566
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:16:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=566
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:16:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
-	}
-}
-text {
-	object {
-		x=20
-		y=598
-		width=50
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Hybrid 17"
-	align="horiz. centered"
-}
-"text update" {
-	object {
-		x=83
-		y=596
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:bot:17:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=203
-		y=596
-		width=50
-		height=25
-	}
-	monitor {
-		chan="SVT:temp:hyb:top:17:temp1:t_rd"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-		precSrc="default"
-		precDefault=1
+	textix="FEB TEMPERATURES"
+	align="horiz. centered"
+}
+composite {
+	object {
+		x=10
+		y=50
+		width=240
+		height=318
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=80
+				y=50
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FPGA"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=140
+				y=50
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FebTemp0"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=200
+				y=50
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FebTemp1"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=10
+				y=73
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB 0"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=80
+				y=71
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:0:axixadc:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=140
+				y=71
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:0:FebTemp0:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=200
+				y=71
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:0:FebTemp1:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		text {
+			object {
+				x=10
+				y=103
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB 1"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=80
+				y=101
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:1:axixadc:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=140
+				y=101
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:1:FebTemp0:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=200
+				y=101
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:1:FebTemp1:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		text {
+			object {
+				x=10
+				y=133
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB 2"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=80
+				y=131
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:2:axixadc:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=140
+				y=131
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:2:FebTemp0:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=200
+				y=131
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:2:FebTemp1:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		text {
+			object {
+				x=10
+				y=163
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB 3"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=80
+				y=161
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:3:axixadc:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=140
+				y=161
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:3:FebTemp0:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=200
+				y=161
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:3:FebTemp1:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		text {
+			object {
+				x=10
+				y=193
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB 4"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=80
+				y=191
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:4:axixadc:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=140
+				y=191
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:4:FebTemp0:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=200
+				y=191
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:4:FebTemp1:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		text {
+			object {
+				x=10
+				y=223
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB 5"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=80
+				y=221
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:5:axixadc:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=140
+				y=221
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:5:FebTemp0:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=200
+				y=221
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:5:FebTemp1:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		text {
+			object {
+				x=10
+				y=253
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB 6"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=80
+				y=251
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:6:axixadc:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=140
+				y=251
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:6:FebTemp0:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=200
+				y=251
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:6:FebTemp1:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		text {
+			object {
+				x=10
+				y=283
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB 7"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=80
+				y=281
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:7:axixadc:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=140
+				y=281
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:7:FebTemp0:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=200
+				y=281
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:7:FebTemp1:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		text {
+			object {
+				x=10
+				y=313
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB 8"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=80
+				y=311
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:8:axixadc:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=140
+				y=311
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:8:FebTemp0:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=200
+				y=311
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:8:FebTemp1:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		text {
+			object {
+				x=10
+				y=343
+				width=50
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="FEB 9"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=80
+				y=341
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:9:axixadc:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=140
+				y=341
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:9:FebTemp0:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
+		"text update" {
+			object {
+				x=200
+				y=341
+				width=50
+				height=25
+			}
+			monitor {
+				chan="SVT:temp:fe:9:FebTemp1:t_rd"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+				precSrc="default"
+				precDefault=1
+			}
+		}
 	}
 }
 oval {
 	object {
 		x=137
-		y=700
+		y=500
 		width=12
 		height=12
 	}
@@ -1727,7 +838,7 @@ oval {
 text {
 	object {
 		x=11
-		y=700
+		y=500
 		width=100
 		height=25
 	}
@@ -1740,7 +851,7 @@ text {
 "text update" {
 	object {
 		x=109
-		y=730
+		y=530
 		width=30
 		height=20
 	}
@@ -1755,66 +866,10 @@ text {
 	limits {
 	}
 }
-"text update" {
-	object {
-		x=501
-		y=700
-		width=45
-		height=17
-	}
-	monitor {
-		chan="minit_t_v_LCW_IN"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=501
-		y=730
-		width=45
-		height=17
-	}
-	monitor {
-		chan="minit_t_v_LCW_OUT"
-		clr=30
-		bclr=14
-	}
-	align="horiz. centered"
-	limits {
-	}
-}
-text {
-	object {
-		x=362
-		y=700
-		width=150
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Vacuum Chamber Input "
-}
-text {
-	object {
-		x=362
-		y=730
-		width=150
-		height=25
-	}
-	"basic attribute" {
-		clr=50
-	}
-	textix="Vacuum Chamber Output "
-}
 oval {
 	object {
 		x=127
-		y=700
+		y=500
 		width=12
 		height=12
 	}
@@ -1829,7 +884,7 @@ oval {
 text {
 	object {
 		x=11
-		y=730
+		y=530
 		width=80
 		height=25
 	}
@@ -1839,19 +894,86 @@ text {
 	textix="SVT DAQ STATUS"
 	align="horiz. centered"
 }
-"shell command" {
+composite {
 	object {
-		x=559
-		y=730
-		width=80
-		height=20
+		x=11
+		y=400
+		width=277
+		height=55
 	}
-	command[0] {
-		label="SVT Temperatures"
-		name="StripTool"
-		args="/usr/local/clas/devel/R3.14.12/support/strip/svt_temps.stp &"
+	"composite name"=""
+	children {
+		"text update" {
+			object {
+				x=150
+				y=400
+				width=45
+				height=17
+			}
+			monitor {
+				chan="minit_t_v_LCW_IN"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=150
+				y=430
+				width=45
+				height=17
+			}
+			monitor {
+				chan="minit_t_v_LCW_OUT"
+				clr=30
+				bclr=14
+			}
+			align="horiz. centered"
+			limits {
+			}
+		}
+		text {
+			object {
+				x=11
+				y=400
+				width=150
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="Vacuum Chamber Input "
+		}
+		text {
+			object {
+				x=11
+				y=430
+				width=150
+				height=25
+			}
+			"basic attribute" {
+				clr=50
+			}
+			textix="Vacuum Chamber Output "
+		}
+		"shell command" {
+			object {
+				x=208
+				y=430
+				width=80
+				height=20
+			}
+			command[0] {
+				label="SVT Temperatures"
+				name="StripTool"
+				args="/usr/local/clas/devel/R3.14.12/support/strip/svt_temps.stp &"
+			}
+			clr=0
+			bclr=39
+			label="StripCharts"
+		}
 	}
-	clr=0
-	bclr=39
-	label="StripCharts"
 }
