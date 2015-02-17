@@ -20,7 +20,7 @@ char* strToUpper( char* s )
 
 
 
-xmlNodePtr getFebNode(xmlDocPtr doc, xmlXPathObjectPtr result, int index, int depth) {
+xmlNodePtr getFebNode(xmlDocPtr doc, xmlXPathObjectPtr result, int index, int depth, xmlChar* nodeName) {
    xmlNodeSetPtr nodeset;
    int i,d;
    xmlNodePtr node;
@@ -40,7 +40,8 @@ xmlNodePtr getFebNode(xmlDocPtr doc, xmlXPathObjectPtr result, int index, int de
             d--;
          }
          if(DEBUG>2) printf("%s\n",p->name);
-         if(xmlStrcmp(p->name,(xmlChar*)"FebFpga")==0) {
+         //if(xmlStrcmp(p->name,(xmlChar*)"FebFpga")==0) {
+         if(xmlStrcmp(p->name,nodeName)==0) {
             index_test = xmlGetProp(p,(xmlChar*)"index");   
             if(index_test!=NULL) {
                if(DEBUG>2) printf("index_test %s\n",index_test);

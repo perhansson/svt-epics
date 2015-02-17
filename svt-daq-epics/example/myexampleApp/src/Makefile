@@ -32,6 +32,7 @@ myexampleSupport_SRCS += status.c
 myexampleSupport_SRCS += daqmap.c
 myexampleSupport_SRCS += client_util.c
 myexampleSupport_SRCS += febxml.c
+myexampleSupport_SRCS += dpmxml.c
 myexampleSupport_SRCS += hybxml.c
 myexampleSupport_SRCS += common.c
 myexampleSupport_SRCS += socket.c

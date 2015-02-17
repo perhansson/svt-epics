@@ -1,6 +1,6 @@
-setenv EPICS_HOST_ARCH linux-x86_64
-setenv EPICS_BASE /u1/packages/base-3.14.12.2
-setenv MEDM_BASE /u1/packages/extensions
+setenv EPICS_HOST_ARCH linux-x86
+setenv EPICS_BASE /u1/epics/base-3.14.12.2
+setenv MEDM_BASE /u1/epics/extensions
 setenv SNMP /u1/packages/net-snmp/builds/net-snmp-5.7.2.1
 setenv QTDIR   /u1/packages/qt_4.7.4_x64
 setenv QWTDIR  /u1/packages/qwt_6.0_x64

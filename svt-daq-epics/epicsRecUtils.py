@@ -1,105 +1,54 @@
 import sys
 
 class FEB:
-    def __init__(self,febid,febchs,half,hybridlist):
+    def __init__(self,febid, hybrids,dna, layer):
         self.id = febid
-        self.febchs = febchs
-        self.half = half
-        self.hybrids = hybridlist
+        self.hybrids = hybrids
+        self.dna = dna
+        self.layer = layer
 
             
-# mapping between hybrid and FEB IDs
 febs= [
-    FEB(0,[0,1],"top",[0,1]),
-    FEB(1,[0,1,2,3],"top",[2,3,4,5]),
-    FEB(2,[0,1,2,3],"top",[6,7,8,9]),
-    FEB(3,[0,1,2,3],"top",[10,11,12,13]),
-    FEB(4,[0,1,2,3],"top",[14,15,16,17]),
-    FEB(5,[0,1,2,3],"bot",[2,3,4,5]),
-    FEB(6,[0,1],"bot",[0,1]),
-    FEB(7,[0,1,2,3],"bot",[6,7,8,9]),
-    FEB(8,[0,1,2,3],"bot",[10,11,12,13]),
-    FEB(9,[0,1,2,3],"bot",[14,15,16,17])
+    FEB(2,[0,1],"0x14084072beb01c00","L1t"),
+    FEB(0,[0,1,2,3],"0x42084072beb01400","L2-3t"),
+    FEB(5,[0,1,2,3],"0x58d0472beb01400","L4t"),
+    FEB(8,[0,1,2,3],"0x52814100a1b01c00","L5t"),
+    FEB(7,[0,1,2,3],"0x50814100a1b01c00","L6t"),
+    FEB(9,[0,1],"0x24d04072beb01c00","L1b"),
+    FEB(6,[0,1,2,3],"0x02d04072beb01c00","L2-3b"),
+    FEB(1,[0,1,2,3],"0x72814100a1b01c00","L4b"),
+    FEB(4,[0,1,2,3],"0x1c084072beb01400","L5b"),
+    FEB(3,[0,1,2,3],"0x70d04072beb01c00","L6b"),
     ]
 
 
 
 
 
-def getFebId(half,hyb):
-    febid = -1
+def getLayer(febid):
+    layer=""
     for feb in febs:
-        if feb.half is half:
-            if hyb in feb.hybrids:
-                febid = feb.id
-    return febid
+        if feb.id ==febid:
+            if layer=="":
+                layer = feb.layer
+            else:
+                print "ERROR: found two febs with ID ", id
+                sys.exit(1)
+    return layer
 
-def getFebCh(half,hyb):
-    febch = -1
+def getDna(febid):
+    layer=""
     for feb in febs:
-        if feb.half is half:
-            for i in range(len(feb.hybrids)):
-                if feb.hybrids[i]==hyb:
-                    febch = feb.febchs[i]
-
-    return febch
-
-
-
-def buildSvtDaqMapHyb():
-    s = """
-
-record(longin, SVT:daq:map:HALF:HYBID) {
-    field(VAL,"FEBID")
-}
-
-    """
-    records = []
-    for half in ["bot","top"]:
-        for hyb in range(0,18):
-            feb = getFebId(half,hyb)
-            if feb<0:
-                print "Invalid feb id for hyb ", hyb, " and half ", half
+        if feb.id ==febid:
+            if layer=="":
+                layer = feb.dna
+            else:
+                print "ERROR: found two febs with ID ", id
                 sys.exit(1)
-            rec = s
-            rec = rec.replace("HYBID",str(hyb))
-            rec = rec.replace("HALF",half)            
-            rec = rec.replace("FEBID",str(feb))
-            records.append(rec)
-    
-    return records
+    return layer
 
 
-def buildSvtDaqMapFebch():
-    s = """
 
-record(longin, SVT:daq:map:HALF:HYBID:febch) {
-    field(VAL,"FEBCH")
-}
-
-    """
-    records = []
-    for half in ["bot","top"]:
-        for hyb in range(0,18):
-            feb = getFebCh(half,hyb)
-            if feb<0:
-                print "Invalid feb ch for hyb ", hyb, " and half ", half
-                sys.exit(1)
-            rec = s
-            rec = rec.replace("HYBID",str(hyb))
-            rec = rec.replace("HALF",half)            
-            rec = rec.replace("FEBCH",str(feb))
-            records.append(rec)
-    
-    return records
-
-
-def buildSvtDaqMap():
-    recs = buildSvtDaqMapHyb()
-    recs2 = buildSvtDaqMapFebch()
-    for r in recs2:
-        recs.append(r)
-    return recs
 
 
 
@@ -544,32 +493,62 @@ record(bo, SVT:lv:FEBID:HYBID:v125:switch)
             records.append(rec)
     
 
+    for feb in range(0,10):
+        s = """
+record(dfanout,SVT:lv:"""+str(feb)+""":all:switch_fanout)
+{
+"""
+        if feb == 2 or feb ==9:
+            r = range(0,2)
+        else:
+            r = range(0,4)
+        link = ["OUTA","OUTB","OUTC","OUTD"]
+        for hyb in r:
+            s += "    field(" + link[hyb]+",\"SVT:lv:"+str(feb)+":"+str(hyb)+":all:switch.VAL PP\") " + "\n"
+        s += "}\n\n"
+        s += " record(bo, SVT:lv:"+str(feb)+":all:switch)" + "\n" + "{\n"
+        s += "\n\tfield(OUT, \"SVT:lv:"+str(feb)+":all:switch_fanout PP\")\n\tfield(ZNAM, \"Off\")\n\tfield(ONAM, \"On\")\n}\n"
+        records.append(s)
+    
+
+    
 
     s = """
-record(dfanout,SVT:lv:hyb:FEBID:all:switch_fanout)
+record(dfanout,SVT:lv:hyb:all:switch_fanout)
 {
-    field(OUTA,"SVT:lv:hyb:FEBID:0:all:switch.VAL PP")
-    field(OUTB,"SVT:lv:hyb:FEBID:1:all:switch.VAL PP")
-    field(OUTC,"SVT:lv:hyb:FEBID:2:all:switch.VAL PP")
-    field(OUTD,"SVT:lv:hyb:FEBID:3:all:switch.VAL PP")
+    field(OUTA,"SVT:lv:hyb:all:switch_fanout1.VAL PP")
+    field(OUTB,"SVT:lv:hyb:all:switch_fanout2.VAL PP")
 }
 
-record(bo, SVT:lv:hyb:FEBID:all:switch) 
+record(dfanout,SVT:lv:hyb:all:switch_fanout1)
 {
-  field(OUT, "SVT:lv:hyb:FEBID:all:switch_fanout PP")
+    field(OUTA,"SVT:lv:0:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:1:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:2:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:3:all:switch.VAL PP")
+    field(OUTE,"SVT:lv:4:all:switch.VAL PP")
+}
+
+record(dfanout,SVT:lv:hyb:all:switch_fanout2)
+{
+    field(OUTA,"SVT:lv:5:all:switch.VAL PP")
+    field(OUTB,"SVT:lv:6:all:switch.VAL PP")
+    field(OUTC,"SVT:lv:7:all:switch.VAL PP")
+    field(OUTD,"SVT:lv:8:all:switch.VAL PP")
+    field(OUTE,"SVT:lv:9:all:switch.VAL PP")
+}
+
+record(bo, SVT:lv:hyb:all:switch) 
+{
+field(OUT, "SVT:lv:hyb:all:switch_fanout PP")
   field(ZNAM, "Off")
   field(ONAM, "On")
 }
 
 """
-    
+
+    records.append(s)
   
-    
-    for feb in range(0,10):
-        rec = s.replace("FEBID",str(feb))
-        records.append(rec)
-    
-    
     
     return records
 
@@ -706,22 +685,22 @@ def buildHybSync():
     
 
     s = """
-record(sub,SVT:lv:hyb:FEBID:HYBID:sync:sync_rd_sub)
+record(aSub,SVT:lv:FEBID:HYBID:sync:sync_rd_asub)
 {
     field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
+    field(INAM,"subSyncInit")
+    field(SNAM,"subSyncProcess")
+    field(OUTA,"SVT:lv:FEBID:HYBID:sync:sync_rd PP")
+    field(FTVA,"STRING")
     field(FLNK,"FLNKNEXTHYB")
 }
 
-record(ai, SVT:lv:hyb:FEBID:HYBID:sync:sync_rd) {
-  field(SCAN, "Passive") field(PREC, "1")
-  field(INP, "SVT:;v:hyb:FEBID:HYBID:sync:sync_rd_sub PP")
+record(stringin, SVT:lv:FEBID:HYBID:sync:sync_rd) {
+  field(SCAN, "Passive")
   field(DTYP,"Soft Channel")
 }
 """
-
-    s_flnk = "SVT:lv:hyb:NEXTFEBID:NEXTHYBID:sync:sync_rd"
+    s_flnk = "SVT:lv:NEXTFEBID:NEXTHYBID:sync:sync_rd_asub"
     records = []
     for feb in range(0,10):
         for hyb in range(0,4):
@@ -744,47 +723,6 @@ record(ai, SVT:lv:hyb:FEBID:HYBID:sync:sync_rd) {
     return records
 
 
-def buildHybSync():
-
-    
-
-    s = """
-record(sub,SVT:lv:FEBID:HYBID:sync:sync_rd_sub)
-{
-    field(SCAN,"Passive")
-    field(INAM,"subLVInit")
-    field(SNAM,"subLVProcess")
-    field(FLNK,"FLNKNEXTHYB")
-}
-
-record(ai, SVT:lv:FEBID:HYBID:sync:sync_rd) {
-  field(SCAN, "Passive") field(PREC, "1")
-  field(INP, "SVT:lv:FEBID:HYBID:sync:sync_rd_sub PP")
-  field(DTYP,"Soft Channel")
-}
-"""
-
-    s_flnk = "SVT:lv:NEXTFEBID:NEXTHYBID:sync:sync_rd"
-    records = []
-    for feb in range(0,10):
-        for hyb in range(0,4):
-            rec = s
-            if hyb==3:
-                if feb < 9:
-                    rec = rec.replace("FLNKNEXTHYB",s_flnk)
-                    rec = rec.replace("NEXTHYBID",str(0))
-                    rec = rec.replace("NEXTFEBID",str(feb+1))
-                else:
-                    rec = rec.replace("FLNKNEXTHYB","")                    
-            else:
-                rec = rec.replace("FLNKNEXTHYB",s_flnk)
-                rec = rec.replace("NEXTHYBID",str(hyb+1))
-                rec = rec.replace("NEXTFEBID",str(feb))
-            rec = rec.replace("HYBID",str(hyb))
-            rec = rec.replace("FEBID",str(feb))
-            records.append(rec)
-    
-    return records
 
 
 def buildDpmMap():
@@ -846,65 +784,78 @@ record(ai, SVT:lv:FEBID:HYBID:datapath:datapath_rd) {
 
 
 
-def buildFebPhysMap():
+
+
+def buildLayer():
 	
+
     s = """
-record(sub,SVT:daq:map:LAYER:febid_sub)
-{
-    field(SCAN,"Passive")
-    field(INAM,"subPollDaqMapInit")
-    field(SNAM,"subPollDaqMapProcess")
-    field(FLNK,"FLNKNEXTHYB")
-}
-
-record(ai, SVT:daq:map:LAYER:febid) {
-  field(SCAN, "Passive") field(PREC, "0")
-  field(INP, "SVT:daq:map:LAYER:febid_sub PP")
-  field(DTYP,"Soft Channel")
-}
-
-
-"""	
-    s_flnk = "SVT:daq:map:NEXTLAYER:febid"
-    records = []
-    layers = ['l1t','l1b','l23t','l23b','l4t','l4b','l5t','l5b','l6t','l6b']
-    for feb in range(0,len(layers)):
-        rec = s
-        if feb <9:
-			rec = rec.replace("FLNKNEXTHYB",s_flnk)
-			rec = rec.replace("NEXTLAYER",layers[feb+1])
-        else:
-			rec = rec.replace("FLNKNEXTHYB","")			
-        rec = rec.replace("LAYER",layers[feb])
-        records.append(rec)
-	
-    s = """
-record(sub,SVT:daq:map:FEBID:layer_sub)
-{
-    field(SCAN,"Passive")
-    field(INAM,"subPollDaqMapInit")
-    field(SNAM,"subPollDaqMapProcess")
-    field(FLNK,"FLNKNEXTHYB")
-}
-
-record(longin, SVT:daq:map:FEBID:layer) {
+record(stringin, SVT:daq:map:FEBID:dna) {
   field(SCAN, "Passive") 
-  field(INP, "SVT:daq:map:FEBID:layer_sub PP")
+  field(VAL,"DNA")
+  field(DTYP,"Soft Channel")
+}
+
+record(stringin, SVT:daq:map:FEBID:layer) {
+  field(SCAN, "Passive") 
+  field(VAL,"LAYER")
+  field(DTYP,"Soft Channel")
+}
+
+record(stringin, SVT:daqmap:PHYSLAYER:febid) {
+  field(SCAN, "Passive") 
+  field(VAL,"FEBID")
   field(DTYP,"Soft Channel")
 }
 
 
 """	
-    s_flnk = "SVT:daq:map:NEXTFEBID:layer"
+    records = []
     for feb in range(0,10):
         rec = s
-        if feb <9:
-			rec = rec.replace("FLNKNEXTHYB",s_flnk)
-			rec = rec.replace("NEXTFEBID",str(feb+1))
-        else:
-			rec = rec.replace("FLNKNEXTHYB","")			
+        rec = rec.replace("PHYSLAYER",str(getLayer(feb)))
         rec = rec.replace("FEBID",str(feb))
+        rec = rec.replace("LAYER",str(getLayer(feb)))
+        rec = rec.replace("DNA",str(getDna(feb)))
         records.append(rec)
         
     return records
+
+
+
+def buildDpmState():
+	
+    s = """
+record(aSub,SVT:daq:dpm:LAYER:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:LAYER:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"FLNKNEXTLAYER")
+}
+
+record(stringin, SVT:daq:dpm:LAYER:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+"""	
+    s_flnk = "SVT:daq:dpm:NEXTLAYER:state_asub"
+    records = []
+    for dpm in range(0,14):
+        rec = s
+        if dpm <13:
+			rec = rec.replace("FLNKNEXTLAYER",s_flnk)
+			rec = rec.replace("NEXTLAYER",str(dpm+1))
+        else:
+			rec = rec.replace("FLNKNEXTLAYER","")			
+        rec = rec.replace("LAYER",str(dpm))
+        records.append(rec)
+    return records
+
+
+
 

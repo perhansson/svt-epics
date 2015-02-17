@@ -21,15 +21,15 @@ def buildEpics():
     printRecords(recs,"dbHybLVStat")
     recs = utils.buildHybLVSwitch()
     printRecords(recs,"dbHybSwitch")
-    recs = utils.buildSvtDaqMap()
-    printRecords(recs,"dbSvtDaqMap")
     recs = utils.buildDpmMap()
     printRecords(recs,"dbDpmMap")
     recs = utils.buildHybSync()
     printRecords(recs,"dbHybSync")
-    recs = utils.buildFebPhysMap()
-    printRecords(recs,"dbFebPhysMap")
-    
+    recs = utils.buildLayer()
+    printRecords(recs,"dbFebLayer")
+    recs = utils.buildDpmState()
+    printRecords(recs,"dbDpmState")
+
 
 
 

@@ -1,0 +1,238 @@
+
+record(aSub,SVT:daq:dpm:0:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:0:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:1:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:0:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:1:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:1:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:2:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:1:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:2:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:2:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:3:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:2:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:3:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:3:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:4:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:3:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:4:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:4:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:5:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:4:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:5:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:5:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:6:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:5:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:6:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:6:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:7:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:6:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:7:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:7:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:8:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:7:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:8:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:8:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:9:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:8:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:9:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:9:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:10:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:9:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:10:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:10:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:11:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:10:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:11:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:11:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:12:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:11:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:12:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:12:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"SVT:daq:dpm:13:state_asub")
+}
+
+record(stringin, SVT:daq:dpm:12:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+
+record(aSub,SVT:daq:dpm:13:state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:13:state PP")
+    field(FTVA,"STRING")
+    field(FLNK,"")
+}
+
+record(stringin, SVT:daq:dpm:13:state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+

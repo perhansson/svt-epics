@@ -4,7 +4,7 @@
 #include <libxml/parser.h>
 #include <libxml/xpath.h>
 
-xmlNodePtr getFebNode(xmlDocPtr doc, xmlXPathObjectPtr result, int index, int depth);
+xmlNodePtr getFebNode(xmlDocPtr doc, xmlXPathObjectPtr result, int index, int depth, xmlChar* nodeName);
 xmlDocPtr getdoc (char *docname);
 xmlXPathObjectPtr getnodeset (xmlDocPtr doc, xmlChar *xpath);
 double getFloatValue(xmlDocPtr doc, xmlNodePtr node);
