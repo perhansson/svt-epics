@@ -1,7 +1,7 @@
 #include <string.h>
 #include "hybxml.h"
 #include "dpmxml.h"
-#include "constants.h"
+#include "commonConstants.h"
 
 
 void getFebCnfCmd(int feb_id, int isopentag,  char* cmd, const int MAX) {
@@ -115,8 +115,6 @@ double getHybTValue(xmlDocPtr doc, const char* type, int index, int hyb) {
 void getHybSync(xmlDocPtr doc, int index, int datapath, char* syncStr) {
   xmlXPathObjectPtr result;
   xmlNodeSetPtr nodeset;
-  xmlNodePtr nodeFeb;
-  xmlNodePtr nodeDataPath;
   char tmp[256];
   //sprintf(tmp,"/system/status/ControlDpm/FebFpga/FebCore/HybridSyncStatus/SyncDetected");
   sprintf(tmp,"/system/status/ControlDpm/FebFpga[@index=\"%d\"]/FebCore/HybridSyncStatus[@index=\"%d\"]/SyncDetected", index, datapath);
@@ -128,7 +126,7 @@ void getHybSync(xmlDocPtr doc, int index, int datapath, char* syncStr) {
     if(DEBUG>1) 
       printf("[ getHybSyncs ] : got %d nodes\n", nodeset->nodeNr);
     if(nodeset->nodeNr==1) {
-      getStrValue(doc,nodeset->nodeTab[0],syncStr);
+      getStrValue(doc,nodeset->nodeTab[0],(xmlChar*)syncStr);
     } else {
       strcpy(syncStr, "too many nodes");
     }

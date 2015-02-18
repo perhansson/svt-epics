@@ -1,0 +1,10 @@
+record(sub,SVT:dpm:0:poll_xml)
+{
+    field(SCAN,"5 second")
+    field(INAM,"subPollInit")
+    field(SNAM,"subPollProcess")
+    #field(FLNK,"SVT:poll_dpm_xml")
+    #field(FLNK,"SVT:poll_stat")
+    #field(INPA, "SVT:poll_xml_ip")
+    #field(INPB, "SVT:poll_xml_port")
+}

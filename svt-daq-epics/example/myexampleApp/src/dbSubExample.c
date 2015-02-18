@@ -5,11 +5,11 @@
 #include <subRecord.h>
 #include <aSubRecord.h>
 #include <epicsExport.h>
-#include <tcpipExample.h>
+//#include <tcpipExample.h>
 #include <stringinRecord.h>
 #include <longinRecord.h>
 #include <dbAccess.h>
-#include "constants.h"
+#include "commonConstants.h"
 #include "daqmap.h"
 #include "client_util.h"
 #include "socket.h"
@@ -455,88 +455,6 @@ static int setupSocket(subRecord *precord, char* hostName, int port) {
   return socketfd;
   
 }
-
-
-/*
-static int setupSocket(subRecord *precord) {
-  process_order++;
-  if (mySubDebug>1) {
-    printf("[ setupSocket ]: %d Record %s called setupSocket(%p)\n", process_order, precord->name, (void*) precord);
-  }
-  
-  // Setup a socket based on EPICS DB info
-  // If there is no info then use a default hostname and port
-  // If not found step through a couple of ports
-  // repeat after waiting
-  char host[40];
-  int p;
-  
-  int sockfd = -1;
-  int dt = 0;
-  int j=0;
-  
-  // get a valid socket
-  while(sockfd<=0 && dt<5) {
-     if (mySubDebug>0) printf("[ subPollProcess ]: try to setup socket (%ds)\n",dt);
-     
-     
-     // only setup socket from DB if it's the poll record?
-     if(strcmp(precord->name,"SVT:poll_xml")==0) {    
-        // look for host name and port in DB
-        if (mySubDebug>1) printf("[ setupSocket ]: look for host name and port in DB\n");
-        getIpFromRecord(precord,host,40);
-        p = getPortFromRecord(precord);
-        if(strlen(host)>0 && p>0) {
-           strcpy(hostName,host);
-           port = p;
-        }        
-        else {
-           printf("[ setupSocket ]: [ WARNING ]: Couldn't get hostname or port from EPICS db.\n");        
-        }
-     }
-     
-     if(strlen(hostName)<=0 || port<0) {
-        printf("[ setupSocket ]: Use defaults\n");        
-        strcpy(hostName,hostNameDef);
-        port = portDef;
-     }
-     
-     //try a set of ports if failing
-     j=0;
-     int port_start = port;
-     while(j<10 && sockfd<0) {
-        port = port_start+j;
-        if (mySubDebug>0) printf("[ setupSocket ]: Trying %s:%d\n",hostName,port);        
-        sockfd = open_socket(hostName,port);
-        if(sockfd<0) {
-           printf("[ setupSocket ]: %s:%d failed\n",hostName,port);                
-           sleep(0.5);
-        } else {
-           printf("[ setupSocket ]: %s:%d open at %d\n",hostName,port, sockfd);                
-        }
-        j++;
-     }
-     
-     if(sockfd<=0) {
-        if (mySubDebug>0) printf("[ subPollProcess ]: couldn't get socket, sleep 1s before retrying\n");	
-        sleep(1);
-        // reset
-        strcpy(hostName,"");
-        port = -1;
-     }
-     
-     dt++;
-  }
-  
-  
-  if (mySubDebug>1) printf("[ setupSocket ]: Returning with socket %d\n",sockfd);
-  
-  return sockfd;
-  
-}
-*/
-
-
 
 
 
