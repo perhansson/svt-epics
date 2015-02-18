@@ -1,0 +1,12 @@
+#!/bin/tcsh
+
+echo "Setup EPICS environment"
+source ./setup_epics.csh
+
+echo $PWD 
+pushd example/iocBoot/iocsvtDaqDpm0
+echo $PWD
+echo "Start IOC"
+./st.cmd
+popd
+

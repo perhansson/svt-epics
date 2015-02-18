@@ -2288,7 +2288,7 @@
 <DataRxCount>0x0</DataRxCount>
 <ErrorCount>0x0</ErrorCount>
 <ReadRegisterResult/>
-<RegRxCount>0x69c92</RegRxCount>
+<RegRxCount>0x6c596</RegRxCount>
 <RunNumber>0x0</RunNumber>
 <RunProgress/>
 <RunState>Stopped</RunState>
@@ -2316,10 +2316,10 @@ Data Path Is Busy!</SystemState>
 <LastTxOpCode>0x0</LastTxOpCode>
 <RxCellErrorCount>0x0</RxCellErrorCount>
 <RxClkFreq>0x9502824</RxClkFreq>
-<RxFrameCount>0xb40dae9</RxFrameCount>
+<RxFrameCount>0xb86b492</RxFrameCount>
 <RxFrameErrorCount>0x0</RxFrameErrorCount>
 <RxLinkDownCount>0x0</RxLinkDownCount>
-<RxLinkErrorCount>0x2</RxLinkErrorCount>
+<RxLinkErrorCount>0x3</RxLinkErrorCount>
 <RxLinkPolarity>0x0</RxLinkPolarity>
 <RxLocalLinkReady>True</RxLocalLinkReady>
 <RxOpCodeCount>0x0</RxOpCodeCount>
@@ -2350,7 +2350,7 @@ Data Path Is Busy!</SystemState>
 <LastTxOpCode>0x0</LastTxOpCode>
 <RxCellErrorCount>0x0</RxCellErrorCount>
 <RxClkFreq>0x9502824</RxClkFreq>
-<RxFrameCount>0xb40dafc</RxFrameCount>
+<RxFrameCount>0xb86b4a5</RxFrameCount>
 <RxFrameErrorCount>0x0</RxFrameErrorCount>
 <RxLinkDownCount>0x0</RxLinkDownCount>
 <RxLinkErrorCount>0x0</RxLinkErrorCount>
@@ -2384,7 +2384,7 @@ Data Path Is Busy!</SystemState>
 <LastTxOpCode>0x0</LastTxOpCode>
 <RxCellErrorCount>0x0</RxCellErrorCount>
 <RxClkFreq>0x9502824</RxClkFreq>
-<RxFrameCount>0xb40db10</RxFrameCount>
+<RxFrameCount>0xb86b4b9</RxFrameCount>
 <RxFrameErrorCount>0x0</RxFrameErrorCount>
 <RxLinkDownCount>0x0</RxLinkDownCount>
 <RxLinkErrorCount>0x0</RxLinkErrorCount>
