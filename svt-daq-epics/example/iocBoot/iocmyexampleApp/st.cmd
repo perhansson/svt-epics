@@ -15,8 +15,6 @@ myexample_registerRecordDeviceDriver pdbbase
 
 ## Load record instances
 #dbLoadTemplate "db/userHost.substitutions"
-#dbLoadRecords "db/hybLV.db"
-#dbLoadRecords "db/dbSubExample.db", "user=trackerHost"
 dbLoadRecords "db/dbHybT.db"
 dbLoadRecords "db/dbHybLV.db"
 dbLoadRecords "db/dbHybLVStat.db"
@@ -24,10 +22,8 @@ dbLoadRecords "db/dbFebTemp.db"
 dbLoadRecords "db/dbHybSwitch.db"
 dbLoadRecords "db/dbHybSync.db"
 dbLoadRecords "db/dbDpmMap.db"
-dbLoadRecords "db/dbDpmState.db"
 dbLoadRecords "db/dbFebLayer.db"
 dbLoadRecords "db/dbSVT.db"
-#dbLoadRecords "db/dbSVTtest.db"
 
 ## Set this to see messages from mySub
 var mySubDebug 0
