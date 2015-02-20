@@ -10,7 +10,6 @@
 #include <stdlib.h>
 #include "commonConstants.h"
 
-int socketFDs[2] = {-1,-1};
 
 int close_socket(int socketfd) {
     return close(socketfd);

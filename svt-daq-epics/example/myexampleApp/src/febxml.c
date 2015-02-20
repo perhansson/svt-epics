@@ -1,6 +1,7 @@
 #include "string.h"
 #include "febxml.h"
 #include "commonConstants.h"
+#include "commonXml.h"
 
 xmlXPathObjectPtr getFebTemps(xmlDocPtr doc, const char* type) {
    char tmp[256];

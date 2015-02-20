@@ -17,6 +17,10 @@ DBD += xxxSupport.dbd
 #USR_INCLUDES += -I/root/daq/include
 USR_INCLUDES += -I/usr/include/libxml2
 
+#SVT DAQ STUFF
+SVTDAQDIR = $(TOP)/../svtDaqLib
+USR_INCLUDES += -I$(SVTDAQDIR)
+
 # Compile and add the code to the support library
 myexampleSupport_SRCS += xxxRecord.c
 myexampleSupport_SRCS += devXxxSoft.c
@@ -74,6 +78,11 @@ xml2_LIBS += xml2
 myexample_LIBS += xml2
 #myexample_LIBS += m
 #myexample_LIBS += z
+
+#SVT DAQ STUFF
+svtDaq_DIR += $(SVTDAQDIR)  
+svtDaq_LIBS += svtDaq  
+myexample_LIBS += svtDaq
 
 # NOTE: To build SNL programs, SNCSEQ must be defined
 # in the <top>/configure/RELEASE file

@@ -12,9 +12,6 @@
 
 char* strToUpper( char* s );
 double extractTempValFromString(char value[]);
-void getSubStrFromName(char name[],const int i, char board_type[], const int MAX);
-void getStringFromEpicsName(char name[], char str[], int idx);
-int getIntFromEpicsName(char name[], int idx);
 
 void getHalfFromDaqMapRecordName(char name[], char board_type[], const int MAX);
 void getHybridFromDaqMapRecordName(char name[], char board_type[], const int MAX);
@@ -26,17 +23,15 @@ void writeReadStatus(int sockfd);
 void flushSocket(int socketfd);
 
 void pollXmlString(int socketfd);
-void pollDpmXmlString(int socketfd, char** xml_string_out, int* len_out);
+//void pollDpmXmlString(int socketfd, char** xml_string_out, int* len_out);
 xmlNode* retrieveElement(xmlDoc* doc, xmlNode* node, char* tag);
 void retrieveValue(xmlDoc* doc, xmlNode* node, char* tags, char value[], const unsigned int MAX);
-void getDpmXmlDoc(int sockfd, int dpm);
 void getXmlDoc(int sockfd, int read_status, int read_config);
 void getXmlDocStrFormat(char** xml_str, int * xml_str_len);
 int getXmlPollStatus();
 int getAllDpmXmlDocStatus();
 int getDpmXmlDocStatus(int dpm);
 
-void getRunState(int dpm, char* state);
 double getFebT(int feb_id, char* ch_name);
 void getFebDeviceDna(int feb_id, char* dna);
 double getHybridT(int index, int hyb, const char* type);

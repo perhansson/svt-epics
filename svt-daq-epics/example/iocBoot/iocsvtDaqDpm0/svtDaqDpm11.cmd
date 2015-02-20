@@ -13,7 +13,7 @@ svtDaqDpm0_registerRecordDeviceDriver pdbbase
 
 ## Load record instances
 #dbLoadRecords("db/xxx.db","user=trackerHost")
-dbLoadRecords "db/dbDpm0.db"
+dbLoadRecords("db/dbDataDpm.db","DPM=11")
 
 var mySubDebug 1
 

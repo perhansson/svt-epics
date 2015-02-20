@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <registryFunction.h>
 #include <subRecord.h>
+#include <aSubRecord.h>
 #include <epicsExport.h>
 #include "commonSocket.h"
 #include "commonXml.h"
@@ -11,7 +12,9 @@
 int mySubDebug = 0;
 int process_order = 0;
 const int thisDpmId = 0;  
-
+int socketFD = -1;
+char host[256];
+xmlDoc* xmldoc = NULL;
 
 static long subPollInit(subRecord *precord) {
   process_order++;
@@ -28,37 +31,49 @@ static long subPollProcess(subRecord *precord) {
   if (mySubDebug>-1)
     printf("[ subPollProcess ]: %d Record %s called subPollProcess(%p)\n",process_order, precord->name, (void*) precord);
   
-
-  socketFDs[thisDpmId] = open_socket("dpm0",8090);
+  // find dpm nr
+  int idpm;
+  char str0[256];
+  char str1[256];  
+  getStringFromEpicsName(precord->name,str0,0);
+  getStringFromEpicsName(precord->name,str1,1);
+  if(strcmp(str0,"SVT")==0 && strcmp(str1,"dpm")==0) {
+    idpm = getIntFromEpicsName(precord->name,2);  
+  } else {
+    printf("[ subPollProcess ]: Wrong precord name to call this function?!  (%s)\n", precord->name);    
+    exit(1);
+  }
+  sprintf(host,"dpm%d",idpm);
+  socketFD = open_socket(host,8090);
   
 
-  if(socketFDs[thisDpmId]>0) {
-    printf("[ subPollProcess ]: successfully opened socket at %d\n", socketFDs[thisDpmId]);
+  if(socketFD>0) {
+    printf("[ subPollProcess ]: successfully opened socket at %d\n", socketFD);
 
-    if(dpm_doc[thisDpmId]!=NULL) {
-      printf("[ subPollProcess ]: dpm doc is not null(%p). Clean up.\n", dpm_doc[thisDpmId]);
-      xmlFreeDoc(dpm_doc[thisDpmId]);
+    if(xmldoc!=NULL) {
+      printf("[ subPollProcess ]: dpm doc is not null(%p). Clean up.\n", xmldoc);
+      xmlFreeDoc(xmldoc);
       xmlCleanupParser();      
-      dpm_doc[thisDpmId] = NULL;
+      xmldoc = NULL;
     }
 
     if (mySubDebug>-1)
       printf("[ subPollProcess ]: get the xml doc\n");
     
-    getDpmXmlDoc(socketFDs[thisDpmId], 0, &(dpm_doc[thisDpmId]));
+    getDpmXmlDoc(socketFD, 0, &xmldoc);
     
     
     if (mySubDebug>-1)
-      printf("[ subPollProcess ]: found xml doc at %p\n", dpm_doc[thisDpmId]);
+      printf("[ subPollProcess ]: found xml doc at %p\n", xmldoc);
     
     
     
-/*     if(dpm_doc[thisDpmId]!=NULL) {       */
+/*     if(xmldoc!=NULL) {       */
 /*       if (mySubDebug>-1) */
-/* 	printf("[ subPollProcess ]: clean up dpm doc (%p)\n", dpm_doc[thisDpmId]); */
-/*       xmlFreeDoc(dpm_doc[thisDpmId]); */
+/* 	printf("[ subPollProcess ]: clean up dpm doc (%p)\n", xmldoc); */
+/*       xmlFreeDoc(xmldoc); */
 /*       xmlCleanupParser();       */
-/*       dpm_doc[thisDpmId] = NULL; */
+/*       xmldoc = NULL; */
 /*    } */
     
   } else {
@@ -69,11 +84,40 @@ static long subPollProcess(subRecord *precord) {
   
 
 
-  if(socketFDs[thisDpmId]>0) {
-    printf("[ subPollProcess ]: close socket\n");
-    socketFDs[0] = close_socket(socketFDs[0]);
+  if(socketFD>0) {
+    printf("[ subPollProcess ]: close socket %d\n", socketFD);
+    socketFD = close_socket(socketFD);
   }
 
+  return 0;
+}
+
+
+static long subDpmStateInit(aSubRecord *precord) {
+  process_order++;
+  if (mySubDebug) {
+    printf("[ subDpmStateInit ]: %d Record %s called subDpmStateInit(%p)\n", process_order, precord->name, (void*) precord);
+  }
+
+  strcpy(precord->vala,"init...");
+
+  return 0;
+}
+
+static long subDpmStateProcess(aSubRecord *precord) {
+  process_order++;
+  if (mySubDebug) {
+    printf("[ subDpmStateProcess ]: %d Record %s called subDpmStateProcess(%p)\n",process_order, precord->name, (void*) precord);
+  }
+
+  char state[256];
+  strcpy(precord->vala, "default");
+
+  getRunStateProcess(precord->name, xmldoc, state);
+
+  strcpy(precord->vala, state);
+
+  
   return 0;
 }
 
@@ -84,3 +128,5 @@ static long subPollProcess(subRecord *precord) {
 epicsExportAddress(int, mySubDebug);
 epicsRegisterFunction(subPollInit);
 epicsRegisterFunction(subPollProcess);
+epicsRegisterFunction(subDpmStateInit);
+epicsRegisterFunction(subDpmStateProcess);

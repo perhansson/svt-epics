@@ -18,6 +18,10 @@ LIBRARY_IOC += svtDaqDpm0Support
 #USR_INCLUDES += -I/root/daq/include
 USR_INCLUDES += -I/usr/include/libxml2
 
+#SVT DAQ STUFF
+SVTDAQDIR = $(TOP)/../svtDaqLib
+USR_INCLUDES += -I$(SVTDAQDIR)
+
 # Compile and add the code to the support library
 # Link locally-provided code into the support library,
 # rather than directly into the IOC application.
@@ -50,6 +54,10 @@ xml2_DIR += /usr/lib
 xml2_LIBS += xml2  
 svtDaqDpm0_LIBS += xml2
 
+#SVT DAQ STUFF
+svtDaq_DIR += $(SVTDAQDIR)  
+svtDaq_LIBS += svtDaq  
+svtDaqDpm0_LIBS += svtDaq
 
 # svtDaqDpm0_registerRecordDeviceDriver.cpp derives from svtDaqDpm0.dbd
 svtDaqDpm0_SRCS += svtDaqDpm0_registerRecordDeviceDriver.cpp

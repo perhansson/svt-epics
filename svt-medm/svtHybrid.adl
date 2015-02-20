@@ -5,8 +5,8 @@ file {
 }
 display {
 	object {
-		x=-5
-		y=70
+		x=-125
+		y=49
 		width=1390
 		height=700
 	}
@@ -6359,7 +6359,8 @@ oval {
 		clr=20
 	}
 	"dynamic attribute" {
-		vis="if not zero"
+		vis="calc"
+		calc="A&1"
 		chan="SVT:hb_check"
 	}
 }
@@ -6374,7 +6375,8 @@ oval {
 		clr=61
 	}
 	"dynamic attribute" {
-		vis="if zero"
+		vis="calc"
+		calc="(!A)&1"
 		chan="SVT:hb_check"
 	}
 }

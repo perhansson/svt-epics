@@ -1,6 +1,7 @@
 #ifndef COMMONDOC_H
 #define COMMONDOC_H
 
+#include "commonConstants.h"
 #include <libxml/parser.h>
 
 

@@ -6,9 +6,7 @@
 
 xmlNodePtr getFebNode(xmlDocPtr doc, xmlXPathObjectPtr result, int index, int depth, xmlChar* nodeName);
 xmlDocPtr getdoc (char *docname);
-xmlXPathObjectPtr getnodeset (xmlDocPtr doc, xmlChar *xpath);
 double getFloatValue(xmlDocPtr doc, xmlNodePtr node);
-void getStrValue(xmlDocPtr doc, xmlNodePtr node, xmlChar* str);
 int getIntValue(xmlDocPtr doc, xmlNodePtr node);
 
 char* strToUpper( char* s );

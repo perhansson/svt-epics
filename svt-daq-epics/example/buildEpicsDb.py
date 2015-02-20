@@ -27,10 +27,20 @@ def buildEpics():
     printRecords(recs,"dbHybSync")
     recs = utils.buildLayer()
     printRecords(recs,"dbFebLayer")
-    recs = utils.buildDpmState()
-    printRecords(recs,"dbDpmState")
+    #recs = utils.buildDpmState()
+    #printRecords(recs,"dbDpmState")
+    recs = utils.buildDpm()
+    printRecords(recs,"dbDataDpm")
+    
 
 
+#def buildDataDpmEpics():
+#    for dpm in range(1):
+#        recs = utils.buildDpm(dpm)
+#        path = "svtDaqDpm"+str(dpm)+"App/Db/dbDpm"+str(dpm)
+#        printRecords(recs,path)
+
+        
 
 
 def printRecords(recs,name):

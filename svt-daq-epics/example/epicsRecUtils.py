@@ -859,3 +859,38 @@ record(stringin, SVT:daq:dpm:LAYER:state) {
 
 
 
+def buildDpm():
+
+    records = []
+    s = """
+record(sub,SVT:dpm:$(DPM):poll_xml)
+{
+    field(SCAN,"1 second")
+    field(INAM,"subPollInit")
+    field(SNAM,"subPollProcess")
+    field(FLNK,"SVT:daq:dpm:$(DPM):state_asub")
+
+}
+
+record(aSub,SVT:daq:dpm:$(DPM):state_asub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmStateInit")
+    field(SNAM,"subDpmStateProcess")
+    field(OUTA,"SVT:daq:dpm:$(DPM):state PP")
+    field(FTVA,"STRING")
+}
+
+record(stringin, SVT:daq:dpm:$(DPM):state) {
+  field(SCAN, "Passive") 
+  field(DTYP,"Soft Channel")
+}
+
+
+"""	
+    records.append(s)
+    return records
+
+
+
+

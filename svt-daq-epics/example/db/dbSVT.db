@@ -53,7 +53,7 @@ record(fanout, SVT:daqmap:fanout)
 {
   field(SCAN,"Passive")
   field(LNK1,"SVT:lv:0:0:sync:sync_rd_asub")
-  field(LNK2,"SVT:daq:dpm:0:state_asub")
+  #field(LNK2,"SVT:daq:dpm:0:state_asub")
   #field(LNK2,"SVT:lv:0:0:dpm:dpm_rd")
 }
 

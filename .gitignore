@@ -1,0 +1,13 @@
+*~
+*.o
+*.d
+O.*
+*.pyc
+**/example/db
+**/example/dbd
+**/example/lib
+*_BAK.adl
+**/linux-x86
+*.xml
+
+

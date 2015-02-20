@@ -2,6 +2,7 @@
 #include "hybxml.h"
 #include "dpmxml.h"
 #include "commonConstants.h"
+#include "commonXml.h"
 
 
 void getFebCnfCmd(int feb_id, int isopentag,  char* cmd, const int MAX) {
@@ -263,46 +264,6 @@ void getHybTrimCmd(int value, int feb_id, int hyb_id, char *ch_name, char* cmd, 
 }
 
 
-
-
-xmlXPathObjectPtr getRunStateFromDpm(xmlDocPtr doc) {
-  char tmp[256];
-  sprintf(tmp,"/system/status/RunState");
-  if(DEBUG>2) printf("[ getRunStateDpm ] : xpath \"%s\"\n",tmp);
-  return getnodeset(doc, (xmlChar*) tmp);
-}
-
-
-void getRunStateFromDpmValue(xmlDocPtr doc, xmlChar* state) {
-  xmlXPathObjectPtr result;
-  xmlNodePtr node;
-  strcpy((char*)state, "undef");
-  //if(DEBUG>2) 
-  printf("[ getRunStateFromDpmValue ] : get RunState from dpm xml\n");
-  result = getRunStateFromDpm(doc);
-  //if(DEBUG>2) {
-  if(result!=NULL) {
-    printf("[ getRunStateFromDpmValue ] : got %d nodes\n", result->nodesetval->nodeNr);
-    if(result->nodesetval->nodeNr==1) {
-      node = result->nodesetval->nodeTab[0];
-      if(node!=NULL) {
-	getStrValue(doc, node, state);
-      } else {
-	printf("[ getRunStateFromDpmValue ] : [ WARNING ] no RunState nodes found\n");
-	strcpy((char*)state, "no valid node");
-      }
-    } else {
-      printf("[ getRunStateFromDpmValue ] : [ WARNING ] %d RunState nodes found, should be exactly 1\n", result->nodesetval->nodeNr);
-      strcpy((char*)state,"wrong nr of nodes");
-    }
-  } else {
-    printf("[ getRunStateFromDpmValue ] : [ WARNING ] no results found\n");
-    strcpy((char*)state, "no xpath results");
-  }  
-  printf("[ getRunStateFromDpmValue ] : returning with state \"%s\"\n", state);
-  
-  return;
-}
 
 
 

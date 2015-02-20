@@ -3,7 +3,7 @@
 ## You may have to change svtDaqDpm0 to something else
 ## everywhere it appears in this file
 
-< envPaths
+< envPaths_x86
 
 cd ${TOP}
 
@@ -13,6 +13,11 @@ svtDaqDpm0_registerRecordDeviceDriver pdbbase
 
 ## Load record instances
 #dbLoadRecords("db/xxx.db","user=trackerHost")
+dbLoadRecords("db/dbDataDpm.db","DPM=13")
+
+var mySubDebug 1
+
+traceIocInit
 
 cd ${TOP}/iocBoot/${IOC}
 iocInit

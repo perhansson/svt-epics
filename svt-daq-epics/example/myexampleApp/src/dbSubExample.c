@@ -10,6 +10,7 @@
 #include <longinRecord.h>
 #include <dbAccess.h>
 #include "commonConstants.h"
+#include "commonXml.h"
 #include "daqmap.h"
 #include "client_util.h"
 #include "socket.h"
@@ -73,16 +74,6 @@ static long subLVInit(subRecord *precord) {
 }
 
 
-static long subDpmStateInit(aSubRecord *precord) {
-  process_order++;
-  if (mySubDebug) {
-    printf("[ subDpmStateInit ]: %d Record %s called subDpmStateInit(%p)\n", process_order, precord->name, (void*) precord);
-  }
-
-  strcpy(precord->vala,"init...");
-
-  return 0;
-}
 
 
 static void getHostNameDataDpm(int i, char* hostname) {
@@ -859,40 +850,6 @@ static void readFeb(subRecord* precord,char action[], int feb_id, char ch_name[]
 
 
 
-static long subDpmStateProcess(aSubRecord *precord) {
-  process_order++;
-  if (mySubDebug) {
-    printf("[ subDpmStateProcess ]: %d Record %s called subDpmStateProcess(%p)\n",process_order, precord->name, (void*) precord);
-  }
-  
-  int idpm;
-  char str1[BUF_SIZE];
-  char str2[BUF_SIZE];
-  char action[BUF_SIZE];
-  char state[256];
-  strcpy(precord->vala, "default");
-  precord->val = -1.0;  
-  getStringFromEpicsName(precord->name,str1,1);
-  getStringFromEpicsName(precord->name,str2,2);
-  if(strcmp(str1,"daq")==0 && strcmp(str2,"dpm")==0) {
-    idpm = getIntFromEpicsName(precord->name,3);  
-    getStringFromEpicsName(precord->name,action,4);    
-    if(strcmp(action,"state_asub")==0) {           
-      getRunState(idpm, state);
-      if(mySubDebug) printf("[ subDpmStateProcess ]: got state %s.\n",state);      
-      //memcpy(precord->vala,state,len);
-      strcpy(precord->vala,state);
-      if(mySubDebug>2) printf("[ subDpmStateProcess ]: memcp done\n");      
-      //strcpy(precord->vala,state);
-    } else {
-      printf("[ subDpmStateProcess ]: [ ERROR ]: wrong action \"%s\"!\n",action);
-    }     
-  } else {
-    printf("[ subDpmStateProcess ]: [ ERROR ]: wrong record name? \"%s\"!\n",precord->name);    
-  }
-  return 0;
-}
-
 
 static long subDnaProcess(aSubRecord *precord) {
   process_order++;
@@ -1300,7 +1257,7 @@ static long subPollProcess(subRecord *precord) {
 
 
 static long subPollDpmProcess(subRecord *precord) {
-  int socketfd;
+  //int socketfd;
 
   process_order++;
 
@@ -1308,6 +1265,7 @@ static long subPollDpmProcess(subRecord *precord) {
     printf("[ subPollDpmProcess ]: %d Record %s called subPollDpmProcess(%p)\n",process_order, precord->name, (void*) precord);
   }
  
+  /*
   
   if(DO_DATA_DPM!=0) {
 
@@ -1364,10 +1322,10 @@ static long subPollDpmProcess(subRecord *precord) {
      } //dpm
   }
 
+*/
 
   return 0;
 }
-
 
 
 
@@ -1492,8 +1450,6 @@ epicsRegisterFunction(subPollStatInit);
 epicsRegisterFunction(subPollStatProcess);
 epicsRegisterFunction(subPollDaqMapInit);
 epicsRegisterFunction(subPollDaqMapProcess);
-epicsRegisterFunction(subDpmStateInit);
-epicsRegisterFunction(subDpmStateProcess);
 epicsRegisterFunction(subDnaInit);
 epicsRegisterFunction(subDnaProcess);
 epicsRegisterFunction(subLayerInit);

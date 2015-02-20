@@ -1,10 +1,178 @@
-#ifndef COMMONXML_H
-#define COMMONXML_H
+#include "commonXml.h"
+#include "commonConstants.h"
 
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
 #include <sys/ioctl.h>
 #include <libxml/parser.h>
+#include <libxml/xpath.h>
 
-#include "commonConstants.h"
+
+void getStrValue(xmlDocPtr doc, xmlNodePtr node, xmlChar* str) {
+   xmlChar* value;
+   if(node!=NULL) {
+      if(DEBUG>1) printf("[ getStrValue ] : from node %s\n",node->name);      
+      value = xmlNodeListGetString(doc,node->children,0);
+      if(value!=NULL) {
+         if(DEBUG>2) printf("[ getStrValue ] : extracted value \"%s\"\n",value);      
+         strcpy((char*)str,(char*)value);
+         xmlFree(value);
+      }
+   } else {
+      if(DEBUG>1) printf("[ getStrValue ] : no node, return empty string\n");      
+      strcpy((char*)str,"");
+   }
+}
+
+xmlXPathObjectPtr
+getnodeset (xmlDocPtr doc, xmlChar *xpath) {
+	
+	xmlXPathContextPtr context;
+	xmlXPathObjectPtr result;
+
+	context = xmlXPathNewContext(doc);
+	if (context == NULL) {
+		printf("[ getnodeset ] : [ ERROR ] :  xmlXPathNewContext\n");
+		return NULL;
+	}
+	result = xmlXPathEvalExpression(xpath, context);
+	xmlXPathFreeContext(context);
+	if (result == NULL) {
+		printf("[ getnodeset ] : [ ERROR ] : xmlXPathEvalExpression\n");
+		return NULL;
+	}
+	if(xmlXPathNodeSetIsEmpty(result->nodesetval)){
+		xmlXPathFreeObject(result);
+        if(DEBUG>2) printf("[ getnodeset ] : [ WARNING ] :  no xmlXPath result found\n");
+		return NULL;
+	}
+	return result;
+}
+
+
+
+void getSubStrFromName(char name[],const int i, char board_type[], const int MAX) {
+    char buf[MAX];
+    strcpy(buf,name);
+    int idx;
+    char* pch;
+    memset(board_type,'\0',MAX);
+    pch = strtok(buf,":");
+    idx=0;
+    while(pch!=NULL) {
+        if(idx==i) {
+            if(strlen(pch)>MAX) {
+                printf("ERROR pch string is too long!\n");	
+            } else {
+                strcpy(board_type,pch);
+                break;
+            }
+        }
+        idx++;    
+        pch = strtok(NULL,":");
+    }  
+    return;
+}
+
+void getStringFromEpicsName(char name[], char str[], int idx) {   
+   getSubStrFromName(name,idx,str,256);
+}
+
+int getIntFromEpicsName(char name[], int idx) {   
+   char str[256];
+   getSubStrFromName(name,idx,str,256);
+   char* p_end = str;
+   int id = (int) strtol(str,&p_end,0);
+   if(p_end==str) {
+      printf("[ getIntFromEpicsName ]: [ ERROR ]: invalid convertion of this feb id %s\n",str);
+      return -1;      
+   }
+   return id;
+}
+
+
+void getRunStateProcess(char* pname, xmlDoc* doc, char* state) {
+
+  int idpm;
+  char str1[256];
+  char str2[256];
+  char action[256];
+  getStringFromEpicsName(pname,str1,1);
+  getStringFromEpicsName(pname,str2,2);
+  if(strcmp(str1,"daq")==0 && strcmp(str2,"dpm")==0) {
+    idpm = getIntFromEpicsName(pname,3);  
+    getStringFromEpicsName(pname,action,4);    
+    if(strcmp(action,"state_asub")==0) {           
+      getRunState(idpm, doc, state);
+      if(DEBUG>0) printf("[ getRunStateProcess ]: got state %s.\n",state);      
+    } else {
+      printf("[ getRunStateProcess ]: [ ERROR ]: wrong action \"%s\"!\n",action);
+    }     
+  } else {
+    printf("[ getRunStateProcess ]: [ ERROR ]: wrong record name? \"%s\"!\n",pname);    
+  }
+  
+}
+
+
+void getRunState(int idpm, xmlDoc* doc, char* state) {
+  int dpm;
+  dpm = idpm;
+  if(DEBUG>0)
+    printf("[ getRunState ] : get state of dpm %d (idpm=%d) dpm_doc at %p\n", dpm, idpm, doc);
+  if(doc!=NULL) {      
+    if(DEBUG>0)
+      printf("[ getRunState ]: idpm %d xml ok\n", idpm);
+    getRunStateFromDpmValue(doc, (xmlChar*) state);
+    if(DEBUG>0)
+      printf("[ getRunState ]: got val %s\n", state);
+  } else {
+    if(DEBUG>0) 
+      printf("[ getRunState ]: [ WARNING ]: the dpm %d xml doc status is invalid\n",idpm);
+    strcpy(state,"no valid xml");
+  }
+  return;
+}
+
+
+
+void getRunStateFromDpmValue(xmlDocPtr doc, xmlChar* state) {
+  xmlXPathObjectPtr result;
+  xmlNodePtr node;
+  char tmp[256];
+  strcpy((char*)state, "undef");
+  if(DEBUG>2) 
+    printf("[ getRunStateFromDpmValue ] : get RunState from dpm xml\n");
+  sprintf(tmp,"/system/status/RunState");
+  if(DEBUG>2) printf("[ getRunStateDpm ] : xpath \"%s\"\n",tmp);
+  result =  getnodeset(doc, (xmlChar*) tmp);
+  //getRunStateFromDpm(doc);
+  //if(DEBUG>2) {
+  if(result!=NULL) {
+    printf("[ getRunStateFromDpmValue ] : got %d nodes\n", result->nodesetval->nodeNr);
+    if(result->nodesetval->nodeNr==1) {
+      node = result->nodesetval->nodeTab[0];
+      if(node!=NULL) {
+	getStrValue(doc, node, state);
+      } else {
+	printf("[ getRunStateFromDpmValue ] : [ WARNING ] no RunState nodes found\n");
+	strcpy((char*)state, "no valid node");
+      }
+    } else {
+      printf("[ getRunStateFromDpmValue ] : [ WARNING ] %d RunState nodes found, should be exactly 1\n", result->nodesetval->nodeNr);
+      strcpy((char*)state,"wrong nr of nodes");
+    }
+  } else {
+    printf("[ getRunStateFromDpmValue ] : [ WARNING ] no results found\n");
+    strcpy((char*)state, "no xpath results");
+  }  
+  printf("[ getRunStateFromDpmValue ] : returning with state \"%s\"\n", state);
+  
+  return;
+}
+
+
 
 
 
@@ -92,8 +260,11 @@ void pollDpmXmlString(int socketfd, char** xml_string_out, int* len_out) {
    time(&timer);
    
    if(DEBUG>0) {
-     lt = localtime(&timer);
-     printf("[ pollDpmXmlString ]: start_time at %s\n",asctime(lt));
+     //lt = localtime(&timer);
+     //printf("[ pollDpmXmlString ]: start_time at %s\n",asctime(lt));
+     //time_t t;
+     //time(t);
+     //printf("[ pollDpmXmlString ]: start_time at %s\n",asctime(localtime(&t)));
    }
    
    nempty=0;
@@ -106,10 +277,11 @@ void pollDpmXmlString(int socketfd, char** xml_string_out, int* len_out) {
    while(dt<3) { 
       
       time(&cur_time);
+
       dt = difftime(cur_time,timer);
       
       if(DEBUG>1) 
-	printf("[ pollDpmXmlString ]: Try to read from socket (nempty %d read_i %d time %ds)\n",nempty,read_i,dt);
+	printf("[ pollDpmXmlString ]: Try to read from socket (nempty %d read_i %d time %ds)\n",nempty,read_i,dt); //,asctime(localtime(&cur_time)));
       
       read_n = 0;
       ioctl(socketfd, FIONREAD, &read_n);
@@ -206,8 +378,8 @@ void pollDpmXmlString(int socketfd, char** xml_string_out, int* len_out) {
          
       } // read_n>0
       else {
-         if(DEBUG>1) printf("[ pollDpmXmlString ]: Nothing to read from socket. Sleep a little..\n");      
-         usleep(0.05);
+         if(DEBUG>2) printf("[ pollDpmXmlString ]: Nothing to read from socket. Sleep a little..\n");      
+         usleep(1000);
          nempty++;
       } 
       
@@ -354,5 +526,4 @@ void getDpmXmlDoc(int sockfd, int dpm, xmlDoc** dpm_doc_ptrptr) {
 }
 
 
-#endif
 

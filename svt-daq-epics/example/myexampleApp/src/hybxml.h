@@ -44,7 +44,6 @@ xmlXPathObjectPtr getHybridFromDpm(xmlDocPtr doc);
 void getHybridFromDpmValues(xmlDocPtr doc, int** hybrids);
 xmlXPathObjectPtr getHybridFromDpm(xmlDocPtr doc);
 
-void getRunStateFromDpmValue(xmlDocPtr doc, xmlChar* state);
 
 
 #endif
