@@ -1,5 +1,0 @@
-include "base.dbd"
-include "xxxSupport.dbd"
-include "dbSubExample.dbd"
-include "myexampleHello.dbd"
-include "initTrace.dbd"
