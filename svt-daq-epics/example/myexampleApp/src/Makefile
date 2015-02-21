@@ -30,7 +30,6 @@ myexampleSupport_SRCS += devXxxSoft.c
 myexampleSupport_SRCS += dbSubExample.c
 myexampleSupport_SRCS += myexampleHello.c
 myexampleSupport_SRCS += initTrace.c
-myexampleSupport_SRCS += tcpipExample.c
 myexampleSupport_SRCS += constants.c
 myexampleSupport_SRCS += status.c
 myexampleSupport_SRCS += daqmap.c
