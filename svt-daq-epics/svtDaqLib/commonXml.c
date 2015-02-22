@@ -100,7 +100,7 @@ void getRunStateProcess(char* pname, xmlDoc* doc, char* state) {
   char action[256];
   getStringFromEpicsName(pname,str1,1);
   getStringFromEpicsName(pname,str2,2);
-  if(strcmp(str1,"daq")==0 && strcmp(str2,"dpm")==0) {
+  if(strcmp(str1,"daq")==0 && (strcmp(str2,"dtm")==0 ||strcmp(str2,"dpm")==0)) {
     idpm = getIntFromEpicsName(pname,3);  
     getStringFromEpicsName(pname,action,4);    
     if(strcmp(action,"state_asub")==0) {           

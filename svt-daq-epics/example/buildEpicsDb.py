@@ -31,6 +31,8 @@ def buildEpics():
     #printRecords(recs,"dbDpmState")
     recs = utils.buildDpm()
     printRecords(recs,"dbDataDpm")
+    recs = utils.buildDtm()
+    printRecords(recs,"dbDataDtm")
     
 
 

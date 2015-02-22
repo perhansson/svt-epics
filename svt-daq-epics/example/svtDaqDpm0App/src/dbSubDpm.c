@@ -11,7 +11,6 @@
 
 int mySubDebug = 0;
 int process_order = 0;
-const int thisDpmId = 0;  
 int socketFD = -1;
 char host[256];
 xmlDoc* xmldoc = NULL;
@@ -37,16 +36,23 @@ static long subPollProcess(subRecord *precord) {
   char str1[256];  
   getStringFromEpicsName(precord->name,str0,0);
   getStringFromEpicsName(precord->name,str1,1);
-  if(strcmp(str0,"SVT")==0 && strcmp(str1,"dpm")==0) {
+  if(strcmp(str0,"SVT")==0 && (strcmp(str1,"dpm")==0 || strcmp(str1,"dtm")==0)) {
     idpm = getIntFromEpicsName(precord->name,2);  
   } else {
     printf("[ subPollProcess ]: Wrong precord name to call this function?!  (%s)\n", precord->name);    
     exit(1);
   }
-  sprintf(host,"dpm%d",idpm);
+  
+  if(strcmp(str1,"dpm")==0) {
+    sprintf(host,"dpm%d",idpm);
+  }
+  else {
+    sprintf(host,"dtm%d",idpm);    
+  }
+
   socketFD = open_socket(host,8090);
   
-
+  
   if(socketFD>0) {
     printf("[ subPollProcess ]: successfully opened socket at %d\n", socketFD);
 
