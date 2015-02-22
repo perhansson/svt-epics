@@ -129,6 +129,32 @@ static long subDpmStateProcess(aSubRecord *precord) {
 
 
 
+static long subDpmFebNumInit(subRecord *precord) {
+  process_order++;
+  if (mySubDebug) {
+    printf("[ subDpmFebNumInit ]: %d Record %s called subDpmFebNumInit(%p)\n", process_order, precord->name, (void*) precord);
+  }
+  return 0;
+}
+
+static long subDpmFebNumProcess(subRecord *precord) {
+  process_order++;
+  if (mySubDebug) {
+    printf("[ subDpmFebNumProcess ]: %d Record %s called subDpmFebNumProcess(%p)\n",process_order, precord->name, (void*) precord);
+  }
+  int val = -1;
+
+  val = getFebNumProcess(precord->name, xmldoc);
+
+  precord->val = val;
+
+  
+  return 0;
+}
+
+
+
+
 /* Register these symbols for use by IOC code: */
 
 epicsExportAddress(int, mySubDebug);
@@ -136,3 +162,5 @@ epicsRegisterFunction(subPollInit);
 epicsRegisterFunction(subPollProcess);
 epicsRegisterFunction(subDpmStateInit);
 epicsRegisterFunction(subDpmStateProcess);
+epicsRegisterFunction(subDpmFebNumInit);
+epicsRegisterFunction(subDpmFebNumProcess);

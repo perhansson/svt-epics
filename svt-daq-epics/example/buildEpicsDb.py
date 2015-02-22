@@ -33,6 +33,8 @@ def buildEpics():
     printRecords(recs,"dbDataDpm")
     recs = utils.buildDtm()
     printRecords(recs,"dbDataDtm")
+    recs = utils.buildDpmFebNum()
+    printRecords(recs,"dbDataDpmFebNum")
     
 
 

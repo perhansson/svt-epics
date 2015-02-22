@@ -927,3 +927,28 @@ record(stringin, SVT:daq:dtm:$(DTM):state) {
 
 
 
+def buildDpmFebNum():
+
+    records = []
+    s = """
+
+record(sub,SVT:daq:dpm:$(DPM):$(DP):febnum_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmFebNumInit")
+    field(SNAM,"subDpmFebNumProcess")
+}
+
+record(longin, SVT:daq:dpm:$(DPM):$(DP):febnum) {
+  field(SCAN, "1 second") 
+  field(INP, "SVT:daq:dpm:$(DPM):(DP):febnum_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+"""	
+    records.append(s)
+    return records
+
+
+

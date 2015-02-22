@@ -24,6 +24,7 @@ DB += dbFebTemp.db
 DB += dbSVT.db
 DB += dbDpmMap.db
 DB += dbDataDpm.db
+DB += dbDataDpmFebNum.db
 DB += dbDataDtm.db
 DB += dbFebLayer.db
 DB += dbHybSync.db

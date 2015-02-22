@@ -10,6 +10,8 @@
 
 void getStrValue(xmlDocPtr doc, xmlNodePtr node, xmlChar* str);
 
+int getIntValue(xmlDocPtr doc, xmlNodePtr node);
+
 xmlXPathObjectPtr getnodeset (xmlDocPtr doc, xmlChar *xpath);
 
 void getSubStrFromName(char name[],const int i, char board_type[], const int MAX);
@@ -23,6 +25,12 @@ void getRunStateProcess(char* pname, xmlDoc* doc, char* state);
 void getRunState(int idpm, xmlDoc* doc, char* state);
 
 void getRunStateFromDpmValue(xmlDocPtr doc, xmlChar* state);
+
+int getFebNumProcess(char* pname, xmlDoc* doc);
+
+int getFebNumFromDpmValue(xmlDocPtr doc, int dp);
+
+int getFebNum(int dpm, int dp, xmlDoc* doc);
 
 int findSystemStr(char* buf, const int MAX, char** start);
 

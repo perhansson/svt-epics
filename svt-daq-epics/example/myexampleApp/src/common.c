@@ -92,20 +92,3 @@ double getFloatValue(xmlDocPtr doc, xmlNodePtr node) {
 }
 
 
-int getIntValue(xmlDocPtr doc, xmlNodePtr node) {
-   int t=0;
-   xmlChar* value;
-   if(node!=NULL) {
-      if(DEBUG>2) printf("[ getIntValue ] : node %s \n",node->name);      
-      value  = xmlNodeListGetString(doc,node->children,0);
-      if(value!=NULL) {
-         if(DEBUG>2) printf("[ getIntValue ] : str value %s\n",value);      
-         //if( xmlStrstr(value,"0x")!=0) 
-         t = (int) strtol((char*)value, NULL, 0);
-         //t = atoi((const char*)value);
-         if(DEBUG>2) printf("[ getIntValue ] : int value %d\n",t);      
-         xmlFree(value);
-      }
-   }
-   return t;
-}
