@@ -26,6 +26,7 @@ DB += dbDpmMap.db
 DB += dbDataDpm.db
 DB += dbDataDpmFebNum.db
 DB += dbDataDpmHybNum.db
+DB += dbDataDpmLink.db
 DB += dbDataDtm.db
 DB += dbFebLayer.db
 DB += dbHybSync.db

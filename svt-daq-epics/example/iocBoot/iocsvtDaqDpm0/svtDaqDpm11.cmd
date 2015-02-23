@@ -14,6 +14,10 @@ svtDaqDpm0_registerRecordDeviceDriver pdbbase
 ## Load record instances
 #dbLoadRecords("db/xxx.db","user=trackerHost")
 dbLoadRecords("db/dbDataDpm.db","DPM=11")
+dbLoadRecords("db/dbDataDpmLink.db","DPM=11,DP=0")
+dbLoadRecords("db/dbDataDpmLink.db","DPM=11,DP=1")
+dbLoadRecords("db/dbDataDpmLink.db","DPM=11,DP=2")
+dbLoadRecords("db/dbDataDpmLink.db","DPM=11,DP=3")
 dbLoadRecords("db/dbDataDpmHybNum.db","DPM=11,DP=0")
 dbLoadRecords("db/dbDataDpmHybNum.db","DPM=11,DP=1")
 dbLoadRecords("db/dbDataDpmHybNum.db","DPM=11,DP=2")

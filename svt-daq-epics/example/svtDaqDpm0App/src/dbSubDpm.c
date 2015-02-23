@@ -66,7 +66,7 @@ static long subPollProcess(subRecord *precord) {
     if (mySubDebug>-1)
       printf("[ subPollProcess ]: get the xml doc\n");
     
-    getDpmXmlDoc(socketFD, 0, &xmldoc);
+    getDpmXmlDoc(socketFD, idpm, &xmldoc);
     
     
     if (mySubDebug>-1)
@@ -152,6 +152,29 @@ static long subDpmFebNumProcess(subRecord *precord) {
   return 0;
 }
 
+static long subDpmLinkInit(subRecord *precord) {
+  process_order++;
+  if (mySubDebug) {
+    printf("[ subDpmLinkInit ]: %d Record %s called subDpmLinkInit(%p)\n", process_order, precord->name, (void*) precord);
+  }
+  return 0;
+}
+
+static long subDpmLinkProcess(subRecord *precord) {
+  process_order++;
+  if (mySubDebug) {
+    printf("[ subDpmLinkProcess ]: %d Record %s called subDpmLinkProcess(%p)\n",process_order, precord->name, (void*) precord);
+  }
+  int val = -1;
+
+  val = getLinkProcess(precord->name, xmldoc);
+
+  precord->val = val;
+
+  
+  return 0;
+}
+
 
 
 
@@ -164,3 +187,5 @@ epicsRegisterFunction(subDpmStateInit);
 epicsRegisterFunction(subDpmStateProcess);
 epicsRegisterFunction(subDpmFebNumInit);
 epicsRegisterFunction(subDpmFebNumProcess);
+epicsRegisterFunction(subDpmLinkInit);
+epicsRegisterFunction(subDpmLinkProcess);

@@ -975,4 +975,28 @@ record(longin, SVT:daq:dpm:$(DPM):$(DP):hybnum) {
     return records
 
 
+def buildDpmLink():
+
+    records = []
+    s = """
+
+record(sub,SVT:daq:dpm:$(DPM):$(DP):rxframeerrorcount_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmLinkInit")
+    field(SNAM,"subDpmLinkProcess")
+}
+
+record(longin, SVT:daq:dpm:$(DPM):$(DP):rxframeerrorcount) {
+  field(SCAN, "1 second") 
+  field(INP, "SVT:daq:dpm:$(DPM):$(DP):rxframeerrorcount_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+"""	
+    records.append(s)
+    return records
+
+
 
