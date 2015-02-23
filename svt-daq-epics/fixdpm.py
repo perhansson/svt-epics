@@ -14,7 +14,8 @@ for dpm in range(0,15):
         if "dbDataDpm.db" in l:
             fnew.write(l)
             for dp in range(0,4):
-                fnew.write("dbLoadRecords(\"db/dbDataDpmFebNum.db\",\"DPM="+str(dpm)+",DP="+str(dp)+"\")\n")
+                fnew.write("dbLoadRecords(\"db/dbDataDpmHybNum.db\",\"DPM="+str(dpm)+",DP="+str(dp)+"\")\n")
+                #fnew.write("dbLoadRecords(\"db/dbDataDpmFebNum.db\",\"DPM="+str(dpm)+",DP="+str(dp)+"\")\n")
         else:
             fnew.write(l)
     fnew.close()

@@ -80,6 +80,7 @@ void getSubStrFromName(char name[],const int i, char board_type[], const int MAX
     pch = strtok(buf,":");
     idx=0;
     while(pch!=NULL) {
+      printf("idx %d\n",idx);
         if(idx==i) {
             if(strlen(pch)>MAX) {
                 printf("ERROR pch string is too long!\n");	
@@ -91,6 +92,7 @@ void getSubStrFromName(char name[],const int i, char board_type[], const int MAX
         idx++;    
         pch = strtok(NULL,":");
     }  
+    printf("[ getSubStrFromName ] : got %s \n",board_type);
     return;
 }
 
@@ -100,6 +102,7 @@ void getStringFromEpicsName(char name[], char str[], int idx) {
 
 int getIntFromEpicsName(char name[], int idx) {   
    char str[256];
+   printf("[ getIntFromEpicsName ] : name %s idx %d\n", name, idx);
    getSubStrFromName(name,idx,str,256);
    char* p_end = str;
    int id = (int) strtol(str,&p_end,0);
@@ -107,6 +110,7 @@ int getIntFromEpicsName(char name[], int idx) {
       printf("[ getIntFromEpicsName ]: [ ERROR ]: invalid convertion of this feb id %s\n",str);
       return -1;      
    }
+   printf("[ getIntFromEpicsName ] : got %d\n", id);
    return id;
 }
 
@@ -142,19 +146,25 @@ int getFebNumProcess(char* pname, xmlDoc* doc) {
   char str2[256];
   char action[256];
   val = -1;
+  idpm = -1;
+  idp = -1;
   getStringFromEpicsName(pname,str1,1);
   getStringFromEpicsName(pname,str2,2);
-  if(strcmp(str1,"daq")==0 && strcmp(str2,"dpm"==0)) {
+
+  if(strcmp(str1,"daq")==0 && strcmp(str2,"dpm")==0) {     
     idpm = getIntFromEpicsName(pname,3);  
     idp = getIntFromEpicsName(pname,4);  
+    
+    printf("[ getFebNumProcess ]: idpm %d\n",idpm);      
+    printf("[ getFebNumProcess ]: idp %d\n",idp);      
+    
     getStringFromEpicsName(pname,action,5);    
-    if(strcmp(action,"febnum_sub")==0) {           
-      val = getFebNum(idpm, idp, doc);
+    
+    if(strcmp(action,"febnum_sub")==0 || strcmp(action,"hybnum_sub")==0) {           
+      val = getFebNumFromDpmValue(doc, idp, action);
+
       if(DEBUG>0) printf("[ getFebNumProcess ]: got val %d.\n",val);      
-    } 
-    else if(strcmp(action,"hybnum_sub")==0) {           
-      //val = getHybNum(idpm, idp, doc);
-      //if(DEBUG>0) printf("[ getFebNumProcess ]: got val %d.\n",val);      
+
     } else {
       printf("[ getFebNumProcess ]: [ ERROR ]: wrong action \"%s\"!\n",action);
     }     
@@ -182,25 +192,6 @@ void getRunState(int idpm, xmlDoc* doc, char* state) {
     strcpy(state,"no valid xml");
   }
   return;
-}
-
-
-int getFebNum(int dpm, int dp, xmlDoc* doc) {
-  int val;
-  val = -1;
-  if(DEBUG>0)
-    printf("[ getFebNum ] : get feb num of dpm %d dpm_doc at %p\n", dpm, dp, doc);
-  if(doc!=NULL) {      
-    if(DEBUG>0)
-      printf("[ getFebNum ]: dpm %d xml ok\n", dpm);
-    val = getFebNumFromDpmValue(doc, dp);
-    if(DEBUG>0)
-      printf("[ getFebNum ]: got val %d\n", val);
-  } else {
-    if(DEBUG>0) 
-      printf("[ getFebNum ]: [ WARNING ]: the dpm %d xml doc status is invalid\n",dpm);
-  }
-  return val;
 }
 
 
@@ -243,37 +234,59 @@ void getRunStateFromDpmValue(xmlDocPtr doc, xmlChar* state) {
 
 
 
-int getFebNumFromDpmValue(xmlDocPtr doc, int dp) {
+int getFebNumFromDpmValue(xmlDocPtr doc, int dp, char* action) {
   xmlXPathObjectPtr result;
   xmlNodePtr node;
   char tmp[256];
   int val;
   val = -1;
-  if(DEBUG>2) 
-    printf("[ getFebNumFromDpmValue ] : get RunState from dpm xml\n");
-  sprintf(tmp,"/system/status/DataDpm/RceCore/Datapath[@index=\"%d\"]/FebNum",dp);
-  if(DEBUG>2) printf("[ getFebNumDpm ] : xpath \"%s\"\n",tmp);
-  result =  getnodeset(doc, (xmlChar*) tmp);
-  //getFebNumFromDpm(doc);
-  //if(DEBUG>2) {
-  if(result!=NULL) {
-    printf("[ getFebNumFromDpmValue ] : got %d nodes\n", result->nodesetval->nodeNr);
-    if(result->nodesetval->nodeNr==1) {
-      node = result->nodesetval->nodeTab[0];
-      if(node!=NULL) {
-	val = getIntValue(doc, node);
+  if(doc!=NULL) {      
+    if(DEBUG>0)
+      printf("[ getFebNumFromDpmValue ]: dpm xml ok\n");
+    
+    
+    if(DEBUG>2) 
+      printf("[ getFebNumFromDpmValue ] : get %s from dpm xml\n", action);
+    if(strcmp(action,"febnum_sub")==0) {
+      sprintf(tmp,"/system/status/DataDpm/RceCore/Datapath[@index=\"%d\"]/FebNum",dp);
+    } 
+    else if( strcmp(action,"hybnum_sub")==0) {
+      sprintf(tmp,"/system/status/DataDpm/RceCore/Datapath[@index=\"%d\"]/HybNum",dp);
+    }
+    else {
+      strcpy(tmp,"");
+    }
+    
+    if(strcmp(tmp,"")!=0) {
+      if(DEBUG>2) printf("[ getFebNumDpm ] : xpath \"%s\"\n",tmp);
+      result =  getnodeset(doc, (xmlChar*) tmp);
+      //getFebNumFromDpm(doc);
+      //if(DEBUG>2) {
+      if(result!=NULL) {
+	printf("[ getFebNumFromDpmValue ] : got %d nodes\n", result->nodesetval->nodeNr);
+	if(result->nodesetval->nodeNr==1) {
+	  node = result->nodesetval->nodeTab[0];
+	  if(node!=NULL) {
+	    val = getIntValue(doc, node);
+	  } else {
+	    printf("[ getFebNumFromDpmValue ] : [ WARNING ] no FebNum nodes found\n");
+	  }
+	} else {
+	  printf("[ getFebNumFromDpmValue ] : [ WARNING ] %d FebNum nodes found, should be exactly 1\n", result->nodesetval->nodeNr);
+	}
       } else {
-	printf("[ getFebNumFromDpmValue ] : [ WARNING ] no FebNum nodes found\n");
-      }
+	printf("[ getFebNumFromDpmValue ] : [ WARNING ] no results found\n");
+      }  
     } else {
-      printf("[ getFebNumFromDpmValue ] : [ WARNING ] %d FebNum nodes found, should be exactly 1\n", result->nodesetval->nodeNr);
+      printf("[ getFebNumFromDpmValue ] : [ WARNING ] wrong action (%s) \n",action);      
     }
   } else {
-    printf("[ getFebNumFromDpmValue ] : [ WARNING ] no results found\n");
-  }  
+    printf("[ getFebNumFromDpmValue ] : [ WARNING ] xml doc not found\n");    
+  }
+  //if(DEBUG>1) {
   printf("[ getFebNumFromDpmValue ] : returning with val %d\n", val);
   
-  return;
+  return val;
 }
 
 

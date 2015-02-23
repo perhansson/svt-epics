@@ -941,7 +941,31 @@ record(sub,SVT:daq:dpm:$(DPM):$(DP):febnum_sub)
 
 record(longin, SVT:daq:dpm:$(DPM):$(DP):febnum) {
   field(SCAN, "1 second") 
-  field(INP, "SVT:daq:dpm:$(DPM):(DP):febnum_sub PP")
+  field(INP, "SVT:daq:dpm:$(DPM):$(DP):febnum_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+"""	
+    records.append(s)
+    return records
+
+
+def buildDpmHybNum():
+
+    records = []
+    s = """
+
+record(sub,SVT:daq:dpm:$(DPM):$(DP):hybnum_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmFebNumInit")
+    field(SNAM,"subDpmFebNumProcess")
+}
+
+record(longin, SVT:daq:dpm:$(DPM):$(DP):hybnum) {
+  field(SCAN, "1 second") 
+  field(INP, "SVT:daq:dpm:$(DPM):$(DP):hybnum_sub PP")
   field(DTYP,"Soft Channel")
 }
 

@@ -7,7 +7,7 @@ display {
 	object {
 		x=68
 		y=49
-		width=1201
+		width=1250
 		height=687
 	}
 	clr=14
@@ -1245,7 +1245,7 @@ text {
 }
 text {
 	object {
-		x=750
+		x=600
 		y=23
 		width=50
 		height=18
@@ -1258,7 +1258,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=46
 		width=46
 		height=20
@@ -1271,7 +1271,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=71
 		width=46
 		height=20
@@ -1284,7 +1284,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=96
 		width=46
 		height=20
@@ -1297,7 +1297,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=121
 		width=46
 		height=20
@@ -1310,7 +1310,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=146
 		width=46
 		height=20
@@ -1323,7 +1323,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=171
 		width=46
 		height=20
@@ -1336,7 +1336,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=196
 		width=46
 		height=20
@@ -1349,7 +1349,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=221
 		width=46
 		height=20
@@ -1362,7 +1362,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=246
 		width=46
 		height=20
@@ -1375,7 +1375,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=271
 		width=46
 		height=20
@@ -1388,7 +1388,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=296
 		width=46
 		height=20
@@ -1401,7 +1401,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=321
 		width=46
 		height=20
@@ -1414,7 +1414,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=346
 		width=46
 		height=20
@@ -1427,7 +1427,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=46
 		width=100
 		height=20
@@ -1443,7 +1443,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=71
 		width=100
 		height=20
@@ -1459,7 +1459,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=96
 		width=100
 		height=20
@@ -1475,7 +1475,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=121
 		width=100
 		height=20
@@ -1491,7 +1491,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=146
 		width=100
 		height=20
@@ -1507,7 +1507,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=171
 		width=100
 		height=20
@@ -1523,7 +1523,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=196
 		width=100
 		height=20
@@ -1539,7 +1539,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=221
 		width=100
 		height=20
@@ -1555,7 +1555,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=246
 		width=100
 		height=20
@@ -1571,7 +1571,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=271
 		width=100
 		height=20
@@ -1587,7 +1587,7 @@ text {
 }
 text {
 	object {
-		x=824
+		x=674
 		y=23
 		width=50
 		height=18
@@ -1600,7 +1600,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=296
 		width=100
 		height=20
@@ -1616,7 +1616,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=321
 		width=100
 		height=20
@@ -1632,7 +1632,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=346
 		width=100
 		height=20
@@ -1648,20 +1648,7 @@ text {
 }
 text {
 	object {
-		x=950
-		y=10
-		width=40
-		height=18
-	}
-	"basic attribute" {
-		clr=51
-	}
-	textix="DP 0"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=752
+		x=602
 		y=371
 		width=46
 		height=20
@@ -1674,7 +1661,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=371
 		width=100
 		height=20
@@ -1688,35 +1675,9 @@ text {
 	limits {
 	}
 }
-text {
-	object {
-		x=922
-		y=23
-		width=50
-		height=18
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="FebNum"
-	align="horiz. centered"
-}
-text {
-	object {
-		x=969
-		y=23
-		width=50
-		height=18
-	}
-	"basic attribute" {
-		clr=31
-	}
-	textix="HybridNum"
-	align="horiz. centered"
-}
 "text update" {
 	object {
-		x=799
+		x=649
 		y=455
 		width=100
 		height=20
@@ -1732,7 +1693,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=455
 		width=46
 		height=20
@@ -1745,7 +1706,7 @@ text {
 }
 text {
 	object {
-		x=752
+		x=602
 		y=430
 		width=46
 		height=20
@@ -1758,7 +1719,7 @@ text {
 }
 "text update" {
 	object {
-		x=799
+		x=649
 		y=430
 		width=100
 		height=20
@@ -1774,7 +1735,7 @@ text {
 }
 text {
 	object {
-		x=750
+		x=600
 		y=410
 		width=50
 		height=18
@@ -1785,9 +1746,48 @@ text {
 	textix="DTM"
 	align="horiz. centered"
 }
+text {
+	object {
+		x=800
+		y=10
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="DP 0"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=772
+		y=23
+		width=50
+		height=18
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="FebNum"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=819
+		y=23
+		width=50
+		height=18
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="HybridNum"
+	align="horiz. centered"
+}
 "text update" {
 	object {
-		x=928
+		x=778
 		y=46
 		width=39
 		height=20
@@ -1803,7 +1803,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=71
 		width=39
 		height=20
@@ -1819,7 +1819,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=96
 		width=39
 		height=20
@@ -1835,7 +1835,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=121
 		width=39
 		height=20
@@ -1851,7 +1851,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=146
 		width=39
 		height=20
@@ -1867,7 +1867,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=171
 		width=39
 		height=20
@@ -1883,7 +1883,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=196
 		width=39
 		height=20
@@ -1899,7 +1899,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=221
 		width=39
 		height=20
@@ -1915,7 +1915,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=246
 		width=39
 		height=20
@@ -1931,7 +1931,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=271
 		width=39
 		height=20
@@ -1947,7 +1947,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=296
 		width=39
 		height=20
@@ -1963,7 +1963,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=321
 		width=39
 		height=20
@@ -1979,7 +1979,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=346
 		width=39
 		height=20
@@ -1995,7 +1995,7 @@ text {
 }
 "text update" {
 	object {
-		x=928
+		x=778
 		y=371
 		width=39
 		height=20
@@ -2011,7 +2011,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=46
 		width=39
 		height=20
@@ -2027,7 +2027,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=71
 		width=39
 		height=20
@@ -2043,7 +2043,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=96
 		width=39
 		height=20
@@ -2059,7 +2059,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=121
 		width=39
 		height=20
@@ -2075,7 +2075,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=146
 		width=39
 		height=20
@@ -2091,7 +2091,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=171
 		width=39
 		height=20
@@ -2107,7 +2107,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=196
 		width=39
 		height=20
@@ -2123,7 +2123,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=221
 		width=39
 		height=20
@@ -2139,7 +2139,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=246
 		width=39
 		height=20
@@ -2155,7 +2155,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=271
 		width=39
 		height=20
@@ -2171,7 +2171,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=296
 		width=39
 		height=20
@@ -2187,7 +2187,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=321
 		width=39
 		height=20
@@ -2203,7 +2203,7 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=346
 		width=39
 		height=20
@@ -2219,13 +2219,1474 @@ text {
 }
 "text update" {
 	object {
-		x=975
+		x=825
 		y=371
 		width=39
 		height=20
 	}
 	monitor {
 		chan="SVT:daq:dpm:13:0:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=908
+		y=10
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="DP 1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=880
+		y=23
+		width=50
+		height=18
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="FebNum"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=927
+		y=23
+		width=50
+		height=18
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="HybridNum"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=886
+		y=46
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:0:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=71
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:1:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=96
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:2:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=121
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:3:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=146
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:4:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=171
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:5:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=196
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:6:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=221
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:7:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=246
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:8:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=271
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:9:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=296
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:10:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=321
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:11:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=346
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:12:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=886
+		y=371
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:13:1:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=46
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:0:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=71
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:1:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=96
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:2:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=121
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:3:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=146
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:4:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=171
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:5:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=196
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:6:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=221
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:7:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=246
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:8:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=271
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:9:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=296
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:10:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=321
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:11:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=346
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:12:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=933
+		y=371
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:13:1:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=1018
+		y=10
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="DP 2"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=990
+		y=23
+		width=50
+		height=18
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="FebNum"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1037
+		y=23
+		width=50
+		height=18
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="HybridNum"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=996
+		y=46
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:0:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=71
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:1:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=96
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:2:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=121
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:3:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=146
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:4:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=171
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:5:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=196
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:6:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=221
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:7:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=246
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:8:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=271
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:9:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=296
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:10:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=321
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:11:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=346
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:12:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=996
+		y=371
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:13:2:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=46
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:0:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=71
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:1:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=96
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:2:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=121
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:3:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=146
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:4:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=171
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:5:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=196
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:6:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=221
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:7:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=246
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:8:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=271
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:9:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=296
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:10:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=321
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:11:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=346
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:12:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1043
+		y=371
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:13:2:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=1128
+		y=10
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=51
+	}
+	textix="DP 3"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1100
+		y=23
+		width=50
+		height=18
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="FebNum"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=1147
+		y=23
+		width=50
+		height=18
+	}
+	"basic attribute" {
+		clr=31
+	}
+	textix="HybridNum"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=1106
+		y=46
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:0:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=71
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:1:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=96
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:2:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=121
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:3:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=146
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:4:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=171
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:5:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=196
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:6:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=221
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:7:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=246
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:8:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=271
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:9:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=296
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:10:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=321
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:11:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=346
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:12:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1106
+		y=371
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:13:3:febnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=46
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:0:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=71
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:1:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=96
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:2:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=121
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:3:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=146
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:4:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=171
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:5:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=196
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:6:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=221
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:7:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=246
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:8:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=271
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:9:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=296
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:10:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=321
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:11:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=346
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:12:3:hybnum"
+		clr=31
+		bclr=14
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1153
+		y=371
+		width=39
+		height=20
+	}
+	monitor {
+		chan="SVT:daq:dpm:13:3:hybnum"
 		clr=31
 		bclr=14
 	}

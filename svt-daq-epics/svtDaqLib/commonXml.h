@@ -28,9 +28,7 @@ void getRunStateFromDpmValue(xmlDocPtr doc, xmlChar* state);
 
 int getFebNumProcess(char* pname, xmlDoc* doc);
 
-int getFebNumFromDpmValue(xmlDocPtr doc, int dp);
-
-int getFebNum(int dpm, int dp, xmlDoc* doc);
+int getFebNumFromDpmValue(xmlDocPtr doc, int dp, char* action);
 
 int findSystemStr(char* buf, const int MAX, char** start);
 
