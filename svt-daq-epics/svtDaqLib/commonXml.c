@@ -225,11 +225,16 @@ int getLinkProcess(char* pname, xmlDoc* doc) {
     getStringFromEpicsName(pname,action,5);    
     
     if(strcmp(action,"rxframeerrorcount_sub")==0) {
-
-      //val = getLinkFromDpmValue(doc, idp, action);
-      
       sprintf(tmp,"/system/status/DataDpm/Pgp2bAxi[@index=\"%d\"]/RxFrameErrorCount",idp);
-      if(DEBUG>2) printf("[ getLinkDpm ] : xpath \"%s\"\n",tmp);
+    } 
+    else if(strcmp(action,"rxlinkerrorcount_sub")==0) {
+      sprintf(tmp,"/system/status/DataDpm/Pgp2bAxi[@index=\"%d\"]/RxLinkErrorCount",idp);
+    } else {
+      strcpy(tmp,""); 
+    }
+    if(strcmp(tmp,"")!=0) {
+      //if(DEBUG>2) 
+	printf("[ getLinkDpm ] : xpath \"%s\"\n",tmp);
       result =  getnodeset(doc, (xmlChar*) tmp);
       if(result!=NULL) {
 	if(DEBUG>0) printf("[ getLinkProcess ] : got %d nodes\n", result->nodesetval->nodeNr);

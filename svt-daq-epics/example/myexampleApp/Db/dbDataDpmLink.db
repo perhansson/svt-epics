@@ -14,3 +14,21 @@ record(longin, SVT:daq:dpm:$(DPM):$(DP):rxframeerrorcount) {
 }
 
 
+
+
+
+record(sub,SVT:daq:dpm:$(DPM):$(DP):rxlinkerrorcount_sub)
+{
+    field(SCAN,"Passive")
+    field(INAM,"subDpmLinkInit")
+    field(SNAM,"subDpmLinkProcess")
+}
+
+record(longin, SVT:daq:dpm:$(DPM):$(DP):rxlinkerrorcount) {
+  field(SCAN, "1 second") 
+  field(INP, "SVT:daq:dpm:$(DPM):$(DP):rxlinkerrorcount_sub PP")
+  field(DTYP,"Soft Channel")
+}
+
+
+

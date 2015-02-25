@@ -26,7 +26,7 @@ void getRunState(int idpm, xmlDoc* doc, char* state);
 
 int getFebNumProcess(char* pname, xmlDoc* doc);
 
-/int getLinkProcess(char* pname, xmlDoc* doc);
+int getLinkProcess(char* pname, xmlDoc* doc);
 
 int findSystemStr(char* buf, const int MAX, char** start);
 
