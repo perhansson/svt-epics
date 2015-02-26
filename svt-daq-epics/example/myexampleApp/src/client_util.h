@@ -10,7 +10,6 @@
 
 
 
-char* strToUpper( char* s );
 double extractTempValFromString(char value[]);
 
 void getHalfFromDaqMapRecordName(char name[], char board_type[], const int MAX);

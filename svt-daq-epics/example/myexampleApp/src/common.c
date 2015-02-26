@@ -6,17 +6,6 @@
 #include <ctype.h>
 
 
-char* strToUpper( char* s )
-{
-    char* p = s;
-    while (*p) {
-        if(islower(*p)) {
-            *p = toupper(*p);
-        }
-        p++;
-    }
-    return s;
-}
 
 
 

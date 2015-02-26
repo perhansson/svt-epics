@@ -9,6 +9,18 @@
 #include <libxml/xpath.h>
 
 
+char* strToUpper( char* s )
+{
+    char* p = s;
+    while (*p) {
+        if(islower(*p)) {
+            *p = toupper(*p);
+        }
+        p++;
+    }
+    return s;
+}
+
 void getStrValue(xmlDocPtr doc, xmlNodePtr node, xmlChar* str) {
    xmlChar* value;
    if(node!=NULL) {
@@ -161,10 +173,10 @@ int getFebNumProcess(char* pname, xmlDoc* doc) {
     
     if(DEBUG>2)  printf("[ getFebNumProcess ] : get %s from dpm xml\n", action);
     if(strcmp(action,"febnum_sub")==0) {
-      sprintf(tmp,"/system/status/DataDpm/RceCore/Datapath[@index=\"%d\"]/FebNum",idp);
+      sprintf(tmp,"/system/status/DataDpm/RceCore/DataPath[@index=\"%d\"]/FebNum",idp);
     } 
     else if( strcmp(action,"hybnum_sub")==0) {
-      sprintf(tmp,"/system/status/DataDpm/RceCore/Datapath[@index=\"%d\"]/HybNum",idp);
+      sprintf(tmp,"/system/status/DataDpm/RceCore/DataPath[@index=\"%d\"]/HybridNum",idp);
     }
     else {
       strcpy(tmp,"");
@@ -219,29 +231,51 @@ int getLinkProcess(char* pname, xmlDoc* doc) {
     idpm = getIntFromEpicsName(pname,3);  
     idp = getIntFromEpicsName(pname,4);  
     
-    //printf("[ getLinkProcess ]: idpm %d\n",idpm);      
-    //printf("[ getLinkProcess ]: idp %d\n",idp);      
-    
     getStringFromEpicsName(pname,action,5);    
     
-    if(strcmp(action,"rxframeerrorcount_sub")==0) {
+    if(strcmp(action,"rxphyready_sub")==0) {
+      sprintf(tmp,"/system/status/DataDpm/Pgp2bAxi[@index=\"%d\"]/RxPhyReady",idp);
+    } 
+    else if(strcmp(action,"rxframecount_sub")==0) {
+      sprintf(tmp,"/system/status/DataDpm/Pgp2bAxi[@index=\"%d\"]/RxFrameCount",idp);
+    } 
+    else if(strcmp(action,"rxframeerrorcount_sub")==0) {
       sprintf(tmp,"/system/status/DataDpm/Pgp2bAxi[@index=\"%d\"]/RxFrameErrorCount",idp);
+    } 
+    else if(strcmp(action,"rxcellerrorcount_sub")==0) {
+      sprintf(tmp,"/system/status/DataDpm/Pgp2bAxi[@index=\"%d\"]/RxCellErrorCount",idp);
     } 
     else if(strcmp(action,"rxlinkerrorcount_sub")==0) {
       sprintf(tmp,"/system/status/DataDpm/Pgp2bAxi[@index=\"%d\"]/RxLinkErrorCount",idp);
+    } 
+    else if(strcmp(action,"rxlinkdowncount_sub")==0) {
+      sprintf(tmp,"/system/status/DataDpm/Pgp2bAxi[@index=\"%d\"]/RxLinkDownCount",idp);
     } else {
       strcpy(tmp,""); 
     }
+
     if(strcmp(tmp,"")!=0) {
-      //if(DEBUG>2) 
-	printf("[ getLinkDpm ] : xpath \"%s\"\n",tmp);
+      if(DEBUG>2) printf("[ getLinkDpm ] : xpath \"%s\"\n",tmp);
       result =  getnodeset(doc, (xmlChar*) tmp);
       if(result!=NULL) {
 	if(DEBUG>0) printf("[ getLinkProcess ] : got %d nodes\n", result->nodesetval->nodeNr);
 	if(result->nodesetval->nodeNr==1) {
 	  node = result->nodesetval->nodeTab[0];
 	  if(node!=NULL) {
-	    val = getIntValue(doc, node);
+	    if(strcmp(action,"rxphyready")==0) {
+	      char tmp2[256];
+	      getStrValue(doc,node,tmp2);
+	      if(strcmp(strToUpper(tmp2),"FALSE")==0) 
+		val = 0;
+	      else if(strcmp(strToUpper(tmp2),"TRUE")==0) 
+		val = 1;
+	      else {
+		printf("[ getLinkProcess ] : [ ERROR ] wrong boolean string %s\n",tmp2);
+		val = -2;
+	      }
+	    } else {
+	      val = getIntValue(doc, node);
+	    }
 	    if(DEBUG>0) printf("[ getLinkProcess ]: got val %d.\n",val);      
 	  } else {
 	    printf("[ getLinkProcess ] : [ WARNING ] no Link nodes found\n");

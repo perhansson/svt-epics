@@ -7,6 +7,7 @@
 
 #include "commonConstants.h"
 
+char* strToUpper( char* s );
 
 void getStrValue(xmlDocPtr doc, xmlNodePtr node, xmlChar* str);
 

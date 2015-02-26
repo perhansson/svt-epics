@@ -8,7 +8,6 @@ xmlNodePtr getFebNode(xmlDocPtr doc, xmlXPathObjectPtr result, int index, int de
 xmlDocPtr getdoc (char *docname);
 double getFloatValue(xmlDocPtr doc, xmlNodePtr node);
 
-char* strToUpper( char* s );
 
 
 #endif

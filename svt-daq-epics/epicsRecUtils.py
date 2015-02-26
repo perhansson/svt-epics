@@ -996,7 +996,7 @@ record(longin, SVT:daq:dpm:$(DPM):$(DP):TYPE) {
 
 
 """	
-    types = ["rxframeerrorcount", "rxlinkerrorcount"]
+    types = ["rxphyready", "rxframecount", "rxframeerrorcount", "rxcellerrorcount", "rxlinkerrorcount", "rxlinkdowncount"]
     for type in types:
         rec = s
         rec = rec.replace("TYPE",type)
