@@ -52,6 +52,7 @@ for dpm_index in range (0, 15):
 		command = "xterm " + title + " " + color + " " + position
 		command += " -e 'pushd " + targetDir+ ";./" + exeName + ";bash'" 		
 		#print command
+		command = command.replace("green","blue")
 		subprocess.Popen(command + "&", shell=True)
 	if dpm_index == 0:
 		xpos = 0
@@ -63,5 +64,6 @@ for dpm_index in range (0, 15):
 		command = "xterm " + title + " " + color + " " + position
 		command += " -e 'pushd " + targetCntrlDpmDir + ";./" + exeName + ";bash'" 		
 		#print command
+		command = command.replace("green","yellow")
 		subprocess.Popen(command + "&", shell=True)
 	

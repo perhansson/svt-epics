@@ -5,10 +5,10 @@ file {
 }
 display {
 	object {
-		x=68
-		y=49
+		x=91
+		y=275
 		width=1250
-		height=687
+		height=500
 	}
 	clr=14
 	bclr=12
