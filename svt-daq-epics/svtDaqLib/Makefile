@@ -21,13 +21,13 @@ OBJS		= commonXml.o commonConstants.o commonDoc.o
 
 all: libsvtDaq.so
 
-libsvtDaq.so:	$(OBJS)
+libsvtDaq.so:	$(OBJS) $(SRCS) $(HDRS)
 	@echo "Linking $(@)..."
 	@rm -f $@
 	$(LD) $(LDFLAGS) -shared -o $@ $(OBJS) $(LIBS)
 	@echo "done linking"
 
-%.o: %.c
+%.o: %.c %.h
 	@echo "Compiling $(@)..."
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -c $*.c
 
